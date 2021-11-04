@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://maximilien.work/sitemap.xml
