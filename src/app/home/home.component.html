@@ -14,23 +14,35 @@
 
 <h2 class="wow fadeIn"><span class="special-span">01</span> Réalisations</h2>
 
-<div class="owl-carousel">
-    <div class="box-realisation">
-      <img src="../../assets/images/Group 3.png" alt="" class="img-box">
-      <div style="padding: 20px;">
-        <h3>Project name</h3>
-        <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio?</p>
-      </div>
-  </div>
-  <div class="box-realisation">
-    <img src="../../assets/images/Group 3.png" alt="" class="img-box">
-    <div style="padding: 20px;">
-      <h3>Project name</h3>
-      <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio?</p>
-    </div>
-</div>
-
-</div>
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+        <div class="slide box-realisation">
+            <img src="../../assets/images/Group 3.png" alt="" class="img-box">
+            <div style="padding: 20px;">
+            <h3>Project name</h3>
+            <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio?</p>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide box-realisation">
+            <img src="../../assets/images/Group 3.png" alt="" class="img-box">
+            <div style="padding: 20px;">
+            <h3>Project name</h3>
+            <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio?</p>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide box-realisation">
+            <img src="../../assets/images/Group 3.png" alt="" class="img-box">
+            <div style="padding: 20px;">
+            <h3>Project name</h3>
+            <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio?</p>
+            </div>
+        </div>
+    </ng-template>
+</owl-carousel-o>
 
 <a href="" class="wow fadeIn link-flash" style="margin-top: 25px;">Voir toutes les réalisations ></a>
 
