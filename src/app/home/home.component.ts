@@ -18,11 +18,12 @@ export class HomeComponent implements OnInit {
     touchDrag: true,
     pullDrag: false,
     dots: false,
+    margin: 20,
     navSpeed: 600,
-    navText: ['&#8249', '&#8250;'],
+    navText: ['<', '>'],
     responsive: {
       0: {
-        items: 1 
+        items: 1
       },
       400: {
         items: 1
@@ -34,6 +35,6 @@ export class HomeComponent implements OnInit {
         items: 2
       }
     },
-    nav: true
+    nav: true,
   }
 }

@@ -1,0 +1,6 @@
+
+<div *ngFor="let work of all_work">
+  <h2>{{ work.title }}</h2>
+  <p>{{ work.description1}}</p>
+  <a (click)="join(work.url)" class="link-flash">Voir plus</a>
+</div>
