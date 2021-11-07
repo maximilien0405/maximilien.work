@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Work } from '../common/work.model';
+import { LinkWorkService } from '../link-work.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +9,16 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private linkwork: LinkWorkService) {
+    this.home_work = this.linkwork.HOME_WORK;
+  }
 
   ngOnInit(): void {
   }
 
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: true,
+    mouseDrag: false,
     touchDrag: true,
     pullDrag: false,
     dots: false,
@@ -37,4 +41,27 @@ export class HomeComponent implements OnInit {
     },
     nav: true,
   }
+
+  public frameShow:boolean = false;
+  imageLink:string = "";
+  description:string = "";
+  link:string = "";
+
+  displayFrame(img:string, description:string, link:string) {
+    this.frameShow = true;
+    this.imageLink = img;
+    this.description = description;
+    this.link = link;
+  }
+
+  hide() {
+    this.frameShow = false
+  }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
+    KeyboardEvent) {
+      this.hide()
+  }
+
+  home_work: Work[];
 }

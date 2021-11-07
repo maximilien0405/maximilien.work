@@ -8,54 +8,49 @@ export class LinkWorkService {
 
   constructor() { }
 
+  HOME_WORK: Work[] = [
+    {
+      img:"../../assets/work/Group 3.png",
+      description:"1 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
+    },
+    {
+      img:"../../assets/work/Group 3.png",
+      description:"2 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
+    },
+    {
+      img:"../../assets/work/Group 3.png",
+      description:"3 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
+    },
+    {
+      img:"../../assets/work/Group 3.png",
+      description:"4 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
+    },
+    {
+      img:"../../assets/work/Group 3.png",
+      description:"5 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
+    }
+  ]
+
   ALL_WORK: Work[] = [
     {
-      url:"projet1",
-
-      preview_img:"",
-      preview_title:"",
-      preview_description:"",
-
-      title: "",
-      subtitle: "",
-      description1: "",
-      description2: "",
-      description3: "",
-      image1: "",
-      image2: "",
-      image3: "",
+      img:"../../assets/work/Group 3.png",
+      description:"1 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
     },
     {
-      url:"projet2",
-
-      preview_img:"",
-      preview_title:"",
-      preview_description:"",
-
-      title: "",
-      subtitle: "",
-      description1: "",
-      description2: "",
-      description3: "",
-      image1: "",
-      image2: "",
-      image3: "",
+      img:"../../assets/work/Group 3.png",
+      description:"2 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
     },
     {
-      url:"projet3",
-
-      preview_img:"",
-      preview_title:"",
-      preview_description:"",
-
-      title: "",
-      subtitle: "",
-      description1: "",
-      description2: "",
-      description3: "",
-      image1: "",
-      image2: "",
-      image3: "",
-    }
+      img:"../../assets/work/Group 3.png",
+      description:"3 Lorem, ipsum dolor sit amet consectetur adipisicing",
+      link:"string",
+    },
   ];
 }

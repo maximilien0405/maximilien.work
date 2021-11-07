@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LinkWorkService } from '../link-work.service';
 import { Work } from './../common/work.model'
@@ -16,9 +16,26 @@ export class AllWorkComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  all_work: Work[];
+  public frameShow:boolean = false;
+  imageLink:string = "";
+  description:string = "";
+  link:string = "";
 
-  join(url:any):void {
-    this.router.navigateByUrl("/projet/" + url);
+  displayFrame(img:string, description:string, link:string) {
+    this.frameShow = true;
+    this.imageLink = img;
+    this.description = description;
+    this.link = link;
   }
+
+  hide() {
+    this.frameShow = false
+  }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
+    KeyboardEvent) {
+      this.hide()
+  }
+
+  all_work: Work[];
 }

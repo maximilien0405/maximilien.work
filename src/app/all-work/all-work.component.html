@@ -1,9 +1,42 @@
 <a routerLink="home" class="wow fadeIn link-flash">< Retour</a>
 
-<h2 class="wow fadeIn"><span class="special-span">01</span> Toutes les réalisations</h2>
+<h2 class="wow fadeIn" style="margin:50px 0px 50px 0px !important">Toutes les réalisations</h2>
 
-<div *ngFor="let work of all_work">
-  <h2>{{ work.title }}</h2>
-  <p>{{ work.description1}}</p>
-  <a (click)="join(work.url)" class="link-flash">Voir plus</a>
+
+<div class="all-rea-work">
+  <div *ngFor="let work of all_work">
+    <!-- Desktop version -->
+    <div class="slide box-realisation rea-box-desktop" (click)="displayFrame(work.img, work.description, work.link)">
+        <img [src]="work.img" class="img-box">
+        <div class="box-hovered" style="padding: 14px 20px 20px 20px;">
+          <p class="subtitle" style="padding-top: 0px !important;">{{ work.description }}</p>
+        </div>
+    </div>
+
+    <!-- Mobile version -->
+  <div class="slide box-realisation rea-box-mobile box-mobile">
+    <div style="position: relative;">
+      <img [src]="work.img" class="img-box">
+      <a [href]="work.link" target="_blank" class="link-work-mobile-all">
+        <img src="../../assets/icons/external.svg" style="height: 23px; margin-top: 6px; margin-left: 6px;" class="icon-color">
+      </a>
+    </div>
+    <div class="box-hovered" style="padding: 14px 20px 20px 20px;">
+      <p class="subtitle" style="padding-top: 0px !important;">{{ work.description }}</p>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<div *ngIf="frameShow == true" class="frameShow" style="width: 100%;">
+  <div class="frame-background" (click)="hide()">
+    <div class="frame-box">
+      <img class="frame-cadre" [src]="imageLink" alt="">
+      <div style="display: flex; justify-content: space-between; margin-top: 20px;" class="paragraph-img">
+        <p class="paragraph" style="color: #272D2D !important;">{{ description }}</p>
+        <a [href]="link" target="_blank" *ngIf="link != ''" class="link-flash">Voir plus ></a>
+      </div>
+    </div>
+  </div>
 </div>
