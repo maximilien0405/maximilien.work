@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Work } from '../common/work.model';
 import { ProjectsService } from '../projects.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   
   component_home_work: Work[];
   
-  constructor(private projectService: ProjectsService) {
+  constructor(private projectService: ProjectsService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -61,8 +62,7 @@ export class HomeComponent implements OnInit {
     this.frameShow = false
   }
 
-  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
-    KeyboardEvent) {
-      this.hide()
+  join(url:any):void {
+    this.router.navigateByUrl("/projet/" + url);
   }
 }

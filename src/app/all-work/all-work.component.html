@@ -2,41 +2,15 @@
 
 <h2 class="wow fadeIn" style="margin:50px 0px 50px 0px !important">Toutes les réalisations</h2>
 
-
 <div class="all-rea-work">
   <div *ngFor="let work of component_all_work">
-    <!-- Desktop version -->
-    <div class="slide box-realisation rea-box-desktop" (click)="displayFrame(work.img, work.description)">
-        <img [src]="work.img" class="img-box">
-        <div class="box-hovered" style="padding: 14px 20px 20px 20px;">
-          <p class="subtitle" style="padding-top: 0px !important;">{{ work.description }}</p>
-        </div>
-    </div>
 
-    <!-- Mobile version -->
-  <div class="slide box-realisation rea-box-mobile box-mobile">
-    <div style="position: relative;">
-      <img [src]="work.img" class="img-box">
-      <a [href]="work.img" target="_blank" class="link-work-mobile-all">
-        <img src="../../assets/icons/external.svg" style="height: 23px; margin-top: 7px; margin-left: 8px;" class="icon-color">
-      </a>
-    </div>
-    <div class="box-hovered" style="padding: 14px 20px 20px 20px;">
-      <p class="subtitle" style="padding-top: 0px !important;">{{ work.description }}</p>
-    </div>
-    </div>
-
-  </div>
-</div>
-
-<div *ngIf="frameShow == true" class="frameShow" style="width: 100%;">
-  <div class="frame-background" (click)="hide()">
-    <div class="frame-box">
-      <img class="frame-cadre" [src]="imageLink" alt="">
-      <div style="display: flex; justify-content: space-between; margin-top: 20px;" class="paragraph-img">
-        <p class="paragraph" style="color: #272D2D !important;">{{ description }}</p>
-        <a [href]="imageLink" target="_blank" class="link-flash">Source ></a>
+    <div class="slide box-realisation wow fadeIn" (click)="join(work.url)">
+      <div class="overlay">
+        <p class="text-overlay paragraph">Cliquez pour plus d'infos</p>
       </div>
+      <img [src]="work.img" class="img-box">
     </div>
+
   </div>
 </div>

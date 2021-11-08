@@ -11,7 +11,7 @@ export class AllWorkComponent implements OnInit {
 
   component_all_work: Work[];
   
-  constructor(private projectService: ProjectsService) {
+  constructor(private projectService: ProjectsService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -34,10 +34,9 @@ export class AllWorkComponent implements OnInit {
     this.frameShow = false
   }
 
-  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
-    KeyboardEvent) {
-      this.hide()
-  }
-
   all_work: Work[];
+
+  join(url:any):void {
+    this.router.navigateByUrl("/projet/" + url);
+  }
 }
