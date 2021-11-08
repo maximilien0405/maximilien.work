@@ -1,7 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Work } from '../common/work.model';
-import { LinkWorkService } from '../link-work.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +8,7 @@ import { LinkWorkService } from '../link-work.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private linkwork: LinkWorkService) {
-    this.home_work = this.linkwork.HOME_WORK;
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -60,6 +57,4 @@ export class HomeComponent implements OnInit {
     KeyboardEvent) {
       this.hide()
   }
-
-  home_work: Work[];
 }

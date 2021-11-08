@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LinkWorkService } from '../link-work.service';
 import { Work } from './../common/work.model'
 
 @Component({
@@ -9,9 +8,7 @@ import { Work } from './../common/work.model'
 })
 export class AllWorkComponent implements OnInit {
 
-  constructor(private linkwork: LinkWorkService, private router: Router) {
-    this.all_work = this.linkwork.ALL_WORK;
-  }
+  constructor() {}
 
   ngOnInit(): void {
   }
