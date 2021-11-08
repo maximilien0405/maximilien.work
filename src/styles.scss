@@ -102,6 +102,11 @@ $black: #272D2D;
     display:none;
   }
 }
+@media (max-width: 792px) {
+  .all-rea-work {
+    grid-template-columns: 1fr !important;
+  }
+}
 
 @media (max-width: 992px) {
 

@@ -2,15 +2,18 @@
 [{
     "url":"whiplay",
     "img":"../../assets/work/whiplay2.png",
-    "description":"1 Lorem, ipsum dolor sit amet consectetur adipisicing"
-},
+    "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores error debitis voluptas exercitationem atque. Accusamus aut, sunt, amet neque numquam adipisci maiores odit corporis ad id, cupiditate totam soluta velit.",
+    "link":"https://www.google.com"
+  },
 {
     "url":"justrun",
     "img":"../../assets/work/whiplay2.png",
-    "description":"2 Lorem, ipsum dolor sit amet consectetur adipisicing"
-},
+    "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores error debitis voluptas exercitationem atque. Accusamus aut, sunt, amet neque numquam adipisci maiores odit corporis ad id, cupiditate totam soluta velit.",
+    "link":"https://www.google.com"
+  },
 {
     "url":"tailship",
     "img":"../../assets/work/whiplay2.png",
-    "description":"3 Lorem, ipsum dolor sit amet consectetur adipisicing"
-}]
+    "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores error debitis voluptas exercitationem atque. Accusamus aut, sunt, amet neque numquam adipisci maiores odit corporis ad id, cupiditate totam soluta velit.",
+    "link":"https://www.google.com"
+  }]

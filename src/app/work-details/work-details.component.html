@@ -2,7 +2,11 @@
 
 <div *ngFor="let work of component_all_work">
     <div *ngIf="work.url == url">
-        <img [src]="work.img" class="detail-img">
-        <p>{{ work.description}}</p>
+
+        <img [src]="work.img" class="detail-img wow fadeIn">
+        <p style="margin-top: 25px;">{{ work.description}}</p>
+        <div *ngIf="work.link != ''" style="margin-top: 20px;">
+          <a [href]="work.link" class="link-flash" >Plus d'infos ></a>
+        </div>
     </div>
   </div>
