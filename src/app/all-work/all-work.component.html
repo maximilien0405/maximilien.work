@@ -6,7 +6,7 @@
 <div class="all-rea-work">
   <div *ngFor="let work of all_work">
     <!-- Desktop version -->
-    <div class="slide box-realisation rea-box-desktop" (click)="displayFrame(work.img, work.description, work.link)">
+    <div class="slide box-realisation rea-box-desktop" (click)="displayFrame(work.img, work.description)">
         <img [src]="work.img" class="img-box">
         <div class="box-hovered" style="padding: 14px 20px 20px 20px;">
           <p class="subtitle" style="padding-top: 0px !important;">{{ work.description }}</p>
@@ -35,7 +35,7 @@
       <img class="frame-cadre" [src]="imageLink" alt="">
       <div style="display: flex; justify-content: space-between; margin-top: 20px;" class="paragraph-img">
         <p class="paragraph" style="color: #272D2D !important;">{{ description }}</p>
-        <a [href]="imageLink" target="_blank" *ngIf="link != ''" class="link-flash">Source ></a>
+        <a [href]="imageLink" target="_blank" class="link-flash">Source ></a>
       </div>
     </div>
   </div>
