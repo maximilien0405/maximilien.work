@@ -28,7 +28,7 @@
     <div class="slide box-realisation rea-box-mobile box-mobile">
       <div style="position: relative;">
         <img [src]="work.img" class="img-box">
-        <a [href]="work.link" target="_blank" class="link-work-mobile">
+        <a [href]="work.img" target="_blank" class="link-work-mobile">
           <img src="../../assets/icons/external.svg" style="height: 23px; margin-top: 6px;" class="icon-color">
         </a>
       </div>
@@ -46,7 +46,7 @@
       <img class="frame-cadre" [src]="imageLink" alt="">
       <div style="display: flex; justify-content: space-between; margin-top: 20px;" class="paragraph-img">
         <p class="paragraph" style="color: #272D2D !important;">{{ description }}</p>
-        <a [href]="link" target="_blank" *ngIf="link != ''" class="link-flash">Voir plus ></a>
+        <a [href]="imageLink" target="_blank" *ngIf="link != ''" class="link-flash">Source ></a>
       </div>
     </div>
   </div>

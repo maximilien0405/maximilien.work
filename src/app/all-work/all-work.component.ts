@@ -19,13 +19,11 @@ export class AllWorkComponent implements OnInit {
   public frameShow:boolean = false;
   imageLink:string = "";
   description:string = "";
-  link:string = "";
 
-  displayFrame(img:string, description:string, link:string) {
+  displayFrame(img:string, description:string) {
     this.frameShow = true;
     this.imageLink = img;
     this.description = description;
-    this.link = link;
   }
 
   hide() {

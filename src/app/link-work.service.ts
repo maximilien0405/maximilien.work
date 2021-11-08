@@ -12,27 +12,22 @@ export class LinkWorkService {
     {
       img:"../../assets/work/Group 3.png",
       description:"1 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
     {
       img:"../../assets/work/Group 3.png",
       description:"2 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
     {
       img:"../../assets/work/Group 3.png",
       description:"3 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
     {
       img:"../../assets/work/Group 3.png",
       description:"4 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
     {
       img:"../../assets/work/Group 3.png",
       description:"5 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     }
   ]
 
@@ -40,17 +35,14 @@ export class LinkWorkService {
     {
       img:"../../assets/work/Group 3.png",
       description:"1 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
     {
       img:"../../assets/work/Group 3.png",
       description:"2 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
     {
       img:"../../assets/work/Group 3.png",
       description:"3 Lorem, ipsum dolor sit amet consectetur adipisicing",
-      link:"string",
     },
   ];
 }
