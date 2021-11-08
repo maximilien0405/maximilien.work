@@ -97,9 +97,17 @@ $black: #272D2D;
   }
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .rea-box-mobile {
+    display:none;
+  }
+}
 
 @media (max-width: 992px) {
+
+    .rea-box-desktop {
+      display:none !important;
+    }
 
     .container {
         width: 100%;
@@ -388,7 +396,7 @@ img::selection {
 .link-work-mobile {
   position: absolute;
   bottom: 15px;
-  right: 15px;
+  left: 15px;
   height: 40px;
   width: 40px;
   background-color: white;

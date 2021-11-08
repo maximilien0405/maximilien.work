@@ -17,10 +17,13 @@
   <ng-template carouselSlide *ngFor="let work of component_home_work">
 
     <div class="slide box-realisation wow fadeIn" (click)="join(work.url)">
-        <div class="overlay">
+        <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">Cliquez pour plus d'infos</p>
         </div>
         <img [src]="work.img" class="img-box">
+        <a (click)="join(work.url)" target="_blank" class="link-work-mobile">
+          <img src="../../assets/icons/external.svg" style="height: 23px; margin-top: 8px;" class="icon-color">
+        </a>
     </div>
 
 </ng-template>
