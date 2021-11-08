@@ -14,7 +14,7 @@
 
 <h2 class="wow fadeIn"><span class="special-span">01</span> Réalisations</h2>
 <owl-carousel-o [options]="customOptions" class="wow fadeIn">
-  <ng-template carouselSlide *ngFor="let work of home_work">
+  <ng-template carouselSlide *ngFor="let work of component_home_work">
 
     <!-- Desktop version -->
     <div class="slide box-realisation rea-box-desktop" (click)="displayFrame(work.img, work.description)">

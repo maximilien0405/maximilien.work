@@ -1,17 +1,25 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Work } from '../common/work.model';
+import { ProjectsService } from '../projects.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  
+  component_home_work: Work[];
+  
+  constructor(private projectService: ProjectsService) {
+  }
 
   ngOnInit(): void {
+    this.projectService.getHomeWork().subscribe((res: Work[]) => {
+      this.component_home_work = res;
+    });
   }
+
 
   customOptions: OwlOptions = {
     loop: true,

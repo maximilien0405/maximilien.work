@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProjectsService } from '../projects.service';
 import { Work } from './../common/work.model'
 
 @Component({
@@ -8,9 +9,15 @@ import { Work } from './../common/work.model'
 })
 export class AllWorkComponent implements OnInit {
 
-  constructor() {}
+  component_all_work: Work[];
+  
+  constructor(private projectService: ProjectsService) {
+  }
 
   ngOnInit(): void {
+    this.projectService.getAllWork().subscribe((res: Work[]) => {
+      this.component_all_work = res;
+    });
   }
 
   public frameShow:boolean = false;

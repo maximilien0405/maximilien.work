@@ -4,7 +4,7 @@
 
 
 <div class="all-rea-work">
-  <div *ngFor="let work of all_work">
+  <div *ngFor="let work of component_all_work">
     <!-- Desktop version -->
     <div class="slide box-realisation rea-box-desktop" (click)="displayFrame(work.img, work.description)">
         <img [src]="work.img" class="img-box">

@@ -10,14 +10,14 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) { }
   
-  getAllWork(): Observable<any> {
+  public getAllWork(): Observable<any> {
     return this.http.get<any>('assets/projects/all_work.json').pipe(
       map((data) => data),
       catchError((error) => throwError(error))
     );
   }
 
-  getHomeWork(): Observable<any> {
+  public getHomeWork(): Observable<any> {
     return this.http.get<any>('assets/projects/home_work.json').pipe(
       map((data) => data),
       catchError((error) => throwError(error))
