@@ -29,7 +29,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/projects"
+              "src/assets/projects",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",

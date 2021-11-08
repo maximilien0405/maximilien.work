@@ -1,4 +1,4 @@
-<img src="../../assets/images/moi.webp" class="pdp wow fadeIn">
+<img src="../../assets/images/moi.webp" class="pdp wow fadeIn" alt="Photo de moi">
 <div class="title-container">
     <h1 class="wow fadeIn title">Maximilien Z.</h1>
     <p class="wow fadeIn subtitle">UI/UX designer & Front-end Developer</p>
@@ -20,8 +20,8 @@
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">Cliquez pour plus d'infos</p>
         </div>
-        <img [src]="work.img" class="img-box">
-        <a (click)="join(work.url)" target="_blank" class="link-work-mobile rea-box-mobile">
+        <img [src]="work.img" class="img-box" [alt]="work.url">
+        <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
           <img src="../../assets/icons/external.svg" style="height: 23px; margin-top: 8px;" class="icon-color">
         </a>
     </div>
@@ -43,21 +43,21 @@
     <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank">
         <div class="box-social">
             <div class="left-box">
-                <img src="../../assets/images/in.png" style="height: 25px;">
+              <img src="../../assets/images/insta.png" style="height: 25px; width: auto;">
             </div> Linkedin
         </div>
     </a>
     <a href="https://github.com/maximilien0405" target="_blank">
         <div class="box-social">
             <div class="left-box">
-                <img src="../../assets/images/gh.png" style="height: 25px;">
+              <img src="../../assets/images/insta.png" style="height: 25px; width: auto;">
             </div>Github
         </div>
     </a>
     <a href="https://www.behance.net/max-zim" target="_blank">
         <div class="box-social">
         <div class="left-box">
-            <img src="../../assets/images/be.png" style="height: 25px;">
+          <img src="../../assets/images/insta.png" style="height: 25px; width: auto;">
         </div>
         Behance
         </div>
@@ -65,7 +65,7 @@
     <a href="https://www.instagram.com/maximilien_work/" target="_blank">
         <div class="box-social">
             <div class="left-box">
-                <img src="../../assets/images/insta.png" style="height: 25px;">
+              <img src="../../assets/images/insta.png" style="height: 25px; width: auto;">
             </div>
             Instagram
         </div>
