@@ -10,6 +10,7 @@ import { ProjectsService } from '../projects.service';
 export class WorkDetailsComponent implements OnInit {
 
   component_all_work: Work[];
+  url:string = "";
 
   constructor(private route: ActivatedRoute, private projectService: ProjectsService) {
     this.route.params.subscribe( params => this.url = params.name );
@@ -19,7 +20,4 @@ export class WorkDetailsComponent implements OnInit {
       this.component_all_work = res;
     });
   }
-
-  url:string = "";
-
 }

@@ -10,7 +10,10 @@ import { Work } from './../common/work.model'
 export class AllWorkComponent implements OnInit {
 
   component_all_work: Work[];
-  
+  public frameShow:boolean = false;
+  imageLink:string = "";
+  description:string = "";
+
   constructor(private projectService: ProjectsService, private router: Router) {
   }
 
@@ -19,10 +22,6 @@ export class AllWorkComponent implements OnInit {
       this.component_all_work = res;
     });
   }
-
-  public frameShow:boolean = false;
-  imageLink:string = "";
-  description:string = "";
 
   displayFrame(img:string, description:string) {
     this.frameShow = true;

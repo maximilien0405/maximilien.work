@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  
+
   component_home_work: Work[];
-  
+  public frameShow:boolean = false;
+  imageLink:string = "";
+  description:string = "";
+
   constructor(private projectService: ProjectsService, private router: Router) {
   }
 
@@ -20,7 +23,6 @@ export class HomeComponent implements OnInit {
       this.component_home_work = res;
     });
   }
-
 
   customOptions: OwlOptions = {
     loop: true,
@@ -47,10 +49,6 @@ export class HomeComponent implements OnInit {
     },
     nav: true,
   }
-
-  public frameShow:boolean = false;
-  imageLink:string = "";
-  description:string = "";
 
   displayFrame(img:string, description:string) {
     this.frameShow = true;
