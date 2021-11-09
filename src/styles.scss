@@ -60,6 +60,7 @@ $black: #272D2D;
 
 .owl-item {
   max-height: 276.5px !important;
+  max-width: 490px !important;
 }
 
 /* ---------------------------------------------------
@@ -113,6 +114,7 @@ $black: #272D2D;
 
   .owl-carousel .owl-item {
     max-height: fit-content !important;
+    max-width: fit-content !important;
   }
 }
 
