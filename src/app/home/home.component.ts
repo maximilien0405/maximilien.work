@@ -21,9 +21,13 @@ export class HomeComponent implements OnInit {
   // Get the component instance.
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
-  @ViewChild(NgxGlideComponent, { static: false }) ngxGlide2: NgxGlideComponent;
 
-
+  breakpoints:object = {
+    800: {
+      perView: 1
+    }
+  }
+  
   ngOnInit(): void {
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
@@ -33,21 +37,15 @@ export class HomeComponent implements OnInit {
     this.ngxGlide.perView = 2;
     this.ngxGlide.showArrows = false;
     this.ngxGlide.showBullets = false;
-
-    this.ngxGlide2.gap = 20;
-    this.ngxGlide2.perView = 1;
-    this.ngxGlide2.showArrows = false;
-    this.ngxGlide2.showBullets = false;
+    this.ngxGlide.breakpoints = this.breakpoints;
   }
 
   next(): void {
     this.ngxGlide.go('>');
-    this.ngxGlide2.go('>');
   }
 
   back(): void {
     this.ngxGlide.go('<');
-    this.ngxGlide2.go('<');
   }
 
   displayFrame(img:string, description:string) {
