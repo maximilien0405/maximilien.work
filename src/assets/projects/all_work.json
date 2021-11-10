@@ -1,7 +1,7 @@
 
 [{
     "url":"whiplay",
-    "img":"../../assets/work/whiplay.webp",
+    "img":"../../assets/work/whiplay.jpg",
     "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
     "link":"https://whiplay.fr/"
   },
@@ -13,7 +13,7 @@
   },
 {
     "url":"justrun",
-    "img":"../../assets/work/justrun.webp",
+    "img":"../../assets/work/justrun.jpg",
     "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
     "link":"https://www.just-run.fr/"
   }]
