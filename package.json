@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@glidejs/glide": "^3.4.1",
+    "ngx-glide": "^12.1.1",
     "ngx-owl-carousel-o": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

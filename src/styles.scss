@@ -1,6 +1,9 @@
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
+@import '~@glidejs/glide/src/assets/sass/glide.core';
+@import '~@glidejs/glide/src/assets/sass/glide.theme';
+
 /* ---------------------------------------------------
   COLORS
 ----------------------------------------------------- */
@@ -12,22 +15,17 @@ $border-hover: #929c9c;
 $black: #272D2D;
 
 /* ---------------------------------------------------
-  OWL CAROUSSEL EDIT
+  SLIDER EDIT
 ----------------------------------------------------- */
 
-.owl-theme .owl-nav {
-  margin-top: 20px;
-  width:100% !important;
-  text-align: right !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.owl-next {
-  margin:0px 0px 0px 5px!important;
-  width: 36.5px !important;
-  padding: 5px !important;
-  font-size:16px !important;
+.arrow {
+  width: 38px;
+  height: 38px;
+  font-size:20px !important;
   text-align:center !important;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
   display:flex;
   align-items:center;
   color:$light-black !important;
@@ -38,29 +36,10 @@ $black: #272D2D;
   &:hover {
     border: 1px solid $border-hover !important
   }
-}
 
-.owl-prev {
-  margin:0px !important;
-  width: 36.5px !important;
-  padding: 5px !important;
-  font-size:16px !important;
-  text-align:center !important;
-  display:flex;
-  align-items:center;
-  color:$light-black !important;
-  background-color: white !important;
-  border: 1px solid $border-color !important;
-  transition: 200ms all;
-
-  &:hover {
-    border: 1px solid $border-hover !important
+  &::selection {
+    background-color: transparent !important;
   }
-}
-
-.owl-item {
-  max-height: 276.5px !important;
-  max-width: 490px !important;
 }
 
 /* ---------------------------------------------------
@@ -340,6 +319,8 @@ img::selection {
 }
 
 .box-realisation {
+  height: 100%;
+  position: relative;
   border: 1px solid $border-color;
   background-color: white;
   border-radius: 8px;
@@ -351,7 +332,7 @@ img::selection {
 
   img {
     height: 150px;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px;
   }
 
   .subtitle {

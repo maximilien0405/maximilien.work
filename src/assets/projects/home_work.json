@@ -16,4 +16,40 @@
   "img":"../../assets/work/justrun.webp",
   "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
   "link":"https://www.just-run.fr/"
+},
+{
+  "url":"whiplay",
+  "img":"../../assets/work/whiplay.webp",
+  "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
+  "link":"https://whiplay.fr/"
+},
+{
+  "url":"instant",
+  "img":"../../assets/work/instant.webp",
+  "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
+  "link":""
+},
+{
+  "url":"justrun",
+  "img":"../../assets/work/justrun.webp",
+  "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "link":"https://www.just-run.fr/"
+},
+{
+  "url":"whiplay",
+  "img":"../../assets/work/whiplay.webp",
+  "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
+  "link":"https://whiplay.fr/"
+},
+{
+  "url":"instant",
+  "img":"../../assets/work/instant.webp",
+  "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
+  "link":""
+},
+{
+  "url":"justrun",
+  "img":"../../assets/work/justrun.webp",
+  "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "link":"https://www.just-run.fr/"
 }]

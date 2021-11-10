@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgxGlideModule } from 'ngx-glide';
 import { AllWorkComponent } from './all-work/all-work.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WorkDetailsComponent } from './work-details/work-details.component';
@@ -19,9 +19,9 @@ import { WorkDetailsComponent } from './work-details/work-details.component';
   ],
   imports: [
     BrowserModule,
+    NgxGlideModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,8 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Work } from '../common/work.model';
 import { ProjectsService } from '../projects.service';
 import { Router } from '@angular/router';
+import { NgxGlideComponent } from 'ngx-glide';
 
 @Component({
   selector: 'app-home',
@@ -18,37 +18,36 @@ export class HomeComponent implements OnInit {
   constructor(private projectService: ProjectsService, private router: Router) {
   }
 
+  // Get the component instance.
+  @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
+
+  @ViewChild(NgxGlideComponent, { static: false }) ngxGlide2: NgxGlideComponent;
+
+
   ngOnInit(): void {
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
     });
+
+    this.ngxGlide.gap = 20;
+    this.ngxGlide.perView = 2;
+    this.ngxGlide.showArrows = false;
+    this.ngxGlide.showBullets = false;
+
+    this.ngxGlide2.gap = 20;
+    this.ngxGlide2.perView = 1;
+    this.ngxGlide2.showArrows = false;
+    this.ngxGlide2.showBullets = false;
   }
 
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: true,
-    pullDrag: false,
-    dots: false,
-    startPosition: 0,
-    margin: 20,
-    navSpeed: 600,
-    navText: ['<', '>'],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 1
-      },
-      760: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      }
-    },
-    nav: true,
+  next(): void {
+    this.ngxGlide.go('>');
+    this.ngxGlide2.go('>');
+  }
+
+  back(): void {
+    this.ngxGlide.go('<');
+    this.ngxGlide2.go('<');
   }
 
   displayFrame(img:string, description:string) {
