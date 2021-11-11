@@ -48,9 +48,9 @@ export class HomeComponent implements OnInit {
     this.ngxGlide.go('<');
   }
 
-  displayFrame(img:string, description:string) {
+  displayFrame(img_preview:string, description:string) {
     this.frameShow = true;
-    this.imageLink = img;
+    this.imageLink = img_preview;
     this.description = description;
   }
 

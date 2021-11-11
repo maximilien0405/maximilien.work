@@ -3,10 +3,33 @@
 <div *ngFor="let work of component_all_work">
     <div *ngIf="work.url == url">
 
-        <img [src]="work.img" class="detail-img wow fadeIn">
+        <img *ngIf="work.onlyOneImage" [src]="work.img1" class="detail-img wow fadeIn">
+
+        <div *ngIf="!work.onlyOneImage">
+
+          <ngx-glide #ngxGlide [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 100 }" [breakpoints]="this.breakpoints">
+            <div *ngFor="let img of work.all_img">            
+              <img [src]="img.url" class="detail-img wow fadeIn">
+            </div>
+          </ngx-glide>
+
+          <div style="display: flex; justify-content: space-between; margin-top: 20px; align-items: center;">
+            <a [href]="work.link" class="link-flash" target="_blank">Plus d'infos ></a>
+            <div style="display: flex;">
+              <a (click)="back()" class="arrow"><</a>
+              <a (click)="next()" class="arrow" style="margin-left: 5px;">></a>
+            </div>
+          </div>
+
+          <p style="margin-top: 25px;" class="wow fadeIn">{{ work.description}}</p>
+          
+        </div>
+
+      <div *ngIf="work.onlyOneImage">
         <p style="margin-top: 25px;" class="wow fadeIn">{{ work.description}}</p>
         <div *ngIf="work.link != ''" style="margin-top: 20px;" class="wow fadeIn">
-          <a [href]="work.link" class="link-flash" target="_blank">Plus d'infos ></a>
+        <a [href]="work.link" class="link-flash" target="_blank">Plus d'infos ></a>
         </div>
+      </div>  
     </div>
   </div>
