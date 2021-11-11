@@ -1,16 +1,14 @@
 
 [{
     "url":"whiplay",
-    "onlyOneImage": false,
     "img_preview":"../../assets/work/whiplay.jpg",
     "img1":"../../assets/work/whiplay.jpg",
-    "all_img": [{ "url":"../../assets/work/whiplay.jpg" }, { "url":"../../assets/work/whiplay.jpg" }, { "url":"../../assets/work/whiplay.jpg" }],
+    "all_img": ["../../assets/work/whiplay.jpg", "../../assets/work/whiplay.jpg", "../../assets/work/whiplay.jpg"],
     "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
     "link":"https://whiplay.fr/"
   },
 {
     "url":"instant",
-    "onlyOneImage": true,
     "img_preview":"../../assets/work/instant.webp",
     "img1":"../../assets/work/instant.webp",
     "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
@@ -18,7 +16,6 @@
   },
 {
     "url":"justrun",
-    "onlyOneImage": true,
     "img_preview":"../../assets/work/justrun.jpg",
     "img1":"../../assets/work/justrun.jpg",
     "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",

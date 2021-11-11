@@ -1,9 +1,8 @@
 export interface Work {
   url:string,
-  onlyOneImage: boolean,
   img_preview:string,
   img1:string,
-  all_img:object,
+  all_img:Array<string>,
   description:string,
   link:string,
 }

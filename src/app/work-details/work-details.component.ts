@@ -39,4 +39,11 @@ export class WorkDetailsComponent implements OnInit {
     this.ngxGlide.go('<');
   }
 
+  public checkIfOneImage(array: Array<string>) {
+    if (array.length <= 1) {
+      return true;
+    }
+    return false;
+  }
+
 }
