@@ -22,4 +22,12 @@
     "all_img": [],
     "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
     "link":"https://www.just-run.fr/"
-  }]
+  },
+  {
+    "url":"tinyhost",
+    "img_preview":"../../assets/work/tinyhost.jpg",
+    "all_img": ["../../assets/work/tinyhost1.jpg", "../../assets/work/tinyhost2.jpg", "../../assets/work/tinyhost3.jpg"],
+    "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+    "link":"https://tinyhost.netlify.app/"
+  }
+]
