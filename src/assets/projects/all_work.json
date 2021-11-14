@@ -11,6 +11,7 @@
     "url":"instant",
     "img_preview":"../../assets/work/instant.webp",
     "img1":"../../assets/work/instant.webp",
+    "all_img": [],
     "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
     "link":""
   },
@@ -18,6 +19,7 @@
     "url":"justrun",
     "img_preview":"../../assets/work/justrun.jpg",
     "img1":"../../assets/work/justrun.jpg",
+    "all_img": [],
     "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
     "link":"https://www.just-run.fr/"
   }]
