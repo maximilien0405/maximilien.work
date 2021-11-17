@@ -1,33 +1,32 @@
 
 [{
     "url":"whiplay",
-    "img_preview":"../../assets/work/whiplay.jpg",
-    "img1":"../../assets/work/whiplay.jpg",
-    "all_img": ["../../assets/work/whiplay.jpg", "../../assets/work/whiplay.jpg", "../../assets/work/whiplay.jpg"],
+    "img_preview":"../../assets/work/whiplay1.png",
+    "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
     "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
     "link":"https://whiplay.fr/"
   },
 {
-    "url":"instant",
-    "img_preview":"../../assets/work/instant.webp",
-    "img1":"../../assets/work/instant.webp",
-    "all_img": [],
-    "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
-    "link":""
-  },
-{
     "url":"justrun",
-    "img_preview":"../../assets/work/justrun.jpg",
-    "img1":"../../assets/work/justrun.jpg",
+    "img_preview":"../../assets/work/justrunPrev.png",
+    "img1":"../../assets/work/justrun1.png",
     "all_img": [],
     "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
     "link":"https://www.just-run.fr/"
   },
   {
     "url":"tinyhost",
-    "img_preview":"../../assets/work/tinyhost.jpg",
-    "all_img": ["../../assets/work/tinyhost1.jpg", "../../assets/work/tinyhost2.jpg", "../../assets/work/tinyhost3.jpg"],
+    "img_preview":"../../assets/work/tinyhostPrev.png",
+    "img1":"../../assets/work/tinyhost1.png",
+    "all_img": [],
     "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
     "link":"https://tinyhost.netlify.app/"
+  },
+  {
+    "url":"instant",
+    "img_preview":"../../assets/work/instant2.png",
+    "all_img": ["../../assets/work/instant1.png","../../assets/work/instant2.png"],
+    "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
+    "link":""
   }
 ]

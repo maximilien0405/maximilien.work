@@ -24,10 +24,11 @@ export class HomeComponent implements OnInit {
 
   breakpoints:object = {
     800: {
-      perView: 1
+      perView: 1,
+      peek: { before: 0, after: 50 }
     }
   }
-  
+
   ngOnInit(): void {
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;

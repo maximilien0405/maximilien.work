@@ -1,25 +1,19 @@
 
 [{
   "url":"whiplay",
-  "img_preview":"../../assets/work/whiplay.jpg",
+  "img_preview":"../../assets/work/whiplay1.png",
   "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
   "link":"https://whiplay.fr/"
 },
 {
-  "url":"instant",
-  "img_preview":"../../assets/work/instant.webp",
-  "description":"Dashboard d'un concept de réseau social nommé 'Instant'.",
-  "link":""
-},
-{
   "url":"justrun",
-  "img_preview":"../../assets/work/justrun.jpg",
+  "img_preview":"../../assets/work/justrunPrev.png",
   "description":"Site de mon projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
   "link":"https://www.just-run.fr/"
 },
 {
   "url":"tinyhost",
-  "img_preview":"../../assets/work/tinyhost.jpg",
+  "img_preview":"../../assets/work/tinyhostPrev.png",
   "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
   "link":"https://tinyhost.netlify.app/"
 }
