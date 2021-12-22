@@ -1,27 +1,28 @@
 
-[{
+[  {
+  "url":"tinyhost",
+  "img_preview":"../../assets/work/tinyhostPrev.png",
+  "img1":"../../assets/work/tinyhost1.png",
+  "all_img": [],
+  "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+  "link":"https://tinyhost.netlify.app/"
+},
+{
+  "url":"justrun",
+  "img_preview":"../../assets/work/justrunPrev.png",
+  "img1":"../../assets/work/justrun1.png",
+  "all_img": [],
+  "description":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "link":"https://www.just-run.fr/"
+},
+{
     "url":"whiplay",
     "img_preview":"../../assets/work/whiplay1.png",
     "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
     "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
     "link":"https://whiplay.fr/"
   },
-{
-    "url":"justrun",
-    "img_preview":"../../assets/work/justrunPrev.png",
-    "img1":"../../assets/work/justrun1.png",
-    "all_img": [],
-    "description":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
-    "link":"https://www.just-run.fr/"
-  },
-  {
-    "url":"tinyhost",
-    "img_preview":"../../assets/work/tinyhostPrev.png",
-    "img1":"../../assets/work/tinyhost1.png",
-    "all_img": [],
-    "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
-    "link":"https://tinyhost.netlify.app/"
-  },
+
   {
     "url":"instant",
     "img_preview":"../../assets/work/instant2.png",

@@ -1,9 +1,9 @@
 
 [{
-  "url":"whiplay",
-  "img_preview":"../../assets/work/whiplay1.png",
-  "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
-  "link":"https://whiplay.fr/"
+  "url":"tinyhost",
+  "img_preview":"../../assets/work/tinyhostPrev.png",
+  "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+  "link":"https://tinyhost.netlify.app/"
 },
 {
   "url":"justrun",
@@ -12,9 +12,9 @@
   "link":"https://www.just-run.fr/"
 },
 {
-  "url":"tinyhost",
-  "img_preview":"../../assets/work/tinyhostPrev.png",
-  "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
-  "link":"https://tinyhost.netlify.app/"
+  "url":"whiplay",
+  "img_preview":"../../assets/work/whiplay1.png",
+  "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
+  "link":"https://whiplay.fr/"
 }
 ]
