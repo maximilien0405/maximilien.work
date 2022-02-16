@@ -19,10 +19,12 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@glidejs/glide": "^3.4.1",
+    "animate.css": "^4.1.1",
     "ngx-glide": "^12.1.1",
     "ngx-owl-carousel-o": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "wow.js": "^1.2.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
