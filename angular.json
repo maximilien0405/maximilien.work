@@ -47,9 +47,7 @@
               "node_modules/animate.css/animate.min.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/wow.js/dist/wow.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
