@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
       this.component_home_work = res;
     });
 
-    this.ngxGlide.gap = 20;
     this.ngxGlide.perView = 2;
     this.ngxGlide.showArrows = false;
     this.ngxGlide.showBullets = false;
