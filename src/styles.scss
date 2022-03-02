@@ -175,6 +175,10 @@ $black: #272d2d;
     grid-template-columns: 1fr 1fr !important;
     gap: 15px !important;
   }
+
+  .all-box-services {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* ---------------------------------------------------
@@ -247,8 +251,12 @@ h2 {
 h3 {
   font-family: 'Marcellus';
   font-weight: 500 !important;
-  font-size: 22px;
+  font-size: 20px;
   color: $black;
+}
+
+.subtitle {
+  color: $light-black;
 }
 
 button {
@@ -397,37 +405,8 @@ header {
     max-width: 450px;
   }
 
-  .box-social {
+  .box {
     padding: 0px 30px;
-  }
-}
-
-.separator {
-  width: 100%;
-  height: 2px;
-  background-color: $border-color;
-  margin: 50px 0px;
-}
-
-/* ---------------------------------------------------
-  ABOUT ME
------------------------------------------------------ */
-
-.box-social {
-  padding: 15px 30px;
-  border: 1px solid $border-color;
-  background-color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transform: all 250ms;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: 200ms all;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.04);
-
-  &:hover {
-    border: 1px solid $border-hover;
   }
 }
 
@@ -437,6 +416,27 @@ header {
   width: 305.1px;
   border-radius: 8px;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------------------------------------------
+  SERVICES
+----------------------------------------------------- */
+
+.all-box-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px;
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 25px;
+  }
+
+  .subtitle {
+    margin-top: 15px;
+  }
 }
 
 /* ---------------------------------------------------
@@ -578,7 +578,7 @@ header {
   }
 }
 
-.box-social {
+.box {
   padding: 15px;
   border: 1px solid $border-color;
   background-color: white;
