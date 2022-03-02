@@ -1,14 +1,13 @@
 <!------ NAVBAR ---------------------------------------------------->
 
-<nav class="wow fadeInDown">
+<nav class="wow fadeInDown" id="accueil">
   <a href="/">
     <h2>MZ.</h2>
   </a>
   <div class="nav-links">
-    <a class="link">Accueil</a>
-    <a class="link">Services</a>
-    <a class="link">Projets</a>
-    <a class="link">Contact</a>
+    <a href="#services" class="link">Services</a>
+    <a href="#realisations" class="link">Réalisations</a>
+    <a href="#contact" class="link">Contact</a>
   </div>
   <div class="theme wow fadeIn">
     <img src="../../assets/icons/theme-dark.svg" alt="menu-icon">
@@ -28,7 +27,7 @@
     <p class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat atque neque reprehenderit ex
       facere, nostrum recusandae non dicta cumque deleniti.
     </p>
-    <button class="box-social">Contact me</button>
+    <button class="box">Contact me</button>
   </div>
   <img src="../../assets/images/moi.jpeg" class="pdp wow fadeIn" alt="Photo de moi" />
 </header>
@@ -36,15 +35,28 @@
 <!------ SERVICES -------------------------------------------------->
 
 <main>
-  <section>
+  <section id="services">
     <h2 class="wow fadeIn"><span class="special-span">01</span> Services</h2>
-
+    <div class="all-box-services">
+      <div class="box">
+        <h3>UI / UX design</h3>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perspiciatis expedita natus amet deserunt?</p>
+      </div>
+      <div class="box">
+        <h3>Front-end development</h3>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perspiciatis expedita natus amet deserunt?</p>
+      </div>
+      <div class="box">
+        <h3>SEO & optimisation</h3>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perspiciatis expedita natus amet deserunt?</p>
+      </div>
+    </div>
   </section>
 
-  <!------ PROJETS -------------------------------------------------->
+  <!------ REALISATION ------------------------------------------------>
 
-  <section>
-    <h2 class="wow fadeIn"><span class="special-span">01</span> Réalisations</h2>
+  <section id="realisations">
+    <h2 class="wow fadeIn"><span class="special-span">02</span> Réalisations</h2>
 
     <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 100 }" [showArrows]="false" [gap]="20"
       [perView]="2" [showBullets]="false" [breakpoints]="this.breakpoints">
@@ -69,8 +81,7 @@
         <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">Tout voir ></a>
       </div>
       <div style="display: flex;">
-        <a (click)="back()" class="arrow">
-        </a>
+        <a (click)="back()" class="arrow"><</a>
         <a (click)="next()" class="arrow" style="margin-left: 5px;">></a>
       </div>
     </div>
@@ -78,50 +89,45 @@
 
   <!---- CONTACT ----------------------------------------------->
 
+  <section id="contact">
+    <h2 class="wow fadeIn"><span class="special-span">03 </span> Contact</h2>
+    <p class="paragraph wow fadeIn">Vous pouvez me contacter directement par e-mail, à l'addresse <a
+        href="mailto:contact@maximilien.work" class="link-flash" rel="noopener">contact@maximilien.work</a>, ou bien me
+      téléphoner pour toute proposition de projet au <a href="tel:0041764970405" class="link-flash" rel="noopener">+41
+        76
+        497 04 05</a>.</p>
 
-  <h2 class="wow fadeIn"><span class="special-span">02 </span> Contact</h2>
-  <p class="paragraph wow fadeIn">Vous pouvez me contacter directement par e-mail, à l'addresse <a
-      href="mailto:contact@maximilien.work" class="link-flash" rel="noopener">contact@maximilien.work</a>, ou bien me
-    téléphoner pour toute proposition de projet au <a href="tel:0041764970405" class="link-flash" rel="noopener">+41
-      76
-      497 04 05</a>.</p>
-
-  <div class="all-box-social wow fadeIn">
-    <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
-      <div class="box-social">
-        <div class="left-box">
-          <img src="../../assets/images/in.png" style="height: 25px; width: 25px;" alt="linkedin-icon">
-        </div> Linkedin
-      </div>
-    </a>
-    <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
-      <div class="box-social">
-        <div class="left-box">
-          <img src="../../assets/images/gh.png" style="height: 25px; width: 25px;" alt="github-icon">
-        </div>Github
-      </div>
-    </a>
-    <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
-      <div class="box-social">
-        <div class="left-box">
-          <img src="../../assets/images/be.png" style="height: 25px; width: 25px;" alt="behance-icon">
+    <div class="all-box-social wow fadeIn">
+      <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/in.png" style="height: 25px; width: 25px;" alt="linkedin-icon">
+          </div> Linkedin
         </div>
-        Behance
-      </div>
-    </a>
-    <a href="https://www.instagram.com/maximilien_work/" target="_blank" rel="noopener">
-      <div class="box-social">
-        <div class="left-box">
-          <img src="../../assets/images/insta.png" style="height: 25px; width: 25px;" alt="instagram-icon">
+      </a>
+      <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/gh.png" style="height: 25px; width: 25px;" alt="github-icon">
+          </div>Github
         </div>
-        Instagram
-      </div>
-    </a>
-  </div>
+      </a>
+      <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/be.png" style="height: 25px; width: 25px;" alt="behance-icon">
+          </div>
+          Behance
+        </div>
+      </a>
+      <a href="https://www.instagram.com/maximilien_work/" target="_blank" rel="noopener">
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/insta.png" style="height: 25px; width: 25px;" alt="instagram-icon">
+          </div>
+          Instagram
+        </div>
+      </a>
+    </div>
+  </section>
 </main>
-
-<div class="separator"></div>
-
-<footer>
-  <h3>I am thrilled to answer to your next project</h3>
-</footer>
