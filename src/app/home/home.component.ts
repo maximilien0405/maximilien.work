@@ -61,4 +61,8 @@ export class HomeComponent implements OnInit {
   join(url:any):void {
     this.router.navigateByUrl("/projet/" + url);
   }
+
+  openNav() {
+
+  }
 }
