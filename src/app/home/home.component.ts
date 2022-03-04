@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   public frameShow:boolean = false;
   imageLink:string = "";
   description:string = "";
+  mobileSidebar: boolean = false;
 
   constructor(private projectService: ProjectsService, private router: Router) {
   }
@@ -63,6 +64,10 @@ export class HomeComponent implements OnInit {
   }
 
   openNav() {
+    this.mobileSidebar = !this.mobileSidebar;
+  }
 
+  closeNav() {
+    this.mobileSidebar = false;
   }
 }

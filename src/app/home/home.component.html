@@ -1,6 +1,35 @@
+<!------ MOBILE SIDEBAR -------------------------------------------->
+
+<div *ngIf="mobileSidebar" class="mobile-sidebar">
+  <a (click)="closeNav()"><img src="icons/close.svg" alt="close-icon"></a>
+
+  <div class="mobile-text">
+    <a (click)="closeNav()" id="01" href="#nav" class="item-navbar selected special-item"><span>01</span>Accueil</a>
+    <div class="separator-item">
+        <div class="separator"></div>
+    </div>
+
+    <a (click)="closeNav()" id="02" href="#services" class="item-navbar selected special-item"><span>02</span>Services</a>
+    <div class="separator-item">
+        <div class="separator"></div>
+    </div>
+
+    <a (click)="closeNav()" id="03" href="#realisations" class="item-navbar selected special-item"><span>03</span>Réalisations</a>
+    <div class="separator-item">
+        <div class="separator"></div>
+    </div>
+
+    <a (click)="closeNav()" id="04" href="#contact" class="item-navbar selected special-item"><span>04</span>Contact</a>
+    <div class="separator-item">
+        <div class="separator"></div>
+    </div>
+  </div>
+  
+</div>
+
 <!------ NAVBAR ---------------------------------------------------->
 
-<nav class="wow fadeInDown" id="accueil">
+<nav id="nav" class="wow fadeInDown" id="accueil">
   <a href="/">
     <h2>MZ.</h2>
   </a>
@@ -9,9 +38,10 @@
     <a href="#realisations" class="link">Réalisations</a>
     <a href="#contact" class="link">Contact</a>
   </div>
-  <div class="theme wow fadeIn">
-    <img src="../../assets/icons/theme-dark.svg" alt="menu-icon">
-    <!--<img src="../../assets/icons/theme-light.svg" alt="menu-icon">-->
+  <div class="icons-box wow fadeIn">
+    <img src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
+    <img src="../../assets/icons/language.svg" alt="language-icon">
+    <!--<img src="../../assets/icons/theme-light.svg" alt="theme-light-icon">-->
   </div>
 
   <div class="hamburger wow fadeIn" (click)="openNav()">
@@ -23,8 +53,8 @@
 
 <header>
   <div class="wow fadeIn">
-    <h1>Hey, moi c'est <br>Maximilien</h1>
-    <p class="subtitle">Un freelance web-designer & développeur débordant d'idées afin de porter votre projet au next-level.</p>
+    <h1>Maximilien Zimmermann</h1>
+    <p class="subtitle">Un freelance web-designer & développeur débordant d'idées afin de porter votre projet au next-level 🚀</p>
     <a href="#contact" class="box">Contactez moi</a>
   </div>
   <img src="../../assets/images/moi.jpeg" class="pdp wow fadeIn" alt="Photo de moi" />
@@ -37,19 +67,16 @@
     <h2 class="wow fadeIn"><span class="special-span">01</span> Services</h2>
     <div class="all-box-services">
       <div class="box">
-        <h3>Web design</h3>
+        <h3>🎨 Web design</h3>
         <p class="subtitle">Prototypes, charte graphique ou bien encore maquettes visuelles complètes.</p>
-        <a href="" class="link-flash">Plus d'infos ></a>
       </div>
       <div class="box">
-        <h3>Développement Front-end</h3>
+        <h3>🖥️ Dév Front-end</h3>
         <p class="subtitle">Intégration web, applications web et modification de sites existants.</p>
-        <a href="" class="link-flash">Plus d'infos ></a>
       </div>
       <div class="box">
-        <h3>SEO & optimisation</h3>
+        <h3>⚙️ SEO & optimisation</h3>
         <p class="subtitle">Référencement, accesibilité ou bien optimisation de performances.</p>
-        <a href="" class="link-flash">Plus d'infos ></a>
       </div>
     </div>
   </section>
