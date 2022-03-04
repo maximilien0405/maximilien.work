@@ -159,6 +159,23 @@ $black: #272d2d;
 }
 
 @media (max-width: 992px) {
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: red;
+  }
+
+  header {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
   .container {
     width: 100%;
     padding-right: 25px !important;
@@ -338,6 +355,29 @@ img::selection {
 }
 
 /* ---------------------------------------------------
+  MOBILE SIDEBAR
+-----------------------------------------------------  */
+
+.mobile-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10000;
+  overflow-x: hidden;
+  transition: all 0.5s; 
+
+
+  img {
+    position:absolute;
+    right: 1.5625rem !important;
+    top: 1.5625rem !important;
+  }
+}
+
+/* ---------------------------------------------------
   NAVBAR
 -----------------------------------------------------  */
 
@@ -368,13 +408,18 @@ nav {
   }
 }
 
-.theme {
-  width: 1.5625rem;
-  height: 1.5625rem;
-  cursor: pointer;
+.icons-box {
+  display: flex;
 
   img {
+    cursor: pointer;
+    width: 1.5625rem;
+    height: 1.5625rem;
     filter: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg) brightness(99%) contrast(84%);
+  }
+
+  img:first-child {
+    margin-right: 15px;
   }
 } 
 
@@ -413,7 +458,7 @@ header {
 }
 
 .pdp {
-  margin-top: 35px;
+  margin-top: 15px;
   height: 300px;
   width: 305.1px;
   border-radius: 8px;
@@ -438,7 +483,6 @@ header {
 
   .subtitle {
     margin-top: 15px;
-    margin-bottom: 15px;
   }
 }
 
