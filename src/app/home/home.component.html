@@ -1,54 +1,3 @@
-<!------ MOBILE SIDEBAR -------------------------------------------->
-
-<div *ngIf="mobileSidebar" class="mobile-sidebar">
-  <a (click)="closeNav()"><img src="icons/close.svg" alt="close-icon"></a>
-
-  <div class="mobile-text">
-    <a (click)="closeNav()" id="01" href="#nav" class="item-navbar selected special-item"><span>01</span>Accueil</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" id="02" href="#services" class="item-navbar selected special-item"><span>02</span>Services</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" id="03" href="#realisations" class="item-navbar selected special-item"><span>03</span>Réalisations</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" id="04" href="#contact" class="item-navbar selected special-item"><span>04</span>Contact</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-  </div>
-
-</div>
-
-<!------ NAVBAR ---------------------------------------------------->
-
-<nav id="nav" class="wow fadeInDown" id="accueil">
-  <a href="/">
-    <h2>MZ.</h2>
-  </a>
-  <div class="nav-links">
-    <a href="#services" class="link">Services</a>
-    <a href="#realisations" class="link">Réalisations</a>
-    <a href="#contact" class="link">Contact</a>
-  </div>
-  <div class="icons-box wow fadeIn">
-    <img src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
-    <img src="../../assets/icons/language.svg" alt="language-icon">
-    <!--<img src="../../assets/icons/theme-light.svg" alt="theme-light-icon">-->
-  </div>
-
-  <div class="hamburger wow fadeIn" (click)="openNav()">
-    <img src="../../assets/icons/menu-1.svg" alt="menu-icon">
-  </div>
-</nav>
-
 <!------ HEADER ---------------------------------------------------->
 
 <header>
@@ -65,7 +14,7 @@
 <main>
   <section id="services">
     <h2 class="wow fadeIn"><span class="special-span">01</span> Services</h2>
-    <div class="all-box-services">
+    <div class="all-box-services wow fadeIn">
       <div class="box">
         <h3>Web design</h3>
         <p class="subtitle">Prototypes, charte graphique ou bien encore maquettes visuelles complètes.</p>
@@ -108,7 +57,7 @@
         <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">Voir toutes les réalisations ></a>
         <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">Tout voir ></a>
       </div>
-      <div style="display: flex;">
+      <div style="display: flex;" class="wow fadeIn">
         <a (click)="back()" class="arrow"><</a>
         <a (click)="next()" class="arrow" style="margin-left: 5px;">></a>
       </div>
