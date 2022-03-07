@@ -1,7 +1,14 @@
 <!------ MOBILE SIDEBAR -------------------------------------------->
 
 <div *ngIf="mobileSidebar" class="mobile-sidebar">
-  <a (click)="closeNav()"><img src="icons/close.svg" alt="close-icon"></a>
+  <div class="icons-container">
+    <div style="display: flex;">
+      <a><img src="../assets/icons/theme-dark.svg" alt="theme-dark-icon"></a>
+      <a style="margin-left: 15px;"><img src="../assets/icons/language.svg" alt="language-icon"></a>
+    </div>
+    <a (click)="closeNav()"><img src="../assets/icons/close.svg" alt="close-icon"></a>
+  </div>
+
 
   <div class="mobile-text">
     <a (click)="closeNav()" id="01" href="#nav" class="item-navbar selected special-item"><span>01</span>Accueil</a>
@@ -20,9 +27,6 @@
     </div>
 
     <a (click)="closeNav()" id="04" href="#contact" class="item-navbar selected special-item"><span>04</span>Contact</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
   </div>
 
 </div>
