@@ -103,6 +103,12 @@ $black: #272d2d;
     font-size: 45px !important;
   }
 
+  .pdp {
+    height: 250px !important;
+    width: 250px !important;
+    margin-top: 0px !important;
+  }
+
   body .all-box-social {
     grid-template-columns: 1fr !important;
     gap: 15px !important;
@@ -465,8 +471,7 @@ header {
   }
 
   .box {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding: 14px 30px 14px 30px !important;
     width: fit-content;
   }
 }
