@@ -1,54 +1,3 @@
-<!------ MOBILE SIDEBAR -------------------------------------------->
-
-<div *ngIf="mobileSidebar" class="mobile-sidebar">
-  <a (click)="closeNav()"><img src="icons/close.svg" alt="close-icon"></a>
-
-  <div class="mobile-text">
-    <a (click)="closeNav()" id="01" href="#nav" class="item-navbar selected special-item"><span>01</span>Accueil</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" id="02" href="#services" class="item-navbar selected special-item"><span>02</span>Services</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" id="03" href="#realisations" class="item-navbar selected special-item"><span>03</span>Réalisations</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" id="04" href="#contact" class="item-navbar selected special-item"><span>04</span>Contact</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-  </div>
-
-</div>
-
-<!------ NAVBAR ---------------------------------------------------->
-
-<nav id="nav" class="wow fadeInDown" id="accueil">
-  <a href="/">
-    <h2>MZ.</h2>
-  </a>
-  <div class="nav-links">
-    <a href="#services" class="link">Services</a>
-    <a href="#realisations" class="link">Réalisations</a>
-    <a href="#contact" class="link">Contact</a>
-  </div>
-  <div class="icons-box wow fadeIn">
-    <img src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
-    <img src="../../assets/icons/language.svg" alt="language-icon">
-    <!--<img src="../../assets/icons/theme-light.svg" alt="theme-light-icon">-->
-  </div>
-
-  <div class="hamburger wow fadeIn" (click)="openNav()">
-    <img src="../../assets/icons/menu-1.svg" alt="menu-icon">
-  </div>
-</nav>
-
 <!------ HEADER ---------------------------------------------------->
 
 <header>
@@ -65,7 +14,7 @@
 <main>
   <section id="services">
     <h2 class="wow fadeIn"><span class="special-span">01</span> Services</h2>
-    <div class="all-box-services">
+    <div class="all-box-services wow fadeIn">
       <div class="box">
         <h3>Web design</h3>
         <p class="subtitle">Prototypes, charte graphique ou bien encore maquettes visuelles complètes.</p>
@@ -96,21 +45,21 @@
           <img [src]="work.img_preview" class="img-box" [alt]="work.url">
           <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
             <img src="../../assets/icons/infos.svg"
-              style="height: 23px; width: 23px; margin-top: 8px; margin-left: 7.2px;" class="icon-color"
+              style="height: 1.4375rem; width: 1.4375rem; margin-top: 0.5rem; margin-left: 0.45rem;" class="icon-color"
               [alt]="work.url">
           </a>
         </div>
       </div>
     </ngx-glide>
 
-    <div style="display: flex; justify-content: space-between; margin-top: 20px; align-items: center;">
+    <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
       <div>
         <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">Voir toutes les réalisations ></a>
         <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">Tout voir ></a>
       </div>
-      <div style="display: flex;">
+      <div style="display: flex;" class="wow fadeIn">
         <a (click)="back()" class="arrow"><</a>
-        <a (click)="next()" class="arrow" style="margin-left: 5px;">></a>
+        <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
       </div>
     </div>
   </section>
@@ -129,21 +78,21 @@
       <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
         <div class="box">
           <div class="left-box">
-            <img src="../../assets/images/in.png" style="height: 25px; width: 25px;" alt="linkedin-icon">
+            <img src="../../assets/images/in.png" style="height: 1.5625rem; width: 1.5625rem;" alt="linkedin-icon">
           </div> Linkedin
         </div>
       </a>
       <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
         <div class="box">
           <div class="left-box">
-            <img src="../../assets/images/gh.png" style="height: 25px; width: 25px;" alt="github-icon">
+            <img src="../../assets/images/gh.png" style="height: 1.5625rem; width: 1.5625rem;" alt="github-icon">
           </div>Github
         </div>
       </a>
       <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
         <div class="box">
           <div class="left-box">
-            <img src="../../assets/images/be.png" style="height: 25px; width: 25px;" alt="behance-icon">
+            <img src="../../assets/images/be.png" style="height: 1.5625rem; width: 1.5625rem;" alt="behance-icon">
           </div>
           Behance
         </div>
@@ -151,7 +100,7 @@
       <a href="https://www.instagram.com/maximilien_work/" target="_blank" rel="noopener">
         <div class="box">
           <div class="left-box">
-            <img src="../../assets/images/insta.png" style="height: 25px; width: 25px;" alt="instagram-icon">
+            <img src="../../assets/images/insta.png" style="height: 1.5625rem; width: 1.5625rem;" alt="instagram-icon">
           </div>
           Instagram
         </div>
