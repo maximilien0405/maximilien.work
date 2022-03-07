@@ -177,8 +177,8 @@ $black: #272d2d;
 
   nav {
     width: 100%;
-    height: 65px;
-    margin-top: 10px !important;
+    height: 4.0625rem;
+    margin-top: 0.625rem !important;
   }
 
   .pdp {
@@ -448,13 +448,13 @@ img::selection {
       font-weight: 700;
       font-size: 4rem;
       left: 0;
-      margin-right: -20px;
-      margin-top: 20px;
+      margin-right: -1.25rem;
+      margin-top: 1.25rem;
       color: #e2e7ee !important;
   }
 
   .special-item {
-      margin-top: 0px !important;
+      margin-top: 0rem !important;
   }
 
   a {
@@ -474,18 +474,18 @@ img::selection {
       transition: all 0.3s;
       width: 100%;
       padding: 0rem 2rem 0rem 2rem;
-      margin:20px 0px 20px 0px;
+      margin:1.25rem 0rem 1.25rem 0rem;
   }
 
   .separator {
-      max-width: 615px !important;
+      max-width: 38.4375rem !important;
       background-color: $border-color;
       height: 0.0625rem;
       margin:0 auto;
   }
 
   .item-navbar {
-      line-height: 90px;
+      line-height: 5.625rem;
   }
 }
 

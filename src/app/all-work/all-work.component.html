@@ -1,7 +1,7 @@
 <a routerLink="home" class="wow fadeIn link-flash go-back">< Retour</a>
 
 <main>
-  <h2 class="wow fadeIn" style="margin:50px 0px 50px 0px !important">Toutes les réalisations</h2>
+  <h2 class="wow fadeIn" style="margin:3.125rem 0rem 3.125rem 0rem !important">Toutes les réalisations</h2>
 
   <div class="all-rea-work">
     <div *ngFor="let work of component_all_work">
@@ -10,9 +10,9 @@
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">Cliquez pour plus d'infos</p>
         </div>
-        <img [src]="work.img_preview" class="img-box" style="border-radius: 8px;" [alt]="work.url">
+        <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
         <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
-          <img src="../../assets/icons/infos.svg" style="height: 23px; width:23px; margin-top: 7px; margin-left: 7px;" class="icon-color" [alt]="work.url">
+          <img src="../../assets/icons/infos.svg" style="height: 1.4375rem; width:1.4375rem; margin-top: 0.4375rem; margin-left: 0.4375rem;" class="icon-color" [alt]="work.url">
         </a>
       </div>
 
