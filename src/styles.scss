@@ -99,6 +99,10 @@ $black: #272d2d;
 ----------------------------------------------------- */
 
 @media (max-width: 508px) {
+  h1 {
+    font-size: 45px !important;
+  }
+
   body .all-box-social {
     grid-template-columns: 1fr !important;
     gap: 15px !important;
@@ -166,13 +170,23 @@ $black: #272d2d;
     background-color: red;
   }
 
+  .pdp {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
   header {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     div {
       width: 100%;
       margin: 0 auto;
       text-align: center;
+
+      a {
+        margin: 0 auto;
+      }
     }
   }
 
