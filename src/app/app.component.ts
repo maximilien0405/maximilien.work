@@ -14,4 +14,8 @@ export class AppComponent {
   closeNav() {
     this.mobileSidebar = false;
   }
+
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+ }
 }
