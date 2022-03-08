@@ -21,11 +21,11 @@
           </div>
         </div>
 
-        <p style="margin-top: 1.5625rem;" class="wow fadeIn">{{ work.description}}</p>
+        <p style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description}}</p>
       </div>
 
       <div *ngIf="checkIfOneImage(work.all_img)">
-        <p style="margin-top: 1.5625rem;" class="wow fadeIn">{{ work.description}}</p>
+        <p style="margin-top: 1.5625rem;" class="subtitle wow fadeIn">{{ work.description}}</p>
         <div *ngIf="work.link != ''" style="margin-top: 1.25rem;" class="wow fadeIn">
         <a [href]="work.link" class="link-flash" target="_blank">Plus d'infos ></a>
         </div>

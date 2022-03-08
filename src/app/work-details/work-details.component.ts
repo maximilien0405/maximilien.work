@@ -27,7 +27,7 @@ export class WorkDetailsComponent implements OnInit {
 
   breakpoints:object = {
     800: {
-      peek: { before: 0, after: 50 }
+      peek: { before: 0, after: 15 }
     }
   }
 

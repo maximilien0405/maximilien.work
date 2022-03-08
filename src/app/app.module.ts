@@ -20,6 +20,7 @@ import { WorkDetailsComponent } from './work-details/work-details.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgxGlideModule,
     AppRoutingModule,
     BrowserAnimationsModule,
