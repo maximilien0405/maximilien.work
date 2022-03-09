@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   breakpoints:object = {
     800: {
       perView: 1,
-      peek: { before: 0, after: 15 }
+      peek: { before: 0, after: 1 }
     }
   }
 

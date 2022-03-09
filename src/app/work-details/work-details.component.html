@@ -7,7 +7,7 @@
 
       <div *ngIf="!checkIfOneImage(work.all_img)">
 
-        <ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 100 }" [breakpoints]="this.breakpoints">
+        <ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
           <div *ngFor="let img of work.all_img">
             <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
           </div>
