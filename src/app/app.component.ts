@@ -30,9 +30,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ]
 })
 export class AppComponent {
-  ngInit() {
+  ngOnInit() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('dark-theme');
+    }
+
+    if(localStorage.getItem('theme') == 'black') {
+      this.toggleDarkTheme();
+    } else {
+      this.toggleWhiteTheme();
     }
   }
 
@@ -50,11 +56,13 @@ export class AppComponent {
   toggleDarkTheme() {
     document.body.classList.add('dark-theme');
     this.whiteTheme = false;
+    localStorage.setItem('theme', 'black')
   }
 
   toggleWhiteTheme() {
     document.body.classList.remove('dark-theme');
     this.whiteTheme = true;
+    localStorage.setItem('theme', 'white')
   }
 
 }
