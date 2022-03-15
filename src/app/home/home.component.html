@@ -3,8 +3,8 @@
 <header>
   <div>
     <h1 class="wow fadeIn">Maximilien Zimmermann</h1>
-    <p class="wow fadeIn subtitle">Un freelance web-designer & développeur débordant d'idées afin de porter votre projet au next-level.</p>
-    <a href="#contact" class="wow fadeIn box">Me contacter</a>
+    <p class="wow fadeIn subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
+    <a href="#contact" class="wow fadeIn box">{{ 'HOME.BUTTON' | translate }}</a>
   </div>
   <img src="../../assets/images/moi.jpeg" class="pdp wow fadeIn" alt="Photo de moi" />
 </header>
@@ -13,19 +13,19 @@
 
 <main>
   <section id="services">
-    <h2 class="wow fadeIn"><span class="special-span">01</span> Services</h2>
+    <h2 class="wow fadeIn"><span class="special-span">01</span>{{ 'HOME.PART-1.TITLE' | translate }}</h2>
     <div class="all-box-services wow fadeIn">
       <div class="box">
-        <h3>Web design</h3>
-        <p class="subtitle">Prototypes, charte graphique ou bien encore maquettes visuelles complètes.</p>
+        <h3>{{ 'HOME.PART-1.BOX-1-TITLE' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.PART-1.BOX-1-SUB' | translate }}</p>
       </div>
       <div class="box">
-        <h3>Dév Front-end</h3>
-        <p class="subtitle">Intégration web, applications web et modification de sites existants.</p>
+        <h3>{{ 'HOME.PART-1.BOX-2-TITLE' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.PART-1.BOX-2-SUB' | translate }}</p>
       </div>
       <div class="box">
-        <h3>SEO & optimisation</h3>
-        <p class="subtitle">Référencement, accesibilité ou bien optimisation de performances.</p>
+        <h3>{{ 'HOME.PART-1.BOX-3-TITLE' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.PART-1.BOX-3-SUB' | translate }}</p>
       </div>
     </div>
   </section>
@@ -33,14 +33,14 @@
   <!------ REALISATION ------------------------------------------------>
 
   <section id="realisations">
-    <h2 class="wow fadeIn"><span class="special-span">02</span> Réalisations</h2>
+    <h2 class="wow fadeIn"><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
 
     <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 70 }" [showArrows]="false" [gap]="20"
       [perView]="2" [showBullets]="false" [breakpoints]="this.breakpoints">
       <div *ngFor="let work of component_home_work">
         <div class="box-realisation wow fadeIn" (click)="join(work.url)">
           <div class="overlay rea-box-desktop">
-            <p class="text-overlay paragraph">Cliquez pour plus d'infos</p>
+            <p class="text-overlay paragraph">{{ 'HOME.PART-2.BOX-HOVER' | translate }}</p>
           </div>
           <img [src]="work.img_preview" class="img-box" [alt]="work.url">
           <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
@@ -54,8 +54,8 @@
 
     <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
       <div>
-        <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">Voir toutes les réalisations ></a>
-        <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">Tout voir ></a>
+        <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">{{ 'HOME.PART-2.PARAGRAPH-DESK' | translate }}</a>
+        <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">{{ 'HOME.PART-2.PARAGRAPH-MOB' | translate }}</a>
       </div>
       <div style="display: flex;" class="wow fadeIn">
         <a (click)="back()" class="arrow"><</a>
@@ -67,10 +67,9 @@
   <!---- CONTACT ----------------------------------------------->
 
   <section id="contact">
-    <h2 class="wow fadeIn"><span class="special-span">03 </span> Contact</h2>
-    <p class="subtitle wow fadeIn">Vous pouvez me contacter directement par e-mail, à l'addresse <a
-        href="mailto:contact@maximilien.work" class="link-flash" rel="noopener">contact@maximilien.work</a>, ou bien me
-      téléphoner pour toute proposition de projet au <a href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497 04 05</a>.</p>
+    <h2 class="wow fadeIn"><span class="special-span">03 </span> {{ 'HOME.PART-3.TITLE' | translate }}</h2>
+    <p class="subtitle wow fadeIn">{{ 'HOME.PART-3.PARAGRAPH-1' | translate }} <a
+        href="mailto:contact@maximilien.work" class="link-flash" rel="noopener">contact@maximilien.work</a>, {{ 'HOME.PART-3.PARAGRAPH-2' | translate }} <a href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497 04 05</a>.</p>
 
     <div class="all-box-social wow fadeIn">
       <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">

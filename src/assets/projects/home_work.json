@@ -2,19 +2,22 @@
 [{
   "url":"tinyhost",
   "img_preview":"../../assets/work/tinyhostPrev.png",
-  "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+  "description_fr":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+  "description_en": "",
   "link":"https://tinyhost.netlify.app/"
 },
 {
   "url":"justrun",
   "img_preview":"../../assets/work/justrunPrev.png",
-  "description":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "description_fr":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "description_en": "",
   "link":"https://www.just-run.fr/"
 },
 {
   "url":"whiplay",
   "img_preview":"../../assets/work/whiplay1.png",
-  "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
+  "description_fr":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
+  "description_en": "",
   "link":"https://whiplay.fr/"
 }
 ]

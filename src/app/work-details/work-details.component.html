@@ -1,4 +1,4 @@
-<a routerLink="home" class="wow fadeIn link-flash go-back">< Retour</a>
+<a routerLink="home" class="wow fadeIn link-flash go-back">{{ 'DETAIL.LINK' | translate }}</a>
 
 <main>
   <div *ngFor="let work of component_all_work">
@@ -14,20 +14,22 @@
         </ngx-glide>
 
         <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
-          <a [href]="work.link" class="link-flash" target="_blank">Plus d'infos ></a>
+          <a [href]="work.link" class="link-flash" target="_blank">{{ 'DETAIL.BOTTOM-LINK' | translate }}</a>
           <div style="display: flex;">
             <a (click)="back()" class="arrow"><</a>
             <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
           </div>
         </div>
 
-        <p style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description}}</p>
+        <p *ngIf="lang == 'fr' || lang == 'FR'"style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_fr}}</p>
+        <p *ngIf="lang == 'en' || lang == 'EN'" style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_en}}</p>
       </div>
 
       <div *ngIf="checkIfOneImage(work.all_img)">
-        <p style="margin-top: 1.5625rem;" class="subtitle wow fadeIn">{{ work.description}}</p>
+        <p *ngIf="lang == 'fr' || lang == 'FR'" style="margin-top: 1.5625rem;" class="subtitle wow fadeIn">{{ work.description_fr}}</p>
+        <p *ngIf="lang == 'en' || lang == 'EN'" style="margin-top: 1.5625rem;" class="subtitle wow fadeIn">{{ work.description_en}}</p>
         <div *ngIf="work.link != ''" style="margin-top: 1.25rem;" class="wow fadeIn">
-        <a [href]="work.link" class="link-flash" target="_blank">Plus d'infos ></a>
+        <a [href]="work.link" class="link-flash" target="_blank">{{ 'DETAIL.BOTTOM-LINK' | translate }}</a>
         </div>
       </div>
     </div>

@@ -4,7 +4,8 @@
   "img_preview":"../../assets/work/tinyhostPrev.png",
   "img1":"../../assets/work/tinyhost1.png",
   "all_img": [],
-  "description":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+  "description_fr":"Home page d'un ancien projet de site web proposant de l'hébergement statique. ",
+  "description_en": "",
   "link":"https://tinyhost.netlify.app/"
 },
 {
@@ -12,22 +13,25 @@
   "img_preview":"../../assets/work/justrunPrev.png",
   "img1":"../../assets/work/justrun1.png",
   "all_img": [],
-  "description":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "description_fr":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
+  "description_en": "",
   "link":"https://www.just-run.fr/"
 },
 {
-    "url":"whiplay",
-    "img_preview":"../../assets/work/whiplay1.png",
-    "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
-    "description":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
-    "link":"https://whiplay.fr/"
-  },
+  "url":"whiplay",
+  "img_preview":"../../assets/work/whiplay1.png",
+  "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
+  "description_fr":"Refonte complète de la charte graphique du projet 'Whiplay'. Tout en reprenant les couleurs de base, je me suis basé sur quelque chose de plus moderne et user friendly.",
+  "description_en": "",
+  "link":"https://whiplay.fr/"
+},
 
-  {
-    "url":"instant",
-    "img_preview":"../../assets/work/instant2.png",
-    "all_img": ["../../assets/work/instant1.png","../../assets/work/instant2.png"],
-    "description":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
-    "link":""
-  }
+{
+  "url":"instant",
+  "img_preview":"../../assets/work/instant2.png",
+  "all_img": ["../../assets/work/instant1.png","../../assets/work/instant2.png"],
+  "description_fr":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
+  "description_en": "",
+  "link":""
+}
 ]

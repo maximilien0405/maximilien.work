@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ProjectsService } from '../projects.service';
 import { Work } from './../common/work.model'
 
@@ -9,12 +10,13 @@ import { Work } from './../common/work.model'
 })
 export class AllWorkComponent implements OnInit {
 
-  component_all_work: Work[];
+  public component_all_work: Work[];
   public frameShow:boolean = false;
-  imageLink:string = "";
-  description:string = "";
+  public imageLink:string = "";
+  public description:string = "";
+  public lang = this.translate.currentLang
 
-  constructor(private projectService: ProjectsService, private router: Router) {
+  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
   }
 
   ngOnInit(): void {

@@ -36,10 +36,35 @@ export class AppComponent {
   constructor(public translate: TranslateService) {
     translate.addLangs(['fr','en'])
     translate.setDefaultLang('en')
+
+    /* Code pour trouver langue user */
+
+    let lang = window.navigator.languages ? window.navigator.languages[0] : null;
+    lang = lang || window.navigator.language;
+
+    let shortLang = lang;
+    if (shortLang.indexOf('-') !== -1)
+        shortLang = shortLang.split('-')[0];
+
+    if (shortLang.indexOf('_') !== -1)
+        shortLang = shortLang.split('_')[0];
+
+    /* ----------------- */
+
+    if (shortLang == "fr") {
+      translate.use('fr')
+    } else {
+      translate.use('en')
+    }
   }
 
-  changeLang(lang: string) {
-    this.translate.use(lang)
+  changeLang() {
+    if (this.translate.currentLang == 'fr') {
+      this.translate.use('en');
+    }
+    else {
+      this.translate.use('fr');
+    }
   }
 
   ngOnInit() {

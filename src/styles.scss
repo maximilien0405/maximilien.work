@@ -70,6 +70,8 @@ body {
     brightness(99%) contrast(84%);
   --icon-dark: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg)
     brightness(99%) contrast(84%);
+  --icon-hover: invert(0%) sepia(10%) saturate(7500%) hue-rotate(272deg)
+    brightness(106%) contrast(94%);
 
   transition: all 0.2s;
 }
@@ -88,6 +90,8 @@ body.dark-theme {
     brightness(94%) contrast(91%);
   --icon-dark: invert(99%) sepia(11%) saturate(1049%) hue-rotate(176deg)
     brightness(99%) contrast(98%);
+  --icon-hover: invert(99%) sepia(80%) saturate(2%) hue-rotate(349deg)
+    brightness(106%) contrast(101%);
 }
 
 /* ---------------------------------------------------
@@ -560,7 +564,12 @@ nav {
     cursor: pointer;
     width: 1.5625rem;
     height: 1.5625rem;
+    transition: all 0.2s;
     filter: var(--icon-gray);
+
+    &:hover {
+      filter: var(--icon-hover);
+    }
   }
 }
 

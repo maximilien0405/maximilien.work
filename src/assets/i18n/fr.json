@@ -1,3 +1,41 @@
 {
-  "TEST":"francais"
+  "NAV": {
+    "ITEM-0": "Accueil",
+    "ITEM-1": "Services",
+    "ITEM-2": "Réalisations",
+    "ITEM-3": "Contact"
+  },
+  "HOME": {
+    "SUBTITLE": "Un freelance web-designer & développeur débordant d'idées afin de porter votre projet au next-level.",
+    "BUTTON": "Me contacter",
+    "PART-1": {
+      "TITLE": "Services",
+      "BOX-1-TITLE": "Web design",
+      "BOX-1-SUB": "Prototypes, charte graphique ou bien encore maquettes visuelles complètes.",
+      "BOX-2-TITLE": "Dév Front-end",
+      "BOX-2-SUB": "Intégration web, applications web et modification de sites existants.",
+      "BOX-3-TITLE": "SEO & optimisation",
+      "BOX-3-SUB": "Référencement, accesibilité ou bien optimisation de performances."
+    },
+    "PART-2": {
+      "TITLE": "Réalisations",
+      "BOX-HOVER": "Cliquez pour plus d'infos",
+      "PARAGRAPH-DESK": "Voir toutes les réalisations >",
+      "PARAGRAPH-MOB": "Tout voir >"
+    },
+    "PART-3": {
+      "TITLE": "Contact",
+      "PARAGRAPH-1": "Vous pouvez me contacter directement par e-mail, à l'addresse",
+      "PARAGRAPH-2": "ou bien me téléphoner pour toute proposition de projet au"
+    }
+  },
+  "PROJECT": {
+    "LINK": "< Retour",
+    "TITLE": "Toutes les réalisations",
+    "BOX-HOVER": "Cliquez pour plus d'infos"
+  },
+  "DETAIL":{
+    "LINK": "< Retour",
+    "BOTTOM-LINK": "Plus d'infos >"
+  }
 }

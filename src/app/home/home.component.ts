@@ -3,6 +3,7 @@ import { Work } from '../common/work.model';
 import { ProjectsService } from '../projects.service';
 import { Router } from '@angular/router';
 import { NgxGlideComponent } from 'ngx-glide';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +11,16 @@ import { NgxGlideComponent } from 'ngx-glide';
 })
 export class HomeComponent implements OnInit {
 
-  component_home_work: Work[];
+  public component_home_work: Work[];
   public frameShow:boolean = false;
-  imageLink:string = "";
-  description:string = "";
+  public imageLink:string = "";
+  public description: string = "";
+  public lang = this.translate.currentLang
 
-  constructor(private projectService: ProjectsService, private router: Router) {
+  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
   }
 
-  // Get the component instance.
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
-
 
   breakpoints:Record<string, unknown> = {
     800: {
