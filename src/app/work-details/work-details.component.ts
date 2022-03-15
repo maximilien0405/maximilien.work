@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { NgxGlideComponent } from 'ngx-glide';
 import { Work } from '../common/work.model';
 import { ProjectsService } from '../projects.service';
@@ -13,10 +13,14 @@ export class WorkDetailsComponent implements OnInit {
 
   public component_all_work: Work[];
   public url: string = "";
-  public lang = this.translate.currentLang
+  public lang = this.translate.currentLang;
 
   constructor(private route: ActivatedRoute, private projectService: ProjectsService, private translate: TranslateService) {
-    this.route.params.subscribe( params => this.url = params.name );
+    this.route.params.subscribe(params => this.url = params.name);
+
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.lang = event.lang
+    })
   }
   ngOnInit(): void {
     this.projectService.getAllWork().subscribe((res: Work[]) => {
@@ -47,5 +51,4 @@ export class WorkDetailsComponent implements OnInit {
     }
     return false;
   }
-
 }
