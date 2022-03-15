@@ -41,6 +41,9 @@
     <a href="#services" class="link">Services</a>
     <a routerLink="projets" class="link">Réalisations</a>
     <a href="#contact" class="link">Contact</a>
+    <a (click)="translate.use('fr') && changeLang('FR')">FR</a>
+    <a (click)="translate.use('en') && changeLang('EN')">EN</a>
+    <a>{{ 'TEST' | translate }}</a>
   </div>
   <div class="icons-box wow fadeIn">
     <img *ngIf="whiteTheme" (click)="toggleDarkTheme()" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">

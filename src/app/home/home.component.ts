@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
 
-  breakpoints:object = {
+  breakpoints:Record<string, unknown> = {
     800: {
       perView: 1,
       peek: { before: 0, after: 1 }

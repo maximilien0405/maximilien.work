@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ]
 })
 export class AppComponent {
+  public lang = this.translate.currentLang
+
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['fr','en'])
+    translate.setDefaultLang('en')
+  }
+
+  changeLang(lang: string) {
+    this.translate.use(lang)
+  }
+
   ngOnInit() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('dark-theme');
