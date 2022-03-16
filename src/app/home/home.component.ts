@@ -17,7 +17,11 @@ export class HomeComponent implements OnInit {
   public description: string = "";
   public lang = this.translate.currentLang
 
-  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {}
+  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
+    setTimeout(() => {
+      this.glideRecreate();
+    }, 100);
+  }
 
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
@@ -28,7 +32,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
     });
@@ -39,7 +43,8 @@ export class HomeComponent implements OnInit {
     this.ngxGlide.breakpoints = this.breakpoints;
   }
 
-  ngAfterViewChecked(): void {
+  glideRecreate() {
+    console.log("Glide recreated")
     this.ngxGlide.recreate();
   }
 
@@ -64,4 +69,6 @@ export class HomeComponent implements OnInit {
   join(url:any):void {
     this.router.navigateByUrl("/projet/" + url);
   }
+
+  
 }
