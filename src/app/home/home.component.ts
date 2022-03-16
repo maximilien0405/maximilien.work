@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
     setTimeout(() => {
       this.glideRecreate();
-    }, 500);
+    }, 700);
   }
 
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
@@ -36,11 +36,6 @@ export class HomeComponent implements OnInit {
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
     });
-
-    this.ngxGlide.perView = 2;
-    this.ngxGlide.showArrows = false;
-    this.ngxGlide.showBullets = false;
-    this.ngxGlide.breakpoints = this.breakpoints;
   }
 
   glideRecreate() {
