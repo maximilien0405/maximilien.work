@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
     setTimeout(() => {
       this.glideRecreate();
-    }, 100);
+    }, 500);
   }
 
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
