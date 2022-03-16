@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.updateItems()
+
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
     });
@@ -38,6 +40,13 @@ export class HomeComponent implements OnInit {
     this.ngxGlide.showArrows = false;
     this.ngxGlide.showBullets = false;
     this.ngxGlide.breakpoints = this.breakpoints;
+  }
+
+  updateItems(): void {
+    console.log("test")
+    if (this.ngxGlide) {
+      this.ngxGlide.recreate();
+    }
   }
 
   next(): void {

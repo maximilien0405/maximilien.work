@@ -1,7 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +35,7 @@ export class AppComponent {
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['fr','en'])
-    translate.setDefaultLang('en')
+    translate.setDefaultLang('fr')
 
     /* Code pour trouver langue user */
 
@@ -56,14 +56,24 @@ export class AppComponent {
     } else {
       translate.use('en')
     }
+
+    if(localStorage.getItem('lang') == 'en') {
+      translate.use('en')
+      return
+    } else {
+      translate.use('fr')
+      return
+    }
   }
 
   changeLang() {
     if (this.translate.currentLang == 'fr') {
       this.translate.use('en');
+      localStorage.setItem('lang', 'en')
     }
     else {
       this.translate.use('fr');
+      localStorage.setItem('lang', 'fr')
     }
   }
 
@@ -76,6 +86,12 @@ export class AppComponent {
       this.toggleDarkTheme();
     } else {
       this.toggleWhiteTheme();
+    }
+
+    if(localStorage.getItem('lang') == 'en') {
+      this.translate.use('en');
+    } else {
+      this.translate.use('fr');
     }
   }
 
@@ -101,5 +117,4 @@ export class AppComponent {
     this.whiteTheme = true;
     localStorage.setItem('theme', 'white')
   }
-
 }
