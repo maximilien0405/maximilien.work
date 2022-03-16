@@ -17,8 +17,7 @@ export class HomeComponent implements OnInit {
   public description: string = "";
   public lang = this.translate.currentLang
 
-  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
-  }
+  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {}
 
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
@@ -30,8 +29,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.updateItems()
-
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
     });
@@ -42,11 +39,8 @@ export class HomeComponent implements OnInit {
     this.ngxGlide.breakpoints = this.breakpoints;
   }
 
-  updateItems(): void {
-    console.log("test")
-    if (this.ngxGlide) {
-      this.ngxGlide.recreate();
-    }
+  ngAfterViewChecked(): void {
+    this.ngxGlide.recreate();
   }
 
   next(): void {
