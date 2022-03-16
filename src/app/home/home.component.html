@@ -1,80 +1,107 @@
-<img src="../../assets/images/moi.jpeg" class="pdp wow fadeIn" alt="Photo de moi"/>
+<!------ HEADER ---------------------------------------------------->
 
-<div class="title-container">
-    <h1 class="wow fadeIn title">Maximilien Z.</h1>
-    <p class="wow fadeIn subtitle">UI/UX designer & Front-end Developer</p>
-</div>
+<header>
+  <div>
+    <h1 class="wow fadeIn">Maximilien Zimmermann</h1>
+    <p class="wow fadeIn subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
+    <a href="#contact" class="wow fadeIn box">{{ 'HOME.BUTTON' | translate }}</a>
+  </div>
+  <img src="../../assets/images/moi.jpeg" class="pdp wow fadeIn" alt="Photo de moi" />
+</header>
+
+<!------ SERVICES -------------------------------------------------->
 
 <main>
-  <p class="paragraph wow fadeIn" style="margin:50px 0px 60px 0px;">
-      <span style="margin-right:10px;">👋</span>Hello ! Moi c'est Maximilien. Actuellement étudiant au <a class="link-flash" target="_blank" href="https://edu.ge.ch/site/cfpt/" rel="noopener">CFPT</a>, j'occupe mon temps libre à travailler sur des projets personnels de tout type.
-      <br><br>Depuis novembre 2021, je réalise aussi en tant qu'indépendant du <a class="link-flash" routerLink="/projets">Web Design</a> ainsi que du <a class="link-flash" routerLink="/projets">Développement Front-end</a> de sites internet pour mes clients.
-
-  <!---- REALISATIONS ------------------------------------------------>
-
-  <h2 class="wow fadeIn"><span class="special-span">01</span> Réalisations</h2>
-
-  <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 100 }" [showArrows]="false" [gap]="20" [perView]="2" [showBullets]="false" [breakpoints]="this.breakpoints">
-    <div *ngFor="let work of component_home_work">
-      <div class="box-realisation wow fadeIn" (click)="join(work.url)">
-        <div class="overlay rea-box-desktop">
-          <p class="text-overlay paragraph">Cliquez pour plus d'infos</p>
-        </div>
-        <img [src]="work.img_preview" class="img-box" [alt]="work.url">
-        <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
-          <img src="../../assets/icons/infos.svg" style="height: 23px; width: 23px; margin-top: 8px; margin-left: 7.2px;" class="icon-color" [alt]="work.url">
-        </a>
+  <section id="services">
+    <h2 class="wow fadeIn"><span class="special-span">01</span>{{ 'HOME.PART-1.TITLE' | translate }}</h2>
+    <div class="all-box-services wow fadeIn">
+      <div class="box">
+        <h3>{{ 'HOME.PART-1.BOX-1-TITLE' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.PART-1.BOX-1-SUB' | translate }}</p>
+      </div>
+      <div class="box">
+        <h3>{{ 'HOME.PART-1.BOX-2-TITLE' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.PART-1.BOX-2-SUB' | translate }}</p>
+      </div>
+      <div class="box">
+        <h3>{{ 'HOME.PART-1.BOX-3-TITLE' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.PART-1.BOX-3-SUB' | translate }}</p>
       </div>
     </div>
-  </ngx-glide>
+  </section>
 
-  <div style="display: flex; justify-content: space-between; margin-top: 20px; align-items: center;">
-    <div>
-      <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">Voir toutes les réalisations ></a>
-      <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">Tout voir ></a>
-    </div>
-    <div style="display: flex;">
-      <a (click)="back()" class="arrow"><</a>
-      <a (click)="next()" class="arrow" style="margin-left: 5px;">></a>
-    </div>
-  </div>
+  <!------ REALISATION ------------------------------------------------>
 
+  <section id="realisations">
+    <h2 class="wow fadeIn"><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
+
+    <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 70 }" [showArrows]="false" [gap]="20"
+      [perView]="2" [showBullets]="false" [breakpoints]="this.breakpoints">
+      <div *ngFor="let work of component_home_work">
+        <div class="box-realisation wow fadeIn" (click)="join(work.url)">
+          <div class="overlay rea-box-desktop">
+            <p class="text-overlay paragraph">{{ 'HOME.PART-2.BOX-HOVER' | translate }}</p>
+          </div>
+          <img [src]="work.img_preview" class="img-box" [alt]="work.url">
+          <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
+            <img src="../../assets/icons/infos.svg"
+              style="height: 1.4375rem; width: 1.4375rem; margin-top: 0.5rem; margin-left: 0.45rem;" class="icon-color"
+              [alt]="work.url">
+          </a>
+        </div>
+      </div>
+    </ngx-glide>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
+      <div>
+        <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">{{ 'HOME.PART-2.PARAGRAPH-DESK' | translate }}</a>
+        <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">{{ 'HOME.PART-2.PARAGRAPH-MOB' | translate }}</a>
+      </div>
+      <div style="display: flex;" class="wow fadeIn">
+        <a (click)="back()" class="arrow"><</a>
+        <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
+      </div>
+    </div>
+  </section>
 
   <!---- CONTACT ----------------------------------------------->
 
-  <h2 class="wow fadeIn"><span class="special-span">02 </span> Contact</h2>
-  <p class="paragraph wow fadeIn">Vous pouvez me contacter directement par e-mail, à l'addresse <a href="mailto:contact@maximilien.work" class="link-flash" rel="noopener">contact@maximilien.work</a>, ou bien me téléphoner pour toute proposition de projet au <a href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497 04 05</a>.</p>
+  <section id="contact">
+    <h2 class="wow fadeIn"><span class="special-span">03 </span> {{ 'HOME.PART-3.TITLE' | translate }}</h2>
+    <p class="subtitle wow fadeIn">{{ 'HOME.PART-3.PARAGRAPH-1' | translate }} <a
+        href="mailto:contact@maximilien.work" class="link-flash" rel="noopener">contact@maximilien.work</a>, {{ 'HOME.PART-3.PARAGRAPH-2' | translate }} <a href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497 04 05</a>.</p>
 
-  <div class="all-box-social wow fadeIn">
+    <div class="all-box-social wow fadeIn">
       <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
-          <div class="box-social">
-              <div class="left-box">
-                <img src="../../assets/images/in.png" style="height: 25px; width: 25px;" alt="linkedin-icon">
-              </div> Linkedin
-          </div>
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/in.png" style="height: 1.5625rem; width: 1.5625rem;" alt="linkedin-icon">
+          </div> Linkedin
+        </div>
       </a>
       <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
-          <div class="box-social">
-              <div class="left-box">
-                <img src="../../assets/images/gh.png" style="height: 25px; width: 25px;" alt="github-icon">
-              </div>Github
-          </div>
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/gh.png" style="height: 1.5625rem; width: 1.5625rem;" alt="github-icon">
+          </div>Github
+        </div>
       </a>
       <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
-          <div class="box-social">
+        <div class="box">
           <div class="left-box">
-            <img src="../../assets/images/be.png" style="height: 25px; width: 25px;" alt="behance-icon">
+            <img src="../../assets/images/be.png" style="height: 1.5625rem; width: 1.5625rem;" alt="behance-icon">
           </div>
           Behance
-          </div>
+        </div>
       </a>
       <a href="https://www.instagram.com/maximilien_work/" target="_blank" rel="noopener">
-          <div class="box-social">
-              <div class="left-box">
-                <img src="../../assets/images/insta.png" style="height: 25px; width: 25px;" alt="instagram-icon">
-              </div>
-              Instagram
+        <div class="box">
+          <div class="left-box">
+            <img src="../../assets/images/insta.png" style="height: 1.5625rem; width: 1.5625rem;" alt="instagram-icon">
           </div>
+          Instagram
+        </div>
       </a>
-  </div>
+    </div>
+  </section>
 </main>

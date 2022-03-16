@@ -1,0 +1,41 @@
+{
+  "NAV": {
+    "ITEM-0": "Home",
+    "ITEM-1": "Services",
+    "ITEM-2": "Projects",
+    "ITEM-3": "Contact"
+  },
+  "HOME": {
+    "SUBTITLE": "A freelance web-designer & developer full of ideas to take your project to the next-level.",
+    "BUTTON": "Contact me",
+    "PART-1": {
+      "TITLE": "Services",
+      "BOX-1-TITLE": "Web design",
+      "BOX-1-SUB": "Prototypes, graphic design or even complete visual mockups.",
+      "BOX-2-TITLE": "Front-end development",
+      "BOX-2-SUB": "Integration, web applications and edits of websites.",
+      "BOX-3-TITLE": "SEO & optimization",
+      "BOX-3-SUB": "SEO, accessibility or optimization of performance."
+    },
+    "PART-2": {
+      "TITLE": "Projects",
+      "BOX-HOVER": "See more",
+      "PARAGRAPH-DESK": "See all work >",
+      "PARAGRAPH-MOB": "See all >"
+    },
+    "PART-3": {
+      "TITLE": "Contact",
+      "PARAGRAPH-1": "You can contact me directly by e-mail, at the address",
+      "PARAGRAPH-2": "or call me for any project proposal at"
+    }
+  },
+  "PROJECT": {
+    "LINK": "< Back",
+    "TITLE": "All projects",
+    "BOX-HOVER": "See more"
+  },
+  "DETAIL":{
+    "LINK":"< Back",
+    "BOTTOM-LINK": "More info >"
+  }
+}
