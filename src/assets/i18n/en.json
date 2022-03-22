@@ -6,11 +6,11 @@
     "ITEM-3": "Contact"
   },
   "HOME": {
-    "SUBTITLE": "A freelance web-designer & developer full of ideas to take your project to the next-level.",
+    "SUBTITLE": "A freelance UI/UX designer & developer full of ideas to take your project to the next-level.",
     "BUTTON": "Contact me",
     "PART-1": {
       "TITLE": "Services",
-      "BOX-1-TITLE": "Web design",
+      "BOX-1-TITLE": "UI/UX design",
       "BOX-1-SUB": "Prototypes, graphic design or even complete visual mockups.",
       "BOX-2-TITLE": "Front-end development",
       "BOX-2-SUB": "Integration, web applications and edits of websites.",
@@ -34,8 +34,8 @@
     "TITLE": "All projects",
     "BOX-HOVER": "See more"
   },
-  "DETAIL":{
-    "LINK":"< Back",
+  "DETAIL": {
+    "LINK": "< Back",
     "BOTTOM-LINK": "More info >"
   }
 }

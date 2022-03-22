@@ -8,12 +8,12 @@
 ----------------------------------------------------- */
 
 @font-face {
-  font-family: 'Marcellus';
-  src: url('assets/fonts/Marcellus-Regular.woff2') format('woff2'),
-    url('assets/fonts/Marcellus-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Lora';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -57,7 +57,7 @@
 ----------------------------------------------------- */
 
 body {
-  --background: #f5f8fc;
+  --background: #f9fbfd;
   --border-color: #d8dde5;
   --light-black: #4e5a5a;
   --border-hover: #929c9c;
@@ -304,8 +304,8 @@ span {
 }
 
 h1 {
-  font-family: 'Marcellus';
-  font-weight: 500 !important;
+  font-family: 'Lora', serif;
+  font-weight: 400 !important;
   font-size: 4.375rem;
   width: 100%;
   color: var(--black);
@@ -313,8 +313,8 @@ h1 {
 }
 
 h2 {
-  font-family: 'Marcellus';
-  font-weight: 500 !important;
+  font-family: 'Lora', serif;
+  font-weight: 400 !important;
   font-size: 1.875rem;
   width: 100%;
   color: var(--black);
@@ -322,8 +322,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Marcellus';
-  font-weight: 500 !important;
+  font-family: 'Lora', serif;
+  font-weight: 400 !important;
   font-size: 1.25rem;
   color: var(--black);
 }
@@ -796,6 +796,10 @@ header {
 
   &:hover {
     border: 0.0625rem solid var(--border-hover);
+  }
+
+  &::selection {
+    background-color: transparent !important;
   }
 }
 
