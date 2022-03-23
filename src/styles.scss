@@ -55,7 +55,6 @@ body {
   --black: #272d2d;
   --white: #ffffff;
   --special-span: #e2e7ee;
-  --border-light: #d8dde5;
 
   --icon-gray: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg)
     brightness(99%) contrast(84%);
@@ -71,10 +70,9 @@ body.dark-theme {
   --border-color: #414242;
   --light-black: #ffffffb2;
   --border-hover: #666666;
-  --black: #f5f8fc;
+  --black: #f9fbfd;
   --white: #2d2e2e;
   --special-span: #e2e7ee57;
-  --border-light: #d8dde5;
 
   --icon-gray: invert(96%) sepia(3%) saturate(699%) hue-rotate(183deg)
     brightness(94%) contrast(91%);
@@ -726,18 +724,6 @@ header {
   background-color: var(--white);
   border-radius: 0.375rem;
   border: 0.0625rem solid var(--border-color);
-  cursor: pointer;
-}
-
-.link-work-mobile-all {
-  position: absolute;
-  bottom: 1.25rem;
-  right: 0.9375rem;
-  height: 2.5rem;
-  width: 2.5rem;
-  background-color: var(--white);
-  border-radius: 0.375rem;
-  border: 0.0625rem solid var(--border-light);
   cursor: pointer;
 }
 
