@@ -12,35 +12,28 @@ import { TranslateService } from '@ngx-translate/core';
 export class HomeComponent implements OnInit {
 
   public component_home_work: Work[];
-  public frameShow:boolean = false;
-  public imageLink:string = "";
+  public frameShow: boolean = false;
+  public imageLink: string = "";
   public description: string = "";
   public lang = this.translate.currentLang
 
   constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
-    setTimeout(() => {
-      this.glideRecreate();
-    }, 700);
   }
 
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
-  breakpoints:Record<string, unknown> = {
+  breakpoints: Record<string, unknown> = {
     800: {
       perView: 1,
       peek: { before: 0, after: 1 }
     }
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.projectService.getHomeWork().subscribe((res: Work[]) => {
       this.component_home_work = res;
     });
-  }
 
-  glideRecreate() {
-    console.log("Glide recreated")
-    this.ngxGlide.recreate();
   }
 
   next(): void {
@@ -51,7 +44,7 @@ export class HomeComponent implements OnInit {
     this.ngxGlide.go('<');
   }
 
-  displayFrame(img_preview:string, description:string) {
+  displayFrame(img_preview: string, description: string) {
     this.frameShow = true;
     this.imageLink = img_preview;
     this.description = description;
@@ -61,9 +54,9 @@ export class HomeComponent implements OnInit {
     this.frameShow = false
   }
 
-  join(url:any):void {
+  join(url: any): void {
     this.router.navigateByUrl("/projet/" + url);
   }
 
-  
+
 }

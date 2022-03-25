@@ -34,23 +34,24 @@
 
   <section id="realisations">
     <h2 class="wow fadeIn"><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
-
-    <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 70 }" [showArrows]="false" [gap]="20" [perView]="2"
-      [showBullets]="false" [breakpoints]="this.breakpoints">
-      <div *ngFor="let work of component_home_work">
-        <div class="box-realisation wow fadeIn" (click)="join(work.url)">
-          <div class="overlay rea-box-desktop">
-            <p class="text-overlay paragraph">{{ 'HOME.PART-2.BOX-HOVER' | translate }}</p>
+    <ng-container *ngIf="component_home_work">
+      <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 70 }" [showArrows]="false" [gap]="20"
+        [perView]="2" [showBullets]="false" [breakpoints]="this.breakpoints">
+        <div *ngFor="let work of component_home_work">
+          <div class="box-realisation wow fadeIn" (click)="join(work.url)">
+            <div class="overlay rea-box-desktop">
+              <p class="text-overlay paragraph">{{ 'HOME.PART-2.BOX-HOVER' | translate }}</p>
+            </div>
+            <img [src]="work.img_preview" class="img-box" [alt]="work.url">
+            <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
+              <img src="../../assets/icons/infos.svg"
+                style="height: 1.4375rem; width: 1.4375rem; margin-top: 0.5rem; margin-left: 0.45rem;"
+                class="icon-color" [alt]="work.url">
+            </a>
           </div>
-          <img [src]="work.img_preview" class="img-box" [alt]="work.url">
-          <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
-            <img src="../../assets/icons/infos.svg"
-              style="height: 1.4375rem; width: 1.4375rem; margin-top: 0.5rem; margin-left: 0.45rem;" class="icon-color"
-              [alt]="work.url">
-          </a>
         </div>
-      </div>
-    </ngx-glide>
+      </ngx-glide>
+    </ng-container>
 
     <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
       <div>
@@ -72,9 +73,10 @@
   <section id="contact">
     <h2 class="wow fadeIn"><span class="special-span" style="margin-right:-2.05rem !important;">03 </span> {{
       'HOME.PART-3.TITLE' | translate }}</h2>
-    <p class="subtitle wow fadeIn">{{ 'HOME.PART-3.PARAGRAPH-1' | translate }} <a href="mailto:maximilien.zimmermann@ik.me"
-        class="link-flash" rel="noopener">maximilien.zimmermann@ik.me</a>, {{ 'HOME.PART-3.PARAGRAPH-2' | translate }} <a
-        href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497 04 05</a>.</p>
+    <p class="subtitle wow fadeIn">{{ 'HOME.PART-3.PARAGRAPH-1' | translate }} <a
+        href="mailto:maximilien.zimmermann@ik.me" class="link-flash" rel="noopener">maximilien.zimmermann@ik.me</a>, {{
+      'HOME.PART-3.PARAGRAPH-2' | translate }} <a href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497
+        04 05</a>.</p>
 
     <div class="all-box-social wow fadeIn">
       <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
