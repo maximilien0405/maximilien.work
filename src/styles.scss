@@ -521,6 +521,7 @@ img::selection {
 nav {
   display: flex;
   flex-direction: row;
+  position:relative;
   justify-content: space-between;
   transition: 200ms all;
   margin-top: 2.5rem;
@@ -572,6 +573,22 @@ nav {
 
   img {
     filter: var(--icon-dark);
+  }
+}
+
+.language-box {
+  position:absolute;
+  padding:25px;
+  right:0px;
+  top:50px;
+  background-color:var(--white);
+  border-radius: 0.3125rem;
+  border: 1px solid var(--border-color);
+  display:flex;
+  flex-direction: column;
+
+  span {
+    padding:0px 0px;
   }
 }
 
