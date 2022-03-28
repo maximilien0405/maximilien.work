@@ -27,6 +27,27 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
           ]
         )
       ]
+    ),
+    trigger(
+      'inOutAnimationSlow',
+      [
+        transition(
+          ':enter',
+          [
+            style({ opacity: 0 }),
+            animate('0.1s ease-out',
+            style({ opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave',
+          [
+            style({ opacity: 1 }),
+            animate('0.1s ease-in',
+            style({ opacity: 0 }))
+          ]
+        )
+      ]
     )
   ]
 })
@@ -39,7 +60,6 @@ export class AppComponent {
     translate.setDefaultLang('fr')
 
     /* Code pour trouver langue user */
-
     let lang = window.navigator.languages ? window.navigator.languages[0] : null;
     lang = lang || window.navigator.language;
 
@@ -49,6 +69,8 @@ export class AppComponent {
 
     if (shortLang.indexOf('_') !== -1)
         shortLang = shortLang.split('_')[0];
+
+    this.lang = shortLang;
 
     /* ----------------- */
 
@@ -60,8 +82,10 @@ export class AppComponent {
 
     if(localStorage.getItem('lang') == 'en') {
       translate.use('en')
+      this.lang = 'en';
       return
-    } else {
+    } else if (localStorage.getItem('lang') == 'fr') {
+      this.lang = 'fr';
       translate.use('fr')
       return
     }
@@ -75,6 +99,8 @@ export class AppComponent {
     this.translate.currentLang == lang;
     this.translate.use(lang);
     localStorage.setItem('lang', lang)
+    this.lang = lang;
+    this.languageClick = false;
   }
 
   ngOnInit() {
@@ -90,9 +116,13 @@ export class AppComponent {
 
     if(localStorage.getItem('lang') == 'en') {
       this.translate.use('en');
+      this.lang = 'en';
     } else {
       this.translate.use('fr');
+      this.lang = 'fr';
     }
+
+    console.log(this.lang)
   }
 
   mobileSidebar: boolean = false;
