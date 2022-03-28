@@ -31,7 +31,8 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
   ]
 })
 export class AppComponent {
-  public lang = this.translate.currentLang
+  public lang = this.translate.currentLang;
+  public languageClick = false;
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['fr','en'])
@@ -66,15 +67,14 @@ export class AppComponent {
     }
   }
 
-  changeLang() {
-    if (this.translate.currentLang == 'fr') {
-      this.translate.use('en');
-      localStorage.setItem('lang', 'en')
-    }
-    else {
-      this.translate.use('fr');
-      localStorage.setItem('lang', 'fr')
-    }
+  languageBox() {
+    this.languageClick = !this.languageClick;
+  }
+
+  changeLang(lang:string) {
+    this.translate.currentLang == lang;
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang)
   }
 
   ngOnInit() {

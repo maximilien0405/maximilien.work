@@ -5,7 +5,7 @@
     <div style="display: flex;">
       <a *ngIf="whiteTheme" (click)="toggleDarkTheme()"><img src="../assets/icons/theme-dark.svg" alt="theme-dark-icon"></a>
       <a *ngIf="!whiteTheme" (click)="toggleWhiteTheme()"><img src="../assets/icons/theme-light.svg" alt="theme-white-icon"></a>
-      <a (click)="changeLang()" style="margin-left: 13px;"><img src="../../assets/icons/lang.svg" alt="lang-icon"></a>
+      <a style="margin-left: 13px;"><img src="../../assets/icons/lang.svg" alt="lang-icon"></a>
     </div>
     <a (click)="closeNav()"><img src="../assets/icons/close.svg" alt="close-icon"></a>
   </div>
@@ -46,7 +46,12 @@
   <div class="icons-box wow fadeIn">
     <img *ngIf="whiteTheme" (click)="toggleDarkTheme()" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
     <img *ngIf="!whiteTheme" (click)="toggleWhiteTheme()" src="../../assets/icons/theme-light.svg" alt="theme-light-icon">
-    <img (click)="changeLang()" src="../../assets/icons/lang.svg" alt="lang-icon" style="margin-left: 13px;">
+    <img (click)="languageBox()" src="../../assets/icons/lang.svg" alt="lang-icon" style="margin-left: 13px;">
+
+    <div *ngIf="languageClick" class="language-box">
+      <span (click)="changeLang('fr')" class="paragraph">French</span>
+      <span (click)="changeLang('en')" class="paragraph">English</span>
+    </div>
   </div>
 
   <div class="hamburger wow fadeIn" (click)="openNav()">
