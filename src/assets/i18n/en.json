@@ -1,9 +1,9 @@
 {
   "NAV": {
-    "ITEM-0": "Home",
-    "ITEM-1": "Services",
+    "ITEM-1": "Home",
     "ITEM-2": "Projects",
-    "ITEM-3": "Contact"
+    "ITEM-3": "Blog",
+    "ITEM-4": "Contact"
   },
   "HOME": {
     "SUBTITLE": "A freelance UI/UX designer & developer full of ideas to take your project to the next-level.",
@@ -34,8 +34,19 @@
     "TITLE": "All projects",
     "BOX-HOVER": "See more"
   },
-  "DETAIL": {
+  "PROJECT-DETAIL": {
     "LINK": "< Back",
     "BOTTOM-LINK": "Visit the website >"
+  },
+  "CONTACT": {
+    "TITLE": "Contact me",
+    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum"
+  },
+  "BLOG": {
+    "TITLE": "All blog posts",
+    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum"
+  },
+  "BLOG-DETAIL": {
+
   }
 }

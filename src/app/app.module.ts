@@ -12,6 +12,8 @@ import { WorkDetailsComponent } from './work-details/work-details.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxGlideModule } from 'ngx-glide';
+import { ContactComponent } from './contact/contact.component';
+import { AllBlogComponent } from './all-blog/all-blog.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -24,6 +26,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     AllWorkComponent,
     WorkDetailsComponent,
+    ContactComponent,
+    AllBlogComponent,
   ],
   imports: [
     BrowserModule,

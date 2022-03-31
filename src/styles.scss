@@ -131,7 +131,7 @@ body.dark-theme {
     display: none !important;
   }
 
-  body .all-box-social {
+  body .socials-container {
     grid-template-columns: 1fr !important;
     gap: 0.9375rem !important;
   }
@@ -235,13 +235,17 @@ body.dark-theme {
     display: none !important;
   }
 
-  .all-box-social {
+  .socials-container {
     grid-template-columns: 1fr 1fr !important;
     gap: 0.9375rem !important;
   }
 
   .all-box-services {
     grid-template-columns: 1fr !important;
+  }
+
+  .page-header h2 {
+    margin: 3.25rem 0rem 1.25rem 0rem;
   }
 }
 
@@ -787,16 +791,6 @@ header {
   CONTACT
 -----------------------------------------------------*/
 
-.all-box-social {
-  margin-top: 1.875rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1.25rem;
-
-  a {
-    font-weight: 400 !important;
-  }
-}
 
 .box {
   padding: 0.9375rem;
@@ -853,3 +847,93 @@ header {
     }
   }
 }
+
+/* ---------------------------------------------------
+  ALL PAGES STYLE
+----------------------------------------------------- */
+
+.page-header {
+  text-align: center;
+  margin: 0rem 0rem 4.5rem 0rem !important;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  margin-top: 100px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------------------------------------------------
+  CONTACT PAGE
+----------------------------------------------------- */
+
+label {
+  color: var(--light-black);
+  margin-top: 20px;
+  
+  &:first-child {
+    margin-top: 0px !important;
+  }
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.9375rem;
+  border: 0.0625rem solid var(--border-color);
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transform: all 250ms;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+  transition: 200ms all;
+  box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
+  color: var(--light-black);
+
+  &:hover {
+    border: 0.0625rem solid var(--border-hover);
+  }
+
+
+  &:focus {
+    outline: none;
+    border-color: var(--light-black);
+  }
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  flex-direction: row;
+  width: 100%;
+}
+
+.input-container {
+  width: 100%;
+
+}
+
+.socials-container {
+  margin-top: 1.875rem;
+  margin-left: 25px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1.25rem;
+
+  a {
+    font-weight: 400 !important;
+  }
+}
+
+

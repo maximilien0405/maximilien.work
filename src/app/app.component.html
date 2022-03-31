@@ -13,22 +13,22 @@
 
 
   <div class="mobile-text">
-    <a (click)="closeNav()" id="01" href="#nav" class="item-navbar selected special-item" style="margin-top: 80px !important;"><span>01</span>{{ 'NAV.ITEM-0' | translate }}</a>
+    <a (click)="closeNav()" routerLink="/" class="item-navbar selected special-item" style="margin-top: 80px !important;"><span>01</span>{{ 'NAV.ITEM-1' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" id="02" href="#services" class="item-navbar selected special-item"><span>02</span>{{ 'NAV.ITEM-1' | translate }}</a>
+    <a (click)="closeNav()" routerLink="projets" class="item-navbar selected special-item"><span>02</span>{{ 'NAV.ITEM-2' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" id="03" routerLink="projets" class="item-navbar selected special-item"><span>03</span>{{ 'NAV.ITEM-2' | translate }}</a>
+    <a (click)="closeNav()" routerLink="blog" class="item-navbar selected special-item"><span>03</span>{{ 'NAV.ITEM-3' | translate }} posts</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" id="04" href="#contact" class="item-navbar selected special-item"><span>04</span>{{ 'NAV.ITEM-3' | translate }}</a>
+    <a (click)="closeNav()" routerLink="contact" class="item-navbar selected special-item"><span>04</span>{{ 'NAV.ITEM-4' | translate }}</a>
   </div>
 
 </div>
@@ -36,13 +36,14 @@
 <!------ NAVBAR ---------------------------------------------------->
 
 <nav id="nav" class="container wow fadeInDown" id="accueil">
-  <a href="/">
+  <a routerLink="/">
     <h2>MZ.</h2>
   </a>
   <div class="nav-links">
-    <a href="#services" class="link">{{ 'NAV.ITEM-1' | translate }}</a>
+    <a routerLink="/" class="link">{{ 'NAV.ITEM-1' | translate }}</a>
     <a routerLink="projets" class="link">{{ 'NAV.ITEM-2' | translate }}</a>
-    <a href="#contact" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
+    <a routerLink="blog" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
+    <a routerLink="contact" class="link">{{ 'NAV.ITEM-4' | translate }}</a>
   </div>
   <div class="icons-box wow fadeIn">
     <img *ngIf="whiteTheme" (click)="toggleDarkTheme()" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
@@ -64,3 +65,13 @@
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<footer class="container">
+  <p class="subtitle">Made with love  ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <div class="nav-links">
+    <a class="link">Instagram</a>
+    <a class="link">Linkedin</a>
+    <a class="link">Behance</a>
+    <a class="link">Github</a>
+  </div>
+</footer>

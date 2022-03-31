@@ -1,9 +1,9 @@
 {
   "NAV": {
-    "ITEM-0": "Accueil",
-    "ITEM-1": "Services",
+    "ITEM-1": "Accueil",
     "ITEM-2": "Réalisations",
-    "ITEM-3": "Contact"
+    "ITEM-3": "Blog",
+    "ITEM-4": "Contact"
   },
   "HOME": {
     "SUBTITLE": "Un freelance UI/UX designer & développeur débordant d'idées afin de porter votre projet au next-level.",
