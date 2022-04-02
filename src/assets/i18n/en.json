@@ -32,6 +32,7 @@
   "PROJECT": {
     "LINK": "< Back",
     "TITLE": "All projects",
+    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum",
     "BOX-HOVER": "See more"
   },
   "PROJECT-DETAIL": {
@@ -40,7 +41,7 @@
   },
   "CONTACT": {
     "TITLE": "Contact me",
-    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum"
+    "SUBTITLE": "Un projet à me proposer ? souhaitez nous contacter ? Vous pouvez nous joindre en remplissant le formulaire ci-dessous et nous tacherons de vous répondre au plus vite."
   },
   "BLOG": {
     "TITLE": "All blog posts",

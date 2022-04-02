@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationEnd, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -52,10 +53,17 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
   ]
 })
 export class AppComponent {
-  public lang = this.translate.currentLang;
-  public languageClick = false;
+  public lang:String = this.translate.currentLang;
+  public languageClick:Boolean = false;
+  public route:String;
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.route = this.router.url;
+      }
+    });
+
     translate.addLangs(['fr','en'])
     translate.setDefaultLang('fr')
 

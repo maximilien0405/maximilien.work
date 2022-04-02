@@ -572,6 +572,11 @@ nav {
   }
 }
 
+.nav-selected {
+  font-weight: 500;
+  color:var(--black) !important;
+}
+
 .hamburger {
   display: none;
   width: 1.5625rem;
@@ -870,6 +875,12 @@ footer {
   margin-top: 100px !important;
   display: flex;
   justify-content: space-between;
+}
+
+.link-menu {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* ---------------------------------------------------
