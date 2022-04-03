@@ -3,7 +3,8 @@
     "ITEM-1": "Accueil",
     "ITEM-2": "Réalisations",
     "ITEM-3": "Blog",
-    "ITEM-4": "Contact"
+    "ITEM-4": "Contact",
+    "MOBILE-1": "Articles de blog"
   },
   "HOME": {
     "SUBTITLE": "Un freelance UI/UX designer & développeur débordant d'idées afin de porter votre projet au next-level.",
@@ -18,24 +19,37 @@
       "BOX-3-SUB": "Référencement, accesibilité ou bien optimisation de performances."
     },
     "PART-2": {
+      "TITLE": "A propos",
+      "PARAGRAPH": ""
+    },
+    "PART-3": {
       "TITLE": "Réalisations",
       "BOX-HOVER": "Cliquez pour plus d'infos",
       "PARAGRAPH-DESK": "Voir toutes les réalisations >",
       "PARAGRAPH-MOB": "Tout voir >"
     },
-    "PART-3": {
-      "TITLE": "Contact",
-      "PARAGRAPH-1": "Vous pouvez me contacter directement par e-mail, à l'addresse",
-      "PARAGRAPH-2": "ou bien me téléphoner pour toute proposition de projet au"
+    "PART-4":{
+      "TITLE": "Mes réseaux",
+      "PARAGRAPH": "Que ce soit sur Linkedin pour voir mon CV, ou bien GitHub pour mes réalisations open-source, j'essaye constamment de documenter mon aventure en tant qu'auto-entrepreneur."
     }
   },
   "PROJECT": {
     "LINK": "< Retour",
     "TITLE": "Toutes les réalisations",
+    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum",
     "BOX-HOVER": "Cliquez pour plus d'infos"
   },
-  "DETAIL": {
+  "PROJECT-DETAIL": {
     "LINK": "< Retour",
     "BOTTOM-LINK": "Visiter le site >"
+  },
+  "BLOG": {
+    "TITLE": "Tous les articles de blog",
+    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum"
+  },
+  "BLOG-DETAIL": {},
+  "CONTACT": {
+    "TITLE": "Me contacter",
+    "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe, et je tâcherai de vous répondre au plus vite."
   }
 }

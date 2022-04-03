@@ -3,7 +3,8 @@
     "ITEM-1": "Home",
     "ITEM-2": "Projects",
     "ITEM-3": "Blog",
-    "ITEM-4": "Contact"
+    "ITEM-4": "Contact",
+    "MOBILE-1": "Blog posts"
   },
   "HOME": {
     "SUBTITLE": "A freelance UI/UX designer & developer full of ideas to take your project to the next-level.",
@@ -18,15 +19,18 @@
       "BOX-3-SUB": "SEO, accessibility or optimization of performance."
     },
     "PART-2": {
+      "TITLE": "About me",
+      "PARAGRAPH": "You can contact me directly by e-mail, at the address"
+    },
+    "PART-3": {
       "TITLE": "Projects",
       "BOX-HOVER": "See more",
       "PARAGRAPH-DESK": "See all work >",
       "PARAGRAPH-MOB": "See all >"
     },
-    "PART-3": {
-      "TITLE": "Contact",
-      "PARAGRAPH-1": "You can contact me directly by e-mail, at the address",
-      "PARAGRAPH-2": "or call me for any project proposal at"
+    "PART-4":{
+      "TITLE": "",
+      "PARAGRAPH": ""
     }
   },
   "PROJECT": {
@@ -39,15 +43,13 @@
     "LINK": "< Back",
     "BOTTOM-LINK": "Visit the website >"
   },
-  "CONTACT": {
-    "TITLE": "Contact me",
-    "SUBTITLE": "Un projet à me proposer ? souhaitez nous contacter ? Vous pouvez nous joindre en remplissant le formulaire ci-dessous et nous tacherons de vous répondre au plus vite."
-  },
   "BLOG": {
     "TITLE": "All blog posts",
     "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum"
   },
-  "BLOG-DETAIL": {
-
+  "BLOG-DETAIL": {},
+  "CONTACT": {
+    "TITLE": "Contact me",
+    "SUBTITLE": "A new project proposal ? Or a simple question? Let me know, and I will try to reply as soon as possible."
   }
 }

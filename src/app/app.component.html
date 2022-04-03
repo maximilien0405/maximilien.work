@@ -1,3 +1,5 @@
+<div *ngIf="languageClick" (click)="languageClick = false" class="gray-overlay"></div>
+
 <!------ MOBILE SIDEBAR -------------------------------------------->
 
 <div [@inOutAnimation] *ngIf="mobileSidebar" class="mobile-sidebar">
@@ -23,7 +25,7 @@
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="item-navbar special-item"><span>03</span>{{ 'NAV.ITEM-3' | translate }} posts</a>
+    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="item-navbar special-item"><span>03</span>{{ 'NAV.MOBILE-1' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>

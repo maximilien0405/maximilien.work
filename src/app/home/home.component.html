@@ -30,17 +30,24 @@
     </div>
   </section>
 
+  <!------ A PROPOS ------------------------------------------------>
+
+  <section>
+    <h2 class="wow fadeIn"><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
+    <p class="paragraph wow fadeIn">{{ 'HOME.PART-2.PARAGRAPH' | translate }}</p>
+  </section>
+
   <!------ REALISATION ------------------------------------------------>
 
   <section id="realisations">
-    <h2 class="wow fadeIn"><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
+    <h2 class="wow fadeIn"><span class="special-span">03</span>{{ 'HOME.PART-3.TITLE' | translate }}</h2>
     <ng-container *ngIf="component_home_work">
       <ngx-glide #ngxGlide type="carousel" [peek]="{ before: 0, after: 70 }" [showArrows]="false" [gap]="20"
         [perView]="2" [showBullets]="false" [breakpoints]="this.breakpoints">
         <div *ngFor="let work of component_home_work">
           <div class="box-realisation wow fadeIn" (click)="join(work.url)">
             <div class="overlay rea-box-desktop">
-              <p class="text-overlay paragraph">{{ 'HOME.PART-2.BOX-HOVER' | translate }}</p>
+              <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
             </div>
             <img [src]="work.img_preview" class="img-box" [alt]="work.url">
             <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
@@ -55,9 +62,9 @@
 
     <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
       <div>
-        <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">{{ 'HOME.PART-2.PARAGRAPH-DESK' |
+        <a routerLink="projets" class="wow fadeIn link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' |
           translate }}</a>
-        <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">{{ 'HOME.PART-2.PARAGRAPH-MOB' | translate
+        <a routerLink="projets" class="wow fadeIn link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate
           }}</a>
       </div>
       <div style="display: flex;" class="wow fadeIn">
@@ -68,17 +75,13 @@
     </div>
   </section>
 
-  <!---- CONTACT ----------------------------------------------->
+  <!------ ME SUIVRE ------------------------------------------------>
 
-  <section id="contact">
-    <h2 class="wow fadeIn"><span class="special-span" style="margin-right:-2.05rem !important;">03 </span> {{
-      'HOME.PART-3.TITLE' | translate }}</h2>
-    <p class="subtitle wow fadeIn">{{ 'HOME.PART-3.PARAGRAPH-1' | translate }} <a
-        href="mailto:maximilien.zimmermann@ik.me" class="link-flash" rel="noopener">maximilien.zimmermann@ik.me</a>, {{
-      'HOME.PART-3.PARAGRAPH-2' | translate }} <a href="tel:0041764970405" class="link-flash" rel="noopener">+41 76 497
-        04 05</a>.</p>
+  <section>
+    <h2 class="wow fadeIn"><span class="special-span">04</span>{{ 'HOME.PART-4.TITLE' | translate }}</h2>
+    <p class="subtitle wow fadeIn">{{ 'HOME.PART-4.PARAGRAPH' | translate }}</p>
 
-    <div class="all-box-social wow fadeIn">
+    <div class="socials-container wow fadeIn">
       <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
         <div class="box">
           <div class="left-box">
@@ -111,4 +114,6 @@
       </a>
     </div>
   </section>
+
+
 </main>
