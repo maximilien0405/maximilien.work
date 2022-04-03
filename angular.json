@@ -33,6 +33,7 @@
               "src/favicon.png",
               "src/preview.png",
               "src/assets",
+              "src/styles",
               "src/sitemap.xml",
               "src/robots.txt",
               "src/assets/projects",
@@ -46,7 +47,8 @@
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "node_modules/animate.css/animate.min.css",
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/global.scss"
             ],
             "scripts": []
           },
