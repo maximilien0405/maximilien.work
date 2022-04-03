@@ -1,53 +1,23 @@
 <main>
     <div class="page-header wow fadeIn">
       <h2>{{ 'CONTACT.TITLE' | translate }}</h2>
-      <p class="subtitle">{{ 'CONTACT.SUBTITLE' | translate }}.</p>
+      <p class="subtitle">{{ 'CONTACT.SUBTITLE' | translate }}</p>
     </div>
-
-    <div class="contact-container">
-      <div class="input-container wow fadeIn">
-        <label for="">Full name</label>
-        <input type="text" placeholder="Full name">
-    
-        <label for="">Email</label>
-        <input type="email" placeholder="Email">
+    <div class="input-container wow fadeIn">
+        <div class="name-email-container">
+          <div>
+            <label for="full_name">Full name</label>
+            <input name="full_name" type="text" placeholder="Full name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input name="email" type="email" placeholder="Email">
+          </div>
+        </div>
 
         <label for="message">Message</label><br>
-        <textarea name="message" cols="30" rows="10"></textarea>
+        <textarea name="message" cols="30" rows="10" placeholder="Your message.."></textarea>
 
-        <button class="box">Send</button>
+        <button>Send</button>
       </div>
-      <div class="socials-container wow fadeIn">
-          <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
-            <div class="box">
-              <div class="left-box">
-                <img src="../../assets/images/in.png" style="height: 1.5625rem; width: 1.5625rem;" alt="linkedin-icon">
-              </div> Linkedin
-            </div>
-          </a>
-          <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
-            <div class="box">
-              <div class="left-box">
-                <img src="../../assets/images/gh.png" style="height: 1.5625rem; width: 1.5625rem;" alt="github-icon">
-              </div>Github
-            </div>
-          </a>
-          <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
-            <div class="box">
-              <div class="left-box">
-                <img src="../../assets/images/be.png" style="height: 1.5625rem; width: 1.5625rem;" alt="behance-icon">
-              </div>
-              Behance
-            </div>
-          </a>
-          <a href="https://www.instagram.com/maximilien_work/" target="_blank" rel="noopener">
-            <div class="box">
-              <div class="left-box">
-                <img src="../../assets/images/insta.png" style="height: 1.5625rem; width: 1.5625rem;" alt="instagram-icon">
-              </div>
-              Instagram
-            </div>
-          </a>
-        </div>
-    </div>
 </main>

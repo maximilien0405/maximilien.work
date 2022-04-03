@@ -559,12 +559,12 @@ label {
 }
 
 input, textarea {
+  font-size: 0.9rem;
   width: 100%;
   padding: 0.9375rem;
   border: 0.0625rem solid var(--border-color);
   background-color: var(--white);
   border-radius: 0.5rem;
-  cursor: pointer;
   transform: all 250ms;
   display: flex;
   flex-direction: row;
@@ -581,8 +581,12 @@ input, textarea {
 
   &:focus {
     outline: none;
-    border-color: var(--light-black);
+    border-color: var(--border-hover);
   }
+}
+
+textarea {
+  resize: none;
 }
 
 .input-container {
@@ -598,9 +602,17 @@ input, textarea {
 ----------------------------------------------------- */
 
 footer {
-  margin-top: 6.25rem !important;
   display: flex;
+  margin-top: 30px !important;
   justify-content: space-between;
 }
 
+.separator {
+  margin-top: 6.25rem !important;
+}
 
+footer .nav-links {
+  a {
+    margin-left: 10px;
+  }
+}
