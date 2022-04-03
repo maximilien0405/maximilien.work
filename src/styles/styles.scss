@@ -317,13 +317,13 @@ nav {
 
 .language-box {
   position:absolute;
-  padding:10px 15px;
-  right:0px;
-  top:50px;
+  padding:0.625rem 0.9375rem;
+  right:0rem;
+  top:3.125rem;
   z-index: 1000;
   background-color:var(--white);
   border-radius: 0.3125rem;
-  border: 1px solid var(--border-color);
+  border: 0.0625rem solid var(--border-color);
   display:flex;
   flex-direction: row;
   box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
@@ -554,8 +554,8 @@ label {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 input, textarea {
@@ -569,7 +569,7 @@ input, textarea {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   transition: 200ms all;
   box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
   color: var(--light-black);
@@ -589,7 +589,7 @@ input, textarea {
   width: 100%;
 
   label {
-    margin-top: 10px !important;
+    margin-top: 0.625rem !important;
   }
 }
 
@@ -598,7 +598,7 @@ input, textarea {
 ----------------------------------------------------- */
 
 footer {
-  margin-top: 100px !important;
+  margin-top: 6.25rem !important;
   display: flex;
   justify-content: space-between;
 }
