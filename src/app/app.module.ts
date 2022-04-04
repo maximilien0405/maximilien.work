@@ -14,6 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxGlideModule } from 'ngx-glide';
 import { ContactComponent } from './contact/contact.component';
 import { AllBlogComponent } from './all-blog/all-blog.component';
+import { EmailSentComponent } from './email-sent/email-sent.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -28,6 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     WorkDetailsComponent,
     ContactComponent,
     AllBlogComponent,
+    EmailSentComponent,
   ],
   imports: [
     BrowserModule,

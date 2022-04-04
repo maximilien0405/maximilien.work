@@ -55,5 +55,10 @@
     "MESSAGE": "Votre message..",
     "BUTTON": "Envoyer",
     "PARAGRAPH": "Vous pouvez également me contacter sur mes réseaux sociaux :"
+  },
+  "FORM-SENT":{
+    "TITLE": "L'e-mail a été envoyé avec succès !",
+    "MESSAGE": "Merci d'avoir pris le temps de m'écrire, je reviens vers vous dès que possible.",
+    "LINK": "Retour à l'accueil"
   }
 }
