@@ -639,10 +639,11 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 30px !important;
+    align-items: center;
   }
 
   .separator {
-    margin-top: 3.25rem !important;
+    margin-top: 1.25rem !important;
   }
 }
 
@@ -660,6 +661,7 @@ footer .nav-links {
 
 .mobile-icons {
   display: none;
+  align-items: center;
   img {
     margin-left: 10px;
   }
