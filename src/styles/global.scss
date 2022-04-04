@@ -1,43 +1,43 @@
-@import '~animate.css/animate.min.css';
+@import "~animate.css/animate.min.css";
 
-@import '~@glidejs/glide/src/assets/sass/glide.core';
-@import '~@glidejs/glide/src/assets/sass/glide.theme';
+@import "~@glidejs/glide/src/assets/sass/glide.core";
+@import "~@glidejs/glide/src/assets/sass/glide.theme";
 
 /* ---------------------------------------------------
   FONTS
 ----------------------------------------------------- */
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
-    url('../assets/fonts/Poppins-Regular.woff') format('woff');
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-SemiBold.woff2') format('woff2'),
-    url('../assets/fonts/Poppins-SemiBold.woff') format('woff');
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Bold.woff2') format('woff2'),
-    url('../assets/fonts/Poppins-Bold.woff') format('woff');
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Medium.woff2') format('woff2'),
-    url('../assets/fonts/Poppins-Medium.woff') format('woff');
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -56,9 +56,12 @@ body {
   --white: #ffffff;
   --special-span: #e2e7ee;
 
-  --icon-gray: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg) brightness(99%) contrast(84%);
-  --icon-dark: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg) brightness(99%) contrast(84%);
-  --icon-hover: invert(9%) sepia(2%) saturate(4568%) hue-rotate(132deg) brightness(97%) contrast(79%);
+  --icon-gray: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg)
+    brightness(99%) contrast(84%);
+  --icon-dark: invert(31%) sepia(13%) saturate(366%) hue-rotate(131deg)
+    brightness(99%) contrast(84%);
+  --icon-hover: invert(9%) sepia(2%) saturate(4568%) hue-rotate(132deg)
+    brightness(97%) contrast(79%);
   transition: all 0.2s;
 }
 
@@ -71,9 +74,12 @@ body.dark-theme {
   --white: #2d2e2e;
   --special-span: #e2e7ee57;
 
-  --icon-gray: invert(96%) sepia(3%) saturate(699%) hue-rotate(183deg) brightness(94%) contrast(91%);
-  --icon-dark: invert(99%) sepia(11%) saturate(1049%) hue-rotate(176deg) brightness(99%) contrast(98%);
-  --icon-hover: invert(97%) sepia(17%) saturate(322%) hue-rotate(175deg) brightness(100%) contrast(98%);
+  --icon-gray: invert(96%) sepia(3%) saturate(699%) hue-rotate(183deg)
+    brightness(94%) contrast(91%);
+  --icon-dark: invert(99%) sepia(11%) saturate(1049%) hue-rotate(176deg)
+    brightness(99%) contrast(98%);
+  --icon-hover: invert(97%) sepia(17%) saturate(322%) hue-rotate(175deg)
+    brightness(100%) contrast(98%);
 }
 
 /* ---------------------------------------------------
@@ -109,7 +115,7 @@ body.dark-theme {
 ----------------------------------------------------- */
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -158,7 +164,7 @@ span {
 }
 
 h1 {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-weight: 400 !important;
   font-size: 4.375rem;
   width: 100%;
@@ -167,7 +173,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-weight: 400 !important;
   font-size: 1.875rem;
   width: 100%;
@@ -176,7 +182,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-weight: 400 !important;
   font-size: 1.25rem;
   color: var(--black);
@@ -189,12 +195,14 @@ a {
 
 button {
   width: 100%;
+  margin-top: 1.25rem;
   text-align: center;
   padding: 0.9375rem 1.5rem;
   border: 0.0625rem solid var(--border-color);
   background-color: var(--white);
   border-radius: 0.5rem;
   cursor: pointer;
+  color: var(--black);
   transform: all 250ms;
   transition: 200ms all;
   box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
@@ -261,7 +269,7 @@ img::selection {
   &::before,
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     bottom: -0.1rem;
     display: block;
@@ -319,6 +327,7 @@ img::selection {
   flex-direction: row;
   align-items: center;
   transition: 200ms all;
+  color: var(--black);
   box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
 
   &:hover {

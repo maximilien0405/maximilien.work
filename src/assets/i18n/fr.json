@@ -20,7 +20,7 @@
     },
     "PART-2": {
       "TITLE": "A propos",
-      "PARAGRAPH": ""
+      "PARAGRAPH": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora quasi sunt perferendis nesciunt voluptates. Accusamus magnam nesciunt quia amet molestiae voluptates veritatis earum quis deserunt, vel delectus blanditiis. Blanditiis similique modi aspernatur, nihil officia voluptatibus quae magni praesentium quidem nemo aliquam necessitatibus fugit consectetur explicabo impedit eum vero excepturi?"
     },
     "PART-3": {
       "TITLE": "Réalisations",
@@ -50,6 +50,10 @@
   "BLOG-DETAIL": {},
   "CONTACT": {
     "TITLE": "Me contacter",
-    "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe, et je tâcherai de vous répondre au plus vite."
+    "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe, et je tâcherai de vous répondre au plus vite.",
+    "FULL-NAME": "Nom complet",
+    "MESSAGE": "Votre message..",
+    "BUTTON": "Envoyer",
+    "PARAGRAPH": "Vous pouvez également me contacter sur mes réseaux sociaux :"
   }
 }

@@ -3,21 +3,59 @@
       <h2>{{ 'CONTACT.TITLE' | translate }}</h2>
       <p class="subtitle">{{ 'CONTACT.SUBTITLE' | translate }}</p>
     </div>
-    <div class="input-container wow fadeIn">
+    <form action="https://formspree.io/f/xvolbllp" method="POST" class="contact-container">
+      <div class="input-container wow fadeIn">
         <div class="name-email-container">
           <div>
-            <label for="full_name">Full name</label>
-            <input name="full_name" type="text" placeholder="Full name">
+            <label for="full_name">{{ 'CONTACT.FULL-NAME' | translate }}</label>
+            <input name="full_name" type="text" [placeholder]="'CONTACT.FULL-NAME' | translate" required>
           </div>
           <div>
             <label for="email">Email</label>
-            <input name="email" type="email" placeholder="Email">
+            <input name="email" type="email" placeholder="Email" required>
           </div>
         </div>
 
         <label for="message">Message</label><br>
-        <textarea name="message" cols="30" rows="10" placeholder="Your message.."></textarea>
+        <textarea name="message" cols="30" rows="7" [placeholder]="'CONTACT.MESSAGE' | translate" required></textarea>
 
-        <button>Send</button>
+        <button>{{ 'CONTACT.BUTTON' | translate }}</button>
       </div>
+      <div class="right-box-container">
+        <div class="subtitle">{{ 'CONTACT.PARAGRAPH' | translate }}</div>
+        <div class="socials-container wow fadeIn">
+          <a href="https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/" target="_blank" rel="noopener">
+            <div class="box">
+              <div class="left-box">
+                <img src="../../assets/images/in.png" style="height: 1.5625rem; width: 1.5625rem;" alt="linkedin-icon">
+              </div> Linkedin
+            </div>
+          </a>
+          <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
+            <div class="box">
+              <div class="left-box">
+                <img src="../../assets/images/gh.png" style="height: 1.5625rem; width: 1.5625rem;" alt="github-icon">
+              </div>Github
+            </div>
+          </a>
+          <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
+            <div class="box">
+              <div class="left-box">
+                <img src="../../assets/images/be.png" style="height: 1.5625rem; width: 1.5625rem;" alt="behance-icon">
+              </div>
+              Behance
+            </div>
+          </a>
+          <a href="https://www.instagram.com/maximilien_work/" target="_blank" rel="noopener">
+            <div class="box">
+              <div class="left-box">
+                <img src="../../assets/images/insta.png" style="height: 1.5625rem; width: 1.5625rem;" alt="instagram-icon">
+              </div>
+              Instagram
+            </div>
+          </a>
+        </div>
+      </div>
+    </form>
 </main>
+

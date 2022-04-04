@@ -20,7 +20,7 @@
     },
     "PART-2": {
       "TITLE": "About me",
-      "PARAGRAPH": "You can contact me directly by e-mail, at the address"
+      "PARAGRAPH": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora quasi sunt perferendis nesciunt voluptates. Accusamus magnam nesciunt quia amet molestiae voluptates veritatis earum quis deserunt, vel delectus blanditiis. Blanditiis similique modi aspernatur, nihil officia voluptatibus quae magni praesentium quidem nemo aliquam necessitatibus fugit consectetur explicabo impedit eum vero excepturi?"
     },
     "PART-3": {
       "TITLE": "Projects",
@@ -29,8 +29,8 @@
       "PARAGRAPH-MOB": "See all >"
     },
     "PART-4":{
-      "TITLE": "",
-      "PARAGRAPH": ""
+      "TITLE": "Folow me",
+      "PARAGRAPH": "lorem ipsum dolor sit amet"
     }
   },
   "PROJECT": {
@@ -50,6 +50,10 @@
   "BLOG-DETAIL": {},
   "CONTACT": {
     "TITLE": "Contact me",
-    "SUBTITLE": "A new project proposal ? Or a simple question? Let me know, and I will try to reply as soon as possible."
+    "SUBTITLE": "A new project proposal ? Or a simple question? Let me know, and I will try to reply as soon as possible.",
+    "FULL-NAME": "Full name",
+    "MESSAGE": "Your message..",
+    "BUTTON": "Send",
+    "PARAGRAPH": "You can also contact me on my social networks:"
   }
 }

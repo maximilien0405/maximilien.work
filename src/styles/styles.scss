@@ -57,6 +57,18 @@
   .name-email-container {
     grid-template-columns: 1fr !important;
   }
+
+  .contact-container {
+    flex-direction: column !important;
+
+    .input-container {
+      width: 100%;
+    }
+
+    .right-box-container {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 508px) {
@@ -223,7 +235,7 @@
 
   a {
     width: 100%;
-    font-family: 'Lora';
+    font-family: "Lora";
     color: var(--light-black);
   }
 
@@ -255,7 +267,7 @@
 nav {
   display: flex;
   flex-direction: row;
-  position:relative;
+  position: relative;
   justify-content: space-between;
   transition: 200ms all;
   margin-top: 2.5rem;
@@ -300,7 +312,7 @@ nav {
 
 .nav-selected {
   font-weight: 500;
-  color:var(--black) !important;
+  color: var(--black) !important;
 }
 
 .hamburger {
@@ -316,20 +328,20 @@ nav {
 }
 
 .language-box {
-  position:absolute;
-  padding:0.625rem 0.9375rem;
-  right:0rem;
-  top:3.125rem;
+  position: absolute;
+  padding: 0.625rem 0.9375rem;
+  right: 0rem;
+  top: 3.125rem;
   z-index: 1000;
-  background-color:var(--white);
+  background-color: var(--white);
   border-radius: 0.3125rem;
   border: 0.0625rem solid var(--border-color);
-  display:flex;
+  display: flex;
   flex-direction: row;
   box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
 
   a {
-    padding:0px 0px;
+    padding: 0px 0px;
     cursor: pointer;
 
     &:hover {
@@ -528,7 +540,7 @@ header {
 .socials-container {
   margin-top: 1.875rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 1.25rem;
 
   a {
@@ -558,7 +570,8 @@ label {
   margin-bottom: 1.25rem;
 }
 
-input, textarea {
+input,
+textarea {
   font-size: 0.9rem;
   width: 100%;
   padding: 0.9375rem;
@@ -578,7 +591,6 @@ input, textarea {
     border: 0.0625rem solid var(--border-hover);
   }
 
-
   &:focus {
     outline: none;
     border-color: var(--border-hover);
@@ -590,11 +602,23 @@ textarea {
 }
 
 .input-container {
-  width: 100%;
+  width: 65%;
 
   label {
     margin-top: 0.625rem !important;
   }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-box-container {
+  width: 35%;
+  padding-left: 40px;
+  margin-left: 40px;
+  border-left: 1px solid var(--border-color);
 }
 
 /* ---------------------------------------------------
@@ -608,11 +632,17 @@ footer {
 }
 
 .separator {
-  margin-top: 6.25rem !important;
+  margin-top: 5.25rem !important;
 }
 
 footer .nav-links {
   a {
-    margin-left: 10px;
+    margin-left: 15px;
+    color: var(--light-black);
+    transition: 200ms all;
+
+    &:hover {
+      color: var(--black);
+    }
   }
 }
