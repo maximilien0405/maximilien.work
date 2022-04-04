@@ -57,18 +57,6 @@
   .name-email-container {
     grid-template-columns: 1fr !important;
   }
-
-  .contact-container {
-    flex-direction: column !important;
-
-    .input-container {
-      width: 100%;
-    }
-
-    .right-box-container {
-      display: none;
-    }
-  }
 }
 
 @media (min-width: 508px) {
@@ -91,6 +79,22 @@
   .owl-carousel .owl-item {
     max-height: fit-content !important;
     max-width: fit-content !important;
+  }
+
+  .contact-container {
+    flex-direction: column !important;
+
+    .input-container {
+      width: 100%;
+    }
+
+    .right-box-container {
+      display: none;
+    }
+  }
+
+  .mobile-icons {
+    display: flex !important;
   }
 }
 
@@ -599,6 +603,7 @@ textarea {
 
 textarea {
   resize: none;
+  height: 203px;
 }
 
 .input-container {
@@ -627,12 +632,18 @@ textarea {
 
 footer {
   display: flex;
-  margin-top: 30px !important;
-  justify-content: space-between;
-}
+  flex-direction: column;
 
-.separator {
-  margin-top: 5.25rem !important;
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px !important;
+  }
+
+  .separator {
+    margin-top: 3.25rem !important;
+  }
 }
 
 footer .nav-links {
@@ -644,5 +655,12 @@ footer .nav-links {
     &:hover {
       color: var(--black);
     }
+  }
+}
+
+.mobile-icons {
+  display: none;
+  img {
+    margin-left: 10px;
   }
 }
