@@ -25,7 +25,7 @@
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="item-navbar special-item"><span>03</span>{{ 'NAV.MOBILE-1' | translate }}</a>
+    <a (click)="closeNav()" href="https://medium.com/@maximilien.z" target="_blank" rel="noopener" class="item-navbar special-item"><span>03</span>{{ 'NAV.MOBILE-1' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
@@ -44,7 +44,7 @@
   <div class="nav-links">
     <a [ngClass]="{'nav-selected': route == '/'}" routerLink="/" class="link">{{ 'NAV.ITEM-1' | translate }}</a>
     <a [ngClass]="{'nav-selected': route == '/projets'}" routerLink="projets" class="link">{{ 'NAV.ITEM-2' | translate }}</a>
-    <a [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
+    <a href="https://medium.com/@maximilien.z" target="_blank" rel="noopener" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
     <a [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="link">{{ 'NAV.ITEM-4' | translate }}</a>
   </div>
   <div class="icons-box wow fadeIn">

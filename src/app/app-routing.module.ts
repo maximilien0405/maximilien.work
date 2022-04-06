@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { WorkDetailsComponent } from './work-details/work-details.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-import { AllBlogComponent } from './all-blog/all-blog.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
 
 const routes: Routes = [
@@ -15,7 +14,6 @@ const routes: Routes = [
   { path: 'projet/:name', component: WorkDetailsComponent},
   { path: 'contact', component:ContactComponent},
   { path: 'contact/success', component: EmailSentComponent },
-  { path: 'blog', component: AllBlogComponent },
   { path: '**', redirectTo: '/' }
 ];
 

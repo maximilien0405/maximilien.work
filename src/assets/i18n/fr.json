@@ -43,11 +43,6 @@
     "LINK": "< Retour",
     "BOTTOM-LINK": "Visiter le site >"
   },
-  "BLOG": {
-    "TITLE": "Tous les articles de blog",
-    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum"
-  },
-  "BLOG-DETAIL": {},
   "CONTACT": {
     "TITLE": "Me contacter",
     "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe, et je tâcherai de vous répondre au plus vite.",
