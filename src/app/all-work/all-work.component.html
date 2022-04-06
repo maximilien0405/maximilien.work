@@ -7,16 +7,18 @@
   <div class="all-rea-work">
     <div *ngFor="let work of component_all_work">
 
-      <div class="box-realisation wow fadeIn" (click)="join(work.url)" style="position: relative !important; height: 100%;">
+      <div class="box-realisation wow fadeIn" (click)="join(work.url)" style="position: relative !important">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
         <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
-        <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
+        <a (click)="join(work.url)" class="link-work-mobile">
           <img src="../../assets/icons/infos.svg" style="height: 1.4375rem; width:1.4375rem; margin-top: 0.4375rem; margin-left: 0.4375rem;" class="icon-color" [alt]="work.url">
         </a>
       </div>
-
+      <h3 style="margin-top: 20px;">Project title</h3>
+      <p class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, dolorum.</p>
+      <a (click)="join(work.url)" class="link-flash">See more ></a>
     </div>
   </div>
 </main>

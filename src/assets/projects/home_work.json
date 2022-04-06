@@ -11,7 +11,7 @@
   "img_preview":"../../assets/work/justrunPrev.png",
   "description_fr":"Site d'un projet de jeu 'JustRun'. J'ai tenté de reprendre le style du logo, et de créer une charte graphique en partant de cette base.",
   "description_en": "Website of a game project named 'JustRun'. I tried to take the style of the logo, and to create a design system from this base.",
-  "link":"https://www.just-run.fr/"
+  "link":"https://justrun-fr.netlify.app"
 },
 {
   "url":"whiplay",

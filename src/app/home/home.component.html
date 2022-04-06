@@ -50,10 +50,8 @@
               <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
             </div>
             <img [src]="work.img_preview" class="img-box" [alt]="work.url">
-            <a (click)="join(work.url)" class="link-work-mobile rea-box-mobile">
-              <img src="../../assets/icons/infos.svg"
-                style="height: 1.4375rem; width: 1.4375rem; margin-top: 0.5rem; margin-left: 0.45rem;"
-                class="icon-color" [alt]="work.url">
+            <a (click)="join(work.url)" class="link-work-mobile">
+              <img src="../../assets/icons/arrow.svg" style="margin:0 auto; height: 0.8rem; width: 0.8rem" class="icon-color" [alt]="work.url">
             </a>
           </div>
         </div>
