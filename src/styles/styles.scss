@@ -24,19 +24,6 @@
     gap: 0.9375rem !important;
   }
 
-  .all-projects {
-    grid-template-columns: 1fr !important;
-    gap: 0.9375rem !important;
-  }
-
-  .all-services {
-    grid-template-columns: 1fr !important;
-    gap: 0.9375rem !important;
-  }
-
-  .all-box-realisation {
-    grid-template-columns: 1fr !important;
-  }
 
   .rea-link-desktop {
     display: none !important;
@@ -74,11 +61,6 @@
 @media (max-width: 792px) {
   .all-rea-work {
     grid-template-columns: 1fr !important;
-  }
-
-  .owl-carousel .owl-item {
-    max-height: fit-content !important;
-    max-width: fit-content !important;
   }
 
   .contact-container {
@@ -420,13 +402,6 @@ header {
 /* ---------------------------------------------------
   REALISATIONS
 ----------------------------------------------------- */
-
-.all-box-realisation {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 1.5625rem;
-}
 
 .box-realisation {
   height: 100%;
