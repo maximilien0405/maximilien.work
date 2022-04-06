@@ -638,6 +638,9 @@ footer .nav-links {
   display: none;
 
   img {
-    margin-left: 10px;
+    margin-left: 5px;
+    height: 30px; 
+    width: 30px;
+    filter: var(--icon-dark);
   }
 }
