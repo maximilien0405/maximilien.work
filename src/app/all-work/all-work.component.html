@@ -5,20 +5,21 @@
   </div>
 
   <div class="all-rea-work">
-    <div *ngFor="let work of component_all_work">
-
+    <div *ngFor="let work of component_all_work" class="big-box-content">
       <div class="box-realisation wow fadeIn" (click)="join(work.url)" style="position: relative !important">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
         <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
         <a (click)="join(work.url)" class="link-work-mobile">
-          <img src="../../assets/icons/infos.svg" style="height: 1.4375rem; width:1.4375rem; margin-top: 0.4375rem; margin-left: 0.4375rem;" class="icon-color" [alt]="work.url">
+          <img src="../../assets/icons/arrow.svg" class="icon-color" style="margin: 0 auto; height: 0.8rem; width: 0.8rem;" alt="tinyhost">
         </a>
       </div>
-      <h3 style="margin-top: 20px;">Project title</h3>
-      <p class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, dolorum.</p>
-      <a (click)="join(work.url)" class="link-flash">See more ></a>
+      <h4 (click)="join(work.url)" style="margin-top: 20px;">{{ work.title_preview }}</h4>
+      <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
+      <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
+
+      <a (click)="join(work.url)" class="link-flash">{{ 'HOME.PART-3.BOX-HOVER' | translate }} ></a>
     </div>
   </div>
 </main>

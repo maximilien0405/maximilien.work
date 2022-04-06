@@ -1,6 +1,9 @@
 
 [
   {
+    "title_preview": "TinyHost",
+    "subtitle_fr": "",
+    "subtitle_en": "",
     "url":"tinyhost",
     "img_preview":"../../assets/work/preview/TinyHost.png",
     "img1":"../../assets/work/tinyhost1.png",
@@ -10,6 +13,9 @@
     "link":"https://tinyhost.netlify.app/"
   },
   {
+    "title_preview": "JustRun",
+    "subtitle_fr": "",
+    "subtitle_en": "",
     "url":"justrun",
     "img_preview":"../../assets/work/preview/JustRun.png",
     "img1":"../../assets/work/justrun1.png",
@@ -19,6 +25,9 @@
     "link":"https://justrun-fr.netlify.app"
   },
   {
+    "title_preview": "Whiplay",
+    "subtitle_fr": "",
+    "subtitle_en": "",
     "url":"whiplay",
     "img_preview":"../../assets/work/preview/Whiplay.png",
     "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
@@ -27,9 +36,12 @@
     "link":"https://whiplay.fr/"
   },
   {
+    "title_preview": "Instant",
+    "subtitle_fr": "",
+    "subtitle_en": "",
     "url":"instant",
     "img_preview":"../../assets/work/preview/Instant.png",
-    "all_img": ["../../assets/work/instant1.png","../../assets/work/instant2.png"],
+    "all_img": ["../../assets/work/instant2.png","../../assets/work/instant1.png"],
     "description_fr":"Dashboard d'un ancien projet de réseau social nommé 'Instant'.",
     "description_en": "Dashboard of an old social network project named 'Instant'.",
     "link":""

@@ -24,7 +24,7 @@
     },
     "PART-3": {
       "TITLE": "Réalisations",
-      "BOX-HOVER": "Cliquez pour plus d'infos",
+      "BOX-HOVER": "Voir plus",
       "PARAGRAPH-DESK": "Voir toutes les réalisations >",
       "PARAGRAPH-MOB": "Tout voir >"
     },
@@ -37,7 +37,7 @@
     "LINK": "< Retour",
     "TITLE": "Toutes les réalisations",
     "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum",
-    "BOX-HOVER": "Cliquez pour plus d'infos"
+    "BOX-HOVER": "Voir plus"
   },
   "PROJECT-DETAIL": {
     "LINK": "< Retour",

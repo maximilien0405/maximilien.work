@@ -413,11 +413,20 @@ header {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  column-gap: 2.5rem;
+  row-gap: 4rem;
+
+  img {
+    height: 100%;
+  }
+
+  .subtitle {
+    margin: 10px 0px;
+  }
 }
 
 .box-realisation {
-  height: 308px;
+  display: flex;
   position: relative;
   border: 0.0625rem solid var(--border-color);
   background-color: var(--white);
@@ -449,6 +458,10 @@ header {
   &:hover {
     border: 0.0625rem solid var(--border-hover);
   }
+}
+
+.big-box-content:hover .overlay {
+  opacity: 1;
 }
 
 .box-realisation:hover .overlay {

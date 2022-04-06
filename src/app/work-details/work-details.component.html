@@ -1,4 +1,4 @@
-<a routerLink="home" class="wow fadeIn link-flash go-back">{{ 'PROJECT.LINK' | translate }}</a>
+<a routerLink="/projets" class="wow fadeIn link-flash go-back">{{ 'PROJECT.LINK' | translate }}</a>
 
 <main>
   <div *ngFor="let work of component_all_work">
@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <p *ngIf="lang == 'fr' || lang == 'FR'"style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_fr}}</p>
+        <p *ngIf="lang == 'fr' || lang == 'FR'" style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_fr}}</p>
         <p *ngIf="lang == 'en' || lang == 'EN'" style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_en}}</p>
       </div>
 

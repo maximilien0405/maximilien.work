@@ -7,8 +7,8 @@
     <div style="display: flex;">
       <a *ngIf="whiteTheme" (click)="toggleDarkTheme()"><img src="../assets/icons/theme-dark.svg" alt="theme-dark-icon"></a>
       <a *ngIf="!whiteTheme" (click)="toggleWhiteTheme()"><img src="../assets/icons/theme-light.svg" alt="theme-white-icon"></a>
-      <a *ngIf="lang == 'en'" style="margin-left: 0.8125rem;" (click)="changeLang('fr')">FR</a>
-      <a *ngIf="lang == 'fr'" style="margin-left: 0.8125rem;" (click)="changeLang('en')">EN</a>
+      <a *ngIf="lang == 'en' || lang == 'EN'" style="margin-left: 0.8125rem;" (click)="changeLang('fr')">FR</a>
+      <a *ngIf="lang == 'fr' || lang == 'FR'" style="margin-left: 0.8125rem;" (click)="changeLang('en')">EN</a>
     </div>
     <a (click)="closeNav()"><img src="../assets/icons/close.svg" alt="close-icon"></a>
   </div>
