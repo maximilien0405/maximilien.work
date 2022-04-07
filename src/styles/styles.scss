@@ -305,7 +305,7 @@ nav {
   display: none;
   cursor: pointer;
   color: var(--black);
-  padding: 0rem 0rem 1.25rem 1.25rem;
+  padding: 1.5rem 0rem 1.25rem 1.25rem;
 
   img {
     width: 1.5625rem;
@@ -565,7 +565,7 @@ header {
   margin-right: 0.9375rem;
 
   img {
-    height: 2rem; 
+    height: 2rem;
     width: 2rem;
     filter: var(--icon-dark);
   }
@@ -616,7 +616,7 @@ textarea {
 
 textarea {
   resize: none;
-  height: 12.6875rem;
+  height: 12.7875rem;
 }
 
 .input-container {
@@ -677,7 +677,7 @@ footer .nav-links {
 
   img {
     margin-left: 0.3125rem;
-    height: 1.875rem; 
+    height: 1.875rem;
     width: 1.875rem;
     filter: var(--icon-dark);
   }
