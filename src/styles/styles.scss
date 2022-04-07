@@ -421,7 +421,7 @@ header {
   }
 
   .subtitle {
-    margin: 10px 0px;
+    margin: 0.625rem 0rem;
   }
 }
 
@@ -532,16 +532,16 @@ header {
 
 .work-header {
   h2 {
-    margin-top: 50px;
+    margin-top: 3.125rem;
     margin-bottom: 0px;
   }
 
   .subtitle {
-    margin: 17px 0px;
+    margin: 1.0625rem 0rem;
   }
 
   a {
-    margin-right: 23px;
+    margin-right: 1.4375rem;
   }
 }
 
@@ -611,7 +611,7 @@ textarea {
 
 textarea {
   resize: none;
-  height: 203px;
+  height: 12.6875rem;
 }
 
 .input-container {
@@ -629,9 +629,9 @@ textarea {
 
 .right-box-container {
   width: 35%;
-  padding-left: 40px;
-  margin-left: 40px;
-  border-left: 1px solid var(--border-color);
+  padding-left: 2.5rem;
+  margin-left: 2.5rem;
+  border-left: 0.0625rem solid var(--border-color);
 }
 
 /* ---------------------------------------------------
@@ -646,7 +646,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px !important;
+    margin-top: 1.875rem !important;
     align-items: center;
   }
 
@@ -657,7 +657,7 @@ footer {
 
 footer .nav-links {
   a {
-    margin-left: 15px;
+    margin-left: 0.9375rem;
     color: var(--light-black);
     transition: 200ms all;
 
@@ -671,9 +671,9 @@ footer .nav-links {
   display: none;
 
   img {
-    margin-left: 5px;
-    height: 30px; 
-    width: 30px;
+    margin-left: 0.3125rem;
+    height: 1.875rem; 
+    width: 1.875rem;
     filter: var(--icon-dark);
   }
 }

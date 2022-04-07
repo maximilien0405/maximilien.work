@@ -21,7 +21,7 @@
           <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
         </div>
       </ngx-glide>
-      <div *ngIf="!checkIfOneImage(work.all_img)" style="display: flex; margin-top: 20px;">
+      <div *ngIf="!checkIfOneImage(work.all_img)" style="display: flex; margin-top: 1.25rem;">
         <a (click)="back()" class="arrow"><</a>
         <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
       </div>

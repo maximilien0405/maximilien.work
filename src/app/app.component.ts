@@ -56,6 +56,8 @@ export class AppComponent {
   public lang:String = this.translate.currentLang;
   public languageClick:Boolean = false;
   public route:String;
+  public mobileSidebar: boolean = false;
+  public whiteTheme: boolean = true;
 
   constructor(public translate: TranslateService, private router: Router) {
     this.router.events.subscribe((event) => {
@@ -132,9 +134,6 @@ export class AppComponent {
 
     console.log(this.lang)
   }
-
-  mobileSidebar: boolean = false;
-  whiteTheme: boolean = true;
 
   openNav() {
     this.mobileSidebar = !this.mobileSidebar;

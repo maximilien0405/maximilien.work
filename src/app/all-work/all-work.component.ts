@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { ProjectsService } from '../projects.service';
-import { Work } from './../common/work.model'
+import { Work } from '../../common/work.model'
 
 @Component({
   selector: 'app-all-work',
@@ -43,8 +43,6 @@ export class AllWorkComponent implements OnInit {
   hide() {
     this.frameShow = false
   }
-
-  all_work: Work[];
 
   join(url:any):void {
     this.router.navigateByUrl("/projet/" + url);
