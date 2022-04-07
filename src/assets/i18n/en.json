@@ -19,8 +19,7 @@
       "BOX-3-SUB": "SEO, accessibility or optimization of performance."
     },
     "PART-2": {
-      "TITLE": "About me",
-      "PARAGRAPH": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora quasi sunt perferendis nesciunt voluptates. Accusamus magnam nesciunt quia amet molestiae voluptates veritatis earum quis deserunt, vel delectus blanditiis. Blanditiis similique modi aspernatur, nihil officia voluptatibus quae magni praesentium quidem nemo aliquam necessitatibus fugit consectetur explicabo impedit eum vero excepturi?"
+      "TITLE": "About me"
     },
     "PART-3": {
       "TITLE": "Projects",
@@ -47,7 +46,7 @@
   },
   "CONTACT": {
     "TITLE": "Contact me",
-    "SUBTITLE": "A new project proposal ? Or a simple question? Let me know!",
+    "SUBTITLE": "A new project proposal ? Or a simple question? Just let me know!",
     "FULL-NAME": "Full name",
     "MESSAGE": "Your message..",
     "BUTTON": "Send",

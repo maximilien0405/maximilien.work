@@ -40,6 +40,14 @@
   .name-email-container {
     grid-template-columns: 1fr !important;
   }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-icons {
+    display: flex !important;
+  }
 }
 
 @media (min-width: 508px) {
@@ -69,14 +77,6 @@
     .right-box-container {
       display: none;
     }
-  }
-
-  .mobile-icons {
-    display: flex !important;
-  }
-
-  .nav-links {
-    display: none;
   }
 }
 

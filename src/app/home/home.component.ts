@@ -3,7 +3,7 @@ import { Work } from '../../common/work.model';
 import { ProjectsService } from '../projects.service';
 import { Router } from '@angular/router';
 import { NgxGlideComponent } from 'ngx-glide';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +25,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {}
+  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
+    this.translate.onLangChange
+    .subscribe((event: LangChangeEvent) => {
+      this.lang = event.lang
+    });
+  }
 
   ngOnInit(): void {
     this.projectService.getHomeWork().subscribe((res: Work[]) => {

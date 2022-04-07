@@ -34,7 +34,23 @@
 
   <section>
     <h2 class="wow fadeIn"><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
-    <p class="subtitle wow fadeIn">{{ 'HOME.PART-2.PARAGRAPH' | translate }}</p>
+
+    <div *ngIf="lang == 'fr' || lang == 'FR'" class="wow fadeIn subtitle">
+      Hello ! Moi c'est Maximilien. Actuellement en apprentissage a Genève, j'occupe mon temps libre à travailler sur des projets personnels de tout type.     
+      Depuis novembre 2021, je réalise aussi en tant qu'indépendant du Web Design et du Développement Front-end pour mes clients. <br><br>
+
+      Que ce soit pour la réalisation de votre site web, ou bien une refonte de la charte graphique de votre entreprise, je tacherais tout mettre en oeuvre afin que votre projet corresponde à votre attente.<br><br>
+      Si vous souhaitez plus d'informations ou avez une mission à me proposer, n'hésitez pas à me contacter. Je serais ravis de trouver une solution à votre problème !
+    </div>
+
+    <div *ngIf="lang == 'en' || lang == 'EN'" class="wow fadeIn subtitle">
+      Hello, I'm Maximilien. Currently in an apprenticeship in Geneva, I spend my free time working on personal projects of all kinds. 
+      Since November 2021, I also work as a freelance web designer and front-end developer for my clients. <br><br>
+
+      Whether it is for the creation of your website, or a redesign of the design system of your business, I will do my best to make sure that your project meets your expectations. <br><br>
+      If you want more information or have a mission to propose to me, do not hesitate to contact me. I will be more than happy to find a solution to your problem! 
+
+    </div>
   </section>
 
   <!------ REALISATION ------------------------------------------------>
