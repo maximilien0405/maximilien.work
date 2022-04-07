@@ -303,12 +303,13 @@ nav {
 
 .hamburger {
   display: none;
-  width: 1.5625rem;
-  height: 1.5625rem;
   cursor: pointer;
   color: var(--black);
+  padding: 0rem 0rem 1.25rem 1.25rem;
 
   img {
+    width: 1.5625rem;
+    height: 1.5625rem;
     filter: var(--icon-dark);
   }
 }
