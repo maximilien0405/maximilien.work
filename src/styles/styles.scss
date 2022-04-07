@@ -125,11 +125,6 @@
     display: none !important;
   }
 
-  .socials-container {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 0.9375rem !important;
-  }
-
   .all-box-services {
     grid-template-columns: 1fr !important;
   }
@@ -558,12 +553,21 @@ header {
   a {
     font-weight: 400 !important;
   }
+  .box {
+    padding: 1.125rem;
+  }
 }
 
 .left-box {
-  margin-right: 1.125rem;
-  margin-top: 0.375rem;
-  margin-left: 0.4375rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.9375rem;
+
+  img {
+    height: 2rem; 
+    width: 2rem;
+    filter: var(--icon-dark);
+  }
 }
 
 /* ---------------------------------------------------
