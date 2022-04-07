@@ -4,33 +4,11 @@
   <div *ngFor="let work of component_all_work">
     <div *ngIf="work.url == url">
       <img *ngIf="checkIfOneImage(work.all_img) == true" [src]="work.img1" class="detail-img wow fadeIn">
-
-      <div *ngIf="!checkIfOneImage(work.all_img)">
-
-        <ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
-          <div *ngFor="let img of work.all_img">
-            <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
-          </div>
-        </ngx-glide>
-
-        <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
-          <a [href]="work.link" class="link-flash" target="_blank">{{ 'PROJECT-DETAIL.BOTTOM-LINK' | translate }}</a>
-          <div style="display: flex;">
-            <a (click)="back()" class="arrow"><</a>
-            <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
-          </div>
+      <ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
+        <div *ngFor="let img of work.all_img">
+          <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
         </div>
-        <p *ngIf="lang == 'fr' || lang == 'FR'" style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_fr}}</p>
-        <p *ngIf="lang == 'en' || lang == 'EN'" style="margin-top: 1.5625rem;" class="wow fadeIn subtitle">{{ work.description_en}}</p>
-      </div>
-
-      <div *ngIf="checkIfOneImage(work.all_img)">
-        <p *ngIf="lang == 'fr' || lang == 'FR'" style="margin-top: 1.5625rem;" class="subtitle wow fadeIn">{{ work.description_fr}}</p>
-        <p *ngIf="lang == 'en' || lang == 'EN'" style="margin-top: 1.5625rem;" class="subtitle wow fadeIn">{{ work.description_en}}</p>
-        <div *ngIf="work.link != ''" style="margin-top: 1.25rem;" class="wow fadeIn">
-        <a [href]="work.link" class="link-flash" target="_blank">{{ 'PROJECT-DETAIL.BOTTOM-LINK' | translate }}</a>
-        </div>
-      </div>
+      </ngx-glide>
     </div>
   </div>
 </main>

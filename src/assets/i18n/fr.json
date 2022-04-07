@@ -36,7 +36,7 @@
   "PROJECT": {
     "LINK": "< Retour",
     "TITLE": "Toutes les réalisations",
-    "SUBTITLE": "Lorem ipsum dolor sit amet lorem ipsum",
+    "SUBTITLE": "Voici quelques-uns de mes projets, que ce soit du design ou bien du développement web.",
     "BOX-HOVER": "Voir plus"
   },
   "PROJECT-DETAIL": {
@@ -45,7 +45,7 @@
   },
   "CONTACT": {
     "TITLE": "Me contacter",
-    "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe, et je tâcherai de vous répondre au plus vite.",
+    "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe !",
     "FULL-NAME": "Nom complet",
     "MESSAGE": "Votre message..",
     "BUTTON": "Envoyer",
