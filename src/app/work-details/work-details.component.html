@@ -3,12 +3,26 @@
 <main>
   <div *ngFor="let work of component_all_work">
     <div *ngIf="work.url == url">
+
+      <div class="work-header">
+        <h2>{{ work.title_preview }}</h2>
+        <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
+        <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
+        <div class="links-group">
+          <a *ngIf="work.website" class="link-flash" [href]="work.website" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK1' | translate }}</a>
+          <a *ngIf="work.github" class="link-flash" [href]="work.github" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK2' | translate }}</a>
+          <a *ngIf="work.behance" class="link-flash" [href]="work.behance" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK3' | translate }}</a>
+        </div>
+      </div>
+
       <img *ngIf="checkIfOneImage(work.all_img) == true" [src]="work.img1" class="detail-img wow fadeIn">
       <ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
         <div *ngFor="let img of work.all_img">
           <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
         </div>
       </ngx-glide>
+
+
     </div>
   </div>
 </main>

@@ -8,9 +8,9 @@
     "img_preview":"../../assets/work/preview/TinyHost.png",
     "img1":"../../assets/work/tinyhost1.png",
     "all_img": [],
-    "description_fr":"",
-    "description_en": "",
-    "link":"https://tinyhost.netlify.app/"
+    "website":"https://tinyhost.netlify.app/",
+    "github": "https://github.com/maximilien0405/tinyhost",
+    "behance": "https://www.behance.net/gallery/133348333/TinyHost"
   },
   {
     "title_preview": "JustRun",
@@ -20,9 +20,9 @@
     "img_preview":"../../assets/work/preview/JustRun.png",
     "img1":"../../assets/work/justrun1.png",
     "all_img": [],
-    "description_fr":"",
-    "description_en": "",
-    "link":"https://justrun-fr.netlify.app"
+    "website":"https://justrun-fr.netlify.app",
+    "github": "https://github.com/maximilien0405/justrun-web",
+    "behance": "https://www.behance.net/gallery/133348191/JustRun"
   },
   {
     "title_preview": "Whiplay",
@@ -31,9 +31,9 @@
     "url":"whiplay",
     "img_preview":"../../assets/work/preview/Whiplay.png",
     "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
-    "description_fr":"",
-    "description_en": "",
-    "link":"https://whiplay.fr/"
+    "website":"",
+    "github": "",
+    "behance": "https://www.behance.net/gallery/133348533/Whiplay"
   },
   {
     "title_preview": "Instant",
@@ -42,8 +42,8 @@
     "url":"instant",
     "img_preview":"../../assets/work/preview/Instant.png",
     "all_img": ["../../assets/work/instant2.png","../../assets/work/instant1.png"],
-    "description_fr":"Dashboard d'un ancien projet de réseau social ayant pour but d'être simple et confidentiel.",
-    "description_en": "Dashboard of an old social network project with the aim of being simple and confidential.",
-    "link":""
+    "website":"",
+    "github": "",
+    "behance": "https://www.behance.net/gallery/133348491/Instant"
   }
 ]

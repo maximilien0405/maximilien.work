@@ -41,7 +41,9 @@
   },
   "PROJECT-DETAIL": {
     "LINK": "< Back",
-    "BOTTOM-LINK": "Visit the website >"
+    "BOTTOM-LINK1": "See website",
+    "BOTTOM-LINK2": "Github",
+    "BOTTOM-LINK3": "Behance"
   },
   "CONTACT": {
     "TITLE": "Contact me",

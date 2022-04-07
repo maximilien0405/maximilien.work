@@ -33,10 +33,6 @@
     grid-template-columns: 1fr !important;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   .hamburger {
     display: block !important;
   }
@@ -77,6 +73,10 @@
 
   .mobile-icons {
     display: flex !important;
+  }
+
+  .nav-links {
+    display: none;
   }
 }
 
@@ -528,6 +528,21 @@ header {
 
 .go-back {
   margin: 6.25rem 0rem 6.25rem 0rem;
+}
+
+.work-header {
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+
+  .subtitle {
+    margin: 17px 0px;
+  }
+
+  a {
+    margin-right: 23px;
+  }
 }
 
 /* ---------------------------------------------------
