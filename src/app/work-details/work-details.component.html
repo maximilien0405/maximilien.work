@@ -16,13 +16,15 @@
       </div>
 
       <img *ngIf="checkIfOneImage(work.all_img) == true" [src]="work.img1" class="detail-img wow fadeIn">
-      <ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
+      <ngx-glide *ngIf="!checkIfOneImage(work.all_img)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
         <div *ngFor="let img of work.all_img">
           <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
         </div>
       </ngx-glide>
-
-
+      <div *ngIf="!checkIfOneImage(work.all_img)" style="display: flex; margin-top: 20px;">
+        <a (click)="back()" class="arrow"><</a>
+        <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
+      </div>
     </div>
   </div>
 </main>
