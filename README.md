@@ -1,4 +1,3 @@
-[<img src="https://i.ibb.co/Y7Yz96V/Group-48095343.png" alt="header" width="100%"/>](httos://www.maximilien.work)
 
 <br>
 
@@ -18,12 +17,10 @@ Please read [CONTRIBUTING.md](https://github.com/Bartek532/zagrodzki.me/blob/mai
 
 | Tech                                                      | Description                                                         |
 | --------------------------------------------------------- | ------------------------------------------------------------------- |
-| [Angular](https://angular.io/)                            | A component-based framework for building scalable web apps          |
+| [Angular](https://angular.io/)                            | Component-based framework for building scalable web apps          |
 | [HTML](https://developer.mozilla.org/fr/docs/Web/HTML)    | The standard markup language for creating Web pages                 |
 | [TypeScript](https://www.typescriptlang.org/)             | Static type-checking programming language                           |
 | [SCSS](https://sass-lang.com)                             | CSS with superpowers                                                |
-| [ESLint](https://eslint.org/)                             | TypeScript linting                                                  |
-| [Prettier](https://prettier.io/)                          | Code formatter                                                      |
 
 <br>
 
