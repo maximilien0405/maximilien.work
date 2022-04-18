@@ -11,9 +11,6 @@
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
         <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
-        <a (click)="join(work.url)" class="link-work-mobile">
-          <img src="../../assets/icons/arrow.svg" class="icon-color" style="margin: 0 auto; height: 0.8rem; width: 0.8rem;" alt="tinyhost">
-        </a>
       </div>
       <h4 (click)="join(work.url)" style="margin-top: 1.25rem;">{{ work.title_preview }}</h4>
       <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>

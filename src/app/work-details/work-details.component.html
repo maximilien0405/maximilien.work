@@ -14,11 +14,17 @@
           <a *ngIf="work.behance" class="link-flash" [href]="work.behance" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK3' | translate }}</a>
         </div>
       </div>
-
-      <img *ngIf="checkIfOneImage(work.all_img) == true" [src]="work.img1" class="detail-img wow fadeIn">
+      <a [href]="work.img1" style="position: relative;">
+        <img *ngIf="checkIfOneImage(work.all_img) == true" [src]="work.img1" class="detail-img wow fadeIn">
+        <a class="link-work-mobile" style="bottom:1.25rem !important">
+          <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="tinyhost">
+        </a>
+      </a>
       <ngx-glide *ngIf="!checkIfOneImage(work.all_img)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
         <div *ngFor="let img of work.all_img">
-          <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
+          <a [href]="img">
+            <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
+          </a>
         </div>
       </ngx-glide>
       <div *ngIf="!checkIfOneImage(work.all_img)" style="display: flex; margin-top: 1.25rem;">

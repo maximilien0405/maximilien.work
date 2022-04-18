@@ -494,18 +494,6 @@ header {
   }
 }
 
-.link-work-mobile {
-  position: absolute;
-  bottom: 0.9375rem;
-  left: 0.9375rem;
-  height: 2.5rem;
-  width: 2.5rem;
-  background-color: var(--white);
-  border-radius: 0.375rem;
-  border: 0.0625rem solid var(--border-color);
-  cursor: pointer;
-}
-
 .box-mobile:hover {
   cursor: unset !important;
   border: 0.0625rem solid var(--border-color) !important;
@@ -539,6 +527,18 @@ header {
   a {
     margin-right: 1.4375rem;
   }
+}
+
+.link-work-mobile {
+  position: absolute;
+  bottom: 0.9375rem;
+  left: 0.9375rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--white);
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--border-color);
+  cursor: pointer;
 }
 
 /* ---------------------------------------------------
