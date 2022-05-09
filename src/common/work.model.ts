@@ -1,5 +1,5 @@
 export interface Work {
-  title_preview:string
+  title_preview:string,
   subtitle_fr:string,
   subtitle_en:string,
   url:string,
@@ -8,5 +8,6 @@ export interface Work {
   all_img:Array<string>,
   website:string,
   behance:string,
-  github:string
+  github:string,
+  type:number
 }

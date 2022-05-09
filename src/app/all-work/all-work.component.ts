@@ -10,11 +10,15 @@ import { Work } from '../../common/work.model'
 })
 export class AllWorkComponent implements OnInit {
 
-  public component_all_work: Work[];
+  public component_free_work: Work[];
+  public component_perso_work: Work[];
+  public component_daily_work: Work[];
+
   public frameShow:boolean = false;
   public imageLink:string = "";
   public description:string = "";
-  public lang = this.translate.currentLang
+  public lang = this.translate.currentLang;
+  public type:number = 1;
 
   constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
     this.translate.onLangChange
@@ -24,27 +28,42 @@ export class AllWorkComponent implements OnInit {
     });
   }
 
-  reloadData() {
-    this.component_all_work = [...this.component_all_work];
+  public reloadData():void {
+    this.component_free_work = [...this.component_free_work];
+    this.component_perso_work = [...this.component_perso_work];
+    this.component_daily_work = [...this.component_daily_work];
   }
 
-  ngOnInit(): void {
-    this.projectService.getAllWork().subscribe((res: Work[]) => {
-      this.component_all_work = res;
+  public ngOnInit(): void {
+    this.projectService.getFreeWork().subscribe((res: Work[]) => {
+      this.component_free_work = res;
+    });
+
+    this.projectService.getPersoWork().subscribe((res: Work[]) => {
+      this.component_perso_work = res;
+    });
+
+    this.projectService.getDailyWork().subscribe((res: Work[]) => {
+      this.component_daily_work = res;
     });
   }
 
-  displayFrame(img_preview:string, description:string) {
+  public displayFrame(img_preview:string, description:string):void {
     this.frameShow = true;
     this.imageLink = img_preview;
     this.description = description;
   }
 
-  hide() {
+  public hide():void {
     this.frameShow = false
   }
 
-  join(url:any):void {
-    this.router.navigateByUrl("/projet/" + url);
+  public join(url:any):void {
+    this.router.navigateByUrl("/realisation/" + url);
+  }
+
+  public changeType(type:number):void {
+    this.type = type;
+    this.reloadData()
   }
 }

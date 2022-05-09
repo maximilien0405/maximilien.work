@@ -1,7 +1,7 @@
 {
   "NAV": {
     "ITEM-1": "Home",
-    "ITEM-2": "Projects",
+    "ITEM-2": "Work",
     "ITEM-3": "Blog",
     "ITEM-4": "Contact",
     "MOBILE-1": "Blog posts"
@@ -34,9 +34,12 @@
   },
   "PROJECT": {
     "LINK": "< Back",
-    "TITLE": "All projects",
-    "SUBTITLE": "Here are some of my projects, whether it is design or web development.",
-    "BOX-HOVER": "See more"
+    "TITLE": "All of my work",
+    "SUBTITLE": "Here are some of my work, whether it is UI/UX design or web development.",
+    "BOX-HOVER": "See more",
+    "CATEGORY-1": "Freelance work",
+    "CATEGORY-2": "Personal projects",
+    "CATEGORY-3": "DailyUI"
   },
   "PROJECT-DETAIL": {
     "LINK": "< Back",

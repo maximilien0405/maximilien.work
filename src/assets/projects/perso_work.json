@@ -1,0 +1,25 @@
+[
+  {    
+      "title_preview": "TinyHost",
+      "subtitle_fr": "Home page d'un ancien projet de site web proposant de l'hébergement statique.",
+      "subtitle_en": "Home page of an old website project offering static hosting to small websites.",
+      "url":"tinyhost",
+      "img_preview":"../../assets/work/preview/TinyHost.jpg",
+      "img1":"../../assets/work/tinyhost1.png",
+      "all_img": [],
+      "website":"https://tinyhost.netlify.app/",
+      "github": "https://github.com/maximilien0405/tinyhost",
+      "behance": "https://www.behance.net/gallery/133348333/TinyHost"
+    },
+    {
+      "title_preview": "Instant",
+      "subtitle_fr":"Dashboard d'un ancien projet de réseau social ayant pour but d'être simple et confidentiel.",
+      "subtitle_en": "Dashboard of an old social network project with the aim of being simple and confidential.",
+      "url":"instant",
+      "img_preview":"../../assets/work/preview/Instant.jpg",
+      "all_img": ["../../assets/work/instant2.png","../../assets/work/instant1.png"],
+      "website":"",
+      "github": "",
+      "behance": "https://www.behance.net/gallery/133348491/Instant"
+    }
+]

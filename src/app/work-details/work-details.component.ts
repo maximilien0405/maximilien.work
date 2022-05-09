@@ -31,7 +31,7 @@ export class WorkDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.projectService.getAllWork().subscribe((res: Work[]) => {
+    this.projectService.getFreeWork().subscribe((res: Work[]) => {
       this.component_all_work = res;
     });
   }

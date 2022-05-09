@@ -1,0 +1,26 @@
+
+[
+  {
+    "title_preview": "JustRun",
+    "subtitle_fr": "Design et développement d'un site pour un projet de jeu vidéo.",
+    "subtitle_en": "Design and development of a website for a video game project.",
+    "url":"justrun",
+    "img_preview":"../../assets/work/preview/JustRun.jpg",
+    "img1":"../../assets/work/justrun1.png",
+    "all_img": [],
+    "website":"https://justrun-fr.netlify.app",
+    "github": "https://github.com/maximilien0405/justrun-web",
+    "behance": "https://www.behance.net/gallery/133348191/JustRun"
+  },
+  {
+    "title_preview": "Whiplay",
+    "subtitle_fr": "Refonte complète de la charte graphique d'un site de collaboration musicale.",
+    "subtitle_en": "Complete redesign of the design system of a music collaboration website.",
+    "url":"whiplay",
+    "img_preview":"../../assets/work/preview/Whiplay.jpg",
+    "all_img": ["../../assets/work/whiplay1.png","../../assets/work/whiplay2.png","../../assets/work/whiplay3.png"],
+    "website":"",
+    "github": "",
+    "behance": "https://www.behance.net/gallery/133348533/Whiplay"
+  }
+]

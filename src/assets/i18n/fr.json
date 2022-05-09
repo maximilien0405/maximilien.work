@@ -34,9 +34,12 @@
   },
   "PROJECT": {
     "LINK": "< Retour",
-    "TITLE": "Toutes les réalisations",
-    "SUBTITLE": "Voici quelques-uns de mes projets, que ce soit du design ou bien du développement web.",
-    "BOX-HOVER": "Voir plus"
+    "TITLE": "Toutes mes réalisations",
+    "SUBTITLE": "Voici quelques-uns de mes réalisations, que ce soit de l'UI/UX design ou bien du développement web.",
+    "BOX-HOVER": "Voir plus",
+    "CATEGORY-1": "Missions Freelance",
+    "CATEGORY-2": "Projets perso",
+    "CATEGORY-3": "DailyUI"
   },
   "PROJECT-DETAIL": {
     "LINK": "< Retour",

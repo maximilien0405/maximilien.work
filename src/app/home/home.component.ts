@@ -57,6 +57,6 @@ export class HomeComponent implements OnInit {
   }
 
   join(url: any): void {
-    this.router.navigateByUrl("/projet/" + url);
+    this.router.navigateByUrl("/realisation/" + url);
   }
 }
