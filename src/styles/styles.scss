@@ -375,6 +375,29 @@ header {
   box-shadow: 0rem 0.5rem 1.875rem rgba(0, 0, 0, 0.15);
 }
 
+
+.category-links {
+  margin-top: 1.875rem !important;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+
+  a {
+    color: var(--light-black);
+    cursor: pointer;
+  }
+
+  .link-flash {
+    color: var(--black) !important;
+  }
+
+  a:hover {
+    color: var(--black);
+  }
+}
+
 /* ---------------------------------------------------
   SERVICES
 ----------------------------------------------------- */

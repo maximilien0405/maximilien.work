@@ -11,7 +11,7 @@ import { ProjectsService } from '../projects.service';
 })
 export class WorkDetailsComponent implements OnInit {
 
-  public component_all_work: Work[];
+  public component_all_work: Work[] = [];
   public url: string = "";
   public lang = this.translate.currentLang;
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
@@ -28,13 +28,27 @@ export class WorkDetailsComponent implements OnInit {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     })
-  }
 
-  ngOnInit(): void {
     this.projectService.getFreeWork().subscribe((res: Work[]) => {
-      this.component_all_work = res;
+      for (let index = 0; index < res.length; index++) {
+        this.component_all_work.push(res[index]);
+      }
+    });
+
+    this.projectService.getPersoWork().subscribe((res: Work[]) => {
+      for (let index = 0; index < res.length; index++) {
+        this.component_all_work.push(res[index]);
+      }
+    });
+
+    this.projectService.getDailyWork().subscribe((res: Work[]) => {
+      for (let index = 0; index < res.length; index++) {
+        this.component_all_work.push(res[index]);
+      }
     });
   }
+
+  ngOnInit(): void {}
 
   next(): void {
     this.ngxGlide.go('>');

@@ -2,9 +2,11 @@
   <div class="page-header wow fadeIn">
     <h2>{{ 'PROJECT.TITLE' | translate }}</h2>
     <p class="subtitle">{{ 'PROJECT.SUBTITLE' | translate }}</p>
-    <a (click)="changeType(1)">{{ 'PROJECT.CATEGORY-1' | translate }}</a>
-    <a (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}</a>
-    <a (click)="changeType(3)">{{ 'PROJECT.CATEGORY-3' | translate }}</a>
+    <div class="category-links">
+      <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'PROJECT.CATEGORY-1' | translate }}</a>
+      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}</a>
+      <a [class.link-flash]="type == 3" (click)="changeType(3)">{{ 'PROJECT.CATEGORY-3' | translate }}</a>
+    </div>
   </div>
 
   <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
