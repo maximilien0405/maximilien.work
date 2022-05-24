@@ -29,23 +29,29 @@ export class WorkDetailsComponent implements OnInit {
       this.lang = event.lang
     })
 
-    this.projectService.getFreeWork().subscribe((res: Work[]) => {
+    this.projectService.getAllWork().subscribe((res: Work[]) => {
       for (let index = 0; index < res.length; index++) {
         this.component_all_work.push(res[index]);
       }
     });
 
-    this.projectService.getPersoWork().subscribe((res: Work[]) => {
-      for (let index = 0; index < res.length; index++) {
-        this.component_all_work.push(res[index]);
-      }
-    });
+    // this.projectService.getFreeWork().subscribe((res: Work[]) => {
+    //   for (let index = 0; index < res.length; index++) {
+    //     this.component_all_work.push(res[index]);
+    //   }
+    // });
 
-    this.projectService.getDailyWork().subscribe((res: Work[]) => {
-      for (let index = 0; index < res.length; index++) {
-        this.component_all_work.push(res[index]);
-      }
-    });
+    // this.projectService.getPersoWork().subscribe((res: Work[]) => {
+    //   for (let index = 0; index < res.length; index++) {
+    //     this.component_all_work.push(res[index]);
+    //   }
+    // });
+
+    // this.projectService.getDailyWork().subscribe((res: Work[]) => {
+    //   for (let index = 0; index < res.length; index++) {
+    //     this.component_all_work.push(res[index]);
+    //   }
+    // });
   }
 
   ngOnInit(): void {}

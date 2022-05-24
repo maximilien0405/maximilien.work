@@ -14,6 +14,8 @@ export class AllWorkComponent implements OnInit {
   public component_perso_work: Work[];
   public component_daily_work: Work[];
 
+  public component_all_work: Work[];
+
   public frameShow:boolean = false;
   public imageLink:string = "";
   public description:string = "";
@@ -35,17 +37,21 @@ export class AllWorkComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.projectService.getFreeWork().subscribe((res: Work[]) => {
-      this.component_free_work = res;
+    this.projectService.getAllWork().subscribe((res: Work[]) => {
+      this.component_all_work = res;
     });
 
-    this.projectService.getPersoWork().subscribe((res: Work[]) => {
-      this.component_perso_work = res;
-    });
+    // this.projectService.getFreeWork().subscribe((res: Work[]) => {
+    //   this.component_free_work = res;
+    // });
 
-    this.projectService.getDailyWork().subscribe((res: Work[]) => {
-      this.component_daily_work = res;
-    });
+    // this.projectService.getPersoWork().subscribe((res: Work[]) => {
+    //   this.component_perso_work = res;
+    // });
+
+    // this.projectService.getDailyWork().subscribe((res: Work[]) => {
+    //   this.component_daily_work = res;
+    // });
   }
 
   public displayFrame(img_preview:string, description:string):void {

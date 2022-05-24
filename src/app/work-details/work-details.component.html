@@ -17,7 +17,7 @@
       <a *ngIf="checkIfOneImage(work.all_img) == true" [href]="work.img1" style="position: relative;">
         <img [src]="work.img1" class="detail-img wow fadeIn">
         <a class="link-work-mobile" style="bottom:1.25rem !important">
-          <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="tinyhost">
+          <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
         </a>
       </a>
       <ngx-glide *ngIf="!checkIfOneImage(work.all_img)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
@@ -25,7 +25,7 @@
           <a [href]="img" style="position: relative;">
             <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
             <a class="link-work-mobile" style="bottom:1.25rem !important">
-              <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="tinyhost">
+              <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
             </a>
           </a>
         </div>

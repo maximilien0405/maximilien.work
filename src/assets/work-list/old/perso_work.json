@@ -1,0 +1,13 @@
+[
+    {
+      "title_preview": "Instant",
+      "subtitle_fr":"Dashboard d'un ancien projet de réseau social ayant pour but d'être simple et confidentiel.",
+      "subtitle_en": "Dashboard of an old social network project with the aim of being simple and confidential.",
+      "url":"instant",
+      "img_preview":"../../assets/work/preview/Instant.jpg",
+      "all_img": ["../../assets/work/instant2.png","../../assets/work/instant1.png"],
+      "website":"",
+      "github": "",
+      "behance": "https://www.behance.net/gallery/133348491/Instant"
+    }
+]
