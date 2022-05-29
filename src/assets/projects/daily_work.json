@@ -1,0 +1,26 @@
+[
+   {
+    "title_preview": "DailyUI - 1",
+    "subtitle_fr":"Design d'une landing page pour un outil de managment entreprise.",
+    "subtitle_en": "Design of a landing page for a business management tool.",
+    "url":"dailyui1",
+    "img_preview":"../../assets/work-images/small/dailyui1.jpg",
+    "img1": "../../assets/work-images/big/dailyui1.jpg",
+    "all_img": [],
+    "website":"",
+    "github": "",
+    "behance": "https://www.behance.net/gallery/"
+  },
+  {
+    "title_preview": "DailyUI - 2",
+    "subtitle_fr":"Système de payement d'une boutique E-Commerce vendant des objets divers.",
+    "subtitle_en": "Payment system of an E-Commerce store selling various objects.",
+    "url":"dailyui2",
+    "img_preview":"../../assets/work-images/small/dailyui2.jpg",
+    "img1": "../../assets/work-images/big/dailyui2.jpg",
+    "all_img": [],
+    "website":"",
+    "github": "",
+    "behance": "https://www.behance.net/gallery/"
+  }
+]

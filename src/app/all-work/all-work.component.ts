@@ -11,10 +11,8 @@ import { Work } from '../../common/work.model'
 export class AllWorkComponent implements OnInit {
 
   public component_free_work: Work[];
-  public component_perso_work: Work[];
+  public component_all_work: Work[] = [];
   public component_daily_work: Work[];
-
-  public component_all_work: Work[];
 
   public frameShow:boolean = false;
   public imageLink:string = "";
@@ -32,26 +30,30 @@ export class AllWorkComponent implements OnInit {
 
   public reloadData():void {
     this.component_free_work = [...this.component_free_work];
-    this.component_perso_work = [...this.component_perso_work];
+    this.component_all_work = [...this.component_all_work];
     this.component_daily_work = [...this.component_daily_work];
   }
 
   public ngOnInit(): void {
-    this.projectService.getAllWork().subscribe((res: Work[]) => {
-      this.component_all_work = res;
+    this.projectService.getFreeWork().subscribe((res: Work[]) => {
+      this.component_free_work = res;
     });
 
-    // this.projectService.getFreeWork().subscribe((res: Work[]) => {
-    //   this.component_free_work = res;
-    // });
+    this.projectService.getDailyWork().subscribe((res: Work[]) => {
+      this.component_daily_work = res;
+    });
 
-    // this.projectService.getPersoWork().subscribe((res: Work[]) => {
-    //   this.component_perso_work = res;
-    // });
+    this.projectService.getFreeWork().subscribe((res: Work[]) => {
+      for (let index = 0; index < res.length; index++) {
+        this.component_all_work.push(res[index]);
+      }
 
-    // this.projectService.getDailyWork().subscribe((res: Work[]) => {
-    //   this.component_daily_work = res;
-    // });
+      this.projectService.getDailyWork().subscribe((res: Work[]) => {
+        for (let index = 0; index < res.length; index++) {
+          this.component_all_work.push(res[index]);
+        }
+      });
+    });
   }
 
   public displayFrame(img_preview:string, description:string):void {
