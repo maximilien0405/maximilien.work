@@ -21,7 +21,9 @@
       <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
       <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
 
-      <a (click)="join(work.url)" class="link-flash">{{ 'HOME.PART-3.BOX-HOVER' | translate }} ></a>
+      <div class="all-tags" *ngIf="work.all_tags">
+        <div class="tag" *ngFor="let x of work.all_tags">{{ x }}</div>
+      </div>
     </div>
   </div>
   <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
@@ -36,7 +38,9 @@
       <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
       <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
 
-      <a (click)="join(work.url)" class="link-flash">{{ 'HOME.PART-3.BOX-HOVER' | translate }} ></a>
+      <div class="all-tags" *ngIf="work.all_tags">
+        <div class="tag" *ngFor="let x of work.all_tags">{{ x }}</div>
+      </div>
     </div>
   </div>
   <div *ngIf="type == 3" class="all-rea-work wow fadeIn">
@@ -51,7 +55,9 @@
       <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
       <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
 
-      <a (click)="join(work.url)" class="link-flash">{{ 'HOME.PART-3.BOX-HOVER' | translate }} ></a>
+      <div class="all-tags" *ngIf="work.all_tags">
+        <div class="tag" *ngFor="let x of work.all_tags">{{ x }}</div>
+      </div>
     </div>
   </div>
 </main>

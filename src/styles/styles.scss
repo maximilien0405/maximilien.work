@@ -277,6 +277,10 @@ nav {
 
   h2 {
     margin: 0rem;
+
+    &::selection {
+      background-color: transparent !important;
+    }
   }
 }
 
@@ -520,6 +524,20 @@ header {
 .box-mobile:hover {
   cursor: unset !important;
   border: 0.0625rem solid var(--border-color) !important;
+}
+
+.all-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.3125rem 0.625rem;
+  background-color: var(--white);
+  border: 0.0625rem solid var(--border-color);
+  border-radius: 0.3125rem;
+  color: var(--black);
+  font-size: 0.875rem;
 }
 
 /* ---------------------------------------------------
