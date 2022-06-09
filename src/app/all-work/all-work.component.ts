@@ -10,9 +10,9 @@ import { Work } from '../../common/work.model'
 })
 export class AllWorkComponent implements OnInit {
 
-  public component_free_work: Work[];
+  public component_project_work: Work[];
   public component_all_work: Work[] = [];
-  public component_daily_work: Work[];
+  public component_other_work: Work[];
 
   public frameShow:boolean = false;
   public imageLink:string = "";
@@ -29,26 +29,26 @@ export class AllWorkComponent implements OnInit {
   }
 
   public reloadData():void {
-    this.component_free_work = [...this.component_free_work];
+    this.component_project_work = [...this.component_project_work];
     this.component_all_work = [...this.component_all_work];
-    this.component_daily_work = [...this.component_daily_work];
+    this.component_other_work = [...this.component_other_work];
   }
 
   public ngOnInit(): void {
-    this.projectService.getFreeWork().subscribe((res: Work[]) => {
-      this.component_free_work = res;
+    this.projectService.getProjectWork().subscribe((res: Work[]) => {
+      this.component_project_work = res;
     });
 
-    this.projectService.getDailyWork().subscribe((res: Work[]) => {
-      this.component_daily_work = res;
+    this.projectService.getOtherWork().subscribe((res: Work[]) => {
+      this.component_other_work = res;
     });
 
-    this.projectService.getFreeWork().subscribe((res: Work[]) => {
+    this.projectService.getProjectWork().subscribe((res: Work[]) => {
       for (let index = 0; index < res.length; index++) {
         this.component_all_work.push(res[index]);
       }
 
-      this.projectService.getDailyWork().subscribe((res: Work[]) => {
+      this.projectService.getOtherWork().subscribe((res: Work[]) => {
         for (let index = 0; index < res.length; index++) {
           this.component_all_work.push(res[index]);
         }

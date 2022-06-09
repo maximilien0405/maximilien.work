@@ -25,7 +25,7 @@
     </div>
   </div>
   <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
-    <div *ngFor="let work of component_free_work" class="big-box-content">
+    <div *ngFor="let work of component_project_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
@@ -40,7 +40,7 @@
     </div>
   </div>
   <div *ngIf="type == 3" class="all-rea-work wow fadeIn">
-    <div *ngFor="let work of component_daily_work" class="big-box-content">
+    <div *ngFor="let work of component_other_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>

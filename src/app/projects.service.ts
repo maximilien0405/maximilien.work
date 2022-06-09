@@ -10,15 +10,15 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) { }
 
-  public getFreeWork(): Observable<any> {
-    return this.http.get<any>('assets/projects/free_work.json').pipe(
+  public getProjectWork(): Observable<any> {
+    return this.http.get<any>('assets/projects/project_work.json').pipe(
       map((data) => data),
       catchError((error) => throwError(error))
     );
   }
 
-  public getDailyWork(): Observable<any> {
-    return this.http.get<any>('assets/projects/daily_work.json').pipe(
+  public getOtherWork(): Observable<any> {
+    return this.http.get<any>('assets/projects/other_work.json').pipe(
       map((data) => data),
       catchError((error) => throwError(error))
     );
