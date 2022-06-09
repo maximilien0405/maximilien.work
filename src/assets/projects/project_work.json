@@ -1,6 +1,19 @@
 
 [
   {
+    "title_preview": "Test project",
+    "subtitle_fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et risus felis. Suspendisse sodales ultrices placerat.",
+    "subtitle_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et risus felis. Suspendisse sodales ultrices placerat.",
+    "url":"testproject",
+    "img_preview":"../../assets/work-images/small/justrun.jpg",
+    "img1":"../../assets/work-images/big/justrun.jpg",
+    "all_img": [],
+    "all_tags": ["Angular", "HTML/SCSS", "TailwindCSS"],
+    "website":"https://justrun-fr.netlify.app",
+    "github": "https://github.com/maximilien0405/justrun-web",
+    "behance": "https://www.behance.net/gallery/133348191/JustRun"
+  },
+  {
     "title_preview": "JustRun",
     "subtitle_fr": "Design et développement d'un site pour un projet de jeu vidéo futuristique.",
     "subtitle_en": "Design and development of a website for a futuristic video game project.",
@@ -8,6 +21,7 @@
     "img_preview":"../../assets/work-images/small/justrun.jpg",
     "img1":"../../assets/work-images/big/justrun.jpg",
     "all_img": [],
+    "all_tags": ["Angular", "HTML/SCSS", "NestJS", "PostgreSQL"],
     "website":"https://justrun-fr.netlify.app",
     "github": "https://github.com/maximilien0405/justrun-web",
     "behance": "https://www.behance.net/gallery/133348191/JustRun"
@@ -21,6 +35,8 @@
     "img1": "../../assets/work-images/big/buyfair.jpg",
     "all_img": [],
     "website":"",
+    "all_tags": ["Angular", "HTML", "SCSS"],
+
     "github": "",
     "behance": "https://www.behance.net/gallery/133348427/BuyFair"
   }
