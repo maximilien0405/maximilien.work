@@ -7,11 +7,13 @@
     "url":"testproject",
     "img_preview":"../../assets/work-images/small/justrun.jpg",
     "img1":"../../assets/work-images/big/justrun.jpg",
-    "all_img": [],
+    "all_img": ["../../assets/work-images/big/justrun.jpg", "../../assets/work-images/big/justrun.jpg"],
     "all_tags": ["Angular", "HTML/SCSS", "TailwindCSS"],
     "website":"https://justrun-fr.netlify.app",
     "github": "https://github.com/maximilien0405/justrun-web",
-    "behance": "https://www.behance.net/gallery/133348191/JustRun"
+    "behance": "https://www.behance.net/gallery/133348191/JustRun",
+    "description_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices enim odio, a varius arcu sagittis et. Aliquam lacinia, nisl mattis aliquam facilisis, enim odio ornare neque, nec iaculis nibh dolor sed enim. Curabitur non purus metus. Cras malesuada non enim eu ultrices. Curabitur vitae leo neque. Etiam commodo nisl ipsum, vel eleifend eros finibus vitae. Nunc quis nibh molestie odio egestas aliquam in vitae mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat ultricies metus, dapibus dictum odio rutrum id. Nulla a tempor urna, id placerat est. Nam mollis ornare enim ut blandit. Aliquam ultricies, augue vel lacinia interdum, felis tellus efficitur ipsum, sit amet fringilla tortor diam sit amet mi. ",
+    "description_fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices enim odio, a varius arcu sagittis et. Aliquam lacinia, nisl mattis aliquam facilisis, enim odio ornare neque, nec iaculis nibh dolor sed enim. Curabitur non purus metus. Cras malesuada non enim eu ultrices. Curabitur vitae leo neque. Etiam commodo nisl ipsum, vel eleifend eros finibus vitae. Nunc quis nibh molestie odio egestas aliquam in vitae mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat ultricies metus, dapibus dictum odio rutrum id. Nulla a tempor urna, id placerat est. Nam mollis ornare enim ut blandit. Aliquam ultricies, augue vel lacinia interdum, felis tellus efficitur ipsum, sit amet fringilla tortor diam sit amet mi. "
   },
   {
     "title_preview": "JustRun",

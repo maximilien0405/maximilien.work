@@ -3,7 +3,6 @@
 <main>
   <div *ngFor="let work of component_all_work">
     <div *ngIf="work.url == url">
-
       <div class="work-header">
         <h2>{{ work.title_preview }}</h2>
         <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
@@ -20,25 +19,36 @@
           </a>
         </div>
       </div>
-      <a *ngIf="checkIfOneImage(work.all_img) == true" [href]="work.img1" style="position: relative;">
+      <div *ngIf="checkIfOneImage(work.all_img) == true" style="position: relative;">
         <img [src]="work.img1" class="detail-img wow fadeIn">
         <a class="link-work-mobile" style="bottom:1.25rem !important">
           <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
         </a>
-      </a>
+      </div>
       <ngx-glide *ngIf="!checkIfOneImage(work.all_img)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
         <div *ngFor="let img of work.all_img">
-          <a [href]="img" style="position: relative;">
+          <div style="position: relative;">
             <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
             <a class="link-work-mobile" style="bottom:1.25rem !important">
               <img src="../../assets/icons/link.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
             </a>
-          </a>
+          </div>
         </div>
       </ngx-glide>
       <div *ngIf="!checkIfOneImage(work.all_img)" style="display: flex; margin-top: 1.25rem;">
         <a (click)="back()" class="arrow"><</a>
         <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
+      </div>
+
+      <div *ngIf="work.description_fr || work.description_en" class="project-details">
+        <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle" style="margin:3rem 0 2.8rem 0">{{ work.description_fr }}</p>
+        <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle" style="margin:3rem 0 2.8rem 0">{{ work.description_en }}</p>
+  
+        <h2>Wireframe</h2>
+        <h2>Charte graphique</h2>
+        <h2>Maquettes</h2>
+        <h2>Développement</h2>
+        <h2>Conclusion</h2>
       </div>
     </div>
   </div>

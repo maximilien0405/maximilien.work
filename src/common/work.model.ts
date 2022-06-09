@@ -10,5 +10,8 @@ export interface Work {
   website:string,
   behance:string,
   github:string,
-  type:number
+  description_en: string,
+  description_fr:string,
+  
+  type:number,
 }
