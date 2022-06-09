@@ -9,9 +9,15 @@
         <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
         <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
         <div class="links-group">
-          <a *ngIf="work.website" class="link-flash" [href]="work.website" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK1' | translate }}</a>
-          <a *ngIf="work.github" class="link-flash" [href]="work.github" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK2' | translate }}</a>
-          <a *ngIf="work.behance" class="link-flash" [href]="work.behance" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK3' | translate }}</a>
+          <a *ngIf="work.website" class="link-flash" [href]="work.website" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK1' | translate }}
+            <img src="assets/icons/ext.svg" alt="ext-icon">
+          </a>
+          <a *ngIf="work.github" class="link-flash" [href]="work.github" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK2' | translate }}
+            <img src="assets/icons/ext.svg" alt="ext-icon">
+          </a>
+          <a *ngIf="work.behance" class="link-flash" [href]="work.behance" target="_blank" rel="noopener">{{ 'PROJECT-DETAIL.BOTTOM-LINK3' | translate }}
+            <img src="assets/icons/ext.svg" alt="ext-icon">
+          </a>
         </div>
       </div>
       <a *ngIf="checkIfOneImage(work.all_img) == true" [href]="work.img1" style="position: relative;">
