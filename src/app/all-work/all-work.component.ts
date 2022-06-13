@@ -11,7 +11,6 @@ import { Work } from '../../common/work.model'
 export class AllWorkComponent implements OnInit {
 
   public component_project_work: Work[];
-  public component_all_work: Work[] = [];
   public component_other_work: Work[];
 
   public frameShow:boolean = false;
@@ -30,7 +29,6 @@ export class AllWorkComponent implements OnInit {
 
   public reloadData():void {
     this.component_project_work = [...this.component_project_work];
-    this.component_all_work = [...this.component_all_work];
     this.component_other_work = [...this.component_other_work];
   }
 
@@ -41,18 +39,6 @@ export class AllWorkComponent implements OnInit {
 
     this.projectService.getOtherWork().subscribe((res: Work[]) => {
       this.component_other_work = res;
-    });
-
-    this.projectService.getProjectWork().subscribe((res: Work[]) => {
-      for (let index = 0; index < res.length; index++) {
-        this.component_all_work.push(res[index]);
-      }
-
-      this.projectService.getOtherWork().subscribe((res: Work[]) => {
-        for (let index = 0; index < res.length; index++) {
-          this.component_all_work.push(res[index]);
-        }
-      });
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { NgxGlideComponent } from 'ngx-glide';
 import { Work } from '../../common/work.model';
@@ -12,6 +12,8 @@ import { ProjectsService } from '../projects.service';
 export class WorkDetailsComponent implements OnInit {
 
   public component_all_work: Work[] = [];
+  public component_project_work: Work[] = [];
+  public isProject: boolean = false;
   public url: string = "";
   public lang = this.translate.currentLang;
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
@@ -22,7 +24,7 @@ export class WorkDetailsComponent implements OnInit {
     }
   }
 
-  constructor(private route: ActivatedRoute, private projectService: ProjectsService, private translate: TranslateService) {
+  constructor(private router: Router, private route: ActivatedRoute, private projectService: ProjectsService, private translate: TranslateService) {
     this.route.params.subscribe(params => this.url = params.name);
 
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
@@ -40,10 +42,14 @@ export class WorkDetailsComponent implements OnInit {
         this.component_all_work.push(res[index]);
       }
     });
+    
+    this.projectService.getProjectWork().subscribe((res: Work[]) => {
+      this.component_project_work = res;
+    });
   }
 
   ngOnInit(): void {}
-
+  
   next(): void {
     this.ngxGlide.go('>');
   }
@@ -57,5 +63,27 @@ export class WorkDetailsComponent implements OnInit {
       return true;
     }
     return false;
+  }
+
+  nextProject(url: string) {
+    let currentProject = false;
+
+    this.component_project_work.forEach(element => {
+
+      if(currentProject){
+        if(url == 'buyfair') {
+          console.log("test")
+          this.router.navigateByUrl("/realisation/testproject");
+        }
+        else {
+          this.router.navigateByUrl("/realisation/" + element.url);
+        }
+        currentProject = false;
+      }
+
+      if(element.url == url){
+        currentProject = true;
+      }
+    });
   }
 }

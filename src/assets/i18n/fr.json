@@ -37,9 +37,8 @@
     "TITLE": "Toutes mes réalisations",
     "SUBTITLE": "Voici quelques-uns de mes réalisations, que ce soit de l'UI/UX design ou bien du développement web.",
     "BOX-HOVER": "Voir plus",
-    "CATEGORY-1": "Tout",
-    "CATEGORY-2": "Projets",
-    "CATEGORY-3": "Autres"
+    "CATEGORY-1": "Projets",
+    "CATEGORY-2": "Autres"
   },
   "PROJECT-DETAIL": {
     "LINK": "< Retour",

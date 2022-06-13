@@ -4,34 +4,14 @@
     <p class="subtitle">{{ 'PROJECT.SUBTITLE' | translate }}</p>
     <div class="category-links">
       <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'PROJECT.CATEGORY-1' | translate }}
-      </a>
-      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}
         <span>({{ this.component_project_work.length }})</span>
       </a>
-      <a [class.link-flash]="type == 3" (click)="changeType(3)">{{ 'PROJECT.CATEGORY-3' | translate }}
+      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}
         <span>({{ this.component_other_work.length }})</span>
       </a>
     </div>
   </div>
-
   <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
-    <div *ngFor="let work of component_all_work" class="big-box-content">
-      <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
-        <div class="overlay rea-box-desktop">
-          <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
-        </div>
-        <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
-      </div>
-      <h4 (click)="join(work.url)" style="margin-top: 1.25rem;">{{ work.title_preview }}</h4>
-      <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
-      <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
-
-      <div class="all-tags" *ngIf="work.all_tags">
-        <div class="tag" *ngFor="let x of work.all_tags">{{ x }}</div>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of component_project_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
         <div class="overlay rea-box-desktop">
@@ -48,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="type == 3" class="all-rea-work wow fadeIn">
+  <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of component_other_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
         <div class="overlay rea-box-desktop">

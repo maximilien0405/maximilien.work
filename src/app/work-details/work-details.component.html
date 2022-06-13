@@ -1,5 +1,6 @@
 <main class="work-details-structure">
-  <div *ngFor="let work of component_all_work" style="max-width: 700px;">
+  <div class="work-content">
+  <div *ngFor="let work of component_all_work" class="work-content-container">
     <div *ngIf="work.url == url">
       <div class="work-header">
         <h2>{{ work.title_preview }}</h2>
@@ -42,24 +43,40 @@
         <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle" style="margin:3rem 0 2.8rem 0">{{ work.description_fr }}</p>
         <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle" style="margin:3rem 0 2.8rem 0">{{ work.description_en }}</p>
 
-        <h2><span class="special-span">01</span>Wireframe</h2>
+        <h2 id="01"><span class="special-span">01</span>Wireframe</h2>
+        <img [src]="work.img1" class="detail-img wow fadeIn">
 
-          <img [src]="work.img1" class="detail-img wow fadeIn">
+        <h2><span class="special-span">02</span>Charte graphique</h2>
+        <img [src]="work.img1" class="detail-img wow fadeIn">
 
-        <h2>Charte graphique</h2>
-        <h2>Maquettes</h2>
-        <h2>Développement</h2>
-        <h2>Conclusion</h2>
+        <h2><span class="special-span">03</span>Maquettes</h2>
+        <img [src]="work.img1" class="detail-img wow fadeIn">
+
+        <h2><span class="special-span">04</span>Développement</h2>
+        <img [src]="work.img1" class="detail-img wow fadeIn">
+
+        <h2><span class="special-span">05</span>Conclusion</h2>
+        <img [src]="work.img1" class="detail-img wow fadeIn">
+
       </div>
     </div>
   </div>
-  <div class="table-container">
-    <a routerLink="/realisations" class="wow fadeIn link-flash go-back">{{ 'PROJECT.LINK' | translate }}</a>
-    <h3>Table des matières</h3>
-        <p><span class="special-span">01</span>Wireframe</p>
-        <p>Charte graphique</p>
-        <p>Maquettes</p>
-        <p>Développement</p>
-        <p>Conclusion</p>
+  </div>
+  <div class="table-container" >
+    <div class="table-content">
+      <h3>Table des matières</h3>
+      <div class="separator"></div>
+      <div class="table-links">
+        <a href="01" class="subtitle">01 - Wireframe</a>
+        <a class="subtitle">02 - Charte graphique</a>
+        <a class="subtitle">03 - Maquettes</a>
+        <a class="subtitle">04 - Développement</a>
+        <a class="subtitle">05 - Conclusion</a>
+      </div>
+    </div>
+    <div class="table-bottom-links">
+      <button routerLink="/realisations" class="wow fadeIn ">{{ 'PROJECT.LINK' | translate }}</button>
+      <button (click)="nextProject(this.url)" class="wow fadeIn ">Suivant ></button>
+    </div>
   </div>
 </main>
