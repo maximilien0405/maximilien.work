@@ -12,6 +12,5 @@ export interface Work {
   github:string,
   description_en: string,
   description_fr:string,
-  
   type:number,
 }

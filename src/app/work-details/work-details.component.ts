@@ -13,8 +13,8 @@ export class WorkDetailsComponent implements OnInit {
 
   public component_all_work: Work[] = [];
   public component_project_work: Work[] = [];
-  public isProject: boolean = false;
   public url: string = "";
+  public workIsProject: boolean = false;
   public lang = this.translate.currentLang;
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
@@ -36,20 +36,18 @@ export class WorkDetailsComponent implements OnInit {
         this.component_all_work.push(res[index]);
       }
     });
-
     this.projectService.getOtherWork().subscribe((res: Work[]) => {
       for (let index = 0; index < res.length; index++) {
         this.component_all_work.push(res[index]);
       }
     });
-    
     this.projectService.getProjectWork().subscribe((res: Work[]) => {
       this.component_project_work = res;
     });
   }
 
-  ngOnInit(): void {}
-  
+  ngOnInit(): void { }
+
   next(): void {
     this.ngxGlide.go('>');
   }
@@ -69,21 +67,24 @@ export class WorkDetailsComponent implements OnInit {
     let currentProject = false;
 
     this.component_project_work.forEach(element => {
-
       if(currentProject){
-        if(url == 'buyfair') {
-          console.log("test")
-          this.router.navigateByUrl("/realisation/testproject");
-        }
-        else {
-          this.router.navigateByUrl("/realisation/" + element.url);
-        }
+        this.router.navigateByUrl("/realisation/" + element.url);
         currentProject = false;
       }
-
       if(element.url == url){
         currentProject = true;
       }
     });
+  }
+
+  isProject() {
+    this.component_all_work.forEach(element => {
+      if (element.url == this.url) {
+        console.log(element.url)
+        this.workIsProject = true
+      }
+    });
+
+    console.log(this.workIsProject)
   }
 }
