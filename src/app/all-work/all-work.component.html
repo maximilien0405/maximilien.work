@@ -17,14 +17,14 @@
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
-        <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
+        <img [src]="work.img_preview" class="img-box" [alt]="work.url">
       </div>
-      <h4 (click)="join(work.url)" style="margin-top: 1.25rem;">{{ work.title_preview }}</h4>
+      <h4 (click)="join(work.url)">{{ work.title_preview }}</h4>
       <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
       <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
 
       <div class="all-tags" *ngIf="work.all_tags">
-        <div class="tag" *ngFor="let x of work.all_tags">{{ x }}</div>
+        <div class="tag" *ngFor="let tag of work.all_tags">{{ tag }}</div>
       </div>
     </div>
   </div>
@@ -34,14 +34,14 @@
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
-        <img [src]="work.img_preview" class="img-box" style="border-radius: 0.5rem;" [alt]="work.url">
+        <img [src]="work.img_preview" class="img-box" [alt]="work.url">
       </div>
-      <h4 (click)="join(work.url)" style="margin-top: 1.25rem;">{{ work.title_preview }}</h4>
+      <h4 (click)="join(work.url)">{{ work.title_preview }}</h4>
       <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
       <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
 
       <div class="all-tags" *ngIf="work.all_tags">
-        <div class="tag" *ngFor="let x of work.all_tags">{{ x }}</div>
+        <div class="tag" *ngFor="let tag of work.all_tags">{{ tag }}</div>
       </div>
     </div>
   </div>

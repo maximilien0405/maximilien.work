@@ -482,6 +482,10 @@ header {
     object-fit: cover;
   }
 
+  img {
+    border-radius: 0.5rem;
+  }
+
   img:hover + .overlay {
     display: block !important;
   }
@@ -489,6 +493,10 @@ header {
   &:hover {
     border: 0.0625rem solid var(--border-hover);
   }
+}
+
+.big-box-content h4 {
+  margin-top: 1.25rem;
 }
 
 .big-box-content:hover .overlay {
@@ -501,10 +509,7 @@ header {
 
 .overlay {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   height: 100%;
   width: 100%;
   opacity: 0;
