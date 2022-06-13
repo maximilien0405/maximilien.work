@@ -3,9 +3,14 @@
     <h2>{{ 'PROJECT.TITLE' | translate }}</h2>
     <p class="subtitle">{{ 'PROJECT.SUBTITLE' | translate }}</p>
     <div class="category-links">
-      <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'PROJECT.CATEGORY-1' | translate }}</a>
-      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}</a>
-      <a [class.link-flash]="type == 3" (click)="changeType(3)">{{ 'PROJECT.CATEGORY-3' | translate }}</a>
+      <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'PROJECT.CATEGORY-1' | translate }}
+      </a>
+      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}
+        <span>({{ this.component_project_work.length }})</span>
+      </a>
+      <a [class.link-flash]="type == 3" (click)="changeType(3)">{{ 'PROJECT.CATEGORY-3' | translate }}
+        <span>({{ this.component_other_work.length }})</span>
+      </a>
     </div>
   </div>
 
