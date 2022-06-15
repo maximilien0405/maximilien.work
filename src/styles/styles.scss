@@ -56,12 +56,6 @@
   }
 }
 
-@media (min-width: 992px) {
-  .link-work-mobile {
-    display: none;
-  }
-}
-
 @media (max-width: 792px) {
   .all-rea-work {
     grid-template-columns: 1fr !important;
@@ -81,6 +75,11 @@
 
   .table-container {
     display: none;
+  }
+
+  .link-work-mobile {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -136,10 +135,11 @@
   .page-header h2 {
     margin: 3.25rem 0rem 1.25rem 0rem;
   }
+}
 
+@media (min-width: 992px) {
   .link-work-mobile {
-    display: flex;
-    align-items: center;
+    display: none;
   }
 }
 
@@ -588,9 +588,10 @@ header {
     gap:10px;
 
     a {
+      font-size: 15px;
       transition: all 0.2s;
     }
-    
+
     a:hover {
       color: var(--black);
     }
@@ -616,7 +617,7 @@ header {
 }
 
 .detail-img {
-  margin-top: 3.125rem;
+  margin-top: 3rem;
   width: 100%;
   border: 0.0625rem solid var(--border-color);
   border-radius: 0.5rem;
@@ -651,6 +652,22 @@ header {
   border-radius: 0.375rem;
   border: 0.0625rem solid var(--border-color);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.link-work {
+  position: absolute;
+  bottom: 0.9375rem;
+  left: 0.9375rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--white);
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .links-group img {
@@ -661,7 +678,11 @@ header {
 
 .project-details {
   h2 {
-    margin-top: 0px;
+    margin-top: 3rem;
+  }
+
+  p {
+    margin-bottom: 0rem;
   }
 }
 
