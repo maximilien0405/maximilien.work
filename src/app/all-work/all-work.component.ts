@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 import { ProjectsService } from '../projects.service';
 
 @Component({
@@ -9,38 +10,40 @@ import { ProjectsService } from '../projects.service';
 })
 export class AllWorkComponent implements OnInit {
 
-  public component_all_work = [];
+  public all_work:any;
+  public total_all_work:any = [];
+  public total_all_other:any = [];
 
   public frameShow:boolean = false;
   public imageLink:string = "";
   public description:string = "";
   public lang = localStorage.getItem('lang')
-  
+  public readonly API_URL = environment.api;
+
   public type:number = 1;
 
-  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
+  constructor(private projectService:ProjectsService, private router: Router, private translate: TranslateService) {
     this.translate.onLangChange
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     });
-        
-    console.log("test")
+      
+    this.projectService.getAllWork(this.lang).subscribe(res => {
+      this.all_work = res.data;
 
-  }
+      for (let x in this.all_work) {
+        if(this.all_work[x].attributes.type == 'project') {
+          this.total_all_work.push(this.all_work[x].attributes)
+        } else if(this.all_work[x].attributes.type == 'other'){
+          this.total_all_other.push(this.all_work[x].attributes)
+        }
+      } 
 
-  // public reloadData():void {
-  //   this.component_project_work = [...this.component_project_work];
-  //   this.component_other_work = [...this.component_other_work];
-  // }
-
-  public ngOnInit(): void {
-
-    this.projectService.getAllWork(this.lang).subscribe((res:any) => {
-      this.component_all_work = res;
+      console.log(this.total_all_work)
     });
-
-    console.log(this.component_all_work)
   }
+
+  public ngOnInit(): void {}
 
   public displayFrame(img_preview:string, description:string):void {
     this.frameShow = true;
@@ -58,6 +61,5 @@ export class AllWorkComponent implements OnInit {
 
   public changeType(type:number):void {
     this.type = type;
-   // this.reloadData()
   }
 }

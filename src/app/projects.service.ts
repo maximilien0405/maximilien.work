@@ -11,9 +11,10 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) { }
   private readonly API_URL = environment.api;
-  public getAllWork(lang:any) {
-    return this.http.get(`${this.API_URL}/api/projects?locale=${lang}&populate=*`).pipe(
-      catchError((error) => throwError(error))
-    );
+
+  public getAllWork(lang:any): Observable<any> {
+
+    return this.http.get<any>(`${this.API_URL}/api/projects?locale=${lang}&populate=*`).pipe(map(res => res));
+    
   }
 }

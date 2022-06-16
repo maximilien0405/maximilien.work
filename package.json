@@ -18,15 +18,16 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@glidejs/glide": "^3.4.1",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
+    "ngx-glide": "^13.0.0",
+    "ngx-owl-carousel-o": "^7.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "@glidejs/glide": "^3.4.1",
-    "animate.css": "^4.1.1",
-    "ngx-glide": "^13.0.0",
-    "ngx-owl-carousel-o": "^7.0.2"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",
