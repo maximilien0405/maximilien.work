@@ -2,7 +2,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { ProjectsService } from '../projects.service';
-import { Work } from '../../common/work.model'
 
 @Component({
   selector: 'app-all-work',
@@ -10,36 +9,37 @@ import { Work } from '../../common/work.model'
 })
 export class AllWorkComponent implements OnInit {
 
-  public component_project_work: Work[];
-  public component_other_work: Work[];
+  public component_all_work = [];
 
   public frameShow:boolean = false;
   public imageLink:string = "";
   public description:string = "";
-  public lang = this.translate.currentLang;
+  public lang = localStorage.getItem('lang')
+  
   public type:number = 1;
 
   constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
     this.translate.onLangChange
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
-      this.reloadData()
     });
+        
+    console.log("test")
+
   }
 
-  public reloadData():void {
-    this.component_project_work = [...this.component_project_work];
-    this.component_other_work = [...this.component_other_work];
-  }
+  // public reloadData():void {
+  //   this.component_project_work = [...this.component_project_work];
+  //   this.component_other_work = [...this.component_other_work];
+  // }
 
   public ngOnInit(): void {
-    this.projectService.getProjectWork().subscribe((res: Work[]) => {
-      this.component_project_work = res;
+
+    this.projectService.getAllWork(this.lang).subscribe((res:any) => {
+      this.component_all_work = res;
     });
 
-    this.projectService.getOtherWork().subscribe((res: Work[]) => {
-      this.component_other_work = res;
-    });
+    console.log(this.component_all_work)
   }
 
   public displayFrame(img_preview:string, description:string):void {
@@ -58,6 +58,6 @@ export class AllWorkComponent implements OnInit {
 
   public changeType(type:number):void {
     this.type = type;
-    this.reloadData()
+   // this.reloadData()
   }
 }

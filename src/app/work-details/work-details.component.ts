@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { NgxGlideComponent } from 'ngx-glide';
-import { Work } from '../../common/work.model';
 import { ProjectsService } from '../projects.service';
 
 @Component({
@@ -11,8 +10,8 @@ import { ProjectsService } from '../projects.service';
 })
 export class WorkDetailsComponent implements OnInit {
 
-  public component_all_work: Work[] = [];
-  public component_project_work: Work[] = [];
+  public component_all_work = [];
+  public component_project_work = [];
   public url: string = "";
   public workIsProject: boolean = false;
   public lang = this.translate.currentLang;
@@ -31,19 +30,19 @@ export class WorkDetailsComponent implements OnInit {
       this.lang = event.lang
     })
 
-    this.projectService.getProjectWork().subscribe((res: Work[]) => {
-      for (let index = 0; index < res.length; index++) {
-        this.component_all_work.push(res[index]);
-      }
-    });
-    this.projectService.getOtherWork().subscribe((res: Work[]) => {
-      for (let index = 0; index < res.length; index++) {
-        this.component_all_work.push(res[index]);
-      }
-    });
-    this.projectService.getProjectWork().subscribe((res: Work[]) => {
-      this.component_project_work = res;
-    });
+    // this.projectService.getProjectWork().subscribe((res: Work[]) => {
+    //   for (let index = 0; index < res.length; index++) {
+    //     this.component_all_work.push(res[index]);
+    //   }
+    // });
+    // this.projectService.getOtherWork().subscribe((res: Work[]) => {
+    //   for (let index = 0; index < res.length; index++) {
+    //     this.component_all_work.push(res[index]);
+    //   }
+    // });
+    // this.projectService.getProjectWork().subscribe((res: Work[]) => {
+    //   this.component_project_work = res;
+    // });
   }
 
   ngOnInit(): void { }
@@ -63,28 +62,28 @@ export class WorkDetailsComponent implements OnInit {
     return false;
   }
 
-  nextProject(url: string) {
-    let currentProject = false;
+  // nextProject(url: string) {
+  //   let currentProject = false;
 
-    this.component_project_work.forEach(element => {
-      if(currentProject){
-        this.router.navigateByUrl("/realisation/" + element.url);
-        currentProject = false;
-      }
-      if(element.url == url){
-        currentProject = true;
-      }
-    });
-  }
+  //   this.component_project_work.forEach(element => {
+  //     if(currentProject){
+  //       this.router.navigateByUrl("/realisation/" + element.url);
+  //       currentProject = false;
+  //     }
+  //     if(element.url == url){
+  //       currentProject = true;
+  //     }
+  //   });
+  // }
 
-  isProject() {
-    this.component_all_work.forEach(element => {
-      if (element.url == this.url) {
-        console.log(element.url)
-        this.workIsProject = true
-      }
-    });
+  // isProject() {
+  //   this.component_all_work.forEach(element => {
+  //     if (element.url == this.url) {
+  //       console.log(element.url)
+  //       this.workIsProject = true
+  //     }
+  //   });
 
-    console.log(this.workIsProject)
-  }
+  //   console.log(this.workIsProject)
+  // }
 }

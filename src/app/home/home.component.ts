@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { Work } from '../../common/work.model';
 import { ProjectsService } from '../projects.service';
 import { Router } from '@angular/router';
 import { NgxGlideComponent } from 'ngx-glide';
@@ -11,7 +10,7 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 })
 export class HomeComponent implements OnInit {
 
-  public component_home_work: Work[];
+  public component_home_work = [];
   public frameShow: boolean = false;
   public imageLink: string = "";
   public description: string = "";
@@ -33,9 +32,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.projectService.getHomeWork().subscribe((res: Work[]) => {
-      this.component_home_work = res;
-    });
+    // this.projectService.getHomeWork().subscribe((res: Work[]) => {
+    //   this.component_home_work = res;
+    // });
   }
 
   next(): void {

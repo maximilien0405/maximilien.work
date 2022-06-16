@@ -106,6 +106,7 @@ export class AppComponent {
   }
 
   changeLang(lang:string) {
+    window.location.reload();
     this.translate.currentLang == lang;
     this.translate.use(lang);
     localStorage.setItem('lang', lang)
@@ -131,8 +132,6 @@ export class AppComponent {
       this.translate.use('fr');
       this.lang = 'fr';
     }
-
-    console.log(this.lang)
   }
 
   openNav() {

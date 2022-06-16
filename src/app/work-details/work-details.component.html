@@ -1,4 +1,4 @@
-<main class="work-details-structure">
+<!--<main class="work-details-structure">
   <div *ngFor="let work of component_all_work">
     <div *ngIf="work.url == url"  class="work-content">
       <div class="work-content-container">
@@ -22,7 +22,6 @@
           </div>
         </div>
 
-        <!-- adssa-->
         <div *ngIf="checkIfOneImage(work.all_img) == true" style="position: relative;">
           <img [src]="work.img1" class="detail-img wow fadeIn">
           <a class="link-work" [href]="work.img1" style="bottom:1.25rem !important">
@@ -48,24 +47,24 @@
               <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
         </div>
 
-        <!-- PROJECT DESCRIPTION -->
+        <!-- PROJECT DESCRIPTION -
         <div *ngIf="work.description_fr || work.description_en" class="project-details">
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_en }}</p>
 
-          <!-- 01 WIREFRAME -->
+          <!-- 01 WIREFRAME --
           <h2 id="01"><span class="special-span">01</span>{{ 'PROJECT-DETAIL.TABLE-ITEM1' | translate }}</h2>
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.wireframe_description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.wireframe_description_en }}</p>
           <img [src]="work.wireframe_image" class="detail-img wow fadeIn">
 
-          <!-- 02 DESIGN SYSTEM -->
+          <!-- 02 DESIGN SYSTEM --
           <h2 id="02"><span class="special-span">02</span>{{ 'PROJECT-DETAIL.TABLE-ITEM2' | translate }}</h2>
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.designsystem_description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.designsystem_description_en }}</p>
           <img [src]="work.designsystem_image" class="detail-img wow fadeIn">
 
-          <!-- 03 MOCKUPS -->
+          <!-- 03 MOCKUPS --
           <h2 id="03"><span class="special-span">03</span>{{ 'PROJECT-DETAIL.TABLE-ITEM3' | translate }}</h2>
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.mockups_description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.mockups_description_en }}</p>
@@ -102,3 +101,4 @@
     </div>
   </div>
 </main>
+-->
