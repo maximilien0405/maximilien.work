@@ -1,37 +1,28 @@
-<!--<main class="work-details-structure">
-  <div *ngFor="let work of component_all_work">
+<main class="work-details-structure">
+  <div *ngFor="let work of total_all">
     <div *ngIf="work.url == url"  class="work-content">
       <div class="work-content-container">
         <div class="work-header">
-          <h2>{{ work.title_preview }}</h2>
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.subtitle_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.subtitle_en }}</p>
-          <div class="links-group">
-            <a *ngIf="work.website" class="link-flash" [href]="work.website" target="_blank" rel="noopener">{{
-              'PROJECT-DETAIL.BOTTOM-LINK1' | translate }}
-              <img src="assets/icons/ext.svg" alt="ext-icon">
-            </a>
-            <a *ngIf="work.github" class="link-flash" [href]="work.github" target="_blank" rel="noopener">{{
-              'PROJECT-DETAIL.BOTTOM-LINK2' | translate }}
-              <img src="assets/icons/ext.svg" alt="ext-icon">
-            </a>
-            <a *ngIf="work.behance" class="link-flash" [href]="work.behance" target="_blank" rel="noopener">{{
-              'PROJECT-DETAIL.BOTTOM-LINK3' | translate }}
+          <h2>{{ work.title }}</h2>
+          <p class="subtitle">{{ work.subtitle }}</p>
+
+          <div class="links-group" *ngFor="let link of work.links">
+            <a class="link-flash" [href]="link.url" target="_blank" rel="noopener">{{ link.name }}
               <img src="assets/icons/ext.svg" alt="ext-icon">
             </a>
           </div>
         </div>
 
-        <div *ngIf="checkIfOneImage(work.all_img) == true" style="position: relative;">
+        <div *ngIf="checkIfOneImage(work.images) == true" style="position: relative;">
           <img [src]="work.img1" class="detail-img wow fadeIn">
           <a class="link-work" [href]="work.img1" style="bottom:1.25rem !important">
             <img src="../../assets/icons/image.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;"
               alt="link">
           </a>
         </div>
-        <ngx-glide *ngIf="!checkIfOneImage(work.all_img)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20"
+        <ngx-glide *ngIf="!checkIfOneImage(work.images)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20"
           [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
-          <div *ngFor="let img of work.all_img">
+          <div *ngFor="let img of work.images">
             <div style="position: relative;">
               <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
               <a class="link-work" style="bottom:1.25rem !important">
@@ -47,38 +38,15 @@
               <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
         </div>
 
-        <!-- PROJECT DESCRIPTION -
         <div *ngIf="work.description_fr || work.description_en" class="project-details">
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_en }}</p>
 
-          <!-- 01 WIREFRAME --
+          <!-- 01 WIREFRAME -->
           <h2 id="01"><span class="special-span">01</span>{{ 'PROJECT-DETAIL.TABLE-ITEM1' | translate }}</h2>
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.wireframe_description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.wireframe_description_en }}</p>
           <img [src]="work.wireframe_image" class="detail-img wow fadeIn">
-
-          <!-- 02 DESIGN SYSTEM --
-          <h2 id="02"><span class="special-span">02</span>{{ 'PROJECT-DETAIL.TABLE-ITEM2' | translate }}</h2>
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.designsystem_description_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.designsystem_description_en }}</p>
-          <img [src]="work.designsystem_image" class="detail-img wow fadeIn">
-
-          <!-- 03 MOCKUPS --
-          <h2 id="03"><span class="special-span">03</span>{{ 'PROJECT-DETAIL.TABLE-ITEM3' | translate }}</h2>
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.mockups_description_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.mockups_description_en }}</p>
-          <img [src]="work.mockups_image" class="detail-img wow fadeIn">
-
-          <h2 id="04"><span class="special-span">04</span>{{ 'PROJECT-DETAIL.TABLE-ITEM4' | translate }}</h2>
-          <img [src]="work.img1" class="detail-img wow fadeIn">
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.dev_description_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.dev_description_en }}</p>
-          <img [src]="work.dev_image" class="detail-img wow fadeIn">
-
-          <h2 id="05"><span class="special-span">05</span>{{ 'PROJECT-DETAIL.TABLE-ITEM5' | translate }}</h2>
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.conclusion_description_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.conclusion_description_en }}</p>
         </div>
       </div>
       <div class="table-container" *ngIf="work.description_en || work.description_fr">
@@ -95,7 +63,7 @@
         </div>
         <div class="table-bottom-links">
           <button routerLink="/realisations" class="wow fadeIn ">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
-          <button (click)="nextProject(this.url)" class="wow fadeIn ">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
+          <!--<button (click)="nextProject(this.url)" class="wow fadeIn ">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>-->
         </div>
       </div>
     </div>

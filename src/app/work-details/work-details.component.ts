@@ -10,11 +10,13 @@ import { ProjectsService } from '../projects.service';
 })
 export class WorkDetailsComponent implements OnInit {
 
-  public component_all_work = [];
-  public component_project_work = [];
+  public all_work:any;
+  
+  public total_all:any = [];
   public url: string = "";
   public workIsProject: boolean = false;
-  public lang = this.translate.currentLang;
+  public lang = localStorage.getItem('lang')
+
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
   breakpoints:Record<string, unknown> = {
@@ -30,19 +32,15 @@ export class WorkDetailsComponent implements OnInit {
       this.lang = event.lang
     })
 
-    // this.projectService.getProjectWork().subscribe((res: Work[]) => {
-    //   for (let index = 0; index < res.length; index++) {
-    //     this.component_all_work.push(res[index]);
-    //   }
-    // });
-    // this.projectService.getOtherWork().subscribe((res: Work[]) => {
-    //   for (let index = 0; index < res.length; index++) {
-    //     this.component_all_work.push(res[index]);
-    //   }
-    // });
-    // this.projectService.getProjectWork().subscribe((res: Work[]) => {
-    //   this.component_project_work = res;
-    // });
+    this.projectService.getAllWork(this.lang).subscribe(res => {
+      this.all_work = res.data;
+
+      for (let x in this.all_work) {
+        this.total_all.push(this.all_work[x].attributes)
+      } 
+
+      console.log(this.total_all);
+    });
   }
 
   ngOnInit(): void { }
@@ -65,7 +63,7 @@ export class WorkDetailsComponent implements OnInit {
   // nextProject(url: string) {
   //   let currentProject = false;
 
-  //   this.component_project_work.forEach(element => {
+  //   this.total_all.forEach(element => {
   //     if(currentProject){
   //       this.router.navigateByUrl("/realisation/" + element.url);
   //       currentProject = false;
@@ -76,14 +74,12 @@ export class WorkDetailsComponent implements OnInit {
   //   });
   // }
 
-  // isProject() {
-  //   this.component_all_work.forEach(element => {
-  //     if (element.url == this.url) {
-  //       console.log(element.url)
-  //       this.workIsProject = true
-  //     }
-  //   });
-
-  //   console.log(this.workIsProject)
-  // }
+  isProject() {
+    this.total_all.forEach(element => {
+      if (element.url == this.url) {
+        console.log(element.url)
+        this.workIsProject = true
+      }
+    });
+  }
 }
