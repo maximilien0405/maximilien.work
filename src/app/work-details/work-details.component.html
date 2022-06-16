@@ -6,8 +6,8 @@
           <h2>{{ work.title }}</h2>
           <p class="subtitle">{{ work.subtitle }}</p>
 
-          <div class="links-group" *ngFor="let link of work.links">
-            <a class="link-flash" [href]="link.url" target="_blank" rel="noopener">{{ link.name }}
+          <div class="links-group">
+            <a *ngFor="let link of work.links" class="link-flash" [href]="link.url" target="_blank" rel="noopener">{{ link.name }}
               <img src="assets/icons/ext.svg" alt="ext-icon">
             </a>
           </div>
@@ -38,7 +38,7 @@
               <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
         </div>
 
-        <div *ngIf="work.description_fr || work.description_en" class="project-details">
+        <div *ngIf="work.type == 'project'" class="project-details">
           <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_fr }}</p>
           <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_en }}</p>
 
@@ -49,7 +49,7 @@
           <img [src]="work.wireframe_image" class="detail-img wow fadeIn">
         </div>
       </div>
-      <div class="table-container" *ngIf="work.description_en || work.description_fr">
+      <div class="table-container" *ngIf="work.type == 'project'">
         <div class="table-content">
           <h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>
           <div class="separator"></div>
@@ -69,4 +69,3 @@
     </div>
   </div>
 </main>
--->

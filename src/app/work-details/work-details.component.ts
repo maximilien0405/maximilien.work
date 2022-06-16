@@ -11,7 +11,7 @@ import { ProjectsService } from '../projects.service';
 export class WorkDetailsComponent implements OnInit {
 
   public all_work:any;
-  
+
   public total_all:any = [];
   public url: string = "";
   public workIsProject: boolean = false;
@@ -37,7 +37,7 @@ export class WorkDetailsComponent implements OnInit {
 
       for (let x in this.all_work) {
         this.total_all.push(this.all_work[x].attributes)
-      } 
+      }
 
       console.log(this.total_all);
     });
@@ -54,6 +54,8 @@ export class WorkDetailsComponent implements OnInit {
   }
 
   checkIfOneImage(array: Array<string>) {
+    console.log(array)
+
     if (array.length <= 1) {
       return true;
     }
