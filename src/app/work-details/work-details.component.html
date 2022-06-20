@@ -1,7 +1,7 @@
 <main class="work-details-structure">
   <div *ngFor="let work of total_all">
     <div *ngIf="work.url == url"  class="work-content">
-      <div class="work-content-container">
+      <div class="work-content-container wow fadeIn">
         <div class="work-header">
           <h2>{{ work.title }}</h2>
           <p class="subtitle">{{ work.subtitle }}</p>
@@ -13,57 +13,54 @@
           </div>
         </div>
 
-        <div *ngIf="checkIfOneImage(work.images) == true" style="position: relative;">
-          <img [src]="work.img1" class="detail-img wow fadeIn">
-          <a class="link-work" [href]="work.img1" style="bottom:1.25rem !important">
+        <div *ngIf="work.onlyoneimage" style="position: relative;">
+          <img [src]="API_URL + work.images.data[0].attributes.url" class="detail-img">
+          <a class="link-work" [href]="API_URL + work.images.data[0].attributes.url" style="bottom:1.25rem !important">
             <img src="../../assets/icons/image.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;"
               alt="link">
           </a>
         </div>
-        <ngx-glide *ngIf="!checkIfOneImage(work.images)" #ngxGlide type="carousel" [showArrows]="false" [gap]="20"
-          [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
-          <div *ngFor="let img of work.images">
-            <div style="position: relative;">
-              <img [src]="img" class="detail-img wow fadeIn" [alt]="work.url">
-              <a class="link-work" style="bottom:1.25rem !important">
-                <img src="../../assets/icons/image.svg" class="icon-color"
-                  style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
-              </a>
-            </div>
+
+        <div>
+          <!--<ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20"
+            [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
+              <div style="position: relative;" *ngFor="let img of work.images.data">
+                <img [src]="API_URL + img.attributes.url" class="detail-img" [alt]="work.url">
+                <a class="link-work" style="bottom:1.25rem !important">
+                  <img src="../../assets/icons/image.svg" class="icon-color"
+                    style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
+                </a>
+              </div>
+          </ngx-glide>-->
+          <!--<ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false">
+            <img [src]="API_URL + work.images.data[0].attributes.url" class="detail-img">
+          </ngx-glide>-->
+      </div>
+      <div *ngIf="!work.onlyoneimage" style="display: flex; margin-top: 1.25rem;">
+        <a (click)="back()" class="arrow"> < </a>
+        <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;"> > </a>
+      </div>
+
+        <div class="project-details">
+          <p class="subtitle" style="margin-top: 2.8rem;">{{ work.description }}</p>
+          <div *ngFor="let content of work.content">
+            <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
+            <p class="subtitle">{{ content.description }}</p>
+            <img *ngIf="content.onlyoneimage" [src]="API_URL + content.images.data[0].attributes.url" class="detail-img wow fadeIn">
           </div>
-        </ngx-glide>
-        <div *ngIf="!checkIfOneImage(work.all_img)" style="display: flex; margin-top: 1.25rem;">
-          <a (click)="back()" class="arrow">
-            <</a>
-              <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;">></a>
-        </div>
-
-        <div *ngIf="work.type == 'project'" class="project-details">
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle" style="margin-top: 2.8rem;">{{ work.description_en }}</p>
-
-          <!-- 01 WIREFRAME -->
-          <h2 id="01"><span class="special-span">01</span>{{ 'PROJECT-DETAIL.TABLE-ITEM1' | translate }}</h2>
-          <p *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">{{ work.wireframe_description_fr }}</p>
-          <p *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">{{ work.wireframe_description_en }}</p>
-          <img [src]="work.wireframe_image" class="detail-img wow fadeIn">
         </div>
       </div>
-      <div class="table-container" *ngIf="work.type == 'project'">
+      <div class="table-container wow fadeIn" *ngIf="work.type == 'project'">
         <div class="table-content">
           <h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>
           <div class="separator"></div>
           <div class="table-links">
-            <a class="subtitle" routerLink="./" fragment="01">01 - {{ 'PROJECT-DETAIL.TABLE-ITEM1' | translate }}</a>
-            <a class="subtitle" routerLink="./" fragment="02">02 - {{ 'PROJECT-DETAIL.TABLE-ITEM2' | translate }}</a>
-            <a class="subtitle" routerLink="./" fragment="03">03 - {{ 'PROJECT-DETAIL.TABLE-ITEM3' | translate }}</a>
-            <a class="subtitle" routerLink="./" fragment="04">04 - {{ 'PROJECT-DETAIL.TABLE-ITEM4' | translate }}</a>
-            <a class="subtitle" routerLink="./" fragment="05">05 - {{ 'PROJECT-DETAIL.TABLE-ITEM5' | translate }}</a>
+            <a *ngFor="let content of work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>
           </div>
         </div>
-        <div class="table-bottom-links">
-          <button routerLink="/realisations" class="wow fadeIn ">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
-          <!--<button (click)="nextProject(this.url)" class="wow fadeIn ">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>-->
+        <div class="table-bottom-links ">
+          <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
+          <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
         </div>
       </div>
     </div>

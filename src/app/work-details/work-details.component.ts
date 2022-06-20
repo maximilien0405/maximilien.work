@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { NgxGlideComponent } from 'ngx-glide';
+import { environment } from 'src/environments/environment';
 import { ProjectsService } from '../projects.service';
 
 @Component({
@@ -13,9 +14,11 @@ export class WorkDetailsComponent implements OnInit {
   public all_work:any;
 
   public total_all:any = [];
+  public total_all_work:any = [];
   public url: string = "";
   public workIsProject: boolean = false;
   public lang = localStorage.getItem('lang')
+  public readonly API_URL = environment.api;
 
   @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
 
@@ -36,6 +39,10 @@ export class WorkDetailsComponent implements OnInit {
       this.all_work = res.data;
 
       for (let x in this.all_work) {
+        if(this.all_work[x].attributes.type == 'project') {
+          this.total_all_work.push(this.all_work[x].attributes)
+        }
+
         this.total_all.push(this.all_work[x].attributes)
       }
 
@@ -53,7 +60,7 @@ export class WorkDetailsComponent implements OnInit {
     this.ngxGlide.go('<');
   }
 
-  checkIfOneImage(array: Array<string>) {
+  checkIfOneImage(array) {
     console.log(array)
 
     if (array.length <= 1) {
@@ -62,26 +69,16 @@ export class WorkDetailsComponent implements OnInit {
     return false;
   }
 
-  // nextProject(url: string) {
-  //   let currentProject = false;
+  nextProject() {
+    let count = 0;
 
-  //   this.total_all.forEach(element => {
-  //     if(currentProject){
-  //       this.router.navigateByUrl("/realisation/" + element.url);
-  //       currentProject = false;
-  //     }
-  //     if(element.url == url){
-  //       currentProject = true;
-  //     }
-  //   });
-  // }
-
-  isProject() {
-    this.total_all.forEach(element => {
-      if (element.url == this.url) {
-        console.log(element.url)
-        this.workIsProject = true
+    this.total_all_work.forEach(element => {
+      if(this.total_all_work[this.total_all_work.length - 1].url == this.url){
+        this.router.navigateByUrl("/realisation/" + this.total_all_work[0].url);
+      } else {
+        this.router.navigateByUrl("/realisation/" + this.total_all_work[count + 1].url);
       }
+      count =+ 1;
     });
   }
 }
