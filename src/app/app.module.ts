@@ -11,7 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WorkDetailsComponent } from './work-details/work-details.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { NgxGlideModule } from 'ngx-glide';
+import { SwiperModule } from 'swiper/angular';
 import { ContactComponent } from './contact/contact.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
 
@@ -32,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgxGlideModule,
+    SwiperModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

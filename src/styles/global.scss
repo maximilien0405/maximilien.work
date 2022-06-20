@@ -1,7 +1,12 @@
 @import "~animate.css/animate.min.css";
 
-@import "~@glidejs/glide/src/assets/sass/glide.core";
-@import "~@glidejs/glide/src/assets/sass/glide.theme";
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+.swiper-slide {
+  border-radius: 0.55rem !important;
+}
 
 /* ---------------------------------------------------
   FONTS

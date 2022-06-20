@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { NgxGlideComponent } from 'ngx-glide';
 import { environment } from 'src/environments/environment';
+import { SwiperComponent } from 'swiper/angular';
 import { ProjectsService } from '../projects.service';
 
 @Component({
@@ -19,12 +19,20 @@ export class WorkDetailsComponent implements OnInit {
   public workIsProject: boolean = false;
   public lang = localStorage.getItem('lang')
   public readonly API_URL = environment.api;
+  @ViewChild('swiper2', { static: false }) swiper: SwiperComponent;
 
-  @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
-
-  breakpoints:Record<string, unknown> = {
-    800: {
-      peek: { before: 0, after: 1 }
+  breakpoints = {
+    '640': {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    '768': {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    '1024': {
+      slidesPerView: 2,
+      spaceBetween: 20
     }
   }
 
@@ -53,11 +61,11 @@ export class WorkDetailsComponent implements OnInit {
   ngOnInit(): void { }
 
   next(): void {
-    this.ngxGlide.go('>');
+    this.swiper.swiperRef.slideNext(250);
   }
 
   back(): void {
-    this.ngxGlide.go('<');
+    this.swiper.swiperRef.slidePrev(250);
   }
 
   checkIfOneImage(array) {

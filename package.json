@@ -26,6 +26,7 @@
     "ngx-glide": "^13.0.0",
     "ngx-owl-carousel-o": "^7.0.2",
     "rxjs": "~7.5.0",
+    "swiper": "^8.2.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

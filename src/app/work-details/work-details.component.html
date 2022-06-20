@@ -21,21 +21,19 @@
           </a>
         </div>
 
-        <div>
-          <!--<ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20"
-            [perView]="1" [showBullets]="false" [peek]="{ before: 0, after: 70 }" [breakpoints]="this.breakpoints">
-              <div style="position: relative;" *ngFor="let img of work.images.data">
-                <img [src]="API_URL + img.attributes.url" class="detail-img" [alt]="work.url">
-                <a class="link-work" style="bottom:1.25rem !important">
-                  <img src="../../assets/icons/image.svg" class="icon-color"
-                    style="margin: 0 auto; height: 1.3rem; width: 1.3rem;" alt="link">
-                </a>
-              </div>
-          </ngx-glide>-->
-          <!--<ngx-glide #ngxGlide type="carousel" [showArrows]="false" [gap]="20" [perView]="1" [showBullets]="false">
-            <img [src]="API_URL + work.images.data[0].attributes.url" class="detail-img">
-          </ngx-glide>-->
-      </div>
+      <swiper #swiper2 [slidesPerView]="3" [breakpoints]="this.breakpoints">
+        <ng-template swiperSlide>
+          <div style="position: relative;" class="box-realisation">
+            <img src="http://95.216.218.151/uploads/IMG_4591_7779f3861d.JPG" class="img-box">
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div style="position: relative;" class="box-realisation">
+            <img src="http://95.216.218.151/uploads/IMG_4591_7779f3861d.JPG" class="img-box">
+          </div>
+        </ng-template>
+      </swiper>
+
       <div *ngIf="!work.onlyoneimage" style="display: flex; margin-top: 1.25rem;">
         <a (click)="back()" class="arrow"> < </a>
         <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;"> > </a>

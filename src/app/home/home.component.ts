@@ -1,8 +1,9 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { Router } from '@angular/router';
-import { NgxGlideComponent } from 'ngx-glide';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
+import { SwiperComponent } from 'swiper/angular';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +11,28 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 })
 export class HomeComponent implements OnInit {
 
-  public component_home_work = [];
+  public all_work:any;
+  public total_all_work:any = [];
+  public readonly API_URL = environment.api;
+
   public frameShow: boolean = false;
   public imageLink: string = "";
   public description: string = "";
-  public lang = this.translate.currentLang
-  @ViewChild(NgxGlideComponent, { static: false }) ngxGlide: NgxGlideComponent;
-  
-  breakpoints: Record<string, unknown> = {
-    800: {
-      perView: 1,
-      peek: { before: 0, after: 1 }
+  public lang = this.translate.currentLang;
+  @ViewChild('swiper', { static: false }) swiper: SwiperComponent;
+
+  breakpoints = {
+    '640': {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    '768': {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    '1024': {
+      slidesPerView: 2,
+      spaceBetween: 20
     }
   }
 
@@ -29,20 +41,26 @@ export class HomeComponent implements OnInit {
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     });
+
+    this.projectService.getAllWork(this.lang).subscribe(res => {
+      this.all_work = res.data;
+
+      for (let x in this.all_work) {
+        this.total_all_work.push(this.all_work[x].attributes)
+      } 
+
+      console.log(this.total_all_work)
+    });
   }
 
-  ngOnInit(): void {
-    // this.projectService.getHomeWork().subscribe((res: Work[]) => {
-    //   this.component_home_work = res;
-    // });
-  }
+  ngOnInit(): void {}
 
   next(): void {
-    this.ngxGlide.go('>');
+    this.swiper.swiperRef.slideNext(250);
   }
 
   back(): void {
-    this.ngxGlide.go('<');
+    this.swiper.swiperRef.slidePrev(250);
   }
 
   displayFrame(img_preview: string, description: string) {
