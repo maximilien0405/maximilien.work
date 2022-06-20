@@ -42,16 +42,7 @@
   },
   "PROJECT-DETAIL": {
     "LINK": "< Retour",
-    "BOTTOM-LINK": "Visiter le site >",
-    "BOTTOM-LINK1": "Voir le site",
-    "BOTTOM-LINK2": "Github",
-    "BOTTOM-LINK3": "Behance",
     "TABLE-TITLE": "Table des matières",
-    "TABLE-ITEM1": "Wireframe",
-    "TABLE-ITEM2": "Charte graphique",
-    "TABLE-ITEM3": "Maquettes",
-    "TABLE-ITEM4": "Développement",
-    "TABLE-ITEM5": "Conclusion",
     "TABLE-NEXT": "Suivant"
   },
   "CONTACT": {

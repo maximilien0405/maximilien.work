@@ -14,7 +14,7 @@ export class ProjectsService {
 
   public getAllWork(lang:any): Observable<any> {
 
-    return this.http.get<any>(`${this.API_URL}/api/projects?locale=${lang}&populate=*`).pipe(map(res => res));
+    return this.http.get<any>(`${this.API_URL}/api/projects?locale=${lang}&populate[0]=content.images&populate[1]=images&populate[2]=links&populate[3]=tags&populate[4]=preview_image`).pipe(map(res => res));
     
   }
 }

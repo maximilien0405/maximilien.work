@@ -42,15 +42,7 @@
   },
   "PROJECT-DETAIL": {
     "LINK": "< Back",
-    "BOTTOM-LINK1": "See website",
-    "BOTTOM-LINK2": "Github",
-    "BOTTOM-LINK3": "Behance",
     "TABLE-TITLE": "Table of Contents",
-    "TABLE-ITEM1": "Wireframe",
-    "TABLE-ITEM2": "Design system",
-    "TABLE-ITEM3": "Mock-ups",
-    "TABLE-ITEM4": "Development",
-    "TABLE-ITEM5": "Conclusion",
     "TABLE-NEXT": "Next"
   },
   "CONTACT": {
