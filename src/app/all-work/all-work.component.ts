@@ -38,8 +38,6 @@ export class AllWorkComponent implements OnInit {
           this.total_all_other.push(this.all_work[x].attributes)
         }
       } 
-
-      console.log(this.total_all_work)
     });
   }
 

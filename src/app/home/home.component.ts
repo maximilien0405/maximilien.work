@@ -48,8 +48,6 @@ export class HomeComponent implements OnInit {
       for (let x in this.all_work) {
         this.total_all_work.push(this.all_work[x].attributes)
       } 
-
-      console.log(this.total_all_work)
     });
   }
 

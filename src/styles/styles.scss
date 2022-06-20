@@ -83,6 +83,12 @@
   }
 }
 
+@media (min-width: 792px) {
+  .mobile-bottom-links {
+    display: none !important;
+  }
+}
+
 @media (max-width: 992px) {
   body {
     margin-bottom: 1.5625rem !important;
@@ -559,6 +565,19 @@ header {
 
 .work-content-container {
   width: 100%;
+}
+
+.mobile-bottom-links {
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-top: -25px;
+  margin-bottom: 25px;
+  display: flex;
+
+  button {
+    margin-top: 0px !important;
+  }
 }
 
 

@@ -2,6 +2,10 @@
   <div *ngFor="let work of total_all">
     <div *ngIf="work.url == url"  class="work-content">
       <div class="work-content-container wow fadeIn">
+        <div class="mobile-bottom-links">
+          <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
+          <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
+        </div>
         <div class="work-header">
           <h2>{{ work.title }}</h2>
           <p class="subtitle">{{ work.subtitle }}</p>
@@ -21,23 +25,38 @@
           </a>
         </div>
 
-      <swiper #swiper2 [slidesPerView]="3" [breakpoints]="this.breakpoints">
-        <ng-template swiperSlide>
-          <div style="position: relative;" class="box-realisation">
-            <img src="http://95.216.218.151/uploads/IMG_4591_7779f3861d.JPG" class="img-box">
-          </div>
-        </ng-template>
-        <ng-template swiperSlide>
-          <div style="position: relative;" class="box-realisation">
-            <img src="http://95.216.218.151/uploads/IMG_4591_7779f3861d.JPG" class="img-box">
-          </div>
-        </ng-template>
-      </swiper>
+        <!--<swiper *ngIf="!work.onlyoneimage" #swiper2 [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpoints">
+          <ng-template swiperSlide>
+            <div class="box-realisation wow fadeIn">
+              <img src="http://95.216.218.151/uploads/justrun_small_72b32f827f.jpg" class="img-box">
+              <a class="link-work-mobile">
+                <img src="../../assets/icons/arrow.svg" style="margin:0 auto; height: 0.8rem; width: 0.8rem" class="icon-color">
+              </a>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="box-realisation wow fadeIn">
+              <img src="http://95.216.218.151/uploads/justrun_small_72b32f827f.jpg" class="img-box">
+              <a class="link-work-mobile">
+                <img src="../../assets/icons/arrow.svg" style="margin:0 auto; height: 0.8rem; width: 0.8rem" class="icon-color">
+              </a>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="box-realisation wow fadeIn">
+              <img src="http://95.216.218.151/uploads/justrun_small_72b32f827f.jpg" class="img-box">
+              <a class="link-work-mobile">
+                <img src="../../assets/icons/arrow.svg" style="margin:0 auto; height: 0.8rem; width: 0.8rem" class="icon-color">
+              </a>
+            </div>
+          </ng-template>
+        </swiper>
+        
 
-      <div *ngIf="!work.onlyoneimage" style="display: flex; margin-top: 1.25rem;">
-        <a (click)="back()" class="arrow"> < </a>
-        <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;"> > </a>
-      </div>
+        <div *ngIf="!work.onlyoneimage" style="display: flex; margin-top: 1.25rem;">
+          <a (click)="back()" class="arrow"> < </a>
+          <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;"> > </a>
+        </div>-->
 
         <div class="project-details">
           <p class="subtitle" style="margin-top: 2.8rem;">{{ work.description }}</p>
@@ -56,7 +75,7 @@
             <a *ngFor="let content of work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>
           </div>
         </div>
-        <div class="table-bottom-links ">
+        <div class="table-bottom-links">
           <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
           <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
         </div>
@@ -64,3 +83,5 @@
     </div>
   </div>
 </main>
+
+

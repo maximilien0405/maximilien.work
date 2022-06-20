@@ -132,9 +132,6 @@ export class AppComponent {
       this.translate.use('fr');
       this.lang = 'fr';
     }
-    
-
-    console.log("test")
   }
 
   openNav() {
