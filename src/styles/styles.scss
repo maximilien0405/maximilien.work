@@ -627,6 +627,19 @@ header {
     }
   }
 
+  .multiple-images-container {
+    position: relative;
+    margin-top: 3rem;
+
+    .arrows-control {
+      position: absolute;
+      bottom: 0.9375rem;
+      right: 0.9375rem;
+      z-index: 1000;
+      display: flex;
+    }
+  }
+
   .separator {
     margin: 18px 0px;
   }

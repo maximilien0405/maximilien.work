@@ -26,11 +26,11 @@ export class WorkDetailsComponent implements OnInit {
       spaceBetween: 20
     },
     '768': {
-      slidesPerView: 2,
-      spaceBetween: 40
+      slidesPerView: 1,
+      spaceBetween: 20
     },
     '1024': {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20
     }
   }
@@ -53,6 +53,8 @@ export class WorkDetailsComponent implements OnInit {
         this.total_all.push(this.all_work[x].attributes)
       }
     });
+
+    console.log(this.total_all)
   }
 
   ngOnInit(): void { }

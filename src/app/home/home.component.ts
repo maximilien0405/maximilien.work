@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     },
     '768': {
       slidesPerView: 2,
-      spaceBetween: 40
+      spaceBetween: 20
     },
     '1024': {
       slidesPerView: 2,
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 
       for (let x in this.all_work) {
         this.total_all_work.push(this.all_work[x].attributes)
-      } 
+      }
     });
   }
 
