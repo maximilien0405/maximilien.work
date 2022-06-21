@@ -275,6 +275,13 @@ img::selection {
   filter: var(--icon-dark);
 }
 
+.icon-color-big {
+  margin: 0 auto; 
+  height: 1.3rem; 
+  width: 1.3rem;
+  filter: var(--icon-dark);
+}
+
 .link-flash {
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;

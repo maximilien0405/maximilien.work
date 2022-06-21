@@ -17,11 +17,10 @@
           </div>
         </div>
 
-        <div *ngIf="work.onlyoneimage">
+        <div *ngIf="work.onlyoneimage" class="oneimage-container">
           <img [src]="API_URL + work.images.data[0].attributes.url" class="detail-img">
-          <a class="link-work" [href]="API_URL + work.images.data[0].attributes.url" style="bottom:1.25rem !important">
-            <img src="../../assets/icons/image.svg" class="icon-color" style="margin: 0 auto; height: 1.3rem; width: 1.3rem;"
-              alt="link">
+          <a class="link-work" [href]="API_URL + work.images.data[0].attributes.url">
+            <img src="../../assets/icons/image.svg" class="icon-color" alt="link">
           </a>
         </div>
 
@@ -43,7 +42,7 @@
         </div>
 
         <div class="project-details">
-          <p class="subtitle" style="margin-top: 2.8rem;">{{ work.description }}</p>
+          <p class="subtitle">{{ work.description }}</p>
           <div *ngFor="let content of work.content">
             <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
             <p *ngIf="content.description" class="subtitle">{{ content.description }}</p>

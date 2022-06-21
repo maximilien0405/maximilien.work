@@ -67,20 +67,20 @@
           </div>
           <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
           <a (click)="join(work.url)" class="link-work-mobile">
-            <img src="../../assets/icons/arrow.svg" style="margin:0 auto; height: 0.8rem; width: 0.8rem" class="icon-color" [alt]="work.url">
+            <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
           </a>
         </div>
       </ng-template>
     </swiper>
 
-    <div style="display: flex; justify-content: space-between; margin-top: 1.25rem; align-items: center;">
+    <div class="rea-container wow fadeIn">
       <div>
-        <a routerLink="realisations" class="wow fadeIn link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
-        <a routerLink="realisations" class="wow fadeIn link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
+        <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
+        <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
       </div>
-      <div style="display: flex;" class="wow fadeIn">
+      <div class="arrows-container">
         <a (click)="back()" class="arrow"> < </a>
-        <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;"> > </a>
+        <a (click)="next()" class="arrow"> > </a>
       </div>
     </div>
   </section>

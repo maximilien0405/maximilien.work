@@ -13,7 +13,7 @@
   </div>
   <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of total_all_work" class="big-box-content">
-      <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
+      <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
@@ -29,7 +29,7 @@
   </div>
   <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of total_all_other" class="big-box-content">
-      <div class="box-realisation" (click)="join(work.url)" style="position: relative !important">
+      <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
         </div>
