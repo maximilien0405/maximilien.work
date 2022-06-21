@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: "http://95.216.218.151"
+  api: "https://api.maximilien.work"
 };

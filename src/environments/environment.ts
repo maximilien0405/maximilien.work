@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: "http://95.216.218.151"
+  api: "https://api.maximilien.work"
 };
 
 /*
