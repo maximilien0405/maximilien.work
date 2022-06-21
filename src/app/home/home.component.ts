@@ -14,14 +14,13 @@ export class HomeComponent implements OnInit {
   public all_work:any;
   public total_all_work:any = [];
   public readonly API_URL = environment.api;
-
   public frameShow: boolean = false;
   public imageLink: string = "";
   public description: string = "";
   public lang = this.translate.currentLang;
   @ViewChild('swiper', { static: false }) swiper: SwiperComponent;
 
-  breakpoints = {
+  public breakpoints = {
     '640': {
       slidesPerView: 1,
       spaceBetween: 20
@@ -36,7 +35,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  constructor(private projectService: ProjectsService, private router: Router, private translate: TranslateService) {
+  constructor(private projectService: ProjectsService, 
+    private router: Router, 
+    private translate: TranslateService) {
+
     this.translate.onLangChange
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
@@ -51,27 +53,27 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {}
 
-  next(): void {
+  public next(): void {
     this.swiper.swiperRef.slideNext(250);
   }
 
-  back(): void {
+  public back(): void {
     this.swiper.swiperRef.slidePrev(250);
   }
 
-  displayFrame(img_preview: string, description: string) {
+  public displayFrame(img_preview: string, description: string) {
     this.frameShow = true;
     this.imageLink = img_preview;
     this.description = description;
   }
 
-  hide() {
+  public hide() {
     this.frameShow = false
   }
 
-  join(url: any): void {
+  public join(url: any): void {
     this.router.navigateByUrl("/realisation/" + url);
   }
 }

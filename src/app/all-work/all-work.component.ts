@@ -22,7 +22,10 @@ export class AllWorkComponent implements OnInit {
 
   public type:number = 1;
 
-  constructor(private projectService:ProjectsService, private router: Router, private translate: TranslateService) {
+  constructor(private projectService:ProjectsService, 
+    private router: Router, 
+    private translate: TranslateService) {
+      
     this.translate.onLangChange
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang

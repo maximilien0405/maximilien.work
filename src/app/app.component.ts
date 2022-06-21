@@ -59,7 +59,8 @@ export class AppComponent {
   public mobileSidebar: boolean = false;
   public whiteTheme: boolean = true;
 
-  constructor(public translate: TranslateService, private router: Router) {
+  constructor(public translate: TranslateService, 
+    private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.route = this.router.url;
@@ -82,8 +83,6 @@ export class AppComponent {
 
     this.lang = shortLang;
 
-    /* ----------------- */
-
     if (shortLang == "fr") {
       translate.use('fr')
     } else {
@@ -101,11 +100,11 @@ export class AppComponent {
     }
   }
 
-  languageBox() {
+  public languageBox() {
     this.languageClick = !this.languageClick;
   }
 
-  changeLang(lang:string) {
+  public changeLang(lang:string) {
     window.location.reload();
     this.translate.currentLang == lang;
     this.translate.use(lang);
@@ -114,7 +113,7 @@ export class AppComponent {
     this.languageClick = false;
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('dark-theme');
     }
@@ -134,21 +133,21 @@ export class AppComponent {
     }
   }
 
-  openNav() {
+  public openNav() {
     this.mobileSidebar = !this.mobileSidebar;
   }
 
-  closeNav() {
+  public closeNav() {
     this.mobileSidebar = false;
   }
 
-  toggleDarkTheme() {
+  public toggleDarkTheme() {
     document.body.classList.add('dark-theme');
     this.whiteTheme = false;
     localStorage.setItem('theme', 'black')
   }
 
-  toggleWhiteTheme() {
+  public toggleWhiteTheme() {
     document.body.classList.remove('dark-theme');
     this.whiteTheme = true;
     localStorage.setItem('theme', 'white')

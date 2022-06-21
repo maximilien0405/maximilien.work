@@ -1,11 +1,14 @@
-<main class="work-details-structure">
+<main class="work-details-structure wow fadeIn">
   <div *ngFor="let work of total_all">
     <div *ngIf="work.url == url"  class="work-content">
-      <div class="work-content-container wow fadeIn">
+      <div class="work-content-container">
         <div class="mobile-bottom-links">
           <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
           <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
         </div>
+
+        <!------ HEADER ------------------------------------------------>
+
         <div class="work-header">
           <h2>{{ work.title }}</h2>
           <p class="subtitle">{{ work.subtitle }}</p>
@@ -27,7 +30,7 @@
         <div *ngIf="!work.onlyoneimage" class="multiple-images-container">
           <swiper #swiper2 [slidesPerView]="1" [breakpoints]="this.breakpoints">
             <ng-template swiperSlide *ngFor="let image of work.images.data">
-              <div class="box-realisation wow fadeIn">
+              <div class="box-realisation">
                 <img [src]="API_URL + image.attributes.url" class="img-box">
                 <a class="link-work-mobile">
                   <img src="../../assets/icons/arrow.svg" class="icon-color">
@@ -41,16 +44,21 @@
           </div>
         </div>
 
+        <!------ PROJECT CONTENT ------------------------------------------------>
+
         <div class="project-details">
           <p class="subtitle">{{ work.description }}</p>
           <div *ngFor="let content of work.content">
             <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
             <p *ngIf="content.description" class="subtitle">{{ content.description }}</p>
-            <img *ngIf="!content.noimages" [src]="API_URL + content.images.data[0].attributes.url" class="detail-img wow fadeIn">
+            <img *ngIf="!content.noimages" [src]="API_URL + content.images.data[0].attributes.url" class="detail-img">
           </div>
         </div>
       </div>
-      <div class="table-container wow fadeIn" *ngIf="work.type == 'project'">
+
+      <!------ TABLE OF MATTER ------------------------------------------------>
+
+      <div class="table-container" *ngIf="work.type == 'project'">
         <div class="table-content">
           <h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>
           <div class="separator"></div>

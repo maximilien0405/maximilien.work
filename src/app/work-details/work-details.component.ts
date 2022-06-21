@@ -20,7 +20,7 @@ export class WorkDetailsComponent implements OnInit {
   public readonly API_URL = environment.api;
   @ViewChild('swiper2', { static: false }) swiper: SwiperComponent;
 
-  breakpoints = {
+  public breakpoints = {
     '640': {
       slidesPerView: 1,
       spaceBetween: 20
@@ -35,7 +35,10 @@ export class WorkDetailsComponent implements OnInit {
     }
   }
 
-  constructor(private router: Router, private route: ActivatedRoute, private projectService: ProjectsService, private translate: TranslateService) {
+  constructor(private router: Router, 
+    private route: ActivatedRoute, 
+    private projectService: ProjectsService, 
+    private translate: TranslateService) {
     this.route.params.subscribe(params => this.url = params.name);
 
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
@@ -57,24 +60,24 @@ export class WorkDetailsComponent implements OnInit {
     console.log(this.total_all)
   }
 
-  ngOnInit(): void { }
+  public ngOnInit(): void { }
 
-  next(): void {
+  public next(): void {
     this.swiper.swiperRef.slideNext(250);
   }
 
-  back(): void {
+  public back(): void {
     this.swiper.swiperRef.slidePrev(250);
   }
 
-  checkIfOneImage(array) {
+  public checkIfOneImage(array) {
     if (array.length <= 1) {
       return true;
     }
     return false;
   }
 
-  nextProject() {
+  public nextProject() {
     let count = 0;
 
     this.total_all_work.forEach(element => {

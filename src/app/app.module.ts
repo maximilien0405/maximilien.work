@@ -15,7 +15,6 @@ import { SwiperModule } from 'swiper/angular';
 import { ContactComponent } from './contact/contact.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
 
-// AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }

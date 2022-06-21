@@ -1,5 +1,8 @@
-<main>
-  <div class="page-header wow fadeIn">
+<main class="wow fadeIn">
+
+  <!------ HEADER ------------------------------------------------>
+
+  <div class="page-header">
     <h2>{{ 'PROJECT.TITLE' | translate }}</h2>
     <p class="subtitle">{{ 'PROJECT.SUBTITLE' | translate }}</p>
     <div class="category-links">
@@ -11,7 +14,10 @@
       </a>
     </div>
   </div>
-  <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
+
+  <!------ PROJECT ------------------------------------------------>
+
+  <div *ngIf="type == 1" class="all-rea-work">
     <div *ngFor="let work of total_all_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
@@ -27,7 +33,10 @@
       </div>
     </div>
   </div>
-  <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
+
+  <!------ OTHER ------------------------------------------------>
+
+  <div *ngIf="type == 2" class="all-rea-work">
     <div *ngFor="let work of total_all_other" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
