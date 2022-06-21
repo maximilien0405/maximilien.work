@@ -25,21 +25,20 @@
           </a>
         </div>
 
-        <div class="multiple-images-container">
-          <swiper *ngIf="!work.onlyoneimage" #swiper2 [slidesPerView]="1" [breakpoints]="this.breakpoints">
+        <div *ngIf="!work.onlyoneimage" class="multiple-images-container">
+          <swiper #swiper2 [slidesPerView]="1" [breakpoints]="this.breakpoints">
             <ng-template swiperSlide *ngFor="let image of work.images.data">
               <div class="box-realisation wow fadeIn">
                 <img [src]="API_URL + image.attributes.url" class="img-box">
                 <a class="link-work-mobile">
-                  <img src="../../assets/icons/arrow.svg" style="margin:0 auto; height: 0.8rem; width: 0.8rem" class="icon-color">
+                  <img src="../../assets/icons/arrow.svg" class="icon-color">
                 </a>
               </div>
             </ng-template>
           </swiper>
           <div *ngIf="!work.onlyoneimage" class="arrows-control">
-            <a (click)="back()" class="arrow">
-              < </a>
-            <a (click)="next()" class="arrow" style="margin-left: 0.3125rem;"> > </a>
+            <a (click)="back()" class="arrow"> < </a>
+            <a (click)="next()" class="arrow"> > </a>
           </div>
         </div>
 
@@ -47,8 +46,8 @@
           <p class="subtitle" style="margin-top: 2.8rem;">{{ work.description }}</p>
           <div *ngFor="let content of work.content">
             <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
-            <p class="subtitle">{{ content.description }}</p>
-            <img *ngIf="content.onlyoneimage" [src]="API_URL + content.images.data[0].attributes.url" class="detail-img wow fadeIn">
+            <p *ngIf="content.description" class="subtitle">{{ content.description }}</p>
+            <img *ngIf="!content.noimages" [src]="API_URL + content.images.data[0].attributes.url" class="detail-img wow fadeIn">
           </div>
         </div>
       </div>

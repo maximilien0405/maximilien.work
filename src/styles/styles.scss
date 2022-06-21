@@ -632,6 +632,8 @@ header {
     margin-top: 3rem;
 
     .arrows-control {
+      display: flex;
+      gap: 0.3125rem;
       position: absolute;
       bottom: 0.9375rem;
       right: 0.9375rem;
