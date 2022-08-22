@@ -14,7 +14,6 @@ export class AllWorkComponent implements OnInit {
   public total_all_work:any = [];
   public total_all_other:any = [];
 
-  public frameShow:boolean = false;
   public imageLink:string = "";
   public description:string = "";
   public lang = localStorage.getItem('lang')
@@ -45,16 +44,6 @@ export class AllWorkComponent implements OnInit {
   }
 
   public ngOnInit(): void {}
-
-  public displayFrame(img_preview:string, description:string):void {
-    this.frameShow = true;
-    this.imageLink = img_preview;
-    this.description = description;
-  }
-
-  public hide():void {
-    this.frameShow = false
-  }
 
   public join(url:any):void {
     this.router.navigateByUrl("/realisation/" + url);
