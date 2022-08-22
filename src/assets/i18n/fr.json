@@ -41,6 +41,11 @@
     "TABLE-TITLE": "Table des matières",
     "TABLE-NEXT": "Suivant"
   },
+  "ARTICLE": {
+    "TITLE": "Tous mes articles de blog",
+    "SUBTITLE" : "J'aime écrire et enseigner des choses. Que ce soit sur le web design, le développement et plus !",
+    "LINK": "Lire sur Medium"
+  },
   "CONTACT": {
     "TITLE": "Me contacter",
     "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe !",

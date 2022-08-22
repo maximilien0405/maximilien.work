@@ -48,6 +48,11 @@
   .mobile-icons {
     display: flex !important;
   }
+
+  .article-bottom-content {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 @media (min-width: 508px) {
@@ -599,6 +604,7 @@ header {
   border-radius: 0.3125rem;
   color: var(--black);
   font-size: 0.875rem;
+  width: max-content;
 }
 
 /* ---------------------------------------------------
@@ -782,6 +788,53 @@ header {
 .oneimage-container {
   position: relative;
   margin-top: 3rem;
+}
+
+/* ---------------------------------------------------
+  ARTICLE BLOG
+-----------------------------------------------------*/
+
+.article-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5625rem;
+  width: 100%;
+  cursor: default;
+
+  .subtitle {
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+  }
+
+  .tag-url {
+    transition: 200ms all;
+  }
+
+  &:hover {
+    border: 0.0625rem solid var(--border-color) !important;
+  }
+
+  &:hover .tag-url {
+    border: 0.0625rem solid var(--border-hover) !important;
+  }
+}
+
+.all-articles-boxs {
+  gap: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .article-right {
+    display: flex;
+    gap: 0.625rem;
+  }
 }
 
 /* ---------------------------------------------------

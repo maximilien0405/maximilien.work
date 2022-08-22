@@ -41,6 +41,11 @@
     "TABLE-TITLE": "Table of Contents",
     "TABLE-NEXT": "Next"
   },
+  "ARTICLE": {
+    "TITLE": "All of my articles",
+    "SUBTITLE": "I love to write and teach stuff. Here you will find articles about design, development and more!",
+    "LINK": "Read on Medium"
+  },
   "CONTACT": {
     "TITLE": "Contact me",
     "SUBTITLE": "A new project proposal ? Or a simple question? Just let me know!",
