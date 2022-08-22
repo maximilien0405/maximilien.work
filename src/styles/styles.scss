@@ -795,10 +795,10 @@ header {
 -----------------------------------------------------*/
 
 .article-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.5625rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 1.5625rem !important;
   width: 100%;
   cursor: default;
 
