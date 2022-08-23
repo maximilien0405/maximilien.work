@@ -48,8 +48,11 @@
     <a [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="link">{{ 'NAV.ITEM-4' | translate }}</a>
   </div>
   <div class="icons-box wow fadeIn">
-    <img *ngIf="whiteTheme" (click)="toggleDarkTheme()" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
-    <img *ngIf="!whiteTheme" (click)="toggleWhiteTheme()" src="../../assets/icons/theme-light.svg" alt="theme-light-icon">
+    <div class="theme-box">
+      <img [ngClass]="{'opacity-end': whiteTheme}" (click)="toggleDarkTheme()" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
+      <img *ngIf="!whiteTheme" [ngClass]="{'opacity-end': !whiteTheme}" (click)="toggleWhiteTheme()" src="../../assets/icons/theme-light.svg" alt="theme-light-icon">
+    </div>
+    
     <img (click)="languageBox()" src="../../assets/icons/lang.svg" alt="lang-icon" class="language-icon">
 
     <div *ngIf="languageClick" [@inOutAnimationSlow]  class="language-box">
