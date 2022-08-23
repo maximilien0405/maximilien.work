@@ -17,7 +17,7 @@
 
   <!------ PROJECT ------------------------------------------------>
 
-  <div *ngIf="type == 1" class="all-rea-work">
+  <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of total_all_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
@@ -36,7 +36,7 @@
 
   <!------ OTHER ------------------------------------------------>
 
-  <div *ngIf="type == 2" class="all-rea-work">
+  <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of total_all_other" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
