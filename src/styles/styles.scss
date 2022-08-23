@@ -49,9 +49,8 @@
     display: flex !important;
   }
 
-  .article-bottom-content {
-    flex-direction: column;
-    gap: 10px;
+  .all-tags {
+    display: none !important;
   }
 }
 
@@ -223,10 +222,6 @@
     display: flex;
     gap: 0.65rem;
   }
-}
-
-.lang-link {
-  margin-left: 0.8125rem;
 }
 
 .mobile-text {
