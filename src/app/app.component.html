@@ -56,9 +56,9 @@
     <img (click)="languageBox()" src="../../assets/icons/lang.svg" alt="lang-icon" class="language-icon">
 
     <div *ngIf="languageClick" [@inOutAnimationSlow]  class="language-box">
-      <a (click)="changeLang('fr')" class="subtitle" [class.bold]="lang == 'fr' ? '600' : ''">🇫🇷</a>
-      <p class="subtitle">-</p>
-      <a (click)="changeLang('en')" class="subtitle" [class.bold]="lang == 'en' ? '600' : ''">🇺🇸</a>
+      <a (click)="changeLang('fr')" class="subtitle">🇫🇷</a>
+      <p class="subtitle">/</p>
+      <a (click)="changeLang('en')" class="subtitle">🇺🇸</a>
     </div>
   </div>
 

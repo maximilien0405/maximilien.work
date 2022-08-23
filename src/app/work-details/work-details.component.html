@@ -51,7 +51,7 @@
           <div *ngFor="let content of work.content">
             <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
             <p *ngIf="content.description" class="subtitle">{{ content.description }}</p>
-            <img *ngIf="!content.noimages" [src]="API_URL + content.images.data[0].attributes.url" class="detail-img">
+            <img *ngIf="!content.noimage" [src]="API_URL + content.image.data.attributes.url" class="detail-img">
           </div>
         </div>
       </div>
