@@ -1,25 +1,25 @@
 <main class="wow fadeIn">
 
     <!------ HEADER ------------------------------------------------>
-  
+
     <div class="page-header">
       <h2>{{ 'ARTICLE.TITLE' | translate }}</h2>
       <p class="subtitle">{{ 'ARTICLE.SUBTITLE' | translate }}</p>
     </div>
-  
+
     <!------ ARTICLE ------------------------------------------------>
-    
+
     <div class="all-articles-boxs wow fadeIn">
         <div *ngFor="let article of total_all_articles">
             <a [href]="article.url" target="_blank" rel="noopener">
                 <div class="box article-box">
                     <h3>{{ article.title }}</h3>
                     <p class="subtitle">{{ article.subtitle }}</p>
-        
+
                     <div class="article-bottom-content">
                         <a [href]="article.url" target="_blank" rel="noopener"><div class="tag tag-url" >{{ 'ARTICLE.LINK' | translate }} ></div></a>
                         <div class="article-right">
-                            <div class="all-tags" *ngIf="article.tags">
+                            <div class="all-tags-blog" *ngIf="article.tags">
                                 <div class="tag" *ngFor="let tag of article.tags">{{ tag.name }}</div>
                             </div>
                             <div class="tag">{{ article.date }}</div>
@@ -30,5 +30,4 @@
         </div>
     </div>
   </main>
-  
-  
+

@@ -21,15 +21,15 @@ export class AllWorkComponent implements OnInit {
 
   public type:number = 1;
 
-  constructor(private projectService:ProjectsService, 
-    private router: Router, 
+  constructor(private projectService:ProjectsService,
+    private router: Router,
     private translate: TranslateService) {
-      
+
     this.translate.onLangChange
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     });
-      
+
     this.projectService.getAllWork(this.lang).subscribe(res => {
       this.all_work = res.data;
 
@@ -39,7 +39,7 @@ export class AllWorkComponent implements OnInit {
         } else if(this.all_work[x].attributes.type == 'other'){
           this.total_all_other.push(this.all_work[x].attributes)
         }
-      } 
+      }
     });
   }
 

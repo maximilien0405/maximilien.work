@@ -46,7 +46,7 @@
 
         <!------ PROJECT CONTENT ------------------------------------------------>
 
-        <div class="project-details">
+        <div class="project-details" *ngIf="work.type == 'project'">
           <p class="subtitle">{{ work.description }}</p>
           <div *ngFor="let content of work.content">
             <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
@@ -60,7 +60,7 @@
 
       <div class="table-container" *ngIf="work.type == 'project'">
         <div class="table-content">
-          <!--<h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>-->
+          <h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>
           <div class="separator"></div>
           <div class="table-links">
             <a *ngFor="let content of work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>
