@@ -1,7 +1,7 @@
 <main class="work-details-structure wow fadeIn">
   <div *ngFor="let work of total_all">
     <div *ngIf="work.url == url"  class="work-content">
-      <div class="work-content-container">
+      <div class="work-content-container" [ngClass]="{'work-content-full-width': work.type == 'other'}">
         <div class="mobile-bottom-links">
           <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
           <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
@@ -60,7 +60,7 @@
 
       <div class="table-container" *ngIf="work.type == 'project'">
         <div class="table-content">
-          <h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>
+          <!--<h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>-->
           <div class="separator"></div>
           <div class="table-links">
             <a *ngFor="let content of work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>

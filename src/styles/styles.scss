@@ -217,7 +217,7 @@
     height: 1.3625rem;
     filter: var(--icon-dark);
   }
-   
+
   div {
     display: flex;
     gap: 0.65rem;
@@ -417,7 +417,7 @@ header {
 .theme-box {
   position: relative;
   margin-right: 1.4375rem;
-  
+
   img {
     position:absolute;
     transition: 200ms all;
@@ -478,8 +478,8 @@ header {
 
 .rea-container {
   display: flex;
-  justify-content: space-between; 
-  margin-top: 1.25rem; 
+  justify-content: space-between;
+  margin-top: 1.25rem;
   align-items: center;
 
   div {
@@ -619,6 +619,11 @@ header {
   max-width: 44.6875rem;
 }
 
+.work-content-full-width {
+  width: 100% !important;
+  max-width: fit-content;
+}
+
 .mobile-bottom-links {
   display: flex;
   gap: 0.875rem;
@@ -741,14 +746,14 @@ header {
   img {
     margin:0 auto;
     border-radius: 0px !important;
-    height: 0.8rem; 
+    height: 0.8rem;
     width: 0.8rem;
   }
 }
 
 .link-work {
   position: absolute;
-  bottom: 0.9375rem;
+  bottom: 1.3125rem;
   left: 0.9375rem;
   height: 2.5rem;
   width: 2.5rem;
@@ -946,8 +951,8 @@ textarea {
 }
 
 .form-subtitle {
-  margin-bottom: 0.9375rem; 
-  margin-top: 0.9375rem; 
+  margin-bottom: 0.9375rem;
+  margin-top: 0.9375rem;
   max-width: 25rem;
 }
 
