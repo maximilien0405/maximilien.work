@@ -9,15 +9,6 @@
   "HOME": {
     "SUBTITLE": "Un freelance UI/UX designer & développeur débordant d'idées afin de porter votre projet au next-level.",
     "BUTTON": "Me contacter",
-    "PART-1": {
-      "TITLE": "Services",
-      "BOX-1-TITLE": "UI/UX design",
-      "BOX-1-SUB": "Prototypes, charte graphique ou bien encore maquettes visuelles complètes.",
-      "BOX-2-TITLE": "Dév Front-end",
-      "BOX-2-SUB": "Intégration web, applications web et modification de sites existants.",
-      "BOX-3-TITLE": "SEO & optimisation",
-      "BOX-3-SUB": "Référencement, accesibilité ou bien optimisation de performances."
-    },
     "PART-2": {
       "TITLE": "A propos"
     },
@@ -48,7 +39,16 @@
   },
   "SERVICES": {
     "TITLE": "Mes services",
-    "SUBTITLE": "Freelance depuis 2020, j'accompagne mes clients pour leurs projets web ou design."
+    "SUBTITLE": "Freelance depuis 2020, j'accompagne mes clients pour leurs projets web ou design.",
+    "PART-1": {
+      "TITLE": "Services",
+      "BOX-1-TITLE": "UI/UX design",
+      "BOX-1-SUB": "Prototypes, charte graphique ou bien encore maquettes visuelles complètes.",
+      "BOX-2-TITLE": "Dév Front-end",
+      "BOX-2-SUB": "Intégration web, applications web et modification de sites existants.",
+      "BOX-3-TITLE": "SEO & optimisation",
+      "BOX-3-SUB": "Référencement, accesibilité ou bien optimisation de performances."
+    }
   },
   "CONTACT": {
     "TITLE": "Me contacter",

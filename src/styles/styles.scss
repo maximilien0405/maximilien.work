@@ -1018,3 +1018,17 @@ footer .nav-links {
   text-align: center;
   line-height: 18.75rem;
 }
+
+
+/* ---------------------------------------------------
+  SERVICE PAGE
+----------------------------------------------------- */
+
+.service-button-group {
+  display: flex;
+  gap: 10px;
+
+  button {
+    width: max-content;
+  }
+}

@@ -9,15 +9,6 @@
   "HOME": {
     "SUBTITLE": "A freelance UI/UX designer & developer full of ideas to take your project to the next-level.",
     "BUTTON": "Contact me",
-    "PART-1": {
-      "TITLE": "Services",
-      "BOX-1-TITLE": "UI/UX design",
-      "BOX-1-SUB": "Prototypes, graphic design or even complete visual mockups.",
-      "BOX-2-TITLE": "Front-end development",
-      "BOX-2-SUB": "Integration, web applications and edits of websites.",
-      "BOX-3-TITLE": "SEO & optimization",
-      "BOX-3-SUB": "SEO, accessibility or optimization of performance."
-    },
     "PART-2": {
       "TITLE": "About me"
     },
@@ -48,7 +39,17 @@
   },
   "SERVICES": {
     "TITLE": "My services",
-    "SUBTITLE": "Freelance since 2020, I accompany my clients for their web or design projects."  },
+    "SUBTITLE": "Freelance since 2020, I accompany my clients for their web or design projects.", 
+    "PART-1": {
+      "TITLE": "Services",
+      "BOX-1-TITLE": "UI/UX design",
+      "BOX-1-SUB": "Prototypes, graphic design or even complete visual mockups.",
+      "BOX-2-TITLE": "Front-end development",
+      "BOX-2-SUB": "Integration, web applications and edits of websites.",
+      "BOX-3-TITLE": "SEO & optimization",
+      "BOX-3-SUB": "SEO, accessibility or optimization of performance."
+    }
+  },
   "CONTACT": {
     "TITLE": "Contact me",
     "SUBTITLE": "A new project proposal ? Or a simple question? Just let me know!",
