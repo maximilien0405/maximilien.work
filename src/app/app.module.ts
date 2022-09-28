@@ -15,6 +15,7 @@ import { SwiperModule } from 'swiper/angular';
 import { ContactComponent } from './contact/contact.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
 import { BlogComponent } from './blog/blog.component';
+import { ServicesComponent } from './services/services.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     EmailSentComponent,
     BlogComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,

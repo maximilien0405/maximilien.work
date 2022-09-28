@@ -20,17 +20,22 @@
         <div class="separator"></div>
     </div>
 
-    <!--<a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/realisations'}" routerLink="realisations" class="item-navbar special-item"><span>02</span>{{ 'NAV.ITEM-2' | translate }}</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>-->
-
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="item-navbar special-item"><span>02</span>{{ 'NAV.MOBILE-1' | translate }}</a>
+    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/realisations'}" routerLink="realisations" class="item-navbar special-item"><span>02</span>{{ 'NAV.ITEM-2' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="item-navbar special-item"><span>03</span>{{ 'NAV.ITEM-4' | translate }}</a>
+    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/services'}" routerLink="services" class="item-navbar special-item"><span>03</span>Services</a>
+    <div class="separator-item">
+        <div class="separator"></div>
+    </div>
+
+    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="item-navbar special-item"><span>04</span>{{ 'NAV.MOBILE-1' | translate }}</a>
+    <div class="separator-item">
+        <div class="separator"></div>
+    </div>
+
+    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="item-navbar special-item"><span>05</span>{{ 'NAV.ITEM-4' | translate }}</a>
   </div>
 
 </div>
@@ -43,7 +48,8 @@
   </a>
   <div class="nav-links">
     <a [ngClass]="{'nav-selected': route == '/'}" routerLink="/" class="link">{{ 'NAV.ITEM-1' | translate }}</a>
-    <!--<a [ngClass]="{'nav-selected': route == '/realisations'}" routerLink="realisations" class="link">{{ 'NAV.ITEM-2' | translate }}</a>-->
+    <a [ngClass]="{'nav-selected': route == '/realisations'}" routerLink="realisations" class="link">{{ 'NAV.ITEM-2' | translate }}</a>
+    <a [ngClass]="{'nav-selected': route == '/services'}" routerLink="services" class="link">Services</a>
     <a [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
     <a [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="link">{{ 'NAV.ITEM-4' | translate }}</a>
   </div>
