@@ -46,6 +46,10 @@
     "SUBTITLE" : "J'aime écrire et enseigner des choses. Que ce soit sur le web design, le développement et plus !",
     "LINK": "Lire sur Medium"
   },
+  "SERVICES": {
+    "TITLE": "Mes services",
+    "SUBTITLE": "Freelance depuis 2020, j'accompagne mes clients pour leurs projets web ou design."
+  },
   "CONTACT": {
     "TITLE": "Me contacter",
     "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe !",
