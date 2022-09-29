@@ -147,7 +147,7 @@
     display: none !important;
   }
 
-  .all-box-skills {
+  body .all-box-skills {
     grid-template-columns: 1fr !important;
   }
 
@@ -455,9 +455,13 @@ header {
   }
 }
 
+.all-box-services {
+  grid-template-columns: 1fr 1fr !important;
+}
+
 .all-box-skills {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1.25rem;
 
   .box {
@@ -1023,12 +1027,3 @@ footer .nav-links {
 /* ---------------------------------------------------
   SERVICE PAGE
 ----------------------------------------------------- */
-
-.service-button-group {
-  display: flex;
-  gap: 10px;
-
-  button {
-    width: max-content;
-  }
-}

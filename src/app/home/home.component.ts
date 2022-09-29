@@ -14,9 +14,6 @@ export class HomeComponent implements OnInit {
   public all_work:any;
   public total_all_work:any = [];
   public readonly API_URL = environment.api;
-  public frameShow: boolean = false;
-  public imageLink: string = "";
-  public description: string = "";
   public lang = this.translate.currentLang;
   @ViewChild('swiper', { static: false }) swiper: SwiperComponent;
 
@@ -61,16 +58,6 @@ export class HomeComponent implements OnInit {
 
   public back(): void {
     this.swiper.swiperRef.slidePrev(250);
-  }
-
-  public displayFrame(img_preview: string, description: string) {
-    this.frameShow = true;
-    this.imageLink = img_preview;
-    this.description = description;
-  }
-
-  public hide() {
-    this.frameShow = false
   }
 
   public join(url: any): void {

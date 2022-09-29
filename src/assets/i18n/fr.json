@@ -52,8 +52,14 @@
     "PART-1": {
       "BOX-1-TITLE": "Création de site web",
       "BOX-1-SUB": "Pour votre portfolio, site de vente en ligne, blog personnel, forum ou bien site vitrine. Tout est possible.",
-      "BOX-2-TITLE": "Front-end development",
-      "BOX-2-SUB": "Integration, web applications and edits of websites."
+      "BOX-2-TITLE": "Modification de site existants",
+      "BOX-2-SUB": "Pour améliorer votre SEO, rendre votre site plus rapide ou bien même ajouter ou supprimer des pages."
+    },
+    "PART-2": {
+      "TITLE": "A propos de moi"
+    },
+    "PART-3": {
+      "TITLE": "Avis clients"
     }
   },
   "CONTACT": {

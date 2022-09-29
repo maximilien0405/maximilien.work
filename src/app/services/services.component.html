@@ -10,7 +10,7 @@
     <!------ 3 SERVICES ------------------------------------------------>
 
     <section class="wow fadeIn">
-      <div class="all-box-skills">
+      <div class="all-box-skills all-box-services">
         <div class="box">
           <h3>{{ 'SERVICES.PART-1.BOX-1-TITLE' | translate }}</h3>
           <p class="subtitle">{{ 'SERVICES.PART-1.BOX-1-SUB' | translate }}</p>
@@ -25,26 +25,51 @@
     <!------ A propos ------------------------------------------------>
 
     <section class="wow fadeIn">
-      <h2><span class="special-span">01</span>{{ 'SERVICE.PART-2.TITLE' | translate }}</h2>
+      <h2><span class="special-span">01</span>{{ 'SERVICES.PART-2.TITLE' | translate }}</h2>
 
       <div *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">
         Depuis novembre 2021, je réalise en tant qu'indépendant du Web Design et du Développement Front-end pour mes clients. <br><br>
   
         Que ce soit pour la réalisation de votre site web, ou bien une refonte de la charte graphique de votre entreprise, je tacherais tout mettre en oeuvre afin que votre projet corresponde à votre attente.<br><br>
-        Si vous souhaitez plus d'informations ou avez une mission à me proposer, n'hésitez pas à me contacter. Je serais ravi de trouver une solution à votre problème !
+        Si vous souhaitez plus d'informations ou avez une mission à me proposer, n'hésitez pas à me contacter ! Je serais ravi de trouver une solution à votre problème.
       </div>
   
       <div *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">
         Since November 2021, I work as a freelance web designer and front-end developer for my clients. <br><br>
   
         Whether it is for the creation of your website, or a redesign of the design system of your business, I will do my best to make sure that your project meets your expectations. <br><br>
-        If you want more information or have a mission to propose to me, do not hesitate to contact me. I will be more than happy to find a solution to your problem!
+        If you want more information or have a mission to propose to me, do not hesitate to contact me! I will be more than happy to find a solution to your problem.
       </div>
+    </section>
 
-      <!--<div class="service-button-group">
-        <button routerLink="/realisations">Voir les réalisations</button>
-        <button routerLink="/contact">Me contacter</button>
-      </div>-->
+    <!------ Avis clients ------------------------------------------------>
+    <section class="wow fadeIn">
+      <h2><span class="special-span">02</span>{{ 'SERVICES.PART-3.TITLE' | translate }}</h2>
+      
+      <swiper #swiper [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpoints">
+        <ng-template swiperSlide *ngFor="let work of total_all_work">
+          <div class="box-realisation" (click)="join(work.url)">
+            <div class="overlay rea-box-desktop">
+              <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
+            </div>
+            <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
+            <a class="link-work-mobile">
+              <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
+            </a>
+          </div>
+        </ng-template>
+      </swiper>
+  
+      <div class="rea-container">
+        <div>
+          <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
+          <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
+        </div>
+        <div class="arrows-container">
+          <a (click)="back()" class="arrow"> < </a>
+          <a (click)="next()" class="arrow"> > </a>
+        </div>
+      </div>
     </section>
 </main>
 
