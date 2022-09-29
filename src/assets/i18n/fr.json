@@ -9,8 +9,17 @@
   "HOME": {
     "SUBTITLE": "Un freelance UI/UX designer & développeur débordant d'idées afin de porter votre projet au next-level.",
     "BUTTON": "Me contacter",
-    "PART-2": {
+    "PART-1": {
       "TITLE": "A propos"
+    },
+    "PART-2": {
+      "TITLE": "Connaissances",
+      "BOX-1-TITLE": "UI/UX design",
+      "BOX-1-SUB": "Prototypes, charte graphique ou bien encore maquettes visuelles complètes.",
+      "BOX-2-TITLE": "Dév Front-end",
+      "BOX-2-SUB": "Intégration web, applications web et modification de sites existants.",
+      "BOX-3-TITLE": "Autres",
+      "BOX-3-SUB": "Référencement, accesibilité et optimisation de performances web."
     },
     "PART-3": {
       "TITLE": "Réalisations",
@@ -41,13 +50,10 @@
     "TITLE": "Mes services",
     "SUBTITLE": "Freelance depuis 2020, j'accompagne mes clients pour leurs projets web ou design.",
     "PART-1": {
-      "TITLE": "Services",
-      "BOX-1-TITLE": "UI/UX design",
-      "BOX-1-SUB": "Prototypes, charte graphique ou bien encore maquettes visuelles complètes.",
-      "BOX-2-TITLE": "Dév Front-end",
-      "BOX-2-SUB": "Intégration web, applications web et modification de sites existants.",
-      "BOX-3-TITLE": "SEO & optimisation",
-      "BOX-3-SUB": "Référencement, accesibilité ou bien optimisation de performances."
+      "BOX-1-TITLE": "Création de site web",
+      "BOX-1-SUB": "Pour votre portfolio, site de vente en ligne, blog personnel, forum ou bien site vitrine. Tout est possible.",
+      "BOX-2-TITLE": "Front-end development",
+      "BOX-2-SUB": "Integration, web applications and edits of websites."
     }
   },
   "CONTACT": {

@@ -147,7 +147,7 @@
     display: none !important;
   }
 
-  .all-box-services {
+  .all-box-skills {
     grid-template-columns: 1fr !important;
   }
 
@@ -455,9 +455,9 @@ header {
   }
 }
 
-.all-box-services {
+.all-box-skills {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
 
   .box {
