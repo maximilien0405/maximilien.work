@@ -12,7 +12,7 @@ export class FeedbackService {
   constructor(private http: HttpClient) { }
   private readonly API_URL = environment.api;
 
-  public getAllFeedback(): Observable<any> {
-    return this.http.get<any>(`${this.API_URL}/api/feedbacks`).pipe(map(res => res));
+  public getAllFeedback(lang: any): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/api/feedbacks?locale=${lang}`).pipe(map(res => res));
   }
 }

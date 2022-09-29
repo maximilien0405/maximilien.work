@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { SwiperComponent } from 'swiper/angular';
+import { FeedbackService } from '../feedback.service';
 
 @Component({
   selector: 'app-services',
@@ -16,14 +17,16 @@ export class ServicesComponent implements OnInit {
   
   @ViewChild('swiper', { static: false }) swiper: SwiperComponent;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private feedbackService: FeedbackService) {
     this.translate.onLangChange
     .subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     });
 
-    this.feedbackService.getAllWork(this.lang).subscribe(res => {
+    this.feedbackService.getAllFeedback(this.lang).subscribe(res => {
       this.all_feedback = res.data;
+
+      console.log(res)
 
       for (let x in this.all_feedback) {
         this.total_all_feedback.push(this.all_feedback[x].attributes)
@@ -37,11 +40,11 @@ export class ServicesComponent implements OnInit {
       spaceBetween: 20
     },
     '768': {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20
     },
     '1024': {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20
     }
   }

@@ -2,7 +2,7 @@
   RESPONSIVE
 ----------------------------------------------------- */
 
-@media (max-width: 508px) {
+@media (max-width: 588px) {
   html {
     font-size: 14.5px !important;
   }
@@ -822,6 +822,7 @@ header {
   cursor: default;
 
   .subtitle {
+    text-align: left;
     margin-top: 0.9375rem;
     margin-bottom: 0.9375rem;
   }
@@ -1027,3 +1028,8 @@ footer .nav-links {
 /* ---------------------------------------------------
   SERVICE PAGE
 ----------------------------------------------------- */
+
+.client-review-text {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}

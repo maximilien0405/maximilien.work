@@ -47,23 +47,25 @@
       <h2><span class="special-span">02</span>{{ 'SERVICES.PART-3.TITLE' | translate }}</h2>
       
       <swiper #swiper [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpoints">
-        <ng-template swiperSlide *ngFor="let work of total_all_work">
-          <div class="box-realisation" (click)="join(work.url)">
-            <div class="overlay rea-box-desktop">
-              <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
+        <ng-template swiperSlide *ngFor="let feedback of total_all_feedback">
+            <div class="box article-box">
+              <p class="subtitle client-review-text" *ngIf="lang == 'en' || lang == 'EN'">{{ feedback.text_en }}</p>
+              <p class="subtitle client-review-text" *ngIf="lang == 'fr' || lang == 'FR'">{{ feedback.text_fr }}</p>
+
+                <!--<div class="article-bottom-content">
+                   <div class="tag tag-url" >{{ feedback.username }}</div>
+                    <div class="article-right">
+                        <div class="tag">{{ feedback.date }}</div>
+                    </div>
+                </div>-->
             </div>
-            <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
-            <a class="link-work-mobile">
-              <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
-            </a>
-          </div>
         </ng-template>
       </swiper>
   
       <div class="rea-container">
         <div>
-          <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
-          <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
+          <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'SERVICES.PART-3.PARAGRAPH' | translate }} ></a>
+          <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'SERVICES.PART-3.PARAGRAPH' | translate }} ></a>
         </div>
         <div class="arrows-container">
           <a (click)="back()" class="arrow"> < </a>

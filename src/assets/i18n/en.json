@@ -53,13 +53,14 @@
       "BOX-1-TITLE": "Website creation",
       "BOX-1-SUB": "For your portfolio, e-commerce site, personal blog, forum or showcase site. Everything is possible.",
       "BOX-2-TITLE": "Modification of existing website",
-      "BOX-2-SUB": "To improve your SEO, make your site faster or even add or remove pages."
+      "BOX-2-SUB": "To improve your SEO, make your website faster or even add or remove pages."
     },
     "PART-2": {
       "TITLE": "About me"
     },
     "PART-3": {
-      "TITLE": "Customer feedback"
+      "TITLE": "Customer feedback",
+      "PARAGRAPH": "Contact me"
     }
 
   },

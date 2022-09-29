@@ -70,13 +70,6 @@ export class WorkDetailsComponent implements OnInit {
     this.swiper.swiperRef.slidePrev(250);
   }
 
-  public checkIfOneImage(array) {
-    if (array.length <= 1) {
-      return true;
-    }
-    return false;
-  }
-
   public nextProject() {
     let count = 0;
 
