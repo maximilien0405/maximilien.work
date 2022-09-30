@@ -10,7 +10,7 @@
     "SUBTITLE": "A freelance UI/UX designer & developer full of ideas to take your project to the next-level.",
     "BUTTON": "Contact me",
     "PART-1": {
-      "TITLE": "About me"
+      "TITLE": "Who am i"
     },
     "PART-2": {
       "TITLE": "Skills",
@@ -48,7 +48,7 @@
   },
   "SERVICES": {
     "TITLE": "My services",
-    "SUBTITLE": "Freelance since 2020, I accompany my clients for their web or design projects.",
+    "SUBTITLE": "Freelance since 2021, I accompany my clients for their web or design projects.",
     "PART-1": {
       "BOX-1-TITLE": "Website creation",
       "BOX-1-SUB": "For your portfolio, e-commerce site, personal blog, forum or showcase site. Everything is possible.",
@@ -62,7 +62,6 @@
       "TITLE": "Customer feedback",
       "PARAGRAPH": "Contact me"
     }
-
   },
   "CONTACT": {
     "TITLE": "Contact me",

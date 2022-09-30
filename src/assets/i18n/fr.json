@@ -10,7 +10,7 @@
     "SUBTITLE": "Un freelance UI/UX designer & développeur débordant d'idées afin de porter votre projet au next-level.",
     "BUTTON": "Me contacter",
     "PART-1": {
-      "TITLE": "A propos"
+      "TITLE": "Qui suis-je"
     },
     "PART-2": {
       "TITLE": "Connaissances",
@@ -48,7 +48,7 @@
   },
   "SERVICES": {
     "TITLE": "Mes services",
-    "SUBTITLE": "Freelance depuis 2020, j'accompagne mes clients pour leurs projets web ou design.",
+    "SUBTITLE": "Freelance depuis 2021, j'accompagne mes clients pour leurs projets web ou design.",
     "PART-1": {
       "BOX-1-TITLE": "Création de site web",
       "BOX-1-SUB": "Pour votre portfolio, site de vente en ligne, blog personnel, forum ou bien site vitrine. Tout est possible.",
@@ -56,7 +56,7 @@
       "BOX-2-SUB": "Pour améliorer votre SEO, rendre votre site plus rapide ou bien même ajouter ou supprimer des pages."
     },
     "PART-2": {
-      "TITLE": "A propos de moi"
+      "TITLE": "A propos"
     },
     "PART-3": {
       "TITLE": "Avis clients",
