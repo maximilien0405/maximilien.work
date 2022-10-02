@@ -24,6 +24,7 @@
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "ngx-glide": "^13.0.0",
+    "ngx-markdown": "^14.0.1",
     "ngx-owl-carousel-o": "^7.0.2",
     "rxjs": "~7.5.0",
     "swiper": "^8.2.4",

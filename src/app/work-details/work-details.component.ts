@@ -35,9 +35,9 @@ export class WorkDetailsComponent implements OnInit {
     }
   }
 
-  constructor(private router: Router, 
-    private route: ActivatedRoute, 
-    private projectService: ProjectsService, 
+  constructor(private router: Router,
+    private route: ActivatedRoute,
+    private projectService: ProjectsService,
     private translate: TranslateService) {
     this.route.params.subscribe(params => this.url = params.name);
 
@@ -60,7 +60,7 @@ export class WorkDetailsComponent implements OnInit {
     console.log(this.total_all)
   }
 
-  public ngOnInit(): void { }
+  public ngOnInit(): void {}
 
   public next(): void {
     this.swiper.swiperRef.slideNext(250);

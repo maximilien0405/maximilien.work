@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
 import { BlogComponent } from './blog/blog.component';
 import { ServicesComponent } from './services/services.component';
+import { MarkdownModule } from "ngx-markdown";
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MarkdownModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
