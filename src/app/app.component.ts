@@ -53,11 +53,12 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
   ]
 })
 export class AppComponent {
-  public lang:String = this.translate.currentLang;
   public languageClick:Boolean = false;
   public route:String;
   public mobileSidebar: boolean = false;
   public whiteTheme: boolean = true;
+  public lang: string | any;
+  public url = new URL(window.location.href);
 
   constructor(public translate: TranslateService, 
     private router: Router) {
@@ -70,33 +71,18 @@ export class AppComponent {
     translate.addLangs(['fr','en'])
     translate.setDefaultLang('fr')
 
-    /* Code pour trouver langue user */
-    let lang = window.navigator.languages ? window.navigator.languages[0] : null;
-    lang = lang || window.navigator.language;
+    if(!localStorage.getItem('lang')) {
+      // Get navigator language & cut it
+      if (navigator.language.includes("-")) {
+        this.lang = navigator.language.slice(0, 2);
+      } else {
+        this.lang = navigator.language;
+      }
 
-    let shortLang = lang;
-    if (shortLang.indexOf('-') !== -1)
-        shortLang = shortLang.split('-')[0];
-
-    if (shortLang.indexOf('_') !== -1)
-        shortLang = shortLang.split('_')[0];
-
-    this.lang = shortLang;
-
-    if (shortLang == "fr") {
-      translate.use('fr')
-    } else {
-      translate.use('en')
-    }
-
-    if(localStorage.getItem('lang') == 'en') {
-      translate.use('en')
-      this.lang = 'en';
-      return
-    } else if (localStorage.getItem('lang') == 'fr') {
-      this.lang = 'fr';
-      translate.use('fr')
-      return
+      // Set navigator language
+      localStorage.setItem("lang", this.lang);
+      this.translate.setDefaultLang(this.lang);
+      this.translate.use(this.lang)
     }
   }
 
@@ -106,8 +92,8 @@ export class AppComponent {
 
   public changeLang(lang:string) {
     window.location.reload();
-    this.translate.currentLang == lang;
     this.translate.use(lang);
+    this.translate.setDefaultLang(lang);
     localStorage.setItem('lang', lang)
     this.lang = lang;
     this.languageClick = false;
