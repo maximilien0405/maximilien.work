@@ -15,6 +15,10 @@
     </div>
   </div>
 
+  <div *ngFor="let work of total_all_work">
+    {{ work.title }}
+  </div>
+
   <!------ PROJECT ------------------------------------------------>
 
   <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
