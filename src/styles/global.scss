@@ -5,7 +5,7 @@
 @import 'swiper/scss/pagination';
 
 .swiper-slide {
-  border-radius: 0.55rem !important;
+  border-radius: 0.5rem !important;
   line-height: normal !important;
 }
 
@@ -98,7 +98,7 @@ body.dark-theme {
   font-size: 1.25rem !important;
   text-align: center !important;
   justify-content: center;
-  border-radius: 0.3125rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -213,7 +213,7 @@ button {
   padding: 0.9375rem 1.5rem;
   border: 0.0625rem solid var(--border-color);
   background-color: var(--white);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   cursor: pointer;
   color: var(--black);
   transform: all 250ms;
@@ -351,7 +351,7 @@ b {
   padding: 0.9375rem;
   border: 0.0625rem solid var(--border-color);
   background-color: var(--white);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   cursor: pointer;
   transform: all 250ms;
   display: flex;
