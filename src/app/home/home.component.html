@@ -66,12 +66,12 @@
 
     <swiper #swiper [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpoints">
       <ng-template swiperSlide *ngFor="let work of total_all_work">
-        <div class="box-realisation" (click)="join(work.url)">
+        <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
           <div class="overlay rea-box-desktop">
             <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
           </div>
           <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
-          <a (click)="join(work.url)" class="link-work-mobile">
+          <a [routerLink]="'/realisation/' + work.url" class="link-work-mobile">
             <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
           </a>
         </div>

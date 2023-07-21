@@ -2,7 +2,7 @@
 
 <!------ MOBILE SIDEBAR -------------------------------------------->
 
-<div [@inOutAnimation] *ngIf="mobileSidebar" class="mobile-sidebar">
+<div @inOutAnimation *ngIf="mobileSidebar" class="mobile-sidebar">
   <div class="icons-container">
     <div>
       <a *ngIf="whiteTheme" (click)="toggleDarkTheme()"><img src="../assets/icons/theme-dark.svg" alt="theme-dark-icon"></a>
@@ -42,7 +42,7 @@
 
 <!------ NAVBAR ---------------------------------------------------->
 
-<nav id="nav" class="container wow fadeInDown" id="accueil">
+<nav class="container wow fadeInDown">
   <a routerLink="/">
     <h2>MZ.</h2>
   </a>
@@ -61,7 +61,7 @@
     
     <img (click)="languageBox()" src="../../assets/icons/lang.svg" alt="lang-icon" class="language-icon">
 
-    <div *ngIf="languageClick" [@inOutAnimationSlow]  class="language-box">
+    <div *ngIf="languageClick" @inOutAnimationSlow class="language-box">
       <a (click)="changeLang('fr')" class="subtitle">🇫🇷</a>
       <p class="subtitle">/</p>
       <a (click)="changeLang('en')" class="subtitle">🇺🇸</a>

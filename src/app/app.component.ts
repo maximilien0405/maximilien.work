@@ -1,27 +1,22 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationEnd, Router } from '@angular/router';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   animations: [
-    trigger(
-      'inOutAnimation',
-      [
+    trigger('inOutAnimation', [
         transition(
-          ':enter',
-          [
+          ':enter', [
             style({ opacity: 0 }),
             animate('0.2s ease-out',
             style({ opacity: 1 }))
           ]
         ),
         transition(
-          ':leave',
-          [
+          ':leave', [
             style({ opacity: 1 }),
             animate('0.2s ease-in',
             style({ opacity: 0 }))
@@ -29,20 +24,16 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
         )
       ]
     ),
-    trigger(
-      'inOutAnimationSlow',
-      [
+    trigger('inOutAnimationSlow', [
         transition(
-          ':enter',
-          [
+          ':enter', [
             style({ opacity: 0 }),
             animate('0.1s ease-out',
             style({ opacity: 1 }))
           ]
         ),
         transition(
-          ':leave',
-          [
+          ':leave', [
             style({ opacity: 1 }),
             animate('0.1s ease-in',
             style({ opacity: 0 }))
@@ -60,8 +51,11 @@ export class AppComponent {
   public lang: string | any;
   public url = new URL(window.location.href);
 
-  constructor(public translate: TranslateService, 
-    private router: Router) {
+  constructor(
+    public translate: TranslateService, 
+    private router: Router)
+  {
+    // Get router url
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.route = this.router.url;
@@ -86,10 +80,12 @@ export class AppComponent {
     }
   }
 
+  // Display or not language dropdown
   public languageBox() {
     this.languageClick = !this.languageClick;
   }
 
+  // Change the language
   public changeLang(lang:string) {
     window.location.reload();
     this.translate.use(lang);
@@ -100,16 +96,19 @@ export class AppComponent {
   }
 
   public ngOnInit() {
+    // Add dark theme if navigator dark
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('dark-theme');
     }
 
+    // Set the right theme
     if(localStorage.getItem('theme') == 'black') {
       this.toggleDarkTheme();
     } else {
       this.toggleWhiteTheme();
     }
 
+    // Set the right lang
     if(localStorage.getItem('lang') == 'en') {
       this.translate.use('en');
       this.lang = 'en';
@@ -119,20 +118,24 @@ export class AppComponent {
     }
   }
 
+  // Open the movile nav
   public openNav() {
     this.mobileSidebar = !this.mobileSidebar;
   }
 
+  // Close the mobile nav
   public closeNav() {
     this.mobileSidebar = false;
   }
 
+  // Toggle dark theme
   public toggleDarkTheme() {
     document.body.classList.add('dark-theme');
     this.whiteTheme = false;
     localStorage.setItem('theme', 'black')
   }
 
+  // Toggle white theme
   public toggleWhiteTheme() {
     document.body.classList.remove('dark-theme');
     this.whiteTheme = true;

@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { ProjectsService } from '../projects.service';
+import { Component, ViewChild } from '@angular/core';
+import { ProjectsService } from '../common/services/projects.service';
 import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
@@ -9,8 +9,7 @@ import { SwiperComponent } from 'swiper/angular';
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent {
   public all_work:any;
   public total_all_work:any = [];
   public readonly API_URL = environment.api;
@@ -36,31 +35,27 @@ export class HomeComponent implements OnInit {
     private router: Router, 
     private translate: TranslateService) {
 
-    this.translate.onLangChange
-    .subscribe((event: LangChangeEvent) => {
+    // Change lang if changed on navbar
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     });
 
+    // Get all the work
     this.projectService.getAllWork(this.lang).subscribe(res => {
       this.all_work = res.data;
-
       for (let x in this.all_work) {
         this.total_all_work.push(this.all_work[x].attributes)
       }
     });
   }
 
-  public ngOnInit(): void {}
-
+  // Go next in slider
   public next(): void {
     this.swiper.swiperRef.slideNext(250);
   }
 
+  // Go back in slider
   public back(): void {
     this.swiper.swiperRef.slidePrev(250);
-  }
-
-  public join(url: any): void {
-    this.router.navigateByUrl("/realisation/" + url);
   }
 }

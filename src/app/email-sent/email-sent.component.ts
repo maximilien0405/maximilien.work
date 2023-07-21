@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-email-sent',
   templateUrl: './email-sent.component.html'
 })
-export class EmailSentComponent implements OnInit {
+export class EmailSentComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

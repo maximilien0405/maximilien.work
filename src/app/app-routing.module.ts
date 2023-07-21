@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AllWorkComponent } from './all-work/all-work.component';
-import { AppComponent } from './app.component';
 import { WorkDetailsComponent } from './work-details/work-details.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';

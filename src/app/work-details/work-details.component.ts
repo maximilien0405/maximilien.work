@@ -1,16 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { SwiperComponent } from 'swiper/angular';
-import { ProjectsService } from '../projects.service';
+import { ProjectsService } from '../common/services/projects.service';
 
 @Component({
   selector: 'app-work-details',
   templateUrl: './work-details.component.html'
 })
-export class WorkDetailsComponent implements OnInit {
-
+export class WorkDetailsComponent {
   public all_work:any;
   public total_all:any = [];
   public total_all_work:any = [];
@@ -38,21 +37,22 @@ export class WorkDetailsComponent implements OnInit {
   constructor(private router: Router,
     private route: ActivatedRoute,
     private projectService: ProjectsService,
-    private translate: TranslateService) {
+    private translate: TranslateService)
+  {
     this.route.params.subscribe(params => this.url = params.name);
 
+    // Change lang if changed on navbar
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
     })
 
+    // Get the realisation and set
     this.projectService.getAllWork(this.lang).subscribe(res => {
       this.all_work = res.data;
-
       for (let x in this.all_work) {
         if(this.all_work[x].attributes.type == 'project') {
           this.total_all_work.push(this.all_work[x].attributes)
         }
-
         this.total_all.push(this.all_work[x].attributes)
       }
     });
@@ -60,16 +60,17 @@ export class WorkDetailsComponent implements OnInit {
     console.log(this.total_all)
   }
 
-  public ngOnInit(): void {}
-
+  // Go next in slider
   public next(): void {
     this.swiper.swiperRef.slideNext(250);
   }
 
+  // Go back in slider
   public back(): void {
     this.swiper.swiperRef.slidePrev(250);
   }
 
+  // Travel to next project
   public nextProject() {
     let count = 0;
 
