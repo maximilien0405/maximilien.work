@@ -43,7 +43,7 @@ export class AllWorkComponent {
     this.router.navigateByUrl("/realisation/" + url);
   }
 
-  // Change the type seen
+  // Change the type
   public changeType(type:number):void {
     this.type = type;
   }

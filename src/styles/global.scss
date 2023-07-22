@@ -4,8 +4,13 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 
+.swiper {
+  border-radius: 0.85rem !important;
+  line-height: normal !important;
+}
+
 .swiper-slide {
-  border-radius: 0.5rem !important;
+  border-radius: 1.5rem;
   line-height: normal !important;
 }
 

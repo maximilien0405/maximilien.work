@@ -50,6 +50,7 @@ export class AppComponent {
   public whiteTheme: boolean = true;
   public lang: string | any;
   public url = new URL(window.location.href);
+  public currentYear = new Date().getFullYear()
 
   constructor(
     public translate: TranslateService, 
@@ -87,12 +88,12 @@ export class AppComponent {
 
   // Change the language
   public changeLang(lang:string) {
-    window.location.reload();
     this.translate.use(lang);
     this.translate.setDefaultLang(lang);
     localStorage.setItem('lang', lang)
     this.lang = lang;
     this.languageClick = false;
+    this.mobileSidebar = false;
   }
 
   public ngOnInit() {
@@ -133,6 +134,7 @@ export class AppComponent {
     document.body.classList.add('dark-theme');
     this.whiteTheme = false;
     localStorage.setItem('theme', 'black')
+    this.mobileSidebar = false;
   }
 
   // Toggle white theme
@@ -140,5 +142,6 @@ export class AppComponent {
     document.body.classList.remove('dark-theme');
     this.whiteTheme = true;
     localStorage.setItem('theme', 'white')
+    this.mobileSidebar = false;
   }
 }

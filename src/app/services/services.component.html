@@ -28,7 +28,7 @@
       <h2><span class="special-span">01</span>{{ 'SERVICES.PART-2.TITLE' | translate }}</h2>
 
       <div *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">
-        Depuis 2021, j’accompagne mes clients dans la réalisation de leurs sites web.
+        Depuis 2022, j’accompagne mes clients dans la réalisation de leurs sites web.
         <br><br>
         Que ce soit pour un site vitrine ou bien une boutique, je tacherais tout mettre en oeuvre afin que votre projet corresponde à votre attente.
         <br><br>
@@ -36,7 +36,7 @@
       </div>
 
       <div *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">
-        Since 2021, I accompany my clients in the realization of their websites.
+        Since 2022, I accompany my clients in the realization of their websites.
         <br><br>
         Whether it is for the creation of your website, or a redesign of the design system of your business, I will do my best to make sure that your project meets your expectations.
         <br><br>
@@ -44,36 +44,70 @@
       </div>
     </section>
 
-    <!------ Avis clients ------------------------------------------------>
+    <!------ REALISATIONS ------------------------------------------------>
+    
     <section class="wow fadeIn">
       <h2><span class="special-span">02</span>{{ 'SERVICES.PART-3.TITLE' | translate }}</h2>
+    
+      <swiper #swiperWork [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpointsWork">
+        <ng-template swiperSlide *ngFor="let work of total_all_work">
+          <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
+            <div class="overlay rea-box-desktop">
+              <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
+            </div>
+            <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
+            <a [routerLink]="'/realisation/' + work.url" class="link-work-mobile">
+              <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
+            </a>
+          </div>
+        </ng-template>
+      </swiper>
+    
+      <div class="rea-container">
+        <div>
+          <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate
+            }}</a>
+          <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
+        </div>
+        <div class="arrows-container">
+          <a (click)="backWork()" class="arrow">
+            < </a>
+              <a (click)="nextWork()" class="arrow"> > </a>
+        </div>
+      </div>
+    </section>
 
-      <swiper #swiper [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpoints">
+    <!------ Avis clients ------------------------------------------------>
+
+    <!--<section class="wow fadeIn">
+      <h2><span class="special-span">03</span>{{ 'SERVICES.PART-4.TITLE' | translate }}</h2>
+
+      <swiper #swiperFeedback [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpointsFeedback">
         <ng-template swiperSlide *ngFor="let feedback of total_all_feedback">
             <div class="box article-box">
               <p class="subtitle client-review-text" *ngIf="lang == 'en' || lang == 'EN'">{{ feedback.text_en }}</p>
               <p class="subtitle client-review-text" *ngIf="lang == 'fr' || lang == 'FR'">{{ feedback.text_fr }}</p>
 
-                <!--<div class="article-bottom-content">
+                <div class="article-bottom-content">
                    <div class="tag tag-url" >{{ feedback.username }}</div>
                     <div class="article-right">
                         <div class="tag">{{ feedback.date }}</div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </ng-template>
       </swiper>
 
       <div class="rea-container">
         <div>
-          <a routerLink="/contact" class="link-flash rea-link-desktop">{{ 'SERVICES.PART-3.PARAGRAPH' | translate }} ></a>
-          <a routerLink="/contact" class="link-flash rea-link-mobile">{{ 'SERVICES.PART-3.PARAGRAPH' | translate }} ></a>
+          <a routerLink="/contact" class="link-flash rea-link-desktop">{{ 'SERVICES.PART-4.PARAGRAPH' | translate }} ></a>
+          <a routerLink="/contact" class="link-flash rea-link-mobile">{{ 'SERVICES.PART-4.PARAGRAPH' | translate }} ></a>
         </div>
         <div class="arrows-container">
-          <a (click)="back()" class="arrow"> < </a>
-          <a (click)="next()" class="arrow"> > </a>
+          <a (click)="backFeedback()" class="arrow"> < </a>
+          <a (click)="nextFeedback()" class="arrow"> > </a>
         </div>
       </div>
-    </section>
+    </section>-->
 </main>
 

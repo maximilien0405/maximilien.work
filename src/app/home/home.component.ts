@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { ProjectsService } from '../common/services/projects.service';
-import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { SwiperComponent } from 'swiper/angular';
@@ -31,10 +30,10 @@ export class HomeComponent {
     }
   }
 
-  constructor(private projectService: ProjectsService, 
-    private router: Router, 
-    private translate: TranslateService) {
-
+  constructor(
+    private projectService: ProjectsService, 
+    private translate: TranslateService)
+  {
     // Change lang if changed on navbar
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.lang = event.lang
@@ -51,11 +50,11 @@ export class HomeComponent {
 
   // Go next in slider
   public next(): void {
-    this.swiper.swiperRef.slideNext(250);
+    this.swiper.swiperRef.slideNext(400);
   }
 
   // Go back in slider
   public back(): void {
-    this.swiper.swiperRef.slidePrev(250);
+    this.swiper.swiperRef.slidePrev(400);
   }
 }

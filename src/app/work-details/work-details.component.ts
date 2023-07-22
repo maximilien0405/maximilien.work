@@ -62,7 +62,7 @@ export class WorkDetailsComponent {
 
   // Go next in slider
   public next(): void {
-    this.swiper.swiperRef.slideNext(250);
+    this.swiper.swiperRef.slideNext(400);
   }
 
   // Go back in slider
