@@ -14,15 +14,15 @@
     },
     "PART-2": {
       "TITLE": "Mes services",
-      "BOX-1-TITLE": "Web design",
-      "BOX-1-SUB": "Prototypes, charte graphique ou bien encore maquettes visuelles complètes.",
-      "BOX-2-TITLE": "Dév Front-end",
-      "BOX-2-SUB": "Intégration web, applications web et modification de sites existants.",
+      "BOX-1-TITLE": "Développement Web",
+      "BOX-1-SUB": "Intégration web, applications web complêtes ou modification de sites existants.",
+      "BOX-2-TITLE": "Web design",
+      "BOX-2-SUB": "Prototypes, maquettes visuelles, ou bien encore identité visuelles complètes.",
       "BOX-3-TITLE": "Autres",
       "BOX-3-SUB": "Référencement, accesibilité et optimisation de performances web."
     },
     "PART-3": {
-      "TITLE": "Quelques réalisations",
+      "TITLE": "Mes réalisations",
       "BOX-HOVER": "Voir plus",
       "PARAGRAPH-DESK": "Voir toutes les réalisations >",
       "PARAGRAPH-MOB": "Tout voir >"
@@ -52,14 +52,14 @@
     "PART-1": {
       "BOX-1-TITLE": "Création de site web",
       "BOX-1-SUB": "Pour votre portfolio, site de vente en ligne, blog personnel, forum ou bien site vitrine. Tout est possible.",
-      "BOX-2-TITLE": "Modification de site existants",
-      "BOX-2-SUB": "Pour améliorer votre SEO, rendre votre site plus rapide ou bien même ajouter ou supprimer des pages."
+      "BOX-2-TITLE": "Design Web",
+      "BOX-2-SUB": "Pour créer des prototypes, maquettes ou bien même identité visuelle complète pour votre entreprise."
     },
     "PART-2": {
       "TITLE": "A propos"
     },
     "PART-3": {
-      "TITLE": "Quelques réalisations"
+      "TITLE": "Mes réalisations"
     },
     "PART-4": {
       "TITLE": "Avis clients",

@@ -14,15 +14,15 @@
     },
     "PART-2": {
       "TITLE": "My solutions",
-      "BOX-1-TITLE": "Web design",
-      "BOX-1-SUB": "Prototypes, graphic design or even complete visual mockups.",
-      "BOX-2-TITLE": "Front-end development",
-      "BOX-2-SUB": "Integration, web applications and edits of websites.",
+      "BOX-1-TITLE": "Web development",
+      "BOX-1-SUB": "Integration, full web applications and edits of websites.",
+      "BOX-2-TITLE": "Web design",
+      "BOX-2-SUB": "Prototypes, UI mockups even complete visual identities.",
       "BOX-3-TITLE": "Other",
       "BOX-3-SUB": "SEO, accessibility and optimization of performance."
     },
     "PART-3": {
-      "TITLE": "Some projects",
+      "TITLE": "My work",
       "BOX-HOVER": "See more",
       "PARAGRAPH-DESK": "See all work >",
       "PARAGRAPH-MOB": "See all >"
@@ -52,14 +52,14 @@
     "PART-1": {
       "BOX-1-TITLE": "Website creation",
       "BOX-1-SUB": "For your portfolio, e-commerce site, personal blog, forum or showcase site. Everything is possible.",
-      "BOX-2-TITLE": "Modification of existing website",
-      "BOX-2-SUB": "To improve your SEO, make your website faster or even add or remove pages."
+      "BOX-2-TITLE": "Web design",
+      "BOX-2-SUB": "To create prototypes, UI mockups or even complete visual identity for your company."
     },
     "PART-2": {
       "TITLE": "About me"
     },
     "PART-3": {
-      "TITLE": "Some projects"
+      "TITLE": "My work"
     },
     "PART-4": {
       "TITLE": "Customer feedback",

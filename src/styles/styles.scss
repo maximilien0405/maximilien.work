@@ -458,6 +458,12 @@ header {
   grid-template-columns: 1fr 1fr !important;
 }
 
+.services .box {
+  padding: 0.875rem 1.875rem 0.875rem 1.875rem !important;
+  width: fit-content;
+  margin-top: 1.875rem;
+}
+
 .all-box-skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
