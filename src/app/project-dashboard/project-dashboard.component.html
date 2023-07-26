@@ -1,0 +1,18 @@
+<main>
+    <div *ngIf="!locked" class="page-header wow fadeIn">
+        <h2>{{ 'PROJECT-DASHBOARD.LOCKED-TITLE' | translate }}</h2>
+        <p class="subtitle form-subtitle">{{ 'PROJECT-DASHBOARD.LOCKED-SUBTITLE' | translate }}</p>
+
+        <div class="locked-container">
+            <div class="input-icon">
+                <input type="{{ showPassword ? 'text' : 'password' }}" [class.form-error]="errorPwd" class="input"
+                [placeholder]="'PROJECT-DASHBOARD.INPUT-PLACEHOLDER' | translate" autofocus>
+                <div (click)="toogleShowPassword()" class="icon-right">
+                    <img *ngIf="showPassword" src="../../assets/icons/eye.svg">
+                    <img *ngIf="!showPassword" src="../../assets/icons/eye2.svg">
+                </div>
+            </div>
+            <button>{{ 'PROJECT-DASHBOARD.BTN-SEND' | translate }}</button>
+        </div>
+    </div>
+</main>

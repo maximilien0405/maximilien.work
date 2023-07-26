@@ -3,25 +3,25 @@
   <!------ HEADER ------------------------------------------------>
 
   <div class="page-header">
-    <h2>{{ 'PROJECT.TITLE' | translate }}</h2>
-    <p class="subtitle">{{ 'PROJECT.SUBTITLE' | translate }}</p>
+    <h2>{{ 'WORK.TITLE' | translate }}</h2>
+    <p class="subtitle">{{ 'WORK.SUBTITLE' | translate }}</p>
     <div class="category-links">
-      <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'PROJECT.CATEGORY-1' | translate }}
+      <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'WORK.CATEGORY-1' | translate }}
         <span>({{ this.total_all_work.length }})</span>
       </a>
-      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'PROJECT.CATEGORY-2' | translate }}
+      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'WORK.CATEGORY-2' | translate }}
         <span>({{ this.total_all_other.length }})</span>
       </a>
     </div>
   </div>
 
-  <!------ PROJECT ------------------------------------------------>
+  <!------ WORK ------------------------------------------------>
 
   <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
     <div *ngFor="let work of total_all_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
-          <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
+          <p class="text-overlay paragraph">{{ 'WORK.BOX-HOVER' | translate }}</p>
         </div>
         <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
       </div>
@@ -40,7 +40,7 @@
     <div *ngFor="let work of total_all_other" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
-          <p class="text-overlay paragraph">{{ 'PROJECT.BOX-HOVER' | translate }}</p>
+          <p class="text-overlay paragraph">{{ 'WORK.BOX-HOVER' | translate }}</p>
         </div>
         <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
       </div>

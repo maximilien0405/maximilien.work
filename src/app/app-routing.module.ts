@@ -7,12 +7,14 @@ import { ContactComponent } from './contact/contact.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
 import { BlogComponent } from './blog/blog.component';
 import { ServicesComponent } from './services/services.component';
+import { ProjectDashboardComponent } from './project-dashboard/project-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'realisations', component: AllWorkComponent },
-  { path: 'realisation/:name', component: WorkDetailsComponent},
+  { path: 'realisation/:name', component: WorkDetailsComponent },
+  { path: 'project-dashboard/:name', component: ProjectDashboardComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component:ContactComponent},

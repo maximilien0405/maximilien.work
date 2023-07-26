@@ -28,7 +28,7 @@
       "PARAGRAPH-MOB": "See all >"
     }
   },
-  "PROJECT": {
+  "WORK": {
     "LINK": "< Back",
     "TITLE": "All of my work",
     "SUBTITLE": "Here are some of my work, whether it is Web design or web development.",
@@ -36,10 +36,16 @@
     "CATEGORY-1": "Projects",
     "CATEGORY-2": "Others"
   },
-  "PROJECT-DETAIL": {
+  "WORK-DETAIL": {
     "LINK": "< Back",
     "TABLE-TITLE": "Table of Contents",
     "TABLE-NEXT": "Next"
+  },
+  "PROJECT-DASHBOARD": {
+    "LOCKED-TITLE": "This page is protected",
+    "LOCKED-SUBTITLE": "To access this page, please enter below the password given to you by Email.",
+    "INPUT-PLACEHOLDER": "Password",
+    "BTN-SEND": "Send"
   },
   "ARTICLE": {
     "TITLE": "All of my articles",

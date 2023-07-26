@@ -15,6 +15,7 @@ import { EmailSentComponent } from './email-sent/email-sent.component';
 import { BlogComponent } from './blog/blog.component';
 import { ServicesComponent } from './services/services.component';
 import { MarkdownModule } from "ngx-markdown";
+import { ProjectDashboardComponent } from './project-dashboard/project-dashboard.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -30,6 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     EmailSentComponent,
     BlogComponent,
     ServicesComponent,
+    ProjectDashboardComponent,
   ],
   imports: [
     BrowserModule,

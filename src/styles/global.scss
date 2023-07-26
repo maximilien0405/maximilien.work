@@ -380,3 +380,45 @@ b {
   height: 0.0625rem;
   background-color: var(--border-color);
 }
+
+
+.input-icon {
+  position: relative;
+
+  .icon-right {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0.55rem;
+    top: 0.51rem;
+    height: 2.375rem;
+    width: 2.375rem;
+    border: 0.0625rem solid var(--border-color) !important;
+    background-color: var(--white);
+    border-radius: 0.8125rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      border-color: var(--border-hover);
+    }
+
+    &:active {
+      transform: scale(0.96);
+      -webkit-transform: scale(0.96);
+      -moz-transform: scale(0.96);
+      border: 0.0625rem solid var(--border-hover);
+    }
+  }
+
+  .input {
+    padding-right: 3.875rem;
+  }
+
+  img {
+    height: 1.25rem;
+    filter: var(--icon-gray);
+  }
+}

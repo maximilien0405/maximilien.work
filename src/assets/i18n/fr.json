@@ -28,7 +28,7 @@
       "PARAGRAPH-MOB": "Tout voir >"
     }
   },
-  "PROJECT": {
+  "WORK": {
     "LINK": "< Retour",
     "TITLE": "Toutes mes réalisations",
     "SUBTITLE": "Voici quelques-uns de mes réalisations, que ce soit de l'Web design ou bien du développement web.",
@@ -36,7 +36,7 @@
     "CATEGORY-1": "Projets",
     "CATEGORY-2": "Autres"
   },
-  "PROJECT-DETAIL": {
+  "WORK-DETAIL": {
     "LINK": "< Retour",
     "TABLE-TITLE": "Table des matières",
     "TABLE-NEXT": "Suivant"

@@ -3,8 +3,8 @@
     <div *ngIf="work.url == url"  class="work-content">
       <div class="work-content-container" [ngClass]="{'work-content-full-width': work.type == 'other'}">
         <div class="mobile-bottom-links">
-          <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
-          <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
+          <button routerLink="/realisations">{{ 'WORK-DETAIL.LINK' | translate }}</button>
+          <button (click)="nextProject()">{{ 'WORK-DETAIL.TABLE-NEXT' | translate }} ></button>
         </div>
 
         <!------ HEADER ------------------------------------------------>
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <!------ PROJECT CONTENT ------------------------------------------------>
+        <!------ WORK CONTENT ------------------------------------------------>
 
         <div class="project-details" *ngIf="work.type == 'project'">
           <p class="subtitle">{{ work.description }}</p>
@@ -60,15 +60,15 @@
 
       <div class="table-container" *ngIf="work.type == 'project'">
         <div class="table-content">
-          <h3>{{ 'PROJECT-DETAIL.TABLE-TITLE' | translate }}</h3>
+          <h3>{{ 'WORK-DETAIL.TABLE-TITLE' | translate }}</h3>
           <div class="separator"></div>
           <div class="table-links">
             <a *ngFor="let content of work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>
           </div>
         </div>
         <div class="table-bottom-links">
-          <button routerLink="/realisations">{{ 'PROJECT-DETAIL.LINK' | translate }}</button>
-          <button (click)="nextProject()">{{ 'PROJECT-DETAIL.TABLE-NEXT' | translate }} ></button>
+          <button routerLink="/realisations">{{ 'WORK-DETAIL.LINK' | translate }}</button>
+          <button (click)="nextProject()">{{ 'WORK-DETAIL.TABLE-NEXT' | translate }} ></button>
         </div>
       </div>
     </div>
