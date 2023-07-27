@@ -1,0 +1,31 @@
+<main>
+    <div *ngIf="locked" class="page-header wow fadeIn">
+        <h2>{{ 'PROJECT-DASHBOARD.LOCKED-TITLE' | translate }}</h2>
+        <p class="subtitle form-subtitle">{{ 'PROJECT-DASHBOARD.LOCKED-SUBTITLE' | translate }}</p>
+
+        <div class="locked-container">
+            <div class="input-icon">
+                <input type="{{ showPassword ? 'text' : 'password' }}" [class.form-error]="errorPwd" class="input" [(ngModel)]="passwordValue" (ngModelChange)="onPasswordChange($event)" [class.form-error]="errorPwd"
+                [placeholder]="'PROJECT-DASHBOARD.INPUT-PLACEHOLDER' | translate" autofocus>
+                <div (click)="toogleShowPassword()" class="icon-right">
+                    <img *ngIf="showPassword" src="../../assets/icons/eye.svg">
+                    <img *ngIf="!showPassword" src="../../assets/icons/eye2.svg">
+                </div>
+                <p *ngIf="errorPwd" class="text-error">{{ 'PROJECT-DASHBOARD.INVALID-PWD' | translate }}</p>
+            </div>
+            <button (click)="getClientWithProjects()">
+                <span *ngIf="!spinnerDisplay">{{ 'PROJECT-DASHBOARD.BTN-SEND' | translate }}</span>
+
+                <div *ngIf="spinnerDisplay" class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="!locked" class="wow fadeIn">
+        <h1>{{ client.name }}</h1>
+    </div>
+</main>

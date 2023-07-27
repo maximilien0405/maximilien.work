@@ -10,6 +10,7 @@
       <a *ngIf="lang == 'en' || lang == 'EN'" (click)="changeLang('fr')">🇫🇷</a>
       <a *ngIf="lang == 'fr' || lang == 'FR'" (click)="changeLang('en')">🇺🇸</a>
     </div>
+    <a *ngIf="showClientLink" class="icon-special" (click)="mobileSidebar = false" [routerLink]="'client-dashboard/' + clientUrl">{{ 'NAV.ITEM-DASHBOARD' | translate}}</a>
     <a (click)="closeNav()"><img src="../assets/icons/close.svg" alt="close-icon"></a>
   </div>
 
@@ -52,6 +53,7 @@
     <a [ngClass]="{'nav-selected': route == '/services'}" routerLink="services" class="link">Services</a>
     <a [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
     <a [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="link">{{ 'NAV.ITEM-4' | translate }}</a>
+    <a @inOutAnimation *ngIf="showClientLink" [ngClass]="{'nav-selected': route == '/client-dashboard/' + clientUrl}" [routerLink]="'client-dashboard/' + clientUrl" class="link link-special">{{ 'NAV.ITEM-DASHBOARD' | translate}}</a>
   </div>
   <div class="icons-box wow fadeIn">
     <div class="theme-box">

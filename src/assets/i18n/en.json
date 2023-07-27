@@ -4,6 +4,7 @@
     "ITEM-2": "Work",
     "ITEM-3": "Blog",
     "ITEM-4": "Contact",
+    "ITEM-DASHBOARD": "My dashboard",
     "MOBILE-1": "Blog posts"
   },
   "HOME": {
@@ -45,6 +46,7 @@
     "LOCKED-TITLE": "This page is protected",
     "LOCKED-SUBTITLE": "To access this page, please enter below the password given to you by Email.",
     "INPUT-PLACEHOLDER": "Password",
+    "INVALID-PWD": "The password is incorrect. Please try again.",
     "BTN-SEND": "Send"
   },
   "ARTICLE": {

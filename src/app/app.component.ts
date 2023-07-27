@@ -2,6 +2,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { ClientService } from './common/services/client.service';
 
 @Component({
   selector: 'app-root',
@@ -51,8 +52,11 @@ export class AppComponent {
   public lang: string | any;
   public url = new URL(window.location.href);
   public currentYear = new Date().getFullYear()
+  public showClientLink: boolean = false;
+  public clientUrl: string;
 
   constructor(
+    public clientService: ClientService,
     public translate: TranslateService, 
     private router: Router)
   {
@@ -79,6 +83,20 @@ export class AppComponent {
       this.translate.setDefaultLang(this.lang);
       this.translate.use(this.lang)
     }
+
+    // Display navbar client link if localstoarge
+    if (localStorage.getItem('clientUrl')) {
+      this.clientUrl = localStorage.getItem('clientUrl') || '';
+      this.showClientLink = true;
+    }
+
+    //Listen to navbar header client
+    this.clientService.subjectShowDashboardLink.subscribe((res: any) => {
+      if (res.value) {
+        this.clientUrl = localStorage.getItem('clientUrl') || '';
+        this.showClientLink = true;
+      }
+    })
   }
 
   // Display or not language dropdown
