@@ -17,6 +17,11 @@ import { ServicesComponent } from './services/services.component';
 import { MarkdownModule } from "ngx-markdown";
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
+import localeEn from '@angular/common/locales/en';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeEn);
+registerLocaleData(localeFr);
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);

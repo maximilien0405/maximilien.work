@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../common/services/client.service';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-client-dashboard',
@@ -14,8 +15,13 @@ export class ClientDashboardComponent {
   public passwordValue: string;
   public client: any = [];
   public spinnerDisplay: boolean; 
+  public lang = this.translate.currentLang;
+  public projectIndex: number = Number(localStorage.getItem('projectIndex')) || 0;
 
-  constructor(private clientService: ClientService, private route: ActivatedRoute) {
+  constructor(private clientService: ClientService,
+    private route: ActivatedRoute,
+    private translate: TranslateService)
+  {
     this.route.params.subscribe(params => this.clientUrl = params.name);
 
     // Display navbar client link if localstoarge
@@ -59,17 +65,23 @@ export class ClientDashboardComponent {
           this.client = res.data[0].attributes;
           localStorage.setItem('clientUrl', this.clientUrl)
           localStorage.setItem('clientPassword', this.passwordValue)
+
+          setTimeout(() => {
+            this.clientService.udpateNavbar();
+          }, 300);
         } else {
           this.errorPwd = true;
         }
-
-        setTimeout(() => {
-          this.clientService.udpateNavbar();
-        }, 300);
       
         this.spinnerDisplay = false;
       }, 1400);    
       
     })
+  }
+
+  // Change the index of projects
+  public changeIndexProject(index: number) {
+    this.projectIndex = index;
+    localStorage.setItem('projectIndex', JSON.stringify(index));
   }
 }

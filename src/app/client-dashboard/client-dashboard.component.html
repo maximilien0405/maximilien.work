@@ -1,20 +1,20 @@
 <main>
     <div *ngIf="locked" class="page-header wow fadeIn">
-        <h2>{{ 'PROJECT-DASHBOARD.LOCKED-TITLE' | translate }}</h2>
-        <p class="subtitle form-subtitle">{{ 'PROJECT-DASHBOARD.LOCKED-SUBTITLE' | translate }}</p>
+        <h2>{{ 'CLIENT-DASHBOARD.LOCKED-TITLE' | translate }}</h2>
+        <p class="subtitle form-subtitle">{{ 'CLIENT-DASHBOARD.LOCKED-SUBTITLE' | translate }}</p>
 
         <div class="locked-container">
             <div class="input-icon">
                 <input type="{{ showPassword ? 'text' : 'password' }}" [class.form-error]="errorPwd" class="input" [(ngModel)]="passwordValue" (ngModelChange)="onPasswordChange($event)" [class.form-error]="errorPwd"
-                [placeholder]="'PROJECT-DASHBOARD.INPUT-PLACEHOLDER' | translate" autofocus>
+                [placeholder]="'CLIENT-DASHBOARD.INPUT-PLACEHOLDER' | translate" autofocus>
                 <div (click)="toogleShowPassword()" class="icon-right">
                     <img *ngIf="showPassword" src="../../assets/icons/eye.svg">
                     <img *ngIf="!showPassword" src="../../assets/icons/eye2.svg">
                 </div>
-                <p *ngIf="errorPwd" class="text-error">{{ 'PROJECT-DASHBOARD.INVALID-PWD' | translate }}</p>
+                <p *ngIf="errorPwd" class="text-error">{{ 'CLIENT-DASHBOARD.INVALID-PWD' | translate }}</p>
             </div>
             <button (click)="getClientWithProjects()">
-                <span *ngIf="!spinnerDisplay">{{ 'PROJECT-DASHBOARD.BTN-SEND' | translate }}</span>
+                <span *ngIf="!spinnerDisplay">{{ 'CLIENT-DASHBOARD.BTN-SEND' | translate }}</span>
 
                 <div *ngIf="spinnerDisplay" class="spinner">
                     <div class="bounce1"></div>
@@ -25,7 +25,63 @@
         </div>
     </div>
 
-    <div *ngIf="!locked" class="wow fadeIn">
-        <h1>{{ client.name }}</h1>
+    <div *ngIf="!locked && client.projects" class="wow fadeIn client-page">
+        <div class="client-header">
+            <h2>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-TITLE' | translate }}</h2>
+            <div class="client-stats">
+                <div class="client-stat">
+                    <img src="../../assets/icons/folder.svg">
+                    <p><b>{{ client.projects.data.length }}</b>
+                        <span *ngIf="client.projects.data.length > 1">
+                            {{ 'CLIENT-DASHBOARD.CLIENT-STAT-NBPROJECTS' | translate }}
+                        </span>
+                        <span *ngIf="client.projects.data.length == 1">
+                            {{ 'CLIENT-DASHBOARD.CLIENT-STAT-NBPROJECT' | translate }}
+                        </span>
+                    </p>
+                </div>
+                <div class="client-stat">
+                    <img src="../../assets/icons/clock.svg">
+                    <p>{{ 'CLIENT-DASHBOARD.CLIENT-STAT-SINCE' | translate }} 
+                        <b>{{ client.start_date | date: 'MMMM y':undefined:lang | titlecase }}</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator separator-client"></div>
+        
+        <div class="client-projects-links">
+            <a *ngFor="let project of client.projects.data; let i = index" [class.link-flash]="projectIndex == i" (click)="changeIndexProject(i)">{{ project.attributes.title }}</a>
+        </div>
+ 
+        <div class="separator separator-client"></div>
+
+        <div *ngFor="let project of client.projects.data; let i = index">
+            <div *ngIf="i == projectIndex" class="box client-box-header">
+                <p class="subtitle"><b>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-GOAL' | translate }} :</b> {{ project.attributes.subtitle }}</p>
+            
+                <div>
+                    <span *ngIf="project.attributes.start_date" class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-DATE' | translate }} : </b>{{ project.attributes.start_date | date:undefined:undefined:lang }}</span>
+                    <div *ngIf="project.attributes.status">
+                        <span *ngIf="project.attributes.status == 'waiting'" class="tag">
+                            {{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-WAITING' | translate }}
+                        </span>
+                        <span *ngIf="project.attributes.status == 'doing'" class="tag">
+                            {{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-DOING' | translate }}
+                        </span>
+                        <span *ngIf="project.attributes.status == 'done'" class="tag">
+                            {{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-DONE' | translate }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+        
+    
+
+ 
     </div>
 </main>

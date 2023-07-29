@@ -24,7 +24,6 @@
     gap: 0.9375rem !important;
   }
 
-
   .rea-link-desktop {
     display: none !important;
   }
@@ -51,6 +50,17 @@
 
   .all-tags-blog {
     display: none !important;
+  }
+
+  .client-header {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .client-box-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
   }
 }
 
@@ -153,6 +163,10 @@
 
   .page-header h2 {
     margin: 3.25rem 0rem 1.25rem 0rem;
+  }
+
+  .client-header {
+    margin-top: 3.25rem !important;
   }
 }
 
@@ -627,8 +641,17 @@ header {
 }
 
 .all-tags-blog {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.all-tags-client {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 27.5rem;
+  margin: 0.725rem auto;
+  margin-top: 1.25rem;
+  justify-content: center;
 }
 
 .tag {
@@ -1064,4 +1087,80 @@ footer .nav-links {
 .client-review-text {
   margin-bottom: 0px !important;
   margin-top: 0px !important;
+}
+
+
+/* ---------------------------------------------------
+  CLIENT DASHBOARD PAGE
+----------------------------------------------------- */
+
+.client-page p {
+  color: var(--light-black);
+}
+
+.client-page b {
+  font-weight: 500;
+}
+
+.client-header {
+  width: 100%;
+  display: flex;
+  margin-top: 6.25rem;
+  justify-content: space-between;
+
+  h2 {
+    margin: 0 !important;
+  }
+
+  div {
+    display: flex;
+    gap: 0.6rem;
+    width: max-content;
+    align-items: center;
+  }
+
+  img {
+    height: 1.375rem;
+    filter: var(--icon-gray);
+  }
+
+  .client-stats {
+    display: flex;
+    gap: 1.875rem;
+  }
+
+  b {
+    font-weight: 500 !important;
+  }
+}
+
+.separator-client {
+  margin: 1.5625rem 0rem;
+}
+
+.client-projects-links {
+  display: flex;
+  gap: 1.25rem;
+  white-space: nowrap;
+  padding: 0.125rem 0rem;
+  overflow: scroll;
+
+  a {
+    color: var(--light-black);
+  }
+
+  .link-flash {
+    color: var(--black);
+  }
+}
+
+.client-box-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  
+  div {
+    display: flex;
+    gap: 0.9375rem;
+  }
 }

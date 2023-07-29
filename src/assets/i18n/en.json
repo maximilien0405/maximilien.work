@@ -42,12 +42,21 @@
     "TABLE-TITLE": "Table of Contents",
     "TABLE-NEXT": "Next"
   },
-  "PROJECT-DASHBOARD": {
+  "CLIENT-DASHBOARD": {
     "LOCKED-TITLE": "This page is protected",
     "LOCKED-SUBTITLE": "To access this page, please enter below the password given to you by Email.",
     "INPUT-PLACEHOLDER": "Password",
     "INVALID-PWD": "The password is incorrect. Please try again.",
-    "BTN-SEND": "Send"
+    "BTN-SEND": "Send",
+    "CLIENT-HEADER-TITLE": "My client dashboard",
+    "CLIENT-STAT-NBPROJECT": "Project",
+    "CLIENT-STAT-NBPROJECTS": "Projects",
+    "CLIENT-STAT-SINCE": "Since",
+    "CLIENT-BOX-HEADER-GOAL": "Goal",
+    "CLIENT-BOX-HEADER-DATE": "Start date",
+    "CLIENT-BOX-HEADER-WAITING": "Waiting",
+    "CLIENT-BOX-HEADER-DOING": "Doing",
+    "CLIENT-BOX-HEADER-DONE": "Done"
   },
   "ARTICLE": {
     "TITLE": "All of my articles",

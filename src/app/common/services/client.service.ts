@@ -15,10 +15,10 @@ export class ClientService {
     
     constructor(private http: HttpClient) { }
 
-    public getClient(name: string, password: string): Observable<any> {
+    public getClient(nameUrl: string, password: string): Observable<any> {
         //return this.http.get<any>(`${this.API_URL}/api/clients?filters[$and][0][name][$eq]=${name}&filters[$and][1][password][$eq]=${password}`).pipe(map(res => res));
 
-        return this.http.get<any>(`${this.API_URL}/api/clients?filters[name][$eq]=${name}`).pipe(map(res => res));
+        return this.http.get<any>(`${this.API_URL}/api/clients?populate[0]=projects&?filters[url][$eq]=${nameUrl}`).pipe(map(res => res));
     }
 
     public udpateNavbar() {
