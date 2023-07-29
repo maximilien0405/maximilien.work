@@ -4,6 +4,7 @@
     "ITEM-2": "Réalisations",
     "ITEM-3": "Blog",
     "ITEM-4": "Contact",
+    "ITEM-DASHBOARD": "Mon dashboard",
     "MOBILE-1": "Blog"
   },
   "HOME": {
@@ -40,6 +41,22 @@
     "LINK": "< Retour",
     "TABLE-TITLE": "Table des matières",
     "TABLE-NEXT": "Suivant"
+  },
+  "CLIENT-DASHBOARD" : {
+    "LOCKED-TITLE" : "Cette page est verrouillée",
+    "LOCKED-SUBTITLE" : "Pour accéder à cette page, veuillez saisir ci-dessous le mot de passe qui vous a été communiqué par Email",
+    "INPUT-PLACEHOLDER" : "Mot de passe",
+    "INVALID-PWD" : "Le mot de passe est incorrect. Veuillez réessayer.",
+    "BTN-SEND" : "Envoyer",
+    "CLIENT-HEADER-TITLE" : "Mon dashboard client",
+    "CLIENT-STAT-NBPROJECT" : "Projet",
+    "CLIENT-STAT-NBPROJECTS" : "Projets",
+    "CLIENT-STAT-SINCE" : "Depuis",
+    "CLIENT-BOX-HEADER-GOAL" : "Objectif",
+    "CLIENT-BOX-HEADER-DATE" : "Date de début",
+    "CLIENT-BOX-HEADER-WAITING" : "En attente",
+    "CLIENT-BOX-HEADER-DOING" : "En cours",
+    "CLIENT-BOX-HEADER-DONE" : "Terminé"
   },
   "ARTICLE": {
     "TITLE": "Tous mes articles de blog",
