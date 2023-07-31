@@ -77,8 +77,12 @@
                         {{ project.attributes.subtitle }}
                     </p>
                     <div>
-                        <span *ngIf="project.attributes.start_date" class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DATE' | translate }} : </b>
+                        <span *ngIf="project.attributes.start_date && !project.attributes.end_date" class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DATE' | translate }} : </b>
                             {{ project.attributes.start_date | date:undefined:undefined:lang }}
+                        </span>
+                        <span *ngIf="project.attributes.end_date" class="tag">
+                            {{ project.attributes.start_date | date:undefined:undefined:lang }} - 
+                            {{ project.attributes.end_date | date:undefined:undefined:lang }}
                         </span>
                         <div *ngIf="project.attributes.status">
                             <span *ngIf="project.attributes.status == 'waiting'" class="tag">
