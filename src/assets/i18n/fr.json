@@ -61,7 +61,9 @@
     "CLIENT-BOX-LINKS" : "Liens",
     "CLIENT-BOX-DOCUMENTS" : "Documents",
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "En attente",
-    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signé"
+    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signé",
+    "CLIENT-BOX-PROGRESS-DAY": "jour",
+    "CLIENT-BOX-PROGRESS-DAYS": "jours"
   },
   "ARTICLE": {
     "TITLE": "Tous mes articles de blog",

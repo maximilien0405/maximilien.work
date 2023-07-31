@@ -1178,7 +1178,6 @@ footer .nav-links {
   gap: 1.5625rem;
 
   .client-container-left {
-    height: 1000px;
 
     .client-box-flex {
       display: flex;
@@ -1191,6 +1190,7 @@ footer .nav-links {
       }
 
       span {
+        margin: unset;
         font-size: 0.7rem;
       }
     }
@@ -1239,6 +1239,7 @@ footer .nav-links {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 1.5375rem;
 
     &:hover p {
       color: var(--black);
@@ -1258,5 +1259,86 @@ footer .nav-links {
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+}
+
+.client-box-progress {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 1.25rem 0rem;
+
+  .client-progress-bar-container {
+    height: 100%;
+    padding: 0rem 1.25rem;
+    position: relative;
+
+    .progress-bar {
+      width: 1px;
+      height: 100%;
+      border-left: 1px solid var(--border-color);
+    }
+  }
+
+  .step-container {
+    position: absolute;
+    top: 0;
+    left: 0.98rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3.125rem 0rem;
+  }
+
+
+  .client-box-steps {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 2.1875rem;
+    padding-left: 1.25rem;
+
+    .tag span {
+      color: unset;
+      margin: unset;
+    }
+
+    .client-box-step {
+      position: relative;
+
+      .paragraph-title {
+        color: var(--black);
+        font-weight: 500;
+        margin: 0 !important;
+        font-size: unset !important;
+      }
+
+      .paragraph {
+        margin: 5px 0px 10px 0px;
+        font-size: 0.9rem;
+      }
+
+      .step {
+        position: absolute;
+        left: -3.3rem;
+        top: 0;
+        width: 1.5625rem;
+        height: 1.5625rem;
+        text-align: center;
+        line-height: 1.5625rem;
+        border-radius: 1.5625rem;
+        font-size: 0.9rem;
+        color: var(--light-black);
+        border: 0.0625rem solid var(--border-color);
+        background-color: var(--white);
+      }
+    }
+
+    .box {
+      height: 100%;
+    }
   }
 }
