@@ -52,11 +52,14 @@
     "CLIENT-STAT-NBPROJECT": "Project",
     "CLIENT-STAT-NBPROJECTS": "Projects",
     "CLIENT-STAT-SINCE": "Since",
-    "CLIENT-BOX-HEADER-GOAL": "Goal",
-    "CLIENT-BOX-HEADER-DATE": "Start date",
-    "CLIENT-BOX-HEADER-WAITING": "Waiting",
-    "CLIENT-BOX-HEADER-DOING": "Doing",
-    "CLIENT-BOX-HEADER-DONE": "Done"
+    "CLIENT-HEADER-GOAL": "Goal",
+    "CLIENT-HEADER-DATE": "Start date",
+    "CLIENT-HEADER-WAITING": "Waiting",
+    "CLIENT-HEADER-DOING": "Doing",
+    "CLIENT-HEADER-DONE": "Done",
+    "CLIENT-BOX-PROGRESS": "Progress",
+    "CLIENT-BOX-LINKS": "Links",
+    "CLIENT-BOX-DOCUMENTS": "Documents"
   },
   "ARTICLE": {
     "TITLE": "All of my articles",

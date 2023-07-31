@@ -52,11 +52,14 @@
     "CLIENT-STAT-NBPROJECT" : "Projet",
     "CLIENT-STAT-NBPROJECTS" : "Projets",
     "CLIENT-STAT-SINCE" : "Depuis",
-    "CLIENT-BOX-HEADER-GOAL" : "Objectif",
-    "CLIENT-BOX-HEADER-DATE" : "Date de début",
-    "CLIENT-BOX-HEADER-WAITING" : "En attente",
-    "CLIENT-BOX-HEADER-DOING" : "En cours",
-    "CLIENT-BOX-HEADER-DONE" : "Terminé"
+    "CLIENT-HEADER-GOAL" : "Objectif",
+    "CLIENT-HEADER-DATE" : "Date de début",
+    "CLIENT-HEADER-WAITING" : "En attente",
+    "CLIENT-HEADER-DOING" : "En cours",
+    "CLIENT-HEADER-DONE" : "Terminé",
+    "CLIENT-BOX-PROGRESS" : "Avancement",
+    "CLIENT-BOX-LINKS" : "Liens",
+    "CLIENT-BOX-DOCUMENTS" : "Documents"
   },
   "ARTICLE": {
     "TITLE": "Tous mes articles de blog",

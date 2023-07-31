@@ -76,6 +76,9 @@ export class ClientDashboardComponent {
 
     this.clientService.getProjectsAndClient(this.lang, clientUrl).subscribe((res: any) => {
       if (res.data[0]) {
+        let timeout = 0;
+        if (this.locked) timeout = 1400;
+
         setTimeout(() => {
           if (this.locked) {
             setTimeout(() => {
@@ -89,7 +92,7 @@ export class ClientDashboardComponent {
 
           localStorage.setItem('clientUrl', this.clientUrl);
           localStorage.setItem('clientPassword', this.passwordValue);
-        }, 1400);  
+        }, timeout);  
       } else {
         if (this.locked) {
           this.errorPwd = true;
@@ -102,5 +105,14 @@ export class ClientDashboardComponent {
   public changeIndexProject(index: number) {
     this.projectIndex = index;
     localStorage.setItem('projectIndex', JSON.stringify(index));
+  }
+
+  // Determine the steps of a project
+  public getProjectSteps(project: any) {
+    let totaStepsComplete = 0;
+    for (let step of project.attributes.progress) {
+      if(step.status == 'done') totaStepsComplete++
+    }
+    return totaStepsComplete;
   }
 }

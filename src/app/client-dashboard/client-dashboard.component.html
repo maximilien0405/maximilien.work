@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div *ngIf="!locked && client" class="wow fadeIn client-page">
+    <div *ngIf="!locked && client && projects" class="wow fadeIn client-page">
         <div class="client-header">
             <h2>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-TITLE' | translate }}</h2>
             <div class="client-stats">
@@ -58,30 +58,53 @@
         <div class="separator separator-client"></div>
 
         <div *ngFor="let project of projects; let i = index">
-            <div *ngIf="i == projectIndex" class="box client-box-header">
-                <p class="subtitle"><b>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-GOAL' | translate }} :</b> {{ project.attributes.subtitle }}</p>
-            
-                <div>
-                    <span *ngIf="project.attributes.start_date" class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-DATE' | translate }} : </b>{{ project.attributes.start_date | date:undefined:undefined:lang }}</span>
-                    <div *ngIf="project.attributes.status">
-                        <span *ngIf="project.attributes.status == 'waiting'" class="tag">
-                            {{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-WAITING' | translate }}
+            <div *ngIf="i == projectIndex">
+                <div class="box client-box-header">
+                    <p class="subtitle">
+                        <b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-GOAL' | translate }} :</b> 
+                        {{ project.attributes.subtitle }}
+                    </p>
+                    <div>
+                        <span *ngIf="project.attributes.start_date" class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DATE' | translate }} : </b>
+                            {{ project.attributes.start_date | date:undefined:undefined:lang }}
                         </span>
-                        <span *ngIf="project.attributes.status == 'doing'" class="tag">
-                            {{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-DOING' | translate }}
-                        </span>
-                        <span *ngIf="project.attributes.status == 'done'" class="tag">
-                            {{ 'CLIENT-DASHBOARD.CLIENT-BOX-HEADER-DONE' | translate }}
-                        </span>
+                        <div *ngIf="project.attributes.status">
+                            <span *ngIf="project.attributes.status == 'waiting'" class="tag">
+                                {{ 'CLIENT-DASHBOARD.CLIENT-HEADER-WAITING' | translate }}
+                            </span>
+                            <span *ngIf="project.attributes.status == 'doing'" class="tag">
+                                {{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DOING' | translate }}
+                            </span>
+                            <span *ngIf="project.attributes.status == 'done'" class="tag">
+                                {{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DONE' | translate }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-container">
+                    <div class="client-container-left box">
+                        <div class="client-box-flex">
+                            <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS' | translate }}</h3>
+                            <p class="subtitle">{{ getProjectSteps(project) }} <span>/</span> {{ project.attributes.progress.length }} steps</p>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+                    <div class="client-container-right">
+                        <div class="box">
+                            <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-LINKS' | translate }} 
+                                <span>({{ project.attributes.links.length }})</span>
+                            </h3>
+                            <div class="separator"></div>
+                        </div>
+                        <div class="box">
+                            <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-DOCUMENTS' | translate }} 
+                                <span>({{ project.attributes.documents.length }})</span>
+                            </h3>
+                            <div class="separator"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-       
-        
-    
-
- 
     </div>
 </main>
