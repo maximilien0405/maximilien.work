@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../common/services/client.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,7 +10,6 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 export class ClientDashboardComponent {
   public locked: boolean = true;
   public showPassword: boolean;
-  public errorPwd: boolean;
   public errorFormPwd: boolean;
   public clientUrl: string;
   public passwordValue: string;
@@ -24,7 +23,8 @@ export class ClientDashboardComponent {
 
   constructor(private clientService: ClientService,
     private route: ActivatedRoute,
-    private translate: TranslateService)
+    private translate: TranslateService,
+    private router: Router)
   {
     this.route.params.subscribe(params => this.clientUrl = params.name);
 
@@ -50,8 +50,7 @@ export class ClientDashboardComponent {
 
   // If password value changes, remove error
   public onPasswordChange(event: any) {
-    if (event && this.errorPwd) {
-      this.errorPwd = false;
+    if (event && this.errorFormPwd) {
       this.errorFormPwd = false;
     }
   }
@@ -59,20 +58,24 @@ export class ClientDashboardComponent {
   // Get a client with it's projects, if not return error
   public getClientWithProjects() {
     this.spinnerDisplay = true;
-    this.errorPwd = false;
     this.errorFormPwd = false;
-    this.getAllData();
-
-    setTimeout(() => {
-      if (this.errorPwd) this.errorFormPwd = true;
-      this.spinnerDisplay = false;
-    }, 1400);    
+    
+    this.clientService.login(this.clientUrl, this.passwordValue).subscribe((res: any) => {
+      if (res.jwt) {
+        localStorage.setItem('token', res.jwt);
+        this.getAllData();
+      }
+    }, () => {
+      setTimeout(() => {
+        this.errorFormPwd = true;
+        this.spinnerDisplay = false;
+      }, 1400);
+    })
   }
 
   // Get all the data needed (projects and client)
   public getAllData() {
     const clientUrl = localStorage.getItem('clientUrl') || this.clientUrl;
-    const clientPwd = localStorage.getItem('clientPassword') || '';
 
     this.clientService.getProjectsAndClient(this.lang, clientUrl).subscribe((res: any) => {
       if (res.data[0]) {
@@ -91,12 +94,9 @@ export class ClientDashboardComponent {
           this.projects = res.data;
 
           localStorage.setItem('clientUrl', this.clientUrl);
-          localStorage.setItem('clientPassword', this.passwordValue);
         }, timeout);  
       } else {
-        if (this.locked) {
-          this.errorPwd = true;
-        }
+        this.router.navigateByUrl('/');
       }
     })
   }

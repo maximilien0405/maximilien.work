@@ -1,4 +1,6 @@
 <main>
+    <!------ LOCKED FORM ------------------------------------------------>
+
     <div *ngIf="locked" class="page-header wow fadeIn">
         <h2>{{ 'CLIENT-DASHBOARD.LOCKED-TITLE' | translate }}</h2>
         <p class="subtitle form-subtitle">{{ 'CLIENT-DASHBOARD.LOCKED-SUBTITLE' | translate }}</p>
@@ -25,7 +27,12 @@
         </div>
     </div>
 
+    <!------ DASHBOARD ------------------------------------------------> 
+
     <div *ngIf="!locked && client && projects" class="wow fadeIn client-page">
+
+        <!------ Header ------>
+
         <div class="client-header">
             <h2>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-TITLE' | translate }}</h2>
             <div class="client-stats">
@@ -51,6 +58,8 @@
 
         <div class="separator separator-client"></div>
         
+        <!------ Project lists ------>
+
         <div class="client-projects-links">
             <a *ngFor="let project of projects; let i = index" [class.link-flash]="projectIndex == i" (click)="changeIndexProject(i)">{{ project.attributes.title }}</a>
         </div>
@@ -59,6 +68,9 @@
 
         <div *ngFor="let project of projects; let i = index">
             <div *ngIf="i == projectIndex">
+
+                <!------ Project header ------>
+
                 <div class="box client-box-header">
                     <p class="subtitle">
                         <b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-GOAL' | translate }} :</b> 
@@ -82,6 +94,9 @@
                     </div>
                 </div>
                 <div class="client-container">
+
+                    <!------ Project progress box ------>
+
                     <div class="client-container-left box">
                         <div class="client-box-flex">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS' | translate }}</h3>
@@ -115,7 +130,10 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="client-container-right">
+                        <!------ Project links box ------>
+
                         <div class="box">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-LINKS' | translate }} 
                                 <span>({{ project.attributes.links.length }})</span>
@@ -128,6 +146,9 @@
                                 </a>
                             </div>
                         </div>
+
+                        <!------ Project documents ------>
+
                         <div class="box">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-DOCUMENTS' | translate }} 
                                 <span>({{ project.attributes.documents.length }})</span>

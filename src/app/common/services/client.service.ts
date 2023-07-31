@@ -15,8 +15,13 @@ export class ClientService {
     
     constructor(private http: HttpClient) { }
 
+    public login(username: string, password: string): Observable<any> {
+        const body = { identifier: username + '@gmail.com', password: password }
+        return this.http.post<any>(`${this.API_URL}/api/auth/local`, body).pipe(map(res => res));
+    }
+
     public getProjectsAndClient(lang: string, nameUrl: string): Observable<any> {
-        return this.http.get<any>(`${this.API_URL}/api/client-projects?populate=*&populate=links&populate=client&populate=documents&populate=documents.file&populate=progress&filters[client][url][$eq]=${nameUrl}&locale=${lang}`).pipe(map(res => res));
+        return this.http.get<any>(`${this.API_URL}/api/client-projects?populate=*&populate=links&populate=client&populate=documents&populate=documents.file&populate=progress&filters[client][url][$eq]=${nameUrl}&locale=${lang}`, { headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}`} }).pipe(map(res => res));
     }
 
     public udpateNavbar() {
