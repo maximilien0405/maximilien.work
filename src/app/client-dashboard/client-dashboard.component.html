@@ -94,16 +94,23 @@
                                 <div class="progress-bar"></div>
                             </div>
                             <div class="client-box-steps">
-                                <div class="client-box-step" *ngFor="let step of project.attributes.progress; let i = index">
-                                    <div>
-                                        <p class="paragraph paragraph-title">{{ step.title }}</p>
-                                        <p class="paragraph">{{ step.description }}</p>
-                                        <div class="tag"><b>Temps estimé : </b>{{ step.estimated_time }}
-                                            <span *ngIf="step.estimated_time == 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAY' | translate }}</span>
-                                            <span *ngIf="step.estimated_time > 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAYS' | translate }}</span>
-                                        </div>
+                                <div class="client-box-step" *ngFor="let step of project.attributes.progress; let i = index; let last = last">
+                                    <p class="paragraph paragraph-title">{{ step.title }}</p>
+                                    <p class="paragraph">{{ step.description }}</p>
+                                    <div class="tag"><b>Temps estimé : </b>{{ step.estimated_time }}
+                                        <span *ngIf="step.estimated_time == 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAY' | translate }}</span>
+                                        <span *ngIf="step.estimated_time > 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAYS' | translate }}</span>
                                     </div>
-                                    <div class="step">{{ i + 1 }}</div>
+                                    <div class="step" [class.step-done]="step.status == 'done'" [class.step-doing]="step.status == 'doing'">
+                                        <span *ngIf="step.status == 'waiting'">{{ i + 1 }}</span>
+                                        <span *ngIf="step.status == 'doing'">
+                                            <img src="../../assets/icons/doing.svg">
+                                        </span>
+                                        <span *ngIf="step.status == 'done'">
+                                            <img src="../../assets/icons/check.svg">
+                                        </span>
+                                    </div>
+                                    <div *ngIf="last" class="progress-bar-cache"></div>
                                 </div>
                             </div>
                         </div>

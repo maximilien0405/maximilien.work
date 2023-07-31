@@ -1021,7 +1021,7 @@ textarea {
 .locked-container {
   max-width: 27.5rem;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
 }
 
 /* ---------------------------------------------------
@@ -1270,15 +1270,24 @@ footer .nav-links {
   padding: 1.25rem 0rem;
 
   .client-progress-bar-container {
-    height: 100%;
+    height: auto;
     padding: 0rem 1.25rem;
     position: relative;
 
     .progress-bar {
-      width: 1px;
+      width: 0.0625rem;
       height: 100%;
-      border-left: 1px solid var(--border-color);
+      border-left: 0.0625rem solid var(--border-color);
     }
+  }
+
+  .progress-bar-cache {
+    background-color: var(--white);
+    position: absolute;
+    top: 0;
+    left: -3.3rem;
+    height: 100%;
+    width: 1.875rem;
   }
 
   .step-container {
@@ -1291,7 +1300,6 @@ footer .nav-links {
     flex-direction: column;
     padding: 3.125rem 0rem;
   }
-
 
   .client-box-steps {
     display: flex;
@@ -1317,7 +1325,7 @@ footer .nav-links {
       }
 
       .paragraph {
-        margin: 5px 0px 10px 0px;
+        margin: 0.3125rem 0rem 0.625rem 0rem;
         font-size: 0.9rem;
       }
 
@@ -1328,12 +1336,45 @@ footer .nav-links {
         width: 1.5625rem;
         height: 1.5625rem;
         text-align: center;
-        line-height: 1.5625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 1.5625rem;
         font-size: 0.9rem;
+        z-index: 100;
         color: var(--light-black);
         border: 0.0625rem solid var(--border-color);
         background-color: var(--white);
+
+        span {
+          margin: unset;
+          color: unset;
+          font-size: unset;
+          display: flex;
+          align-items: center;
+        }
+
+        img {
+          filter: var(--icon-dark);
+          height: 0.875rem;
+          width: 0.875rem;
+          animation: rotate 1.5s linear infinite; 
+        }
+      }
+
+      .step-doing {
+        border: 0.0625rem solid var(--border-hover);
+      }
+
+      .step-done {
+        background-color: var(--green);
+        color: var(--white);
+        border: 0.0625rem solid var(--green);
+
+        img {
+          animation: none !important;
+          filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(29deg) brightness(110%) contrast(102%);
+        }
       }
     }
 
