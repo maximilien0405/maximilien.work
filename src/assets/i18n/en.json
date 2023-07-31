@@ -59,7 +59,9 @@
     "CLIENT-HEADER-DONE": "Done",
     "CLIENT-BOX-PROGRESS": "Progress",
     "CLIENT-BOX-LINKS": "Links",
-    "CLIENT-BOX-DOCUMENTS": "Documents"
+    "CLIENT-BOX-DOCUMENTS": "Documents",
+    "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "Waiting",
+    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signed"
   },
   "ARTICLE": {
     "TITLE": "All of my articles",

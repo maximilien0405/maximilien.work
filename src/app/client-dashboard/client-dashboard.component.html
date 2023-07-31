@@ -95,12 +95,33 @@
                                 <span>({{ project.attributes.links.length }})</span>
                             </h3>
                             <div class="separator"></div>
+                            <div class="client-box-items">
+                                <a *ngFor="let link of project.attributes.links" [href]="link.url" target="_blank" rel="noopener">
+                                    <p class="subtitle">{{ link.name }}</p>
+                                    <img src="../../assets/icons/arrow-right.svg">
+                                </a>
+                            </div>
                         </div>
                         <div class="box">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-DOCUMENTS' | translate }} 
                                 <span>({{ project.attributes.documents.length }})</span>
                             </h3>
                             <div class="separator"></div>
+                            <div class="client-box-items">
+                                <a *ngFor="let document of project.attributes.documents" [href]="'https://api.maximilien.work' + document.file.data.attributes.url" target="_blank" rel="noopener">
+                                    <p class="subtitle">{{ document.name }} <span *ngIf="document.number">#{{ document.number }}</span></p>
+
+                                    <div class="client-box-items-right">
+                                        <div *ngIf="document.status == 'waiting'" class="tag">
+                                            {{ 'CLIENT-DASHBOARD.ClIENT-BOX-DOCUMENTS-STATUS-WAITING' | translate }}
+                                        </div>
+                                        <div *ngIf="document.status == 'signed'" class="tag">
+                                            {{ 'CLIENT-DASHBOARD.ClIENT-BOX-DOCUMENTS-STATUS-SIGNED' | translate }}
+                                        </div>
+                                        <img src="../../assets/icons/link.svg">
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

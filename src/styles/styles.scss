@@ -889,10 +889,6 @@ header {
   &:hover .tag-url {
     border: 0.0625rem solid var(--border-hover) !important;
   }
-
-  .tag-url:hover {
-    border: 0.0625rem solid var(--border-hover) !important;
-  }
 }
 
 .all-articles-boxs {
@@ -1225,5 +1221,42 @@ footer .nav-links {
 
   .separator {
     margin: 1.125rem 0rem;
+  }
+}
+
+.client-box-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  p {
+    transition: 200ms all;
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:hover p {
+      color: var(--black);
+    }
+
+    &:hover img {
+      filter: var(--icon-dark) !important;
+    }
+  }
+
+  img {
+    filter: var(--icon-gray);
+    height: 1.25rem;
+  }
+
+  .client-box-items-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 }
