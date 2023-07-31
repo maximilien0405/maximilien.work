@@ -63,7 +63,8 @@
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "En attente",
     "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signé",
     "CLIENT-BOX-PROGRESS-DAY": "jour",
-    "CLIENT-BOX-PROGRESS-DAYS": "jours"
+    "CLIENT-BOX-PROGRESS-DAYS": "jours",
+    "CLIENT-BOX-PROGRESS-ESTIMATED": "Temps estimé"
   },
   "ARTICLE": {
     "TITLE": "Tous mes articles de blog",

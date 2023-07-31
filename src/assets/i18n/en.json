@@ -61,7 +61,10 @@
     "CLIENT-BOX-LINKS": "Links",
     "CLIENT-BOX-DOCUMENTS": "Documents",
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "Waiting",
-    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signed"
+    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signed",
+    "CLIENT-BOX-PROGRESS-DAY": "day",
+    "CLIENT-BOX-PROGRESS-DAYS": "days",
+    "CLIENT-BOX-PROGRESS-ESTIMATED": "Estimated time"
   },
   "ARTICLE": {
     "TITLE": "All of my articles",

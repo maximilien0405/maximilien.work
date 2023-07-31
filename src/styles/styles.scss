@@ -1290,6 +1290,16 @@ footer .nav-links {
     width: 1.875rem;
   }
 
+  .progress-bar-done {
+    position: absolute;
+    top: 0;
+    left: -2.55rem;
+    height: 100%;
+    width: 0.0625rem;
+    height: 100%;
+    border-left: 0.0625rem solid var(--border-hover);
+  }
+
   .step-container {
     position: absolute;
     top: 0;
@@ -1306,7 +1316,6 @@ footer .nav-links {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    gap: 2.1875rem;
     padding-left: 1.25rem;
 
     .tag span {
@@ -1316,6 +1325,11 @@ footer .nav-links {
 
     .client-box-step {
       position: relative;
+      padding-bottom: 2.1875rem;
+
+      &:last-child {
+        padding-bottom: 0px !important;
+      }
 
       .paragraph-title {
         color: var(--black);
@@ -1352,6 +1366,7 @@ footer .nav-links {
           font-size: unset;
           display: flex;
           align-items: center;
+          margin-left: -0.0313rem;
         }
 
         img {

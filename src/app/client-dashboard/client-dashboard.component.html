@@ -116,7 +116,7 @@
                                 <div class="client-box-step" *ngFor="let step of project.attributes.progress; let i = index; let last = last">
                                     <p class="paragraph paragraph-title">{{ step.title }}</p>
                                     <p class="paragraph">{{ step.description }}</p>
-                                    <div class="tag"><b>Temps estimé : </b>{{ step.estimated_time }}
+                                    <div class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-ESTIMATED' | translate }} : </b>{{ step.estimated_time }}
                                         <span *ngIf="step.estimated_time == 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAY' | translate }}</span>
                                         <span *ngIf="step.estimated_time > 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAYS' | translate }}</span>
                                     </div>
@@ -129,6 +129,7 @@
                                             <img src="../../assets/icons/check.svg">
                                         </span>
                                     </div>
+                                    <div *ngIf="step.status == 'done'" class="progress-bar-done"></div>
                                     <div *ngIf="last" class="progress-bar-cache"></div>
                                 </div>
                             </div>
@@ -169,7 +170,7 @@
                                         <div *ngIf="document.status == 'signed'" class="tag">
                                             {{ 'CLIENT-DASHBOARD.ClIENT-BOX-DOCUMENTS-STATUS-SIGNED' | translate }}
                                         </div>
-                                        <img src="../../assets/icons/link.svg">
+                                        <img src="../../assets/icons/arrow-right.svg">
                                     </div>
                                 </a>
                             </div>
