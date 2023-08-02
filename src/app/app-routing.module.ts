@@ -8,6 +8,7 @@ import { EmailSentComponent } from './email-sent/email-sent.component';
 import { BlogComponent } from './blog/blog.component';
 import { ServicesComponent } from './services/services.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
+import { PayementComponent } from './payement/payement.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component:ContactComponent},
   { path: 'contact/success', component: EmailSentComponent },
+  { path: 'payement', component: PayementComponent },
   { path: '**', redirectTo: '/' }
 ];
 

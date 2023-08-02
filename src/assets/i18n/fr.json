@@ -62,7 +62,7 @@
     "CLIENT-BOX-LINKS" : "Liens",
     "CLIENT-BOX-DOCUMENTS" : "Documents",
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "En attente",
-    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signé",
+    "ClIENT-BOX-DOCUMENTS-STATUS-PAID": "Payée",
     "CLIENT-BOX-PROGRESS-DAY": "jour",
     "CLIENT-BOX-PROGRESS-DAYS": "jours",
     "CLIENT-BOX-PROGRESS-ESTIMATED": "Temps estimé"
@@ -91,6 +91,10 @@
       "TITLE": "Avis clients",
       "PARAGRAPH": "Contactez moi"
     }
+  },
+  "PAYEMENT": {
+    "TITLE": "Me payer",
+    "SUBTITLE": "Vous trouverez ci-dessous toutes les informations nécessaires afin de payer vos factures."
   },
   "CONTACT": {
     "TITLE": "Me contacter",

@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import localeFr from '@angular/common/locales/fr';
+import { PayementComponent } from './payement/payement.component';
 registerLocaleData(localeEn);
 registerLocaleData(localeFr);
 
@@ -37,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     EmailSentComponent,
     BlogComponent,
     ServicesComponent,
-    ClientDashboardComponent
+    ClientDashboardComponent,
+    PayementComponent
   ],
   imports: [
     BrowserModule,

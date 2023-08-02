@@ -62,7 +62,7 @@
     "CLIENT-BOX-LINKS": "Links",
     "CLIENT-BOX-DOCUMENTS": "Documents",
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "Waiting",
-    "ClIENT-BOX-DOCUMENTS-STATUS-SIGNED": "Signed",
+    "ClIENT-BOX-DOCUMENTS-STATUS-PAID": "Paid",
     "CLIENT-BOX-PROGRESS-DAY": "day",
     "CLIENT-BOX-PROGRESS-DAYS": "days",
     "CLIENT-BOX-PROGRESS-ESTIMATED": "Estimated time"
@@ -91,6 +91,10 @@
       "TITLE": "Customer feedback",
       "PARAGRAPH": "Contact me"
     }
+  },
+  "PAYEMENT": {
+    "TITLE": "Pay me",
+    "SUBTITLE": "Below you'll find all the information you need to pay your bills."
   },
   "CONTACT": {
     "TITLE": "Contact me",
