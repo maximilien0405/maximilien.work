@@ -104,7 +104,17 @@
                     <div class="client-container-left box">
                         <div class="client-box-flex">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS' | translate }}</h3>
-                            <p class="subtitle">{{ getProjectSteps(project) }} <span>/</span> {{ project.attributes.progress.length }} steps</p>
+                            <p class="subtitle">
+                                <span *ngIf="lang == 'fr'">
+                                    {{ 'CLIENT-DASHBOARD.CLIENT-BOX-STEPS' | translate }}
+                                </span>
+                                {{ getProjectSteps(project) }} 
+                                <span class="special-span-2">/</span>
+                                {{ project.attributes.progress.length }}
+                                <span *ngIf="lang == 'en'">
+                                    {{ 'CLIENT-DASHBOARD.CLIENT-BOX-STEPS' | translate }}
+                                </span>
+                            </p>
                         </div>
                         <div class="separator"></div>
 

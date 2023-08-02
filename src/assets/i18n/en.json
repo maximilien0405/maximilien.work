@@ -58,6 +58,7 @@
     "CLIENT-HEADER-DOING": "Doing",
     "CLIENT-HEADER-DONE": "Done",
     "CLIENT-BOX-PROGRESS": "Progress",
+    "CLIENT-BOX-STEPS": "steps",
     "CLIENT-BOX-LINKS": "Links",
     "CLIENT-BOX-DOCUMENTS": "Documents",
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "Waiting",

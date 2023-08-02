@@ -58,6 +58,7 @@
     "CLIENT-HEADER-DOING" : "En cours",
     "CLIENT-HEADER-DONE" : "Terminé",
     "CLIENT-BOX-PROGRESS" : "Avancement",
+    "CLIENT-BOX-STEPS": "Étape",
     "CLIENT-BOX-LINKS" : "Liens",
     "CLIENT-BOX-DOCUMENTS" : "Documents",
     "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "En attente",

@@ -111,6 +111,10 @@
   .client-container-right {
     width: 100% !important;
   }
+
+  .client-box-step .paragraph {
+    max-width: 85% !important;
+  }
 }
 
 @media (min-width: 792px) {
@@ -1190,8 +1194,13 @@ footer .nav-links {
       }
 
       span {
+        font-size: unset;
+        margin: unset !important;
+      }
+
+      .special-span-2 {
         margin: unset;
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
       }
     }
   }
