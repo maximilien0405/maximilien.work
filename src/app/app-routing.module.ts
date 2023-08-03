@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component:ContactComponent},
   { path: 'contact/success', component: EmailSentComponent },
-  { path: 'payement', component: PayementComponent },
+  { path: 'payement/:id', component: PayementComponent },
   { path: '**', redirectTo: '/' }
 ];
 

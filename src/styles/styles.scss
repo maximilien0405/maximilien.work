@@ -1096,7 +1096,6 @@ footer .nav-links {
   margin-top: 0px !important;
 }
 
-
 /* ---------------------------------------------------
   CLIENT DASHBOARD PAGE
 ----------------------------------------------------- */
@@ -1405,5 +1404,53 @@ footer .nav-links {
     .box {
       height: 100%;
     }
+  }
+}
+
+/* ---------------------------------------------------
+  PAYEMENT PAGE
+----------------------------------------------------- */
+
+.box-twint {
+  img {
+    height: 1.875rem;
+  }
+
+  .subtitle:last-child {
+    margin: 0px !important;
+  }
+
+  b {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  span {
+    display: flex;
+  }
+
+  span img {
+    height: 1.75rem;
+    filter: var(--icon-dark);
+    margin-right: 0.5rem;
+  }
+}
+
+.box-bank {
+  h1 {
+    margin: 0px !important;
+  }
+
+  .first-subtitle {
+    margin: 0px !important;
+  }
+
+  p {
+    margin-top: 0.25rem;
+  }
+
+  b {
+    color: var(--black);
+    font-weight: 500;
   }
 }

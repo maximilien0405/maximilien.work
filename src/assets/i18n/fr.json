@@ -93,8 +93,15 @@
     }
   },
   "PAYEMENT": {
-    "TITLE": "Moyens de payement",
-    "SUBTITLE": "Vous trouverez ci-dessous toutes les informations nécessaires afin de payer vos factures."
+    "TITLE": "Payement de la facture N°",
+    "SUBTITLE": "Vous trouverez ci-dessous toutes les informations nécessaires afin de payer cette facture.",
+    "METHOD-1-TITLE": "Virement bancaire",
+    "METHOD-2-SUBTITLE-1": "Rien de plus simple ! Lancez l'application Twint et envoyez",
+    "METHOD-2-SUBTITLE-2": "au",
+    "METHOD-2-SUBTITLE-3": "Afin que je puisse reconnaitre et valider le payement, merci d'ajouter votre nom et prénom dans le champ 'Message'.",
+    "BANK-ADDRESS": "Adresse",
+    "BANK-AMOUNT": "Montant",
+    "BANK-BANK": "Banque"
   },
   "CONTACT": {
     "TITLE": "Me contacter",

@@ -3,10 +3,42 @@
     <!------ HEADER ------------------------------------------------>
 
     <div class="page-header">
-        <h2>{{ 'PAYEMENT.TITLE' | translate }}</h2>
+        <h2>{{ 'PAYEMENT.TITLE' | translate }}{{ invoiceNumber }}</h2>
         <p class="subtitle">{{ 'PAYEMENT.SUBTITLE' | translate }}</p>
     </div>
 
+    <!------ PAYEMENT METHODS ------------------------------------------------>
     
+    <section class="wow fadeIn">
+        <div class="all-box-skills all-box-services">
+            <div class="box box-bank">
+                <h3>{{ 'PAYEMENT.METHOD-1-TITLE' | translate }}</h3>
+                <div class="separator-client separator"></div>
+                <p class="subtitle first-subtitle"><b>IBAN :</b> CH44 0483 5183 4661 5000 0</p>
+                <p class="subtitle"><b>{{ 'PAYEMENT.BANK-ADDRESS' | translate }} :</b> Rue de la Prulay, 31 - 1217 Meyrin, Suisse</p>
+                <p class="subtitle"><b>{{ 'PAYEMENT.BANK-AMOUNT' | translate }} :</b> {{ invoiceAmount }} {{ invoiceCurrency }}</p>
+                <p class="subtitle"><b>{{ 'PAYEMENT.BANK-BANK' | translate }} :</b> CREDIT SUISSE (Switzerland) Ltd.</p>
+            </div>
+            
+            <div class="box box-twint">
+                <img *ngIf="theme == 'white'" src="../../assets/images/twint-logo-black.png" alt="logo-twint">
+                <img *ngIf="theme == 'black'" src="../../assets/images/twint-logo-white.png" alt="logo-twint">
+                <p class="subtitle">
+                    {{ 'PAYEMENT.METHOD-2-SUBTITLE-1' | translate }}
+                    <b>{{ invoiceAmount }} {{ invoiceCurrency }}</b>
+                    {{ 'PAYEMENT.METHOD-2-SUBTITLE-2' | translate }}
+                    <b>+41 76 497 04 05</b>.
+                </p>
+                
+                <div class="separator-client separator"></div>
+
+                <span class="subtitle">
+                    <img src="../../assets/icons/info.svg" alt="">
+                    {{ 'PAYEMENT.METHOD-2-SUBTITLE-3' | translate }}
+                </span>
+
+            </div>
+        </div>
+    </section>
 
 </main>
