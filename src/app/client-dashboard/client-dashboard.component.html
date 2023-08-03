@@ -149,7 +149,7 @@
                     <div class="client-container-right">
                         <!------ Project links box ------>
 
-                        <div class="box">
+                        <div *ngIf="project.attributes.links.length > 0" class="box">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-LINKS' | translate }} 
                                 <span>({{ project.attributes.links.length }})</span>
                             </h3>
