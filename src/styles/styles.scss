@@ -1412,11 +1412,26 @@ footer .nav-links {
 ----------------------------------------------------- */
 
 .box-twint {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+
+  .box-twint-flex {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
   img {
     height: 1.875rem;
   }
 
-  .subtitle:last-child {
+  .img-qr {
+    height: 10.3125rem;
+  }
+
+  .subtitle {
     margin: 0px !important;
   }
 
@@ -1425,14 +1440,9 @@ footer .nav-links {
     font-weight: 500;
   }
 
-  span {
-    display: flex;
-  }
-
-  span img {
-    height: 1.75rem;
-    filter: var(--icon-dark);
-    margin-right: 0.5rem;
+  .separator {
+    height: 100% !important;
+    width: 0.125rem !important;
   }
 }
 

@@ -96,8 +96,6 @@
     "TITLE": "Payment of invoice N°",
     "SUBTITLE": "Below you'll find all the information you need to pay this invoice.",
     "METHOD-1-TITLE": "Bank transfer",
-    "METHOD-2-SUBTITLE-1": "It couldn't be easier! Start the Twint application and send",
-    "METHOD-2-SUBTITLE-2": "to",
     "METHOD-2-SUBTITLE-3": "So that I can recognize and validate the payment, please add your first and last name in the 'Message' field.",
     "BANK-ADDRESS": "Address",
     "BANK-AMOUNT": "Amount",

@@ -23,20 +23,20 @@
             <div class="box box-twint">
                 <img *ngIf="theme == 'white'" src="../../assets/images/twint-logo-black.png" alt="logo-twint">
                 <img *ngIf="theme == 'black'" src="../../assets/images/twint-logo-white.png" alt="logo-twint">
-                <p class="subtitle">
-                    {{ 'PAYEMENT.METHOD-2-SUBTITLE-1' | translate }}
-                    <b>{{ invoiceAmount }} {{ invoiceCurrency }}</b>
-                    {{ 'PAYEMENT.METHOD-2-SUBTITLE-2' | translate }}
-                    <b>+41 76 497 04 05</b>.
-                </p>
-                
-                <div class="separator-client separator"></div>
+                <div class="box-twint-flex">
+                    <span class="subtitle">
+                        {{ 'PAYEMENT.METHOD-2-SUBTITLE-1' | translate }}
+                        <b>{{ 'PAYEMENT.METHOD-2-SUBTITLE-2' | translate }}</b>
+                        {{ 'PAYEMENT.METHOD-2-SUBTITLE-3' | translate }}
+                        <b>{{ 'PAYEMENT.METHOD-2-SUBTITLE-4' | translate }}</b>.<br><br>
+                        {{ 'PAYEMENT.METHOD-2-SUBTITLE-5' | translate }}
+                        <b>{{ invoiceAmount }} {{ invoiceCurrency }}</b>.
+                    </span>
 
-                <span class="subtitle">
-                    <img src="../../assets/icons/info.svg" alt="">
-                    {{ 'PAYEMENT.METHOD-2-SUBTITLE-3' | translate }}
-                </span>
+                    <div class="separator"></div>
 
+                    <img src="../../assets/images/qr-code.png" class="img-qr">
+                </div>
             </div>
         </div>
     </section>
