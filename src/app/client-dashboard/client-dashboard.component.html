@@ -164,7 +164,7 @@
 
                         <!------ Project documents ------>
 
-                        <div class="box">
+                        <div *ngIf="project.documents.links.length > 0" class="box">
                             <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-DOCUMENTS' | translate }} 
                                 <span>({{ project.attributes.documents.length }})</span>
                             </h3>
