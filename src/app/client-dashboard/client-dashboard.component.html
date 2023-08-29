@@ -146,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="client-container-right">
+                    <div class="client-container-right" *ngIf="project.attributes.links.length > 0 || project.attributes.documents.length > 0">
                         <!------ Project links box ------>
 
                         <div *ngIf="project.attributes.links.length > 0" class="box">
