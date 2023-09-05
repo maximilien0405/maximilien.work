@@ -139,12 +139,18 @@ export class AppComponent {
 
   // Open the movile nav
   public openNav() {
-    this.mobileSidebar = !this.mobileSidebar;
+    this.mobileSidebar = true;
+    if (this.mobileSidebar) {
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add('overflow');
+    }
   }
 
   // Close the mobile nav
   public closeNav() {
     this.mobileSidebar = false;
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.remove('overflow');
   }
 
   // Toggle dark theme
