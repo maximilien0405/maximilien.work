@@ -6,10 +6,15 @@
     <h2>{{ 'WORK.TITLE' | translate }}</h2>
     <p class="subtitle">{{ 'WORK.SUBTITLE' | translate }}</p>
     <div class="category-links">
-      <a [class.link-flash]="type == 1" (click)="changeType(1)">{{ 'WORK.CATEGORY-1' | translate }}
-        <span>({{ this.total_all_work.length }})</span>
+      <a [class.link-flash]="total_selected_work == total_all_personnal" (click)="changeType('personnal')">{{ 'WORK.CATEGORY-1' | translate }}
+        <span>({{ this.total_all_personnal.length }})</span>
       </a>
-      <a [class.link-flash]="type == 2" (click)="changeType(2)">{{ 'WORK.CATEGORY-2' | translate }}
+      <a [class.link-flash]="total_selected_work == total_all_freelance" (click)="changeType('freelance')">{{
+        'WORK.CATEGORY-2' |
+        translate }}
+        <span>({{ this.total_all_freelance.length }})</span>
+      </a>
+      <a [class.link-flash]="total_selected_work == total_all_other" (click)="changeType('other')">{{ 'WORK.CATEGORY-3' | translate }}
         <span>({{ this.total_all_other.length }})</span>
       </a>
     </div>
@@ -17,27 +22,8 @@
 
   <!------ WORK ------------------------------------------------>
 
-  <div *ngIf="type == 1" class="all-rea-work wow fadeIn">
-    <div *ngFor="let work of total_all_work" class="big-box-content">
-      <div class="box-realisation" (click)="join(work.url)">
-        <div class="overlay rea-box-desktop">
-          <p class="text-overlay paragraph">{{ 'WORK.BOX-HOVER' | translate }}</p>
-        </div>
-        <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
-      </div>
-      <h4 (click)="join(work.url)">{{ work.title }}</h4>
-      <p class="subtitle">{{ work.subtitle }}</p>
-
-      <div class="all-tags-work" *ngIf="work.tags">
-        <div class="tag" *ngFor="let tag of work.tags">{{ tag.name }}</div>
-      </div>
-    </div>
-  </div>
-
-  <!------ OTHER ------------------------------------------------>
-
-  <div *ngIf="type == 2" class="all-rea-work wow fadeIn">
-    <div *ngFor="let work of total_all_other" class="big-box-content">
+  <div class="all-rea-work wow fadeIn">
+    <div *ngFor="let work of total_selected_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'WORK.BOX-HOVER' | translate }}</p>

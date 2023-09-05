@@ -32,10 +32,11 @@
   "WORK": {
     "LINK": "< Retour",
     "TITLE": "Toutes mes réalisations",
-    "SUBTITLE": "Voici quelques-uns de mes réalisations, que ce soit de l'Web design ou bien du développement web.",
+    "SUBTITLE": "Voici quelques-uns de mes réalisations, que ce soit du Web design ou bien du développement web.",
     "BOX-HOVER": "Voir plus",
-    "CATEGORY-1": "Projets",
-    "CATEGORY-2": "Autres"
+    "CATEGORY-1": "Projets personnels",
+    "CATEGORY-2": "Projets professionnels",
+    "CATEGORY-3": "Autres"
   },
   "WORK-DETAIL": {
     "LINK": "< Retour",

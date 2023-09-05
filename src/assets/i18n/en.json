@@ -34,8 +34,9 @@
     "TITLE": "All of my work",
     "SUBTITLE": "Here are some of my work, whether it is Web design or web development.",
     "BOX-HOVER": "See more",
-    "CATEGORY-1": "Projects",
-    "CATEGORY-2": "Others"
+    "CATEGORY-1": "Personal projects",
+    "CATEGORY-2": "Professional projects",
+    "CATEGORY-3": "Others"
   },
   "WORK-DETAIL": {
     "LINK": "< Back",
