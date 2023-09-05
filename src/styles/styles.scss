@@ -62,6 +62,23 @@
     align-items: flex-start !important;
     gap: 1rem !important;
   }
+
+  body .category-links {
+    flex-direction: column !important;
+    align-items: center !important;
+    border-top: 0.125rem solid var(--border-color);
+    border-bottom: 0.125rem solid var(--border-color);
+    padding: 1.875rem 0rem;
+    margin-top: 2.5rem !important;
+
+    a {
+      width: fit-content !important;
+    }
+  }
+
+  .page-header {
+    margin-bottom: 2.5rem !important;
+  }
 }
 
 @media (min-width: 508px) {
