@@ -28,16 +28,17 @@
         </div>
 
         <div *ngIf="!work.onlyoneimage" class="multiple-images-container">
-          <swiper #swiper2 [slidesPerView]="1" [breakpoints]="this.breakpoints">
-            <ng-template swiperSlide *ngFor="let image of work.images.data">
+          <div class="keen-slider" #sliderRef>
+            <div *ngFor="let image of work.images.data" class="keen-slider__slide">
               <div class="box-realisation">
                 <img [src]="API_URL + image.attributes.url" class="img-box">
                 <a class="link-work-mobile">
                   <img src="../../assets/icons/arrow.svg" class="icon-color">
                 </a>
               </div>
-            </ng-template>
-          </swiper>
+            </div>
+          </div>
+
           <div *ngIf="!work.onlyoneimage" class="arrows-control">
             <a (click)="back()" class="arrow"> < </a>
             <a (click)="next()" class="arrow"> > </a>

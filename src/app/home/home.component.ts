@@ -1,37 +1,24 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, viewChild, ViewChild } from '@angular/core';
 import { ProjectsService } from '../common/services/projects.service';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
-import { SwiperComponent } from 'swiper/angular';
+import KeenSlider, { KeenSliderInstance } from "keen-slider"
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   public all_work:any;
   public total_all_work:any = [];
   public readonly API_URL = environment.api;
   public lang = this.translate.currentLang;
-  @ViewChild('swiper', { static: false }) swiper: SwiperComponent;
 
-  public breakpoints = {
-    '640': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    '768': {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    '1024': {
-      slidesPerView: 2,
-      spaceBetween: 20
-    }
-  }
+  public sliderConfig: KeenSliderInstance;
+  @ViewChild("sliderRef") sliderRef: ElementRef<HTMLElement>;
 
   constructor(
-    private projectService: ProjectsService, 
+    private projectService: ProjectsService,
     private translate: TranslateService)
   {
     // Change lang if changed on navbar
@@ -48,13 +35,31 @@ export class HomeComponent {
     });
   }
 
+  public ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.sliderConfig = new KeenSlider(this.sliderRef.nativeElement, {
+        initial: 0,
+        loop: true,
+        slides: { perView: 2, spacing: 20 },
+        breakpoints: {
+          '(max-width: 640px)': {
+            slides: { perView: 1, spacing: 20 },
+          },
+          '(min-width: 641px)': {
+            slides: { perView: 2, spacing: 20 },
+          },
+        }
+      });
+    }, 350);
+  }
+
   // Go next in slider
   public next(): void {
-    this.swiper.swiperRef.slideNext(400);
+    this.sliderConfig.next();
   }
 
   // Go back in slider
   public back(): void {
-    this.swiper.swiperRef.slidePrev(400);
+    this.sliderConfig.prev();
   }
 }

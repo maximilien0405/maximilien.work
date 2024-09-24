@@ -46,12 +46,12 @@
     </section>
 
     <!------ REALISATIONS ------------------------------------------------>
-    
+
     <section class="wow fadeIn">
       <h2><span class="special-span">02</span>{{ 'SERVICES.PART-3.TITLE' | translate }}</h2>
-    
-      <swiper #swiperWork [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpointsWork">
-        <ng-template swiperSlide *ngFor="let work of total_all_work">
+
+      <div class="keen-slider" #sliderRef>
+        <div *ngFor="let work of total_all_work" class="keen-slider__slide">
           <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
             <div class="overlay rea-box-desktop">
               <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
@@ -61,19 +61,17 @@
               <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
             </a>
           </div>
-        </ng-template>
-      </swiper>
-    
+        </div>
+      </div>
+
       <div class="rea-container">
         <div>
-          <a routerLink="/realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate
-            }}</a>
+          <a routerLink="/realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
           <a routerLink="/realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
         </div>
         <div class="arrows-container">
-          <a (click)="backWork()" class="arrow">
-            < </a>
-              <a (click)="nextWork()" class="arrow"> > </a>
+          <a (click)="back()" class="arrow"> < </a>
+          <a (click)="next()" class="arrow"> > </a>
         </div>
       </div>
     </section>

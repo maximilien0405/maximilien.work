@@ -16,13 +16,13 @@
     <h2><span class="special-span">01</span>{{ 'HOME.PART-1.TITLE' | translate }}</h2>
 
     <div *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">
-      Hello ! Moi c'est Maximilien. Indépendant depuis novembre 2022, je réalise du Web Design et du Développement Front-end pour mes clients. 
+      Hello ! Moi c'est Maximilien. Indépendant depuis novembre 2022, je réalise du Web Design et du Développement Front-end pour mes clients.
       Si vous êtes intéressés, n'hésitez pas à jeter un œil à mes <a routerLink="realisations" class="link-flash">réalisations</a> et <a routerLink="services" class="link-flash">services</a>.
 
       <br><br>
       Pendant mon temps libre, je travaille également sur des projets personnels de toute sorte afin d'affiner mes compétences
-      et de m'améliorer continuellement, tels que <a routerLink="realisation/senior-contact" class="link-flash">SeniorContact</a> ou <a routerLink="realisation/buyfair" class="link-flash">BuyFair</a>. 
-    
+      et de m'améliorer continuellement, tels que <a routerLink="realisation/senior-contact" class="link-flash">SeniorContact</a> ou <a routerLink="realisation/buyfair" class="link-flash">BuyFair</a>.
+
       <br><br>
       J'aime aussi écrire des <a routerLink="blog" class="link-flash">articles de blog</a>, gérer des projets ou bien jouer aux jeux vidéo.
     </div>
@@ -33,7 +33,7 @@
 
       <br><br>
       In my spare time, I also work on personal projects of all kinds in order to refine my skills. and to continually improve, such as <a routerLink="realisation/senior-contact" class="link-flash">SeniorContact</a> or <a routerLink="realisation/buyfair" class="link-flash">BuyFair</a>.
-      
+
       <br><br>
       I also like to write <a routerLink="blog" class="link-flash">blog articles</a>, manage projects or play video games.
     </div>
@@ -64,8 +64,8 @@
   <section class="wow fadeIn">
     <h2><span class="special-span">03</span>{{ 'HOME.PART-3.TITLE' | translate }}</h2>
 
-    <swiper #swiper [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpoints">
-      <ng-template swiperSlide *ngFor="let work of total_all_work">
+    <div class="keen-slider" #sliderRef>
+      <div *ngFor="let work of total_all_work" class="keen-slider__slide">
         <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
           <div class="overlay rea-box-desktop">
             <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
@@ -75,8 +75,8 @@
             <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
           </a>
         </div>
-      </ng-template>
-    </swiper>
+      </div>
+    </div>
 
     <div class="rea-container">
       <div>

@@ -1090,20 +1090,6 @@ footer .nav-links {
   }
 }
 
-.swiper-container {
-  width: 100%;
-  height: 18.75rem;
-  margin: 3.125rem auto;
-}
-
-.swiper-slide {
-  background: #f1f1f1;
-  color: #000;
-  text-align: center;
-  line-height: 18.75rem;
-}
-
-
 /* ---------------------------------------------------
   SERVICE PAGE
 ----------------------------------------------------- */
@@ -1185,7 +1171,7 @@ footer .nav-links {
   b {
     color: var(--black);
   }
-  
+
   div {
     display: flex;
     gap: 0.9375rem;
@@ -1398,7 +1384,7 @@ footer .nav-links {
           filter: var(--icon-dark);
           height: 0.875rem;
           width: 0.875rem;
-          animation: rotate 1.5s linear infinite; 
+          animation: rotate 1.5s linear infinite;
         }
       }
 

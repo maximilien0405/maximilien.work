@@ -1,15 +1,15 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
-import { SwiperComponent } from 'swiper/angular';
 import { ProjectsService } from '../common/services/projects.service';
+import KeenSlider, { KeenSliderInstance } from "keen-slider"
 
 @Component({
   selector: 'app-work-details',
   templateUrl: './work-details.component.html'
 })
-export class WorkDetailsComponent {
+export class WorkDetailsComponent implements AfterViewInit {
   public all_work:any;
   public total_all:any = [];
   public total_all_work:any = [];
@@ -17,21 +17,18 @@ export class WorkDetailsComponent {
   public workIsProject: boolean = false;
   public lang = localStorage.getItem('lang')
   public readonly API_URL = environment.api;
-  @ViewChild('swiper2', { static: false }) swiper: SwiperComponent;
 
-  public breakpoints = {
-    '640': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    '768': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    '1024': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    }
+  public sliderConfig: KeenSliderInstance;
+  @ViewChild("sliderRef") sliderRef: ElementRef<HTMLElement>;
+
+  public ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.sliderConfig = new KeenSlider(this.sliderRef.nativeElement, {
+        initial: 0,
+        loop: true,
+        slides: { perView: 1, spacing: 20 },
+      });
+    }, 350);
   }
 
   constructor(private router: Router,
@@ -56,18 +53,16 @@ export class WorkDetailsComponent {
         this.total_all.push(this.all_work[x].attributes)
       }
     });
-
-    console.log(this.total_all)
   }
 
   // Go next in slider
   public next(): void {
-    this.swiper.swiperRef.slideNext(400);
+    this.sliderConfig.next();
   }
 
   // Go back in slider
   public back(): void {
-    this.swiper.swiperRef.slidePrev(250);
+    this.sliderConfig.prev();
   }
 
   // Travel to next project

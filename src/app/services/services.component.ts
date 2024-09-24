@@ -1,54 +1,24 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { SwiperComponent } from 'swiper/angular';
 import { FeedbackService } from '../common/services/feedback.service';
 import { environment } from 'src/environments/environment';
 import { ProjectsService } from '../common/services/projects.service';
+import KeenSlider, { KeenSliderInstance } from "keen-slider"
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html'
 })
-export class ServicesComponent {
+export class ServicesComponent implements AfterViewInit {
   public lang = this.translate.currentLang;
   public all_feedback:any;
   public total_all_feedback:any = [];
   public all_work: any;
   public total_all_work: any = [];
   public readonly API_URL = environment.api;
-  
-  public breakpointsWork = {
-    '640': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    '768': {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    '1024': {
-      slidesPerView: 2,
-      spaceBetween: 20
-    }
-  }
 
-  public breakpointsFeedback = {
-    '640': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    '768': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    '1024': {
-      slidesPerView: 1,
-      spaceBetween: 20
-    }
-  }
-
-  @ViewChild('swiperWork', { static: false }) swiperWork: SwiperComponent;
-  @ViewChild('swiperFeedback', { static: false }) swiperFeedback: SwiperComponent;
+  public sliderConfig: KeenSliderInstance;
+  @ViewChild("sliderRef") sliderRef: ElementRef<HTMLElement>;
 
   constructor(private translate: TranslateService,
     private feedbackService: FeedbackService,
@@ -76,21 +46,31 @@ export class ServicesComponent {
     });
   }
 
+  public ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.sliderConfig = new KeenSlider(this.sliderRef.nativeElement, {
+        initial: 0,
+        loop: true,
+        slides: { perView: 2, spacing: 20 },
+        breakpoints: {
+          '(max-width: 640px)': {
+            slides: { perView: 1, spacing: 20 },
+          },
+          '(min-width: 641px)': {
+            slides: { perView: 2, spacing: 20 },
+          },
+        }
+      });
+    }, 350);
+  }
+
   // Go next in slider
-  public nextFeedback(): void {
-    this.swiperFeedback.swiperRef.slideNext(400);
+  public next(): void {
+    this.sliderConfig.next();
   }
 
   // Go back in slider
-  public backFeedback(): void {
-    this.swiperFeedback.swiperRef.slidePrev(400);
-  }
-
-  public nextWork(): void {
-    this.swiperWork.swiperRef.slideNext(400);
-  }
-
-  public backWork(): void {
-    this.swiperWork.swiperRef.slidePrev(400);
+  public back(): void {
+    this.sliderConfig.prev();
   }
 }

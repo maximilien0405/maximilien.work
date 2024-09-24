@@ -45,6 +45,7 @@
             ],
             "styles": [
               "node_modules/animate.css/animate.min.css",
+              "node_modules/keen-slider/keen-slider.min.css",
               "src/styles/styles.scss",
               "src/styles/global.scss"
             ],
@@ -114,7 +115,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/keen-slider/keen-slider.min.css"
             ],
             "scripts": []
           }
