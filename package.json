@@ -22,7 +22,7 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
-    "ngx-markdown": "^14.0.1",
+    "ngx-markdown": "^16.0.0",
     "rxjs": "~7.5.0",
     "swiper": "^8.2.4",
     "tslib": "^2.3.0",
