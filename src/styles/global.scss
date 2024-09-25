@@ -205,15 +205,21 @@ button {
   width: 100%;
   margin-top: 1.25rem;
   text-align: center;
-  padding: 0.9375rem 1.5rem;
   border: 0.0625rem solid var(--border-color);
   background-color: var(--white);
   border-radius: 0.8rem;
   cursor: pointer;
   color: var(--black);
+  height: 3.4rem;
   transform: all 250ms;
   transition: 200ms all;
   box-shadow: 0rem 0.5rem 0.625rem rgba(0, 0, 0, 0.04);
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
 
   &:hover {
     border: 0.0625rem solid var(--border-hover);
@@ -493,4 +499,60 @@ b {
 
 .overflow {
   overflow: hidden !important;
+}
+
+.input-error {
+  border: 0.0625rem solid var(--red) !important;
+
+  &:hover, &:active {
+    border: 0.0625rem solid var(--red) !important;
+  }
+}
+
+.input-text-error {
+  color: var(--red);
+  font-size: 0.8125rem;
+  margin-top: 0.375rem;
+}
+
+
+.spinner {
+  display: flex;
+  gap: 0rem;
+}
+
+.spinner > div {
+  gap: 0rem !important;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--light-black);
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  margin-right: 0.1875rem;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.bounce3 {
+  margin-left: 0.1875rem;
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
 }

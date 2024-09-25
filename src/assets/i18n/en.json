@@ -108,7 +108,9 @@
     "FULL-NAME": "Full name",
     "MESSAGE": "Your message..",
     "BUTTON": "Send",
-    "PARAGRAPH": "You can also contact me on my social networks:"
+    "PARAGRAPH": "You can also contact me on my social networks:",
+    "FIELD-REQUIRED": "Field is required.",
+    "FORM-SUBMIT-ERROR": "An error occured while trying to submit the form."
   },
   "FORM-SENT":{
     "TITLE": "Email sent successfully!",

@@ -56,7 +56,7 @@
             <div class="overlay rea-box-desktop">
               <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
             </div>
-            <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
+            <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
             <a [routerLink]="'/realisation/' + work.url" class="link-work-mobile">
               <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
             </a>

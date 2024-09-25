@@ -1,4 +1,4 @@
-<main class="wow fadeIn">
+<main class="wow fadeIn" [class.special-rea-work-margin-bottom]="all_work.length == 0 || !all_work">
 
   <!------ HEADER ------------------------------------------------>
 
@@ -22,13 +22,13 @@
 
   <!------ WORK ------------------------------------------------>
 
-  <div class="all-rea-work wow fadeIn">
+  <div class="all-rea-work" *ngIf="all_work.length > 0">
     <div *ngFor="let work of total_selected_work" class="big-box-content">
       <div class="box-realisation" (click)="join(work.url)">
         <div class="overlay rea-box-desktop">
           <p class="text-overlay paragraph">{{ 'WORK.BOX-HOVER' | translate }}</p>
         </div>
-        <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
+        <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
       </div>
       <h4 (click)="join(work.url)">{{ work.title }}</h4>
       <p class="subtitle">{{ work.subtitle }}</p>

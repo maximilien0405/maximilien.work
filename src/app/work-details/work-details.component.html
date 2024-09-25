@@ -1,76 +1,74 @@
 <main class="work-details-structure wow fadeIn">
-  <div *ngFor="let work of total_all">
-    <div *ngIf="work.url == url"  class="work-content">
-      <div class="work-content-container" [ngClass]="{'work-content-full-width': work.type == 'other'}">
-        <div class="mobile-bottom-links">
-          <button routerLink="/realisations">{{ 'WORK-DETAIL.LINK' | translate }}</button>
-          <button (click)="nextProject()">{{ 'WORK-DETAIL.TABLE-NEXT' | translate }} ></button>
-        </div>
+  <div *ngIf="current_work" class="work-content">
+    <div class="work-content-container" [ngClass]="{'work-content-full-width': current_work.type == 'other'}">
+      <div class="mobile-bottom-links">
+        <button routerLink="/realisations">{{ 'WORK-DETAIL.LINK' | translate }}</button>
+        <button (click)="nextProject()">{{ 'WORK-DETAIL.TABLE-NEXT' | translate }} ></button>
+      </div>
 
-        <!------ HEADER ------------------------------------------------>
+      <!------ HEADER ------------------------------------------------>
 
-        <div class="work-header">
-          <h2>{{ work.title }}</h2>
-          <p class="subtitle">{{ work.subtitle }}</p>
+      <div class="work-header">
+        <h2>{{ current_work.title }}</h2>
+        <p class="subtitle">{{ current_work.subtitle }}</p>
 
-          <div class="links-group">
-            <a *ngFor="let link of work.links" class="link-flash" [href]="link.url" target="_blank" rel="noopener">{{ link.name }}
-              <img src="assets/icons/ext.svg" alt="ext-icon">
-            </a>
-          </div>
-        </div>
-
-        <div *ngIf="work.onlyoneimage" class="oneimage-container">
-          <img [src]="API_URL + work.images.data[0].attributes.url" class="detail-img">
-          <a class="link-work" [href]="API_URL + work.images.data[0].attributes.url">
-            <img src="../../assets/icons/image.svg" class="icon-color-big" alt="link">
+        <div class="links-group">
+          <a *ngFor="let link of current_work.links" class="link-flash" [href]="link.url" target="_blank" rel="noopener">{{ link.name }}
+            <img src="assets/icons/ext.svg" alt="ext-icon">
           </a>
-        </div>
-
-        <div *ngIf="!work.onlyoneimage" class="multiple-images-container">
-          <div class="keen-slider" #sliderRef>
-            <div *ngFor="let image of work.images.data" class="keen-slider__slide">
-              <div class="box-realisation">
-                <img [src]="API_URL + image.attributes.url" class="img-box">
-                <a class="link-work-mobile">
-                  <img src="../../assets/icons/arrow.svg" class="icon-color">
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div *ngIf="!work.onlyoneimage" class="arrows-control">
-            <a (click)="back()" class="arrow"> < </a>
-            <a (click)="next()" class="arrow"> > </a>
-          </div>
-        </div>
-
-        <!------ WORK CONTENT ------------------------------------------------>
-
-        <div class="project-details" *ngIf="work.type == 'project'">
-          <p class="subtitle">{{ work.description }}</p>
-          <div *ngFor="let content of work.content">
-            <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
-            <markdown [data]="content.description | language : 'typescript'" class="subtitle" ngPreserveWhitespaces></markdown>
-            <img *ngIf="!content.noimage" [src]="API_URL + content.image.data.attributes.url" class="detail-img">
-          </div>
         </div>
       </div>
 
-      <!------ TABLE OF MATTER ------------------------------------------------>
+      <div *ngIf="current_work.onlyoneimage" class="oneimage-container">
+        <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + current_work.images.data[0].attributes.url" class="detail-img">
+        <a class="link-work" [href]="API_URL + current_work.images.data[0].attributes.url">
+          <img src="../../assets/icons/image.svg" class="icon-color-big" alt="link">
+        </a>
+      </div>
 
-      <div class="table-container" *ngIf="work.type == 'project'">
-        <div class="table-content">
-          <h3>{{ 'WORK-DETAIL.TABLE-TITLE' | translate }}</h3>
-          <div class="separator"></div>
-          <div class="table-links">
-            <a *ngFor="let content of work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>
+      <div *ngIf="!current_work.onlyoneimage" class="multiple-images-container">
+        <div class="keen-slider" #sliderRef>
+          <div *ngFor="let image of current_work.images.data" class="keen-slider__slide">
+            <div class="box-realisation">
+              <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + image.attributes.url" class="img-box">
+              <a class="link-work-mobile">
+                <img src="../../assets/icons/arrow.svg" class="icon-color">
+              </a>
+            </div>
           </div>
         </div>
-        <div class="table-bottom-links">
-          <button routerLink="/realisations">{{ 'WORK-DETAIL.LINK' | translate }}</button>
-          <button (click)="nextProject()">{{ 'WORK-DETAIL.TABLE-NEXT' | translate }} ></button>
+
+        <div *ngIf="!current_work.onlyoneimage" class="arrows-control">
+          <a (click)="back()" class="arrow"> < </a>
+          <a (click)="next()" class="arrow"> > </a>
         </div>
+      </div>
+
+      <!------ WORK CONTENT ------------------------------------------------>
+
+      <div class="project-details" *ngIf="current_work.type == 'project'">
+        <p class="subtitle">{{ current_work.description }}</p>
+        <div *ngFor="let content of current_work.content">
+          <h2 [id]="content.url"><span class="special-span">0{{ content.number }}</span>{{ content.title }}</h2>
+          <markdown [data]="content.description | language : 'typescript'" class="subtitle" ngPreserveWhitespaces></markdown>
+          <img *ngIf="!content.noimage" [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + content.image.data.attributes.url" class="detail-img">
+        </div>
+      </div>
+    </div>
+
+    <!------ TABLE OF MATTER ------------------------------------------------>
+
+    <div class="table-container" *ngIf="current_work.type == 'project'">
+      <div *ngIf="current_work.content.length > 0" class="table-content">
+        <h3>{{ 'WORK-DETAIL.TABLE-TITLE' | translate }}</h3>
+        <div class="separator"></div>
+        <div class="table-links">
+          <a *ngFor="let content of current_work.content" class="subtitle" routerLink="./" [fragment]="content.url">0{{ content.number }} - {{ content.title }}</a>
+        </div>
+      </div>
+      <div class="table-bottom-links">
+        <button routerLink="/realisations">{{ 'WORK-DETAIL.LINK' | translate }}</button>
+        <button (click)="nextProject()">{{ 'WORK-DETAIL.TABLE-NEXT' | translate }} ></button>
       </div>
     </div>
   </div>

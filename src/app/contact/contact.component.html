@@ -1,5 +1,5 @@
 <main class="wow fadeIn">
-  
+
     <!------ HEADER ------------------------------------------------>
 
     <div class="page-header">
@@ -9,24 +9,38 @@
 
     <!------ FORM ------------------------------------------------>
 
-    <form action="https://submit-form.com/2UXU5Lf3" method="POST" class="contact-container">
+    <form [formGroup]="form" class="contact-container">
       <input type="hidden" name="_redirect" value="https://www.maximilien.work/contact/success"/>
       <div class="input-container">
         <div class="name-email-container">
           <div>
-            <label for="full_name">{{ 'CONTACT.FULL-NAME' | translate }}</label>
-            <input name="full_name" type="text" [placeholder]="'CONTACT.FULL-NAME' | translate" required>
+            <label>{{ 'CONTACT.FULL-NAME' | translate }}</label>
+            <input formControlName="fullName" type="text" [placeholder]="'CONTACT.FULL-NAME' | translate" [class.input-error]="formSubmitted && form.get('fullName')?.errors">
+            <p class="input-text-error" *ngIf="formSubmitted && form.get('fullName')?.errors">{{ 'CONTACT.FIELD-REQUIRED' | translate }}</p>
           </div>
           <div>
-            <label for="email">Email</label>
-            <input name="email" type="email" placeholder="Email" required>
+            <label>Email</label>
+            <input formControlName="email" type="email" placeholder="Email" [class.input-error]="formSubmitted && form.get('email')?.errors">
+            <p class="input-text-error" *ngIf="formSubmitted && form.get('email')?.errors">{{ 'CONTACT.FIELD-REQUIRED' | translate }}</p>
           </div>
         </div>
 
-        <label for="message">Message</label><br>
-        <textarea name="message" [placeholder]="'CONTACT.MESSAGE' | translate" required></textarea>
+        <label>Message</label><br>
+        <textarea formControlName="message" [placeholder]="'CONTACT.MESSAGE' | translate" [class.input-error]="formSubmitted && form.get('message')?.errors"></textarea>
+        <p class="input-text-error" *ngIf="formSubmitted && form.get('message')?.errors">{{ 'CONTACT.FIELD-REQUIRED' | translate }}</p>
 
-        <button>{{ 'CONTACT.BUTTON' | translate }}</button>
+        <button (click)="submitForm()">
+          <span *ngIf="!spinnerDisplay">
+            {{ 'CONTACT.BUTTON' | translate }}
+          </span>
+          <div *ngIf="spinnerDisplay" class="spinner spinner-black">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </button>
+
+        <p *ngIf="formSubmitError" class="input-text-error">{{ 'CONTACT.FORM-SUBMIT-ERROR' | translate }}</p>
       </div>
 
       <!------ SOCIALS CONTAINER ------------------------------------------------>

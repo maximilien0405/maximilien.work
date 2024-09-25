@@ -64,13 +64,13 @@
   <section class="wow fadeIn">
     <h2><span class="special-span">03</span>{{ 'HOME.PART-3.TITLE' | translate }}</h2>
 
-    <div class="keen-slider" #sliderRef>
+    <div *ngIf="all_work.length > 0" class="keen-slider" #sliderRef>
       <div *ngFor="let work of total_all_work" class="keen-slider__slide">
         <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
           <div class="overlay rea-box-desktop">
             <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
           </div>
-          <img [src]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
+          <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
           <a [routerLink]="'/realisation/' + work.url" class="link-work-mobile">
             <img src="../../assets/icons/arrow.svg" class="icon-color" [alt]="work.url">
           </a>

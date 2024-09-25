@@ -30,8 +30,21 @@ export class ServicesComponent implements AfterViewInit {
     });
 
     // Get all the work
+    const allWork = localStorage.getItem('allWork');
+    if(allWork) {
+      this.all_work = JSON.parse(allWork);
+      this.total_all_work = [];
+
+      for (let x in this.all_work) {
+        this.total_all_work.push(this.all_work[x].attributes)
+      }
+    }
+
+    // Get all the work
     this.projectService.getAllWork(this.lang).subscribe(res => {
       this.all_work = res.data;
+      this.total_all_work = [];
+
       for (let x in this.all_work) {
         this.total_all_work.push(this.all_work[x].attributes)
       }

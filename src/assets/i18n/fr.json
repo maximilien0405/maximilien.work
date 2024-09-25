@@ -112,7 +112,9 @@
     "FULL-NAME": "Nom complet",
     "MESSAGE": "Votre message..",
     "BUTTON": "Envoyer",
-    "PARAGRAPH": "Vous pouvez également me contacter sur mes réseaux sociaux :"
+    "PARAGRAPH": "Vous pouvez également me contacter sur mes réseaux sociaux :",
+    "FIELD-REQUIRED": "Le champ est obligatoire.",
+    "FORM-SUBMIT-ERROR": "Une erreur s'est produite lors de l'envoi du formulaire."
   },
   "FORM-SENT":{
     "TITLE": "L'e-mail a été envoyé avec succès !",
