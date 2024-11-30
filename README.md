@@ -12,9 +12,9 @@
 ## 02 - Installation
 
 ```
-git clone https://github.com/maximilien0405/site-perso-angular.git
+git clone https://github.com/maximilien0405/maximilien.work.git
 
-cd site-perso-angular/
+cd maximilien.work/
 
 npm i
 
