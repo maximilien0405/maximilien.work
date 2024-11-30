@@ -7,7 +7,7 @@
       <p class="subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
       <a routerLink="contact" class="box box-btn">{{ 'HOME.BUTTON' | translate }}</a>
     </div>
-    <img src="../../assets/images/moi.avif" class="pdp" alt="Photo de moi" />
+    <img [defaultImage]="'../../assets/images/moi-placeholder.png'" [lazyLoad]="'../../assets/images/moi.avif'" class="pdp"/>
   </header>
 
   <!------ A PROPOS ------------------------------------------------>
