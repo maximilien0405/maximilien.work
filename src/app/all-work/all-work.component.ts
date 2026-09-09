@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
@@ -6,9 +6,11 @@ import { ProjectsService } from '../common/services/projects.service';
 import { fadeAnimation } from '../common/others/animations';
 
 @Component({
-  selector: 'app-all-work',
-  templateUrl: './all-work.component.html',
-  animations: [fadeAnimation]
+    selector: 'app-all-work',
+    templateUrl: './all-work.component.html',
+    animations: [fadeAnimation],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class AllWorkComponent {
   public all_work:any;
@@ -58,21 +60,32 @@ export class AllWorkComponent {
 
   // Set and filter all work
   public processAllWork(data: any) {
-    this.all_work = data;
-    this.total_all_personnal = [];
-    this.total_all_other = [];
-    this.total_all_freelance = [];
+    console.log(data)
+    console.log(this.all_work)
+    if(this.all_work) {
+      console.log(this.total_all_personnal)
 
-    for (let x in this.all_work) {
-      if (this.all_work[x].attributes.category == 'personnal') {
-        this.total_all_personnal.push(this.all_work[x].attributes)
-      } else if (this.all_work[x].attributes.category == 'other'){
-        this.total_all_other.push(this.all_work[x].attributes)
-      } else if (this.all_work[x].attributes.category == 'freelance') {
-        this.total_all_freelance.push(this.all_work[x].attributes)
-      }
+    } else {
+      this.all_work = data;
     }
 
-    this.total_selected_work = this.total_all_personnal;
+
+
+
+    // this.total_all_personnal = [];
+    // this.total_all_other = [];
+    // this.total_all_freelance = [];
+
+    // for (let x in this.all_work) {
+    //   if (this.all_work[x].attributes.category == 'personnal') {
+    //     this.total_all_personnal.push(this.all_work[x].attributes)
+    //   } else if (this.all_work[x].attributes.category == 'other'){
+    //     this.total_all_other.push(this.all_work[x].attributes)
+    //   } else if (this.all_work[x].attributes.category == 'freelance') {
+    //     this.total_all_freelance.push(this.all_work[x].attributes)
+    //   }
+    // }
+
+    // this.total_selected_work = this.total_all_personnal;
   }
 }

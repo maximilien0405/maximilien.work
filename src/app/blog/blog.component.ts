@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import { ArticlesService } from '../common/services/articles.service';
 import { fadeAnimation } from '../common/others/animations';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  animations: [fadeAnimation]
+    selector: 'app-blog',
+    templateUrl: './blog.component.html',
+    animations: [fadeAnimation],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class BlogComponent {
   public all_articles:any;

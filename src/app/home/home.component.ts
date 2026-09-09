@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, viewChild, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, viewChild, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ProjectsService } from '../common/services/projects.service';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
@@ -6,14 +6,16 @@ import KeenSlider, { KeenSliderInstance } from "keen-slider"
 import { ArticlesService } from '../common/services/articles.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class HomeComponent implements AfterViewInit {
   public all_work:any = [];
   public total_all_work:any = [];
   public readonly API_URL = environment.api;
-  public lang = this.translate.currentLang;
+  public lang = this.translate.getCurrentLang() || 'fr';
 
   public sliderConfig: KeenSliderInstance;
   @ViewChild("sliderRef") sliderRef: ElementRef<HTMLElement>;

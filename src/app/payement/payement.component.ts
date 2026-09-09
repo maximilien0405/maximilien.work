@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-payement',
-  templateUrl: './payement.component.html'
+    selector: 'app-payement',
+    templateUrl: './payement.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class PayementComponent implements OnInit {
   public invoiceNumber: number;

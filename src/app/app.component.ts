@@ -1,48 +1,37 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ClientService } from './common/services/client.service';
+import { MetaTagsService } from './common/services/meta-tags.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  animations: [
-    trigger('inOutAnimation', [
-        transition(
-          ':enter', [
-            style({ opacity: 0 }),
-            animate('0.2s ease-out',
-            style({ opacity: 1 }))
-          ]
-        ),
-        transition(
-          ':leave', [
-            style({ opacity: 1 }),
-            animate('0.2s ease-in',
-            style({ opacity: 0 }))
-          ]
-        )
-      ]
-    ),
-    trigger('inOutAnimationSlow', [
-        transition(
-          ':enter', [
-            style({ opacity: 0 }),
-            animate('0.1s ease-out',
-            style({ opacity: 1 }))
-          ]
-        ),
-        transition(
-          ':leave', [
-            style({ opacity: 1 }),
-            animate('0.1s ease-in',
-            style({ opacity: 0 }))
-          ]
-        )
-      ]
-    )
-  ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    animations: [
+        trigger('inOutAnimation', [
+            transition(':enter', [
+                style({ opacity: 0 }),
+                animate('0.2s ease-out', style({ opacity: 1 }))
+            ]),
+            transition(':leave', [
+                style({ opacity: 1 }),
+                animate('0.2s ease-in', style({ opacity: 0 }))
+            ])
+        ]),
+        trigger('inOutAnimationSlow', [
+            transition(':enter', [
+                style({ opacity: 0 }),
+                animate('0.1s ease-out', style({ opacity: 1 }))
+            ]),
+            transition(':leave', [
+                style({ opacity: 1 }),
+                animate('0.1s ease-in', style({ opacity: 0 }))
+            ])
+        ])
+    ],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class AppComponent {
   public languageClick:Boolean = false;
@@ -57,18 +46,20 @@ export class AppComponent {
 
   constructor(
     public clientService: ClientService,
-    public translate: TranslateService, 
-    private router: Router)
+    public translate: TranslateService,
+    private router: Router,
+    private metaTags: MetaTagsService)
   {
-    // Get router url
+    // Get router url + update SEO
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.route = this.router.url;
+        this.metaTags.updateMetaTags(this.router.url);
       }
     });
 
     translate.addLangs(['fr','en'])
-    translate.setDefaultLang('fr')
+    translate.setFallbackLang('fr')
 
     if(!localStorage.getItem('lang')) {
       // Get navigator language & cut it
@@ -80,7 +71,7 @@ export class AppComponent {
 
       // Set navigator language
       localStorage.setItem("lang", this.lang);
-      this.translate.setDefaultLang(this.lang);
+      this.translate.setFallbackLang(this.lang);
       this.translate.use(this.lang)
     }
 
@@ -107,11 +98,12 @@ export class AppComponent {
   // Change the language
   public changeLang(lang:string) {
     this.translate.use(lang);
-    this.translate.setDefaultLang(lang);
+    this.translate.setFallbackLang(lang);
     localStorage.setItem('lang', lang)
     this.lang = lang;
     this.languageClick = false;
     this.mobileSidebar = false;
+    this.metaTags.updateMetaTags(this.router.url);
   }
 
   public ngOnInit() {
@@ -135,6 +127,8 @@ export class AppComponent {
       this.translate.use('fr');
       this.lang = 'fr';
     }
+
+    this.metaTags.updateMetaTags(this.router.url);
   }
 
   // Open the movile nav

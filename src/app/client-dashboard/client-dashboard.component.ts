@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ClientService } from '../common/services/client.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-client-dashboard',
-  templateUrl: './client-dashboard.component.html'
+    selector: 'app-client-dashboard',
+    templateUrl: './client-dashboard.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class ClientDashboardComponent {
   public locked: boolean = true;
@@ -18,7 +20,7 @@ export class ClientDashboardComponent {
   public projects: any = [];
 
   public spinnerDisplay: boolean; 
-  public lang = this.translate.currentLang;
+  public lang = this.translate.getCurrentLang() || 'fr';
   public projectIndex: number = Number(localStorage.getItem('projectIndex')) || 0;
 
   constructor(private clientService: ClientService,

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
@@ -6,8 +6,10 @@ import { ProjectsService } from '../common/services/projects.service';
 import KeenSlider, { KeenSliderInstance } from "keen-slider"
 
 @Component({
-  selector: 'app-work-details',
-  templateUrl: './work-details.component.html'
+    selector: 'app-work-details',
+    templateUrl: './work-details.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class WorkDetailsComponent {
   public all_work:any = [];

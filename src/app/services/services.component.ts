@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { FeedbackService } from '../common/services/feedback.service';
 import { environment } from 'src/environments/environment';
@@ -6,11 +6,13 @@ import { ProjectsService } from '../common/services/projects.service';
 import KeenSlider, { KeenSliderInstance } from "keen-slider"
 
 @Component({
-  selector: 'app-services',
-  templateUrl: './services.component.html'
+    selector: 'app-services',
+    templateUrl: './services.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class ServicesComponent implements AfterViewInit {
-  public lang = this.translate.currentLang;
+  public lang = this.translate.getCurrentLang() || 'fr';
   public all_feedback:any;
   public total_all_feedback:any = [];
   public all_work: any;
