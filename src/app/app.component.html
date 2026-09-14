@@ -1,76 +1,77 @@
+<div *ngIf="displayMainOverlay" [@.disabled]="!willDismissMainOverlay" @fadeAnimation class="absolute-overlay-white"></div>
 <div *ngIf="languageClick" (click)="languageClick = false" class="gray-overlay"></div>
 
 <!------ MOBILE SIDEBAR -------------------------------------------->
 
-<div @inOutAnimation *ngIf="mobileSidebar" class="mobile-sidebar">
+<div *ngIf="mobileSidebar" @slideMenuAnimation class="mobile-sidebar">
   <div class="icons-container">
     <div>
       <a *ngIf="whiteTheme" (click)="toggleDarkTheme()"><img src="../assets/icons/theme-dark.svg" alt="theme-dark-icon"></a>
       <a *ngIf="!whiteTheme" (click)="toggleWhiteTheme()"><img src="../assets/icons/theme-light.svg" alt="theme-white-icon"></a>
-      <a *ngIf="lang == 'en' || lang == 'EN'" (click)="changeLang('fr')">🇫🇷</a>
-      <a *ngIf="lang == 'fr' || lang == 'FR'" (click)="changeLang('en')">🇺🇸</a>
+      <a *ngIf="lang == 'en'" (click)="changeLang('fr')">🇫🇷</a>
+      <a *ngIf="lang == 'fr'" (click)="changeLang('en')">🇺🇸</a>
     </div>
-    <a *ngIf="showClientLink" class="icon-special" (click)="mobileSidebar = false" [routerLink]="'client-dashboard/' + clientUrl">{{ 'NAV.ITEM-DASHBOARD' | translate}}</a>
+    <a *ngIf="showClientLink" class="icon-special" (click)="mobileSidebar = false" [routerLink]="'client-dashboard/' + clientUrl">{{ 'navbar_dashboard' | translate }}</a>
     <a (click)="closeNav()"><img src="../assets/icons/close.svg" alt="close-icon"></a>
   </div>
 
 
   <div class="mobile-text">
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/'}" routerLink="/" class="item-navbar special-item first-item"><span>01</span>{{ 'NAV.ITEM-1' | translate }}</a>
+    <a (click)="closeNav()" [class.nav-selected]="route == '/'" routerLink="/" class="item-navbar special-item first-item"><span>01</span>{{ 'navbar_home' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/realisations'}" routerLink="realisations" class="item-navbar special-item"><span>02</span>{{ 'NAV.ITEM-2' | translate }}</a>
+    <a (click)="closeNav()" [class.nav-selected]="route == '/realisations'" routerLink="realisations" class="item-navbar special-item"><span>02</span>{{ 'navbar_work' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/services'}" routerLink="services" class="item-navbar special-item"><span>03</span>Services</a>
+    <a (click)="closeNav()" [class.nav-selected]="route == '/services'" routerLink="services" class="item-navbar special-item"><span>03</span>{{ 'navbar_services' | translate }}</a>
     <div class="separator-item">
         <div class="separator"></div>
     </div>
 
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="item-navbar special-item"><span>04</span>{{ 'NAV.MOBILE-1' | translate }}</a>
-    <div class="separator-item">
-        <div class="separator"></div>
-    </div>
-
-    <a (click)="closeNav()" [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="item-navbar special-item"><span>05</span>{{ 'NAV.ITEM-4' | translate }}</a>
+    <a (click)="closeNav()" [class.nav-selected]="route == '/contact'" routerLink="contact" class="item-navbar special-item"><span>04</span>{{ 'navbar_contact' | translate }}</a>
   </div>
 
 </div>
 
 <!------ NAVBAR ---------------------------------------------------->
 
-<nav class="container wow fadeInDown">
+<nav class="container">
   <a routerLink="/">
     <h2>MZ.</h2>
   </a>
   <div class="nav-links">
-    <a [ngClass]="{'nav-selected': route == '/'}" routerLink="/" class="link">{{ 'NAV.ITEM-1' | translate }}</a>
-    <a [ngClass]="{'nav-selected': route == '/realisations'}" routerLink="realisations" class="link">{{ 'NAV.ITEM-2' | translate }}</a>
-    <a [ngClass]="{'nav-selected': route == '/services'}" routerLink="services" class="link">Services</a>
-    <a [ngClass]="{'nav-selected': route == '/blog'}" routerLink="blog" class="link">{{ 'NAV.ITEM-3' | translate }}</a>
-    <a [ngClass]="{'nav-selected': route == '/contact'}" routerLink="contact" class="link">{{ 'NAV.ITEM-4' | translate }}</a>
-    <a @inOutAnimation *ngIf="showClientLink" [ngClass]="{'nav-selected': route == '/client-dashboard/' + clientUrl}" [routerLink]="'client-dashboard/' + clientUrl" class="link link-special">{{ 'NAV.ITEM-DASHBOARD' | translate}}</a>
+    <a [class.nav-selected]="route == '/'" routerLink="/" class="link">{{ 'navbar_home' | translate }}</a>
+    <a [class.nav-selected]="route == '/realisations'" routerLink="realisations" class="link">{{ 'navbar_work' | translate }}</a>
+    <a [class.nav-selected]="route == '/services'" routerLink="services" class="link">{{ 'navbar_services' | translate }}</a>
+    <a [class.nav-selected]="route == '/contact'" routerLink="contact" class="link">{{ 'navbar_contact' | translate }}</a>
+    <a @fadeAnimation *ngIf="showClientLink" [class.nav-selected]="route == '/client-dashboard/' + clientUrl" [routerLink]="'client-dashboard/' + clientUrl" class="link link-special">{{ 'navbar_dashboard' | translate }}</a>
   </div>
-  <div class="icons-box wow fadeIn">
+  <div class="icons-box">
     <div class="theme-box">
-      <img [ngClass]="{'opacity-end': whiteTheme}" (click)="toggleDarkTheme()" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
-      <img *ngIf="!whiteTheme" [ngClass]="{'opacity-end': !whiteTheme}" (click)="toggleWhiteTheme()" src="../../assets/icons/theme-light.svg" alt="theme-light-icon">
+      <a *ngIf="whiteTheme" (click)="toggleDarkTheme()">
+        <img [class.opacity-end]="whiteTheme" src="../../assets/icons/theme-dark.svg" alt="theme-dark-icon">
+      </a>
+      <a *ngIf="!whiteTheme" (click)="toggleWhiteTheme()">
+        <img [class.opacity-end]="!whiteTheme" src="../../assets/icons/theme-light.svg" alt="theme-light-icon">
+      </a>
     </div>
-    
-    <img (click)="languageBox()" src="../../assets/icons/lang.svg" alt="lang-icon" class="language-icon">
 
-    <div *ngIf="languageClick" @inOutAnimationSlow class="language-box">
+    <a (click)="languageBox()">
+      <img src="../../assets/icons/lang.svg" alt="lang-icon">
+    </a>
+
+    <div *ngIf="languageClick" @fadeAnimation class="language-box">
       <a (click)="changeLang('fr')" class="subtitle">🇫🇷</a>
       <p class="subtitle">/</p>
       <a (click)="changeLang('en')" class="subtitle">🇺🇸</a>
     </div>
   </div>
 
-  <div class="hamburger wow fadeIn" (click)="openNav()">
+  <div class="hamburger" (click)="openNav()">
     <img src="../../assets/icons/menu-1.svg" alt="menu-icon">
   </div>
 </nav>
@@ -95,16 +96,16 @@
     </div>
     <div class="mobile-icons">
       <a href="https://www.linkedin.com/in/maximilien-zimmermann/" target="_blank" rel="noopener">
-        <img src="../../assets/icons/linkedin.svg" alt="linkedin-icon" >
+        <img src="../../assets/icons/linkedin.svg" alt="linkedin-icon">
       </a>
       <a href="https://github.com/maximilien0405" target="_blank" rel="noopener">
-        <img src="../../assets/icons/github.svg" alt="github-icon" >
+        <img src="../../assets/icons/github.svg" alt="github-icon">
       </a>
       <a href="https://medium.com/@maximilien.z" target="_blank" rel="noopener">
-        <img src="../../assets/icons/medium.svg" alt="medium-icon" >
+        <img src="../../assets/icons/medium.svg" alt="medium-icon">
       </a>
       <a href="https://www.behance.net/max-zim" target="_blank" rel="noopener">
-        <img src="../../assets/icons/behance.svg" alt="behance-icon" >
+        <img src="../../assets/icons/behance.svg" alt="behance-icon">
       </a>
     </div>
   </div>

@@ -1,124 +1,116 @@
 {
-  "NAV": {
-    "ITEM-1": "Accueil",
-    "ITEM-2": "Réalisations",
-    "ITEM-3": "Blog",
-    "ITEM-4": "Contact",
-    "ITEM-DASHBOARD": "Mon dashboard",
-    "MOBILE-1": "Blog"
-  },
+  "navbar_home": "Accueil",
+  "navbar_work": "Réalisations",
+  "navbar_services": "Services",
+  "navbar_contact": "Contact",
+  "navbar_dashboard": "Mon dashboard",
   "HOME": {
-    "SUBTITLE": "Un développeur & designer web débordant d'idées afin de porter votre projet au next-level.",
-    "BUTTON": "Me contacter",
-    "PART-1": {
-      "TITLE": "Qui suis-je"
-    },
-    "PART-2": {
-      "TITLE": "Mes services",
-      "BOX-1-TITLE": "Développement Web",
-      "BOX-1-SUB": "Intégration web, applications web complêtes ou modification de sites existants.",
-      "BOX-2-TITLE": "Web design",
-      "BOX-2-SUB": "Prototypes, maquettes visuelles, ou bien encore identité visuelle complète.",
-      "BOX-3-TITLE": "Autres",
-      "BOX-3-SUB": "Référencement, accesibilité et optimisation de performances web."
-    },
-    "PART-3": {
-      "TITLE": "Mes réalisations",
-      "BOX-HOVER": "Voir plus",
-      "PARAGRAPH-DESK": "Voir toutes les réalisations >",
-      "PARAGRAPH-MOB": "Tout voir >"
-    }
+    "subtitle": "Un développeur & designer web débordant d'idées afin de porter votre projet au next-level.",
+    "button": "Me contacter",
+    "part_1_title": "Qui suis-je",
+    "part_1_p1": "Hello ! Moi c'est Maximilien. Indépendant depuis novembre 2022, je réalise du Web Design et du Développement Front-end pour mes clients.",
+    "part_1_p2_before": "Si vous êtes intéressés, n'hésitez pas à jeter un œil à mes ",
+    "part_1_work": "réalisations",
+    "part_1_p2_and": " et ",
+    "part_1_services": "services",
+    "part_1_p2_after": ".",
+    "part_1_p3_before": "Pendant mon temps libre, je travaille également sur des projets personnels de toute sorte afin d'affiner mes compétences et de m'améliorer continuellement, tels que ",
+    "part_1_p3_or": " ou ",
+    "part_1_p3_after": ".",
+    "part_1_p4": "J'aime aussi gérer des projets ou bien jouer aux jeux vidéo.",
+    "part_2_title": "Mes services",
+    "part_2_box_1_title": "Développement Web",
+    "part_2_box_1_sub": "Intégration web, applications web complêtes ou modification de sites existants.",
+    "part_2_box_2_title": "Web design",
+    "part_2_box_2_sub": "Prototypes, maquettes visuelles, ou bien encore identité visuelle complète.",
+    "part_2_box_3_title": "Autres",
+    "part_2_box_3_sub": "Référencement, accesibilité et optimisation de performances web.",
+    "part_3_title": "Mes réalisations",
+    "part_3_box_hover": "Voir plus",
+    "part_3_paragraph_desk": "Voir toutes les réalisations >",
+    "part_3_paragraph_mob": "Tout voir >"
   },
   "WORK": {
-    "LINK": "< Retour",
-    "TITLE": "Toutes mes réalisations",
-    "SUBTITLE": "Voici quelques-uns de mes réalisations, que ce soit du Web design ou bien du développement web.",
-    "BOX-HOVER": "Voir plus",
-    "CATEGORY-1": "Projets personnels",
-    "CATEGORY-2": "Projets professionnels",
-    "CATEGORY-3": "Autres"
+    "link": "< Retour",
+    "title": "Toutes mes réalisations",
+    "subtitle": "Voici quelques-uns de mes réalisations, que ce soit du Web design ou bien du développement web.",
+    "box_hover": "Voir plus",
+    "category_1": "Projets personnels",
+    "category_2": "Projets professionnels",
+    "category_3": "Autres"
   },
-  "WORK-DETAIL": {
-    "LINK": "< Retour",
-    "TABLE-TITLE": "Table des matières",
-    "TABLE-NEXT": "Suivant"
+  "WORK_DETAIL": {
+    "link": "< Retour",
+    "table_title": "Table des matières",
+    "table_next": "Suivant"
   },
-  "CLIENT-DASHBOARD" : {
-    "LOCKED-TITLE" : "Cette page est verrouillée",
-    "LOCKED-SUBTITLE" : "Pour accéder à cette page, veuillez saisir ci-dessous le mot de passe qui vous a été communiqué par Email",
-    "INPUT-PLACEHOLDER" : "Mot de passe",
-    "INVALID-PWD" : "Le mot de passe est incorrect. Veuillez réessayer.",
-    "BTN-SEND" : "Envoyer",
-    "CLIENT-HEADER-TITLE" : "Mon dashboard client",
-    "CLIENT-STAT-NBPROJECT" : "Projet",
-    "CLIENT-STAT-NBPROJECTS" : "Projets",
-    "CLIENT-STAT-SINCE" : "Depuis",
-    "CLIENT-HEADER-GOAL" : "Objectif",
-    "CLIENT-HEADER-DATE" : "Date de début",
-    "CLIENT-HEADER-WAITING" : "En attente",
-    "CLIENT-HEADER-DOING" : "En cours",
-    "CLIENT-HEADER-DONE" : "Terminé",
-    "CLIENT-BOX-PROGRESS" : "Avancement",
-    "CLIENT-BOX-STEPS": "Étape",
-    "CLIENT-BOX-LINKS" : "Liens",
-    "CLIENT-BOX-DOCUMENTS" : "Documents",
-    "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "En attente",
-    "ClIENT-BOX-DOCUMENTS-STATUS-PAID": "Payée",
-    "CLIENT-BOX-PROGRESS-DAY": "jour",
-    "CLIENT-BOX-PROGRESS-DAYS": "jours",
-    "CLIENT-BOX-PROGRESS-ESTIMATED": "Temps estimé"
-  },
-  "ARTICLE": {
-    "TITLE": "Tous mes articles de blog",
-    "SUBTITLE" : "J'aime écrire et enseigner des choses. Que ce soit sur le web design, le développement et plus !",
-    "LINK": "Lire sur Medium"
+  "CLIENT_DASHBOARD": {
+    "locked_title": "Cette page est verrouillée",
+    "locked_subtitle": "Pour accéder à cette page, veuillez saisir ci-dessous le mot de passe qui vous a été communiqué par Email",
+    "input_placeholder": "Mot de passe",
+    "invalid_pwd": "Le mot de passe est incorrect. Veuillez réessayer.",
+    "btn_send": "Envoyer",
+    "client_header_title": "Mon dashboard client",
+    "client_stat_nbproject": "Projet",
+    "client_stat_nbprojects": "Projets",
+    "client_stat_since": "Depuis",
+    "client_header_goal": "Objectif",
+    "client_header_date": "Date de début",
+    "client_header_waiting": "En attente",
+    "client_header_doing": "En cours",
+    "client_header_done": "Terminé",
+    "client_box_progress": "Avancement",
+    "client_box_steps": "Étape",
+    "client_box_steps_of": "Étape {{current}} / {{total}}",
+    "client_box_links": "Liens",
+    "client_box_documents": "Documents",
+    "client_box_documents_status_waiting": "En attente",
+    "client_box_documents_status_paid": "Payée",
+    "client_box_progress_day": "jour",
+    "client_box_progress_days": "jours",
+    "client_box_progress_estimated": "Temps estimé"
   },
   "SERVICES": {
-    "TITLE": "Mes services",
-    "SUBTITLE": "Freelance depuis 2022, j'accompagne mes clients pour leurs projets web ou design.",
-    "PART-1": {
-      "BOX-1-TITLE": "Création de site web",
-      "BOX-1-SUB": "Pour votre portfolio, site de vente en ligne, blog personnel, forum ou bien site vitrine. Tout est possible.",
-      "BOX-2-TITLE": "Design Web",
-      "BOX-2-SUB": "Pour créer des prototypes, maquettes ou bien même identité visuelle complète pour votre entreprise."
-    },
-    "PART-2": {
-      "TITLE": "A propos"
-    },
-    "PART-3": {
-      "TITLE": "Mes réalisations"
-    },
-    "PART-4": {
-      "TITLE": "Avis clients",
-      "PARAGRAPH": "Contactez moi"
-    }
+    "title": "Mes services",
+    "subtitle": "Freelance depuis 2022, j'accompagne mes clients pour leurs projets web ou design.",
+    "part_1_box_1_title": "Création de site web",
+    "part_1_box_1_sub": "Pour votre portfolio, site de vente en ligne, blog personnel, forum ou bien site vitrine. Tout est possible.",
+    "part_1_box_2_title": "Design Web",
+    "part_1_box_2_sub": "Pour créer des prototypes, maquettes ou bien même identité visuelle complète pour votre entreprise.",
+    "part_2_title": "A propos",
+    "part_2_p1": "Depuis 2022, j’accompagne mes clients dans la réalisation de leurs sites web.",
+    "part_2_p2": "Que ce soit pour un site vitrine ou bien une boutique, je tacherais tout mettre en oeuvre afin que votre projet corresponde à votre attente.",
+    "part_2_p3": "Si vous souhaitez plus d'informations ou avez une mission à me proposer, n'hésitez pas à me contacter ! Je serais ravi de trouver une solution à votre problème.",
+    "part_3_title": "Mes réalisations",
+    "part_4_title": "Avis clients",
+    "part_4_paragraph": "Contactez moi"
   },
   "PAYEMENT": {
-    "TITLE": "Payement de la facture N°",
-    "SUBTITLE": "Vous trouverez ci-dessous toutes les informations nécessaires afin de payer cette facture.",
-    "METHOD-1-TITLE": "Virement bancaire",
-    "METHOD-2-SUBTITLE-1": "Ouvrez l'application",
-    "METHOD-2-SUBTITLE-2": "Twint",
-    "METHOD-2-SUBTITLE-3": "et cliquez sur le bouton en bas :",
-    "METHOD-2-SUBTITLE-4": "Payer",
-    "METHOD-2-SUBTITLE-5": "Scannez le QR code et entrez le montant suivant :",
-    "BANK-ADDRESS": "Adresse",
-    "BANK-AMOUNT": "Montant",
-    "BANK-BANK": "Banque"
+    "title": "Payement de la facture N°",
+    "subtitle": "Vous trouverez ci-dessous toutes les informations nécessaires afin de payer cette facture.",
+    "method_1_title": "Virement bancaire",
+    "method_2_subtitle_1": "Ouvrez l'application",
+    "method_2_subtitle_2": "Twint",
+    "method_2_subtitle_3": "et cliquez sur le bouton en bas :",
+    "method_2_subtitle_4": "Payer",
+    "method_2_subtitle_5": "Scannez le QR code et entrez le montant suivant :",
+    "bank_address": "Adresse",
+    "bank_amount": "Montant",
+    "bank_bank": "Banque"
   },
   "CONTACT": {
-    "TITLE": "Me contacter",
-    "SUBTITLE": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe !",
-    "FULL-NAME": "Nom complet",
-    "MESSAGE": "Votre message..",
-    "BUTTON": "Envoyer",
-    "PARAGRAPH": "Vous pouvez également me contacter sur mes réseaux sociaux :",
-    "FIELD-REQUIRED": "Le champ est obligatoire.",
-    "FORM-SUBMIT-ERROR": "Une erreur s'est produite lors de l'envoi du formulaire."
+    "title": "Me contacter",
+    "subtitle": "Un projet à me proposer ? Ou une simple question ? Faites-moi signe !",
+    "full_name": "Nom complet",
+    "message": "Votre message..",
+    "button": "Envoyer",
+    "paragraph": "Vous pouvez également me contacter sur mes réseaux sociaux :",
+    "field_required": "Le champ est obligatoire.",
+    "form_submit_error": "Une erreur s'est produite lors de l'envoi du formulaire."
   },
-  "FORM-SENT":{
-    "TITLE": "L'e-mail a été envoyé avec succès !",
-    "MESSAGE": "Merci d'avoir pris le temps de m'écrire, je reviens vers vous dès que possible.",
-    "LINK": "Retour à l'accueil"
+  "FORM_SENT": {
+    "title": "L'e-mail a été envoyé avec succès !",
+    "message": "Merci d'avoir pris le temps de m'écrire, je reviens vers vous dès que possible.",
+    "link": "Retour à l'accueil"
   }
 }

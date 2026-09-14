@@ -1,74 +1,67 @@
 <main>
   <!------ HEADER ---------------------------------------------------->
 
-  <header class="wow fadeIn">
+  <header>
     <div>
       <h1>Maximilien Zimmermann</h1>
-      <p class="subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
-      <a routerLink="contact" class="box box-btn">{{ 'HOME.BUTTON' | translate }}</a>
+      <p class="subtitle">{{ 'HOME.subtitle' | translate }}</p>
+      <a routerLink="contact" class="box box-btn">{{ 'HOME.button' | translate }}</a>
     </div>
     <img [defaultImage]="'../../assets/images/moi-placeholder.png'" [lazyLoad]="'../../assets/images/moi.avif'" class="pdp" alt="Portrait de Maximilien Zimmermann"/>
   </header>
 
   <!------ A PROPOS ------------------------------------------------>
 
-  <section class="wow fadeIn">
-    <h2><span class="special-span">01</span>{{ 'HOME.PART-1.TITLE' | translate }}</h2>
+  <section>
+    <h2><span class="special-span">01</span>{{ 'HOME.part_1_title' | translate }}</h2>
 
-    <div *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">
-      Hello ! Moi c'est Maximilien. Indépendant depuis novembre 2022, je réalise du Web Design et du Développement Front-end pour mes clients.
-      Si vous êtes intéressés, n'hésitez pas à jeter un œil à mes <a routerLink="realisations" class="link-flash">réalisations</a> et <a routerLink="services" class="link-flash">services</a>.
-
+    <div class="subtitle">
+      {{ 'HOME.part_1_p1' | translate }}
       <br><br>
-      Pendant mon temps libre, je travaille également sur des projets personnels de toute sorte afin d'affiner mes compétences
-      et de m'améliorer continuellement, tels que <a routerLink="realisation/senior-contact" class="link-flash">SeniorContact</a> ou <a routerLink="realisation/buyfair" class="link-flash">BuyFair</a>.
-
+      {{ 'HOME.part_1_p2_before' | translate }}
+      <a routerLink="realisations" class="link-flash">{{ 'HOME.part_1_work' | translate }}</a>
+      {{ 'HOME.part_1_p2_and' | translate }}
+      <a routerLink="services" class="link-flash">{{ 'HOME.part_1_services' | translate }}</a>{{ 'HOME.part_1_p2_after' | translate }}
       <br><br>
-      J'aime aussi écrire des <a routerLink="blog" class="link-flash">articles de blog</a>, gérer des projets ou bien jouer aux jeux vidéo.
-    </div>
-
-    <div *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">
-      Hello ! I'm Maximilien. Freelance since November 2022, I do Web Design and Front-end Development for my clients.
-      If you are interested, please take a look at my <a routerLink="realisations" class="link-flash">work</a> and <a routerLink="services" class="link-flash">services</a>.
-
+      {{ 'HOME.part_1_p3_before' | translate }}
+      <a routerLink="realisation/senior-contact" class="link-flash">SeniorContact</a>
+      {{ 'HOME.part_1_p3_or' | translate }}
+      <a routerLink="realisation/buyfair" class="link-flash">BuyFair</a>{{ 'HOME.part_1_p3_after' | translate }}
       <br><br>
-      In my spare time, I also work on personal projects of all kinds in order to refine my skills. and to continually improve, such as <a routerLink="realisation/senior-contact" class="link-flash">SeniorContact</a> or <a routerLink="realisation/buyfair" class="link-flash">BuyFair</a>.
-
-      <br><br>
-      I also like to write <a routerLink="blog" class="link-flash">blog articles</a>, manage projects or play video games.
+      {{ 'HOME.part_1_p4' | translate }}
     </div>
   </section>
 
   <!------ Connaissances/skills ------------------------------------------------>
 
-  <section class="wow fadeIn">
-    <h2><span class="special-span">02</span>{{ 'HOME.PART-2.TITLE' | translate }}</h2>
+  <section>
+    <h2><span class="special-span">02</span>{{ 'HOME.part_2_title' | translate }}</h2>
     <div class="all-box-skills">
       <div class="box">
-        <h3>{{ 'HOME.PART-2.BOX-1-TITLE' | translate }}</h3>
-        <p class="subtitle">{{ 'HOME.PART-2.BOX-1-SUB' | translate }}</p>
+        <h3>{{ 'HOME.part_2_box_1_title' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.part_2_box_1_sub' | translate }}</p>
       </div>
       <div class="box">
-        <h3>{{ 'HOME.PART-2.BOX-2-TITLE' | translate }}</h3>
-        <p class="subtitle">{{ 'HOME.PART-2.BOX-2-SUB' | translate }}</p>
+        <h3>{{ 'HOME.part_2_box_2_title' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.part_2_box_2_sub' | translate }}</p>
       </div>
       <div class="box">
-        <h3>{{ 'HOME.PART-2.BOX-3-TITLE' | translate }}</h3>
-        <p class="subtitle">{{ 'HOME.PART-2.BOX-3-SUB' | translate }}</p>
+        <h3>{{ 'HOME.part_2_box_3_title' | translate }}</h3>
+        <p class="subtitle">{{ 'HOME.part_2_box_3_sub' | translate }}</p>
       </div>
     </div>
   </section>
 
   <!------ REALISATIONS ------------------------------------------------>
 
-  <section class="wow fadeIn">
-    <h2><span class="special-span">03</span>{{ 'HOME.PART-3.TITLE' | translate }}</h2>
+  <section>
+    <h2><span class="special-span">03</span>{{ 'HOME.part_3_title' | translate }}</h2>
 
-    <div *ngIf="all_work.length > 0" class="keen-slider" #sliderRef>
-      <div *ngFor="let work of total_all_work" class="keen-slider__slide">
+    <div *ngIf="allWork.length > 0" class="keen-slider" #sliderRef>
+      <div *ngFor="let work of totalAllWork" class="keen-slider__slide">
         <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
           <div class="overlay rea-box-desktop">
-            <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
+            <p class="text-overlay paragraph">{{ 'HOME.part_3_box_hover' | translate }}</p>
           </div>
           <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
           <a [routerLink]="'/realisation/' + work.url" class="link-work-mobile">
@@ -80,8 +73,8 @@
 
     <div class="rea-container">
       <div>
-        <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
-        <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
+        <a routerLink="realisations" class="link-flash rea-link-desktop">{{ 'HOME.part_3_paragraph_desk' | translate }}</a>
+        <a routerLink="realisations" class="link-flash rea-link-mobile">{{ 'HOME.part_3_paragraph_mob' | translate }}</a>
       </div>
       <div class="arrows-container">
         <a (click)="back()" class="arrow"> < </a>

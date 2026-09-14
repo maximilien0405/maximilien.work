@@ -11,7 +11,6 @@ import { provideTranslateService, TranslateDirective, TranslatePipe } from '@ngx
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ContactComponent } from './contact/contact.component';
 import { EmailSentComponent } from './email-sent/email-sent.component';
-import { BlogComponent } from './blog/blog.component';
 import { ServicesComponent } from './services/services.component';
 import { MarkdownModule } from "ngx-markdown";
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
@@ -32,7 +31,6 @@ registerLocaleData(localeFr);
     WorkDetailsComponent,
     ContactComponent,
     EmailSentComponent,
-    BlogComponent,
     ServicesComponent,
     ClientDashboardComponent,
     PayementComponent,

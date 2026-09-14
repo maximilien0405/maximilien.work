@@ -1,22 +1,22 @@
 <main>
     <!------ LOCKED FORM ------------------------------------------------>
 
-    <div *ngIf="locked" class="page-header wow fadeIn">
-        <h2>{{ 'CLIENT-DASHBOARD.LOCKED-TITLE' | translate }}</h2>
-        <p class="subtitle form-subtitle">{{ 'CLIENT-DASHBOARD.LOCKED-SUBTITLE' | translate }}</p>
+    <div *ngIf="locked" class="page-header">
+        <h2>{{ 'CLIENT_DASHBOARD.locked_title' | translate }}</h2>
+        <p class="subtitle form-subtitle">{{ 'CLIENT_DASHBOARD.locked_subtitle' | translate }}</p>
 
         <div class="locked-container">
             <div class="input-icon">
                 <input type="{{ showPassword ? 'text' : 'password' }}" [class.form-error]="errorFormPwd" class="input" [(ngModel)]="passwordValue" (ngModelChange)="onPasswordChange($event)"
-                [placeholder]="'CLIENT-DASHBOARD.INPUT-PLACEHOLDER' | translate" autofocus>
+                [placeholder]="'CLIENT_DASHBOARD.input_placeholder' | translate" autofocus>
                 <div (click)="toogleShowPassword()" class="icon-right">
                     <img *ngIf="showPassword" src="../../assets/icons/eye.svg">
                     <img *ngIf="!showPassword" src="../../assets/icons/eye2.svg">
                 </div>
-                <p *ngIf="errorFormPwd" class="text-error">{{ 'CLIENT-DASHBOARD.INVALID-PWD' | translate }}</p>
+                <p *ngIf="errorFormPwd" class="text-error">{{ 'CLIENT_DASHBOARD.invalid_pwd' | translate }}</p>
             </div>
             <button (click)="getClientWithProjects()">
-                <span *ngIf="!spinnerDisplay">{{ 'CLIENT-DASHBOARD.BTN-SEND' | translate }}</span>
+                <span *ngIf="!spinnerDisplay">{{ 'CLIENT_DASHBOARD.btn_send' | translate }}</span>
 
                 <div *ngIf="spinnerDisplay" class="spinner">
                     <div class="bounce1"></div>
@@ -29,27 +29,27 @@
 
     <!------ DASHBOARD ------------------------------------------------> 
 
-    <div *ngIf="!locked && client && projects" class="wow fadeIn client-page">
+    <div *ngIf="!locked && client && projects" class="client-page">
 
         <!------ Header ------>
 
         <div class="client-header">
-            <h2>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-TITLE' | translate }}</h2>
+            <h2>{{ 'CLIENT_DASHBOARD.client_header_title' | translate }}</h2>
             <div class="client-stats">
                 <div class="client-stat">
                     <img src="../../assets/icons/folder.svg">
                     <p><b>{{ projects.length }}</b>
                         <span *ngIf="projects.length > 1">
-                            {{ 'CLIENT-DASHBOARD.CLIENT-STAT-NBPROJECTS' | translate }}
+                            {{ 'CLIENT_DASHBOARD.client_stat_nbprojects' | translate }}
                         </span>
                         <span *ngIf="projects.length == 1">
-                            {{ 'CLIENT-DASHBOARD.CLIENT-STAT-NBPROJECT' | translate }}
+                            {{ 'CLIENT_DASHBOARD.client_stat_nbproject' | translate }}
                         </span>
                     </p>
                 </div>
                 <div class="client-stat">
                     <img src="../../assets/icons/clock.svg">
-                    <p>{{ 'CLIENT-DASHBOARD.CLIENT-STAT-SINCE' | translate }} 
+                    <p>{{ 'CLIENT_DASHBOARD.client_stat_since' | translate }} 
                         <b>{{ client.start_date | date: 'MMMM y':undefined:lang | titlecase }}</b>
                     </p>
                 </div>
@@ -73,11 +73,11 @@
 
                 <div class="box client-box-header">
                     <p class="subtitle">
-                        <b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-GOAL' | translate }} :</b> 
+                        <b>{{ 'CLIENT_DASHBOARD.client_header_goal' | translate }} :</b> 
                         {{ project.attributes.subtitle }}
                     </p>
                     <div>
-                        <span *ngIf="project.attributes.start_date && !project.attributes.end_date" class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DATE' | translate }} : </b>
+                        <span *ngIf="project.attributes.start_date && !project.attributes.end_date" class="tag"><b>{{ 'CLIENT_DASHBOARD.client_header_date' | translate }} : </b>
                             {{ project.attributes.start_date | date:undefined:undefined:lang }}
                         </span>
                         <span *ngIf="project.attributes.end_date" class="tag">
@@ -86,13 +86,13 @@
                         </span>
                         <div *ngIf="project.attributes.status">
                             <span *ngIf="project.attributes.status == 'waiting'" class="tag">
-                                {{ 'CLIENT-DASHBOARD.CLIENT-HEADER-WAITING' | translate }}
+                                {{ 'CLIENT_DASHBOARD.client_header_waiting' | translate }}
                             </span>
                             <span *ngIf="project.attributes.status == 'doing'" class="tag">
-                                {{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DOING' | translate }}
+                                {{ 'CLIENT_DASHBOARD.client_header_doing' | translate }}
                             </span>
                             <span *ngIf="project.attributes.status == 'done'" class="tag">
-                                {{ 'CLIENT-DASHBOARD.CLIENT-HEADER-DONE' | translate }}
+                                {{ 'CLIENT_DASHBOARD.client_header_done' | translate }}
                             </span>
                         </div>
                     </div>
@@ -103,17 +103,9 @@
 
                     <div class="client-container-left box">
                         <div class="client-box-flex">
-                            <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS' | translate }}</h3>
+                            <h3>{{ 'CLIENT_DASHBOARD.client_box_progress' | translate }}</h3>
                             <p class="subtitle">
-                                <span *ngIf="lang == 'fr'">
-                                    {{ 'CLIENT-DASHBOARD.CLIENT-BOX-STEPS' | translate }}
-                                </span>
-                                {{ getProjectSteps(project) }} 
-                                <span class="special-span-2">/</span>
-                                {{ project.attributes.progress.length }}
-                                <span *ngIf="lang == 'en'">
-                                    {{ 'CLIENT-DASHBOARD.CLIENT-BOX-STEPS' | translate }}
-                                </span>
+                                {{ 'CLIENT_DASHBOARD.client_box_steps_of' | translate:{ current: getProjectSteps(project), total: project.attributes.progress.length } }}
                             </p>
                         </div>
                         <div class="separator"></div>
@@ -126,9 +118,9 @@
                                 <div class="client-box-step" *ngFor="let step of project.attributes.progress; let i = index; let last = last">
                                     <p class="paragraph paragraph-title">{{ step.title }}</p>
                                     <p class="paragraph">{{ step.description }}</p>
-                                    <div class="tag"><b>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-ESTIMATED' | translate }} : </b>{{ step.estimated_time }}
-                                        <span *ngIf="step.estimated_time == 1 || step.estimated_time == 0.5">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAY' | translate }}</span>
-                                        <span *ngIf="step.estimated_time > 1">{{ 'CLIENT-DASHBOARD.CLIENT-BOX-PROGRESS-DAYS' | translate }}</span>
+                                    <div class="tag"><b>{{ 'CLIENT_DASHBOARD.client_box_progress_estimated' | translate }} : </b>{{ step.estimated_time }}
+                                        <span *ngIf="step.estimated_time == 1 || step.estimated_time == 0.5">{{ 'CLIENT_DASHBOARD.client_box_progress_day' | translate }}</span>
+                                        <span *ngIf="step.estimated_time > 1">{{ 'CLIENT_DASHBOARD.client_box_progress_days' | translate }}</span>
                                     </div>
                                     <div class="step" [class.step-done]="step.status == 'done'" [class.step-doing]="step.status == 'doing'">
                                         <span *ngIf="step.status == 'waiting'">{{ i + 1 }}</span>
@@ -150,7 +142,7 @@
                         <!------ Project links box ------>
 
                         <div *ngIf="project.attributes.links.length > 0" class="box">
-                            <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-LINKS' | translate }} 
+                            <h3>{{ 'CLIENT_DASHBOARD.client_box_links' | translate }} 
                                 <span>({{ project.attributes.links.length }})</span>
                             </h3>
                             <div class="separator"></div>
@@ -165,7 +157,7 @@
                         <!------ Project documents ------>
 
                         <div *ngIf="project.attributes.documents.length > 0" class="box">
-                            <h3>{{ 'CLIENT-DASHBOARD.CLIENT-BOX-DOCUMENTS' | translate }} 
+                            <h3>{{ 'CLIENT_DASHBOARD.client_box_documents' | translate }} 
                                 <span>({{ project.attributes.documents.length }})</span>
                             </h3>
                             <div class="separator"></div>
@@ -175,10 +167,10 @@
 
                                     <div class="client-box-items-right">
                                         <div *ngIf="document.status == 'waiting'" class="tag">
-                                            {{ 'CLIENT-DASHBOARD.ClIENT-BOX-DOCUMENTS-STATUS-WAITING' | translate }}
+                                            {{ 'CLIENT_DASHBOARD.client_box_documents_status_waiting' | translate }}
                                         </div>
                                         <div *ngIf="document.status == 'paid'" class="tag">
-                                            {{ 'CLIENT-DASHBOARD.ClIENT-BOX-DOCUMENTS-STATUS-PAID' | translate }}
+                                            {{ 'CLIENT_DASHBOARD.client_box_documents_status_paid' | translate }}
                                         </div>
                                         <img src="../../assets/icons/arrow-right.svg">
                                     </div>

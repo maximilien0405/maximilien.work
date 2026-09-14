@@ -80,11 +80,6 @@ export class MetaTagsService {
           : 'Développement web, web design, référencement et performances.',
         keywords: isEn ? 'web development, web design, SEO' : 'développement web, web design, SEO',
       },
-      '/blog': {
-        title: isEn ? 'Blog — Maximilien Z.' : 'Blog — Maximilien Z.',
-        description: isEn ? 'Articles about web development and design.' : 'Articles sur le développement web et le design.',
-        keywords: isEn ? 'blog, web, articles' : 'blog, web, articles',
-      },
       '/contact': {
         title: isEn ? 'Contact — Maximilien Z.' : 'Contact — Maximilien Z.',
         description: isEn

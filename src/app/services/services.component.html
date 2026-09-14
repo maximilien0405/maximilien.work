@@ -1,60 +1,52 @@
-<main class="wow fadeIn">
+<main>
 
     <!------ HEADER ------------------------------------------------>
 
     <div class="page-header">
-      <h2>{{ 'SERVICES.TITLE' | translate }}</h2>
-      <p class="subtitle">{{ 'SERVICES.SUBTITLE' | translate }}</p>
+      <h2>{{ 'SERVICES.title' | translate }}</h2>
+      <p class="subtitle">{{ 'SERVICES.subtitle' | translate }}</p>
     </div>
 
     <!------ 2 SERVICES ------------------------------------------------>
 
-    <section class="wow fadeIn">
+    <section>
       <div class="all-box-skills all-box-services">
         <div class="box">
-          <h3>{{ 'SERVICES.PART-1.BOX-1-TITLE' | translate }}</h3>
-          <p class="subtitle">{{ 'SERVICES.PART-1.BOX-1-SUB' | translate }}</p>
+          <h3>{{ 'SERVICES.part_1_box_1_title' | translate }}</h3>
+          <p class="subtitle">{{ 'SERVICES.part_1_box_1_sub' | translate }}</p>
         </div>
         <div class="box">
-          <h3>{{ 'SERVICES.PART-1.BOX-2-TITLE' | translate }}</h3>
-          <p class="subtitle">{{ 'SERVICES.PART-1.BOX-2-SUB' | translate }}</p>
+          <h3>{{ 'SERVICES.part_1_box_2_title' | translate }}</h3>
+          <p class="subtitle">{{ 'SERVICES.part_1_box_2_sub' | translate }}</p>
         </div>
       </div>
     </section>
 
     <!------ A propos ------------------------------------------------>
 
-    <section class="wow fadeIn services">
-      <h2><span class="special-span">01</span>{{ 'SERVICES.PART-2.TITLE' | translate }}</h2>
+    <section class="services">
+      <h2><span class="special-span">01</span>{{ 'SERVICES.part_2_title' | translate }}</h2>
 
-      <div *ngIf="lang == 'fr' || lang == 'FR'" class="subtitle">
-        Depuis 2022, j’accompagne mes clients dans la réalisation de leurs sites web.
+      <div class="subtitle">
+        {{ 'SERVICES.part_2_p1' | translate }}
         <br><br>
-        Que ce soit pour un site vitrine ou bien une boutique, je tacherais tout mettre en oeuvre afin que votre projet corresponde à votre attente.
+        {{ 'SERVICES.part_2_p2' | translate }}
         <br><br>
-        Si vous souhaitez plus d'informations ou avez une mission à me proposer, n'hésitez pas à me contacter ! Je serais ravi de trouver une solution à votre problème.
+        {{ 'SERVICES.part_2_p3' | translate }}
       </div>
-
-      <div *ngIf="lang == 'en' || lang == 'EN'" class="subtitle">
-        Since 2022, I accompany my clients in the realization of their websites.
-        <br><br>
-        Whether it is for the creation of your website, or a redesign of the design system of your business, I will do my best to make sure that your project meets your expectations.
-        <br><br>
-        If you want more information or have a mission to propose to me, do not hesitate to contact me! I will be more than happy to find a solution to your problem.
-      </div>
-      <a routerLink="contact" class="box box-btn">{{ 'HOME.BUTTON' | translate }}</a>
+      <a routerLink="contact" class="box box-btn">{{ 'HOME.button' | translate }}</a>
     </section>
 
     <!------ REALISATIONS ------------------------------------------------>
 
-    <section class="wow fadeIn">
-      <h2><span class="special-span">02</span>{{ 'SERVICES.PART-3.TITLE' | translate }}</h2>
+    <section>
+      <h2><span class="special-span">02</span>{{ 'SERVICES.part_3_title' | translate }}</h2>
 
       <div class="keen-slider" #sliderRef>
-        <div *ngFor="let work of total_all_work" class="keen-slider__slide">
+        <div *ngFor="let work of totalAllWork" class="keen-slider__slide">
           <div class="box-realisation" [routerLink]="'/realisation/' + work.url">
             <div class="overlay rea-box-desktop">
-              <p class="text-overlay paragraph">{{ 'HOME.PART-3.BOX-HOVER' | translate }}</p>
+              <p class="text-overlay paragraph">{{ 'HOME.part_3_box_hover' | translate }}</p>
             </div>
             <img [defaultImage]="'../../assets/images/placeholder.jpg'" [lazyLoad]="API_URL + work.preview_image.data.attributes.url" class="img-box" [alt]="work.url">
             <a [routerLink]="'/realisation/' + work.url" class="link-work-mobile">
@@ -66,8 +58,8 @@
 
       <div class="rea-container">
         <div>
-          <a routerLink="/realisations" class="link-flash rea-link-desktop">{{ 'HOME.PART-3.PARAGRAPH-DESK' | translate }}</a>
-          <a routerLink="/realisations" class="link-flash rea-link-mobile">{{ 'HOME.PART-3.PARAGRAPH-MOB' | translate }}</a>
+          <a routerLink="/realisations" class="link-flash rea-link-desktop">{{ 'HOME.part_3_paragraph_desk' | translate }}</a>
+          <a routerLink="/realisations" class="link-flash rea-link-mobile">{{ 'HOME.part_3_paragraph_mob' | translate }}</a>
         </div>
         <div class="arrows-container">
           <a (click)="back()" class="arrow"> < </a>
@@ -78,14 +70,13 @@
 
     <!------ Avis clients ------------------------------------------------>
 
-    <!--<section class="wow fadeIn">
-      <h2><span class="special-span">03</span>{{ 'SERVICES.PART-4.TITLE' | translate }}</h2>
+    <!--<section>
+      <h2><span class="special-span">03</span>{{ 'SERVICES.part_4_title' | translate }}</h2>
 
       <swiper #swiperFeedback [slidesPerView]="1" [loop]="true" [breakpoints]="this.breakpointsFeedback">
-        <ng-template swiperSlide *ngFor="let feedback of total_all_feedback">
+        <ng-template swiperSlide *ngFor="let feedback of totalAllFeedback">
             <div class="box article-box">
-              <p class="subtitle client-review-text" *ngIf="lang == 'en' || lang == 'EN'">{{ feedback.text_en }}</p>
-              <p class="subtitle client-review-text" *ngIf="lang == 'fr' || lang == 'FR'">{{ feedback.text_fr }}</p>
+              <p class="subtitle client-review-text">{{ lang == 'en' ? feedback.text_en : feedback.text_fr }}</p>
 
                 <div class="article-bottom-content">
                    <div class="tag tag-url" >{{ feedback.username }}</div>
@@ -99,8 +90,8 @@
 
       <div class="rea-container">
         <div>
-          <a routerLink="/contact" class="link-flash rea-link-desktop">{{ 'SERVICES.PART-4.PARAGRAPH' | translate }} ></a>
-          <a routerLink="/contact" class="link-flash rea-link-mobile">{{ 'SERVICES.PART-4.PARAGRAPH' | translate }} ></a>
+          <a routerLink="/contact" class="link-flash rea-link-desktop">{{ 'SERVICES.part_4_paragraph' | translate }} ></a>
+          <a routerLink="/contact" class="link-flash rea-link-mobile">{{ 'SERVICES.part_4_paragraph' | translate }} ></a>
         </div>
         <div class="arrows-container">
           <a (click)="backFeedback()" class="arrow"> < </a>
@@ -109,4 +100,3 @@
       </div>
     </section>-->
 </main>
-

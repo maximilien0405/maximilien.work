@@ -1,120 +1,116 @@
 {
-  "NAV": {
-    "ITEM-1": "Home",
-    "ITEM-2": "Work",
-    "ITEM-3": "Blog",
-    "ITEM-4": "Contact",
-    "ITEM-DASHBOARD": "My dashboard",
-    "MOBILE-1": "Blog posts"
-  },
+  "navbar_home": "Home",
+  "navbar_work": "Work",
+  "navbar_services": "Services",
+  "navbar_contact": "Contact",
+  "navbar_dashboard": "My dashboard",
   "HOME": {
-    "SUBTITLE": "A web developer & designer full of ideas to take your project to the next-level.",
-    "BUTTON": "Contact me",
-    "PART-1": {
-      "TITLE": "Who am i"
-    },
-    "PART-2": {
-      "TITLE": "My solutions",
-      "BOX-1-TITLE": "Web development",
-      "BOX-1-SUB": "Integration, full web applications and edits of websites.",
-      "BOX-2-TITLE": "Web design",
-      "BOX-2-SUB": "Prototypes, UI mockups even complete visual identities.",
-      "BOX-3-TITLE": "Other",
-      "BOX-3-SUB": "SEO, accessibility and optimization of performance."
-    },
-    "PART-3": {
-      "TITLE": "My work",
-      "BOX-HOVER": "See more",
-      "PARAGRAPH-DESK": "See all work >",
-      "PARAGRAPH-MOB": "See all >"
-    }
+    "subtitle": "A web developer & designer full of ideas to take your project to the next-level.",
+    "button": "Contact me",
+    "part_1_title": "Who am i",
+    "part_1_p1": "Hello ! I'm Maximilien. Freelance since November 2022, I do Web Design and Front-end Development for my clients.",
+    "part_1_p2_before": "If you are interested, please take a look at my ",
+    "part_1_work": "work",
+    "part_1_p2_and": " and ",
+    "part_1_services": "services",
+    "part_1_p2_after": ".",
+    "part_1_p3_before": "In my spare time, I also work on personal projects of all kinds in order to refine my skills and to continually improve, such as ",
+    "part_1_p3_or": " or ",
+    "part_1_p3_after": ".",
+    "part_1_p4": "I also like to manage projects or play video games.",
+    "part_2_title": "My solutions",
+    "part_2_box_1_title": "Web development",
+    "part_2_box_1_sub": "Integration, full web applications and edits of websites.",
+    "part_2_box_2_title": "Web design",
+    "part_2_box_2_sub": "Prototypes, UI mockups even complete visual identities.",
+    "part_2_box_3_title": "Other",
+    "part_2_box_3_sub": "SEO, accessibility and optimization of performance.",
+    "part_3_title": "My work",
+    "part_3_box_hover": "See more",
+    "part_3_paragraph_desk": "See all work >",
+    "part_3_paragraph_mob": "See all >"
   },
   "WORK": {
-    "LINK": "< Back",
-    "TITLE": "All of my work",
-    "SUBTITLE": "Here are some of my work, whether it is Web design or web development.",
-    "BOX-HOVER": "See more",
-    "CATEGORY-1": "Personal projects",
-    "CATEGORY-2": "Professional projects",
-    "CATEGORY-3": "Others"
+    "link": "< Back",
+    "title": "All of my work",
+    "subtitle": "Here are some of my work, whether it is Web design or web development.",
+    "box_hover": "See more",
+    "category_1": "Personal projects",
+    "category_2": "Professional projects",
+    "category_3": "Others"
   },
-  "WORK-DETAIL": {
-    "LINK": "< Back",
-    "TABLE-TITLE": "Table of Contents",
-    "TABLE-NEXT": "Next"
+  "WORK_DETAIL": {
+    "link": "< Back",
+    "table_title": "Table of Contents",
+    "table_next": "Next"
   },
-  "CLIENT-DASHBOARD": {
-    "LOCKED-TITLE": "This page is protected",
-    "LOCKED-SUBTITLE": "To access this page, please enter below the password given to you by Email.",
-    "INPUT-PLACEHOLDER": "Password",
-    "INVALID-PWD": "The password is incorrect. Please try again.",
-    "BTN-SEND": "Send",
-    "CLIENT-HEADER-TITLE": "My client dashboard",
-    "CLIENT-STAT-NBPROJECT": "Project",
-    "CLIENT-STAT-NBPROJECTS": "Projects",
-    "CLIENT-STAT-SINCE": "Since",
-    "CLIENT-HEADER-GOAL": "Goal",
-    "CLIENT-HEADER-DATE": "Start date",
-    "CLIENT-HEADER-WAITING": "Waiting",
-    "CLIENT-HEADER-DOING": "Doing",
-    "CLIENT-HEADER-DONE": "Done",
-    "CLIENT-BOX-PROGRESS": "Progress",
-    "CLIENT-BOX-STEPS": "steps",
-    "CLIENT-BOX-LINKS": "Links",
-    "CLIENT-BOX-DOCUMENTS": "Documents",
-    "ClIENT-BOX-DOCUMENTS-STATUS-WAITING": "Waiting",
-    "ClIENT-BOX-DOCUMENTS-STATUS-PAID": "Paid",
-    "CLIENT-BOX-PROGRESS-DAY": "day",
-    "CLIENT-BOX-PROGRESS-DAYS": "days",
-    "CLIENT-BOX-PROGRESS-ESTIMATED": "Estimated time"
-  },
-  "ARTICLE": {
-    "TITLE": "All of my articles",
-    "SUBTITLE": "I love to write and teach stuff. Here you will find articles about design, development and more!",
-    "LINK": "Read on Medium"
+  "CLIENT_DASHBOARD": {
+    "locked_title": "This page is protected",
+    "locked_subtitle": "To access this page, please enter below the password given to you by Email.",
+    "input_placeholder": "Password",
+    "invalid_pwd": "The password is incorrect. Please try again.",
+    "btn_send": "Send",
+    "client_header_title": "My client dashboard",
+    "client_stat_nbproject": "Project",
+    "client_stat_nbprojects": "Projects",
+    "client_stat_since": "Since",
+    "client_header_goal": "Goal",
+    "client_header_date": "Start date",
+    "client_header_waiting": "Waiting",
+    "client_header_doing": "Doing",
+    "client_header_done": "Done",
+    "client_box_progress": "Progress",
+    "client_box_steps": "steps",
+    "client_box_steps_of": "{{current}} / {{total}} steps",
+    "client_box_links": "Links",
+    "client_box_documents": "Documents",
+    "client_box_documents_status_waiting": "Waiting",
+    "client_box_documents_status_paid": "Paid",
+    "client_box_progress_day": "day",
+    "client_box_progress_days": "days",
+    "client_box_progress_estimated": "Estimated time"
   },
   "SERVICES": {
-    "TITLE": "My services",
-    "SUBTITLE": "Freelance since 2022, I accompany my clients for their web or design projects.",
-    "PART-1": {
-      "BOX-1-TITLE": "Website creation",
-      "BOX-1-SUB": "For your portfolio, e-commerce site, personal blog, forum or showcase site. Everything is possible.",
-      "BOX-2-TITLE": "Web design",
-      "BOX-2-SUB": "To create prototypes, UI mockups or even complete visual identity for your company."
-    },
-    "PART-2": {
-      "TITLE": "About me"
-    },
-    "PART-3": {
-      "TITLE": "My work"
-    },
-    "PART-4": {
-      "TITLE": "Customer feedback",
-      "PARAGRAPH": "Contact me"
-    }
+    "title": "My services",
+    "subtitle": "Freelance since 2022, I accompany my clients for their web or design projects.",
+    "part_1_box_1_title": "Website creation",
+    "part_1_box_1_sub": "For your portfolio, e-commerce site, personal blog, forum or showcase site. Everything is possible.",
+    "part_1_box_2_title": "Web design",
+    "part_1_box_2_sub": "To create prototypes, UI mockups or even complete visual identity for your company.",
+    "part_2_title": "About me",
+    "part_2_p1": "Since 2022, I accompany my clients in the realization of their websites.",
+    "part_2_p2": "Whether it is for the creation of your website, or a redesign of the design system of your business, I will do my best to make sure that your project meets your expectations.",
+    "part_2_p3": "If you want more information or have a mission to propose to me, do not hesitate to contact me! I will be more than happy to find a solution to your problem.",
+    "part_3_title": "My work",
+    "part_4_title": "Customer feedback",
+    "part_4_paragraph": "Contact me"
   },
   "PAYEMENT": {
-    "TITLE": "Payment of invoice N°",
-    "SUBTITLE": "Below you'll find all the information you need to pay this invoice.",
-    "METHOD-1-TITLE": "Bank transfer",
-    "METHOD-2-SUBTITLE-3": "So that I can recognize and validate the payment, please add your first and last name in the 'Message' field.",
-    "BANK-ADDRESS": "Address",
-    "BANK-AMOUNT": "Amount",
-    "BANK-BANK": "Bank"
+    "title": "Payment of invoice N°",
+    "subtitle": "Below you'll find all the information you need to pay this invoice.",
+    "method_1_title": "Bank transfer",
+    "method_2_subtitle_1": "Open the",
+    "method_2_subtitle_2": "Twint",
+    "method_2_subtitle_3": "app and tap the button at the bottom:",
+    "method_2_subtitle_4": "Pay",
+    "method_2_subtitle_5": "Scan the QR code and enter the following amount:",
+    "bank_address": "Address",
+    "bank_amount": "Amount",
+    "bank_bank": "Bank"
   },
   "CONTACT": {
-    "TITLE": "Contact me",
-    "SUBTITLE": "A new project proposal ? Or a simple question? Just let me know!",
-    "FULL-NAME": "Full name",
-    "MESSAGE": "Your message..",
-    "BUTTON": "Send",
-    "PARAGRAPH": "You can also contact me on my social networks:",
-    "FIELD-REQUIRED": "Field is required.",
-    "FORM-SUBMIT-ERROR": "An error occured while trying to submit the form."
+    "title": "Contact me",
+    "subtitle": "A new project proposal ? Or a simple question? Just let me know!",
+    "full_name": "Full name",
+    "message": "Your message..",
+    "button": "Send",
+    "paragraph": "You can also contact me on my social networks:",
+    "field_required": "Field is required.",
+    "form_submit_error": "An error occured while trying to submit the form."
   },
-  "FORM-SENT":{
-    "TITLE": "Email sent successfully!",
-    "MESSAGE": "Thank you for taking the time to write to me, I will get back to you as soon as possible.",
-    "LINK": "Return to homepage"
+  "FORM_SENT": {
+    "title": "Email sent successfully!",
+    "message": "Thank you for taking the time to write to me, I will get back to you as soon as possible.",
+    "link": "Return to homepage"
   }
 }

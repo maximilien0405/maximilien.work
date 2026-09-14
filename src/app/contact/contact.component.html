@@ -1,10 +1,10 @@
-<main class="wow fadeIn">
+<main>
 
     <!------ HEADER ------------------------------------------------>
 
     <div class="page-header">
-      <h2>{{ 'CONTACT.TITLE' | translate }}</h2>
-      <p class="subtitle">{{ 'CONTACT.SUBTITLE' | translate }}</p>
+      <h2>{{ 'CONTACT.title' | translate }}</h2>
+      <p class="subtitle">{{ 'CONTACT.subtitle' | translate }}</p>
     </div>
 
     <!------ FORM ------------------------------------------------>
@@ -14,24 +14,24 @@
       <div class="input-container">
         <div class="name-email-container">
           <div>
-            <label>{{ 'CONTACT.FULL-NAME' | translate }}</label>
-            <input formControlName="fullName" type="text" [placeholder]="'CONTACT.FULL-NAME' | translate" [class.input-error]="formSubmitted && form.get('fullName')?.errors">
-            <p class="input-text-error" *ngIf="formSubmitted && form.get('fullName')?.errors">{{ 'CONTACT.FIELD-REQUIRED' | translate }}</p>
+            <label>{{ 'CONTACT.full_name' | translate }}</label>
+            <input formControlName="fullName" type="text" [placeholder]="'CONTACT.full_name' | translate" [class.input-error]="formSubmitted && form.get('fullName')?.errors">
+            <p class="input-text-error" *ngIf="formSubmitted && form.get('fullName')?.errors">{{ 'CONTACT.field_required' | translate }}</p>
           </div>
           <div>
             <label>Email</label>
             <input formControlName="email" type="email" placeholder="Email" [class.input-error]="formSubmitted && form.get('email')?.errors">
-            <p class="input-text-error" *ngIf="formSubmitted && form.get('email')?.errors">{{ 'CONTACT.FIELD-REQUIRED' | translate }}</p>
+            <p class="input-text-error" *ngIf="formSubmitted && form.get('email')?.errors">{{ 'CONTACT.field_required' | translate }}</p>
           </div>
         </div>
 
         <label>Message</label><br>
-        <textarea formControlName="message" [placeholder]="'CONTACT.MESSAGE' | translate" [class.input-error]="formSubmitted && form.get('message')?.errors"></textarea>
-        <p class="input-text-error" *ngIf="formSubmitted && form.get('message')?.errors">{{ 'CONTACT.FIELD-REQUIRED' | translate }}</p>
+        <textarea formControlName="message" [placeholder]="'CONTACT.message' | translate" [class.input-error]="formSubmitted && form.get('message')?.errors"></textarea>
+        <p class="input-text-error" *ngIf="formSubmitted && form.get('message')?.errors">{{ 'CONTACT.field_required' | translate }}</p>
 
         <button (click)="submitForm()">
           <span *ngIf="!spinnerDisplay">
-            {{ 'CONTACT.BUTTON' | translate }}
+            {{ 'CONTACT.button' | translate }}
           </span>
           <div *ngIf="spinnerDisplay" class="spinner spinner-black">
             <div class="bounce1"></div>
@@ -40,13 +40,13 @@
           </div>
         </button>
 
-        <p *ngIf="formSubmitError" class="input-text-error">{{ 'CONTACT.FORM-SUBMIT-ERROR' | translate }}</p>
+        <p *ngIf="formSubmitError" class="input-text-error">{{ 'CONTACT.form_submit_error' | translate }}</p>
       </div>
 
       <!------ SOCIALS CONTAINER ------------------------------------------------>
 
       <div class="right-box-container">
-        <div class="subtitle">{{ 'CONTACT.PARAGRAPH' | translate }}</div>
+        <div class="subtitle">{{ 'CONTACT.paragraph' | translate }}</div>
         <div class="socials-container">
           <a href="https://www.linkedin.com/in/maximilien-zimmermann/" target="_blank" rel="noopener">
             <div class="box">

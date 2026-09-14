@@ -1,109 +1,77 @@
-import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { ClientService } from './common/services/client.service';
 import { MetaTagsService } from './common/services/meta-tags.service';
+import { fadeAnimation, slideMenuAnimation } from './common/others/animations';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    animations: [
-        trigger('inOutAnimation', [
-            transition(':enter', [
-                style({ opacity: 0 }),
-                animate('0.2s ease-out', style({ opacity: 1 }))
-            ]),
-            transition(':leave', [
-                style({ opacity: 1 }),
-                animate('0.2s ease-in', style({ opacity: 0 }))
-            ])
-        ]),
-        trigger('inOutAnimationSlow', [
-            transition(':enter', [
-                style({ opacity: 0 }),
-                animate('0.1s ease-out', style({ opacity: 1 }))
-            ]),
-            transition(':leave', [
-                style({ opacity: 1 }),
-                animate('0.1s ease-in', style({ opacity: 0 }))
-            ])
-        ])
-    ],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  animations: [fadeAnimation, slideMenuAnimation],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
-export class AppComponent {
-  public languageClick:Boolean = false;
-  public route:String;
+export class AppComponent implements OnInit, OnDestroy {
+  public languageClick: boolean = false;
+  public route: string;
   public mobileSidebar: boolean = false;
   public whiteTheme: boolean = true;
-  public lang: string | any;
-  public url = new URL(window.location.href);
-  public currentYear = new Date().getFullYear()
+  public lang: string;
+  public currentYear = new Date().getFullYear();
   public showClientLink: boolean = false;
   public clientUrl: string;
+  public displayMainOverlay = true;
+  public willDismissMainOverlay = false;
+
+  private routerEvents$: Subscription;
+  private dashboardLink$: Subscription;
 
   constructor(
     public clientService: ClientService,
     public translate: TranslateService,
     private router: Router,
-    private metaTags: MetaTagsService)
-  {
+    private metaTags: MetaTagsService,
+  ) {
     // Get router url + update SEO
-    this.router.events.subscribe((event) => {
+    this.routerEvents$ = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.route = this.router.url;
         this.metaTags.updateMetaTags(this.router.url);
       }
     });
 
-    translate.addLangs(['fr','en'])
-    translate.setFallbackLang('fr')
+    translate.addLangs(['fr', 'en']);
+    translate.setFallbackLang('fr');
 
-    if(!localStorage.getItem('lang')) {
+    if (!localStorage.getItem('lang')) {
       // Get navigator language & cut it
-      if (navigator.language.includes("-")) {
+      if (navigator.language.includes('-')) {
         this.lang = navigator.language.slice(0, 2);
       } else {
         this.lang = navigator.language;
       }
 
       // Set navigator language
-      localStorage.setItem("lang", this.lang);
+      localStorage.setItem('lang', this.lang);
       this.translate.setFallbackLang(this.lang);
-      this.translate.use(this.lang)
+      this.translate.use(this.lang);
     }
 
-    // Display navbar client link if localstoarge
+    // Display navbar client link if localstorage
     if (localStorage.getItem('clientUrl')) {
       this.clientUrl = localStorage.getItem('clientUrl') || '';
       this.showClientLink = true;
     }
 
-    //Listen to navbar header client
-    this.clientService.subjectShowDashboardLink.subscribe((res: any) => {
+    // Listen to navbar header client
+    this.dashboardLink$ = this.clientService.subjectShowDashboardLink.subscribe((res) => {
       if (res.value) {
         this.clientUrl = localStorage.getItem('clientUrl') || '';
         this.showClientLink = true;
       }
-    })
-  }
-
-  // Display or not language dropdown
-  public languageBox() {
-    this.languageClick = !this.languageClick;
-  }
-
-  // Change the language
-  public changeLang(lang:string) {
-    this.translate.use(lang);
-    this.translate.setFallbackLang(lang);
-    localStorage.setItem('lang', lang)
-    this.lang = lang;
-    this.languageClick = false;
-    this.mobileSidebar = false;
-    this.metaTags.updateMetaTags(this.router.url);
+    });
   }
 
   public ngOnInit() {
@@ -113,14 +81,14 @@ export class AppComponent {
     }
 
     // Set the right theme
-    if(localStorage.getItem('theme') == 'black') {
+    if (localStorage.getItem('theme') == 'black') {
       this.toggleDarkTheme();
     } else {
       this.toggleWhiteTheme();
     }
 
     // Set the right lang
-    if(localStorage.getItem('lang') == 'en') {
+    if (localStorage.getItem('lang') == 'en') {
       this.translate.use('en');
       this.lang = 'en';
     } else {
@@ -129,9 +97,37 @@ export class AppComponent {
     }
 
     this.metaTags.updateMetaTags(this.router.url);
+
+    setTimeout(() => {
+      this.willDismissMainOverlay = true;
+      setTimeout(() => {
+        this.displayMainOverlay = false;
+      }, 50);
+    }, 50);
   }
 
-  // Open the movile nav
+  public ngOnDestroy() {
+    this.routerEvents$?.unsubscribe();
+    this.dashboardLink$?.unsubscribe();
+  }
+
+  // Display or not language dropdown
+  public languageBox() {
+    this.languageClick = !this.languageClick;
+  }
+
+  // Change the language
+  public changeLang(lang: string) {
+    this.translate.use(lang);
+    this.translate.setFallbackLang(lang);
+    localStorage.setItem('lang', lang);
+    this.lang = lang;
+    this.languageClick = false;
+    this.mobileSidebar = false;
+    this.metaTags.updateMetaTags(this.router.url);
+  }
+
+  // Open the mobile nav
   public openNav() {
     this.mobileSidebar = true;
     if (this.mobileSidebar) {
@@ -151,7 +147,7 @@ export class AppComponent {
   public toggleDarkTheme() {
     document.body.classList.add('dark-theme');
     this.whiteTheme = false;
-    localStorage.setItem('theme', 'black')
+    localStorage.setItem('theme', 'black');
     this.mobileSidebar = false;
   }
 
@@ -159,7 +155,7 @@ export class AppComponent {
   public toggleWhiteTheme() {
     document.body.classList.remove('dark-theme');
     this.whiteTheme = true;
-    localStorage.setItem('theme', 'white')
+    localStorage.setItem('theme', 'white');
     this.mobileSidebar = false;
   }
 }

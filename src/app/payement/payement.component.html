@@ -1,23 +1,23 @@
-<main class="wow fadeIn">
+<main>
 
     <!------ HEADER ------------------------------------------------>
 
     <div class="page-header">
-        <h2>{{ 'PAYEMENT.TITLE' | translate }}{{ invoiceNumber }}</h2>
-        <p class="subtitle">{{ 'PAYEMENT.SUBTITLE' | translate }}</p>
+        <h2>{{ 'PAYEMENT.title' | translate }}{{ invoiceNumber }}</h2>
+        <p class="subtitle">{{ 'PAYEMENT.subtitle' | translate }}</p>
     </div>
 
     <!------ PAYEMENT METHODS ------------------------------------------------>
     
-    <section class="wow fadeIn">
+    <section>
         <div class="all-box-skills all-box-services">
             <div class="box box-bank">
-                <h3>{{ 'PAYEMENT.METHOD-1-TITLE' | translate }}</h3>
+                <h3>{{ 'PAYEMENT.method_1_title' | translate }}</h3>
                 <div class="separator-client separator"></div>
                 <p class="subtitle first-subtitle"><b>IBAN :</b> CH44 0483 5183 4661 5000 0</p>
-                <p class="subtitle"><b>{{ 'PAYEMENT.BANK-ADDRESS' | translate }} :</b> Rue de la Prulay, 31 - 1217 Meyrin, Suisse</p>
-                <p class="subtitle"><b>{{ 'PAYEMENT.BANK-AMOUNT' | translate }} :</b> {{ invoiceAmount }} {{ invoiceCurrency }}</p>
-                <p class="subtitle"><b>{{ 'PAYEMENT.BANK-BANK' | translate }} :</b> CREDIT SUISSE (Switzerland) Ltd.</p>
+                <p class="subtitle"><b>{{ 'PAYEMENT.bank_address' | translate }} :</b> Rue de la Prulay, 31 - 1217 Meyrin, Suisse</p>
+                <p class="subtitle"><b>{{ 'PAYEMENT.bank_amount' | translate }} :</b> {{ invoiceAmount }} {{ invoiceCurrency }}</p>
+                <p class="subtitle"><b>{{ 'PAYEMENT.bank_bank' | translate }} :</b> CREDIT SUISSE (Switzerland) Ltd.</p>
             </div>
             
             <div class="box box-twint">
@@ -25,11 +25,11 @@
                 <img *ngIf="theme == 'black'" src="../../assets/images/twint-logo-white.png" alt="logo-twint">
                 <div class="box-twint-flex">
                     <span class="subtitle">
-                        {{ 'PAYEMENT.METHOD-2-SUBTITLE-1' | translate }}
-                        <b>{{ 'PAYEMENT.METHOD-2-SUBTITLE-2' | translate }}</b>
-                        {{ 'PAYEMENT.METHOD-2-SUBTITLE-3' | translate }}
-                        <b>{{ 'PAYEMENT.METHOD-2-SUBTITLE-4' | translate }}</b>.<br><br>
-                        {{ 'PAYEMENT.METHOD-2-SUBTITLE-5' | translate }}
+                        {{ 'PAYEMENT.method_2_subtitle_1' | translate }}
+                        <b>{{ 'PAYEMENT.method_2_subtitle_2' | translate }}</b>
+                        {{ 'PAYEMENT.method_2_subtitle_3' | translate }}
+                        <b>{{ 'PAYEMENT.method_2_subtitle_4' | translate }}</b>.<br><br>
+                        {{ 'PAYEMENT.method_2_subtitle_5' | translate }}
                         <b>{{ invoiceAmount }} {{ invoiceCurrency }}</b>.
                     </span>
 

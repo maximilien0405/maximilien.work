@@ -1,48 +1,63 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { ClientService } from '../common/services/client.service';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { ClientService } from '../common/services/client.service';
+import { ClientAttributes, ClientProjectEntry, LoginResponse } from '../common/models/client.model';
 
 @Component({
-    selector: 'app-client-dashboard',
-    templateUrl: './client-dashboard.component.html',
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: 'app-client-dashboard',
+  templateUrl: './client-dashboard.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
-export class ClientDashboardComponent {
+export class ClientDashboardComponent implements OnDestroy {
   public locked: boolean = true;
   public showPassword: boolean;
   public errorFormPwd: boolean;
   public clientUrl: string;
   public passwordValue: string;
 
-  public client: any = [];
-  public projects: any = [];
+  public client: ClientAttributes;
+  public projects: ClientProjectEntry[] = [];
 
-  public spinnerDisplay: boolean; 
+  public spinnerDisplay: boolean;
   public lang = this.translate.getCurrentLang() || 'fr';
   public projectIndex: number = Number(localStorage.getItem('projectIndex')) || 0;
 
-  constructor(private clientService: ClientService,
+  private params$: Subscription;
+  private langChange$: Subscription;
+  private login$: Subscription;
+  private data$: Subscription;
+
+  constructor(
+    private clientService: ClientService,
     private route: ActivatedRoute,
     private translate: TranslateService,
-    private router: Router)
-  {
-    this.route.params.subscribe(params => this.clientUrl = params.name);
+    private router: Router,
+  ) {
+    this.params$ = this.route.params.subscribe((params) => this.clientUrl = params.name);
 
     // Listen to lang change
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+    this.langChange$ = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       if (event.lang != this.lang) {
         this.lang = event.lang;
         this.getAllData();
       }
     });
 
-    // Display navbar client link if localstoarge
+    // Display navbar client link if localstorage
     if (localStorage.getItem('clientUrl')) {
       this.locked = false;
-      this.getAllData();      
+      this.getAllData();
     }
+  }
+
+  public ngOnDestroy() {
+    this.params$?.unsubscribe();
+    this.langChange$?.unsubscribe();
+    this.login$?.unsubscribe();
+    this.data$?.unsubscribe();
   }
 
   // Show or not the password
@@ -51,7 +66,7 @@ export class ClientDashboardComponent {
   }
 
   // If password value changes, remove error
-  public onPasswordChange(event: any) {
+  public onPasswordChange(event: string) {
     if (event && this.errorFormPwd) {
       this.errorFormPwd = false;
     }
@@ -61,25 +76,30 @@ export class ClientDashboardComponent {
   public getClientWithProjects() {
     this.spinnerDisplay = true;
     this.errorFormPwd = false;
-    
-    this.clientService.login(this.clientUrl, this.passwordValue).subscribe((res: any) => {
-      if (res.jwt) {
-        localStorage.setItem('token', res.jwt);
-        this.getAllData();
-      }
-    }, () => {
-      setTimeout(() => {
-        this.errorFormPwd = true;
-        this.spinnerDisplay = false;
-      }, 1400);
-    })
+
+    this.login$?.unsubscribe();
+    this.login$ = this.clientService.login(this.clientUrl, this.passwordValue).subscribe({
+      next: (res: LoginResponse) => {
+        if (res.jwt) {
+          localStorage.setItem('token', res.jwt);
+          this.getAllData();
+        }
+      },
+      error: () => {
+        setTimeout(() => {
+          this.errorFormPwd = true;
+          this.spinnerDisplay = false;
+        }, 1400);
+      },
+    });
   }
 
   // Get all the data needed (projects and client)
   public getAllData() {
     const clientUrl = localStorage.getItem('clientUrl') || this.clientUrl;
 
-    this.clientService.getProjectsAndClient(this.lang, clientUrl).subscribe((res: any) => {
+    this.data$?.unsubscribe();
+    this.data$ = this.clientService.getProjectsAndClient(this.lang, clientUrl).subscribe((res) => {
       if (res.data[0]) {
         let timeout = 0;
         if (this.locked) timeout = 1400;
@@ -96,11 +116,11 @@ export class ClientDashboardComponent {
           this.projects = res.data;
 
           localStorage.setItem('clientUrl', this.clientUrl);
-        }, timeout);  
+        }, timeout);
       } else {
         this.router.navigateByUrl('/');
       }
-    })
+    });
   }
 
   // Change the index of projects
@@ -110,10 +130,10 @@ export class ClientDashboardComponent {
   }
 
   // Determine the steps of a project
-  public getProjectSteps(project: any) {
+  public getProjectSteps(project: ClientProjectEntry) {
     let totaStepsComplete = 0;
-    for (let step of project.attributes.progress) {
-      if(step.status == 'done') totaStepsComplete++
+    for (const step of project.attributes.progress) {
+      if (step.status == 'done') totaStepsComplete++;
     }
     return totaStepsComplete;
   }
